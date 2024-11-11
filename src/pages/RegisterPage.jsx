@@ -1,7 +1,10 @@
 import React from 'react'
 
 export default function RegisterPage() {
+
   return (
-    <div>RegisterPage</div>
+    <div className='w-screen h-screen bg-red-200'>
+      
+    </div>
   )
 }
