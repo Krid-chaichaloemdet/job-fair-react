@@ -34,7 +34,6 @@ export default function RegisterInput({
       );
     }
   }
-
   // Return all inputs as a list of JSX elements
   return (
     <div className="flex flex-row justify-between">
