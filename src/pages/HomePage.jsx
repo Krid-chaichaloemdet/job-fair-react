@@ -17,7 +17,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <div className='flex flex-row justify-start pl-5 py-5 '>
+      <div className='flex flex-row justify-start px-5 py-5 '>
         <h1 className='font-bold text-[20px] text-[#131E3c]'>JOBS</h1>
       </div>
 
