@@ -1,5 +1,5 @@
-import React from "react";
-import axios from 'axios'
+import React, { useState } from "react";
+import axios from "axios";
 export default function RegisterInput({
   name,
   typeOfInput = "text",
@@ -8,7 +8,11 @@ export default function RegisterInput({
   textArea,
   textAreaHight,
   textAreaWidth,
+  isDropDown,
+  positionDropDown,
 }) {
+  const [isOpenPositionDropDown, setIsOpenPositionDropDown] = useState(false);
+
   const inputs = [];
 
   const typeOfGender = [
@@ -35,7 +39,6 @@ export default function RegisterInput({
     }
   }
 
-  // Return all inputs as a list of JSX elements
   return (
     <div className="flex flex-row justify-between">
       {amout > 1 ? (
@@ -44,12 +47,90 @@ export default function RegisterInput({
         <>
           {textArea ? (
             <textarea
+
             rows={4}
               className={`resize-none ${textAreaWidth} rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem]`}
               name={name} 
             ></textarea>
           ) : (
             <input className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem]" type={typeOfInput} name={name} />
+
+              rows={4}
+              className={`resize-none ${textAreaWidth} rounded-sm`}
+              name={name}
+            ></textarea>
+          ) : (
+            <div>
+              {isDropDown ? (
+                <div>
+             {  isOpenPositionDropDown !== true  && <div
+                    name={name}
+                    onClick={() =>
+                      setIsOpenPositionDropDown(!isOpenPositionDropDown)
+                    }
+                    className="cursor-pointer"
+                  >
+                    {" "}
+                    {positionDropDown}
+                  </div>}
+                  {isOpenPositionDropDown && (
+                    <div 
+                    onClick={()=>setIsOpenPositionDropDown(false)}
+                    name={name} className="flex flex-col bg-red-500">
+                      <div className="flex gap-2">
+                        <input
+                          type="radio"
+                          name={name}
+                          value={"Accounting & Purchasing"}
+                        />
+                        <label htmlFor="">Accounting & Purchasing</label>
+                      </div>
+                      <div className="flex gap-2">
+                        <input
+                          type="radio"
+                          name={name}
+                          value={"Application Developer"}
+                        />
+                        <label>Application Developer</label>
+                      </div>
+                      <div className="flex gap-2">
+                        <input
+                          type="radio"
+                          name={name}
+                          value={"Administrator"}
+                        />
+
+                        <label>Administrator</label>
+                      </div>
+                      <div className="flex gap-2">
+                        <input
+                          type="radio"
+                          name={name}
+                          value={"Graphics Designer"}
+                        />
+                        <label>Graphics Designer</label>
+                      </div>
+                      <div className="flex gap-2">
+                        <input
+                          type="radio"
+                          name={name}
+                          value={"Human Resources"}
+                        />
+                        <label>Human Resources</label>
+                      </div>
+                      <div className="flex gap-2">
+                        <input type="radio" name={name} value={"IT Support"} />
+
+                        <label>IT Support</label>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <input className="rounded-md" type={typeOfInput} name={name} />
+              )}
+            </div>
+
           )}
         </>
       )}

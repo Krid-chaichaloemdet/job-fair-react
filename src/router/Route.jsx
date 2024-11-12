@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
+import { RouterProvider, createBrowserRouter, Outlet ,} from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import RegisterPage from "../pages/RegisterPage";
 import TestingPage from "../pages/TestingPage";
@@ -11,12 +11,13 @@ const router = createBrowserRouter([
       <>
         <Header />
         <Outlet />
+
       </>
     ),
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/registerPage", element: <RegisterPage /> },
-      { path: "/testingPage", element: <TestingPage /> },
+      { path: `/testingPage/1`, element: <TestingPage /> },
     ],
   },
 ]);

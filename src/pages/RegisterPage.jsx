@@ -14,7 +14,7 @@ export default function RegisterPage() {
     faculty: '',
     department : '',
     dateCanStartWorking :'',
-
+    interestedPosition : 'click here'
   });
 
   const handleInput = (e) => {
@@ -52,8 +52,8 @@ export default function RegisterPage() {
     { id: 8, title: "Faculty", name: "faculty" },
     { id: 9, title: "Department", name: "department" },
     { id: 10, title: "Date you can start working MM/DD/YYYY", name: "dateCanStartWorking", typeOfInput: 'date' },
+    { id: 11, title: "Interested position", name: "interestedPosition", isDropDown: true  , positionDropDown: input.interestedPosition},
   ];
-  console.log(input);
 
   const handleSubmitForm =  async(e) =>{
     try {
@@ -63,6 +63,7 @@ export default function RegisterPage() {
       console.log(error)
     }
   }
+  console.log(input)
   return (
     <form 
     onSubmit={handleSubmitForm}
@@ -85,6 +86,9 @@ export default function RegisterPage() {
               textArea={arr[i].textArea}
               textAreaHight={arr[i].textAreaHight}
               textAreaWidth={arr[i].textAreaWidth}
+              isDropDown={arr[i].isDropDown}
+              positionDropDown={arr[i].positionDropDown}
+              setInputPosition={setInput}
             />
           </div>
         );
