@@ -10,6 +10,7 @@ export default function RegisterInput({
   textAreaWidth,
   isDropDown,
   positionDropDown,
+  
 }) {
 
   const [isOpenPositionDropDown, setIsOpenPositionDropDown] = useState(false);
@@ -39,7 +40,8 @@ export default function RegisterInput({
     }
   }
 
-  // Return all inputs as a list of JSX elements
+  const po1 = document.getElementById('position1')
+
   return (
     <div className="flex flex-row justify-between">
       {amout > 1 ? (
@@ -68,10 +70,12 @@ export default function RegisterInput({
                   </div>}
                   {isOpenPositionDropDown && (
                     <div 
-                    onClick={()=>setIsOpenPositionDropDown(false)}
-                    name={name} className="flex flex-col bg-red-500">
-                      <div className="flex gap-2">
+                   
+                    name={name} className="flex flex-col ">
+                      <div   
+                         className="flex gap-2">
                         <input
+                         onClick={()=>setIsOpenPositionDropDown(false)}
                           type="radio"
                           name={name}
                           value={"Accounting & Purchasing"}
@@ -80,6 +84,7 @@ export default function RegisterInput({
                       </div>
                       <div className="flex gap-2">
                         <input
+                         onClick={()=>setIsOpenPositionDropDown(false)}
                           type="radio"
                           name={name}
                           value={"Application Developer"}
@@ -88,6 +93,7 @@ export default function RegisterInput({
                       </div>
                       <div className="flex gap-2">
                         <input
+                         onClick={()=>setIsOpenPositionDropDown(false)}
                           type="radio"
                           name={name}
                           value={"Administrator"}
@@ -96,6 +102,7 @@ export default function RegisterInput({
                       </div>
                       <div className="flex gap-2">
                         <input
+                         onClick={()=>setIsOpenPositionDropDown(false)}
                           type="radio"
                           name={name}
                           value={"Graphics Designer"}
@@ -104,6 +111,7 @@ export default function RegisterInput({
                       </div>
                       <div className="flex gap-2">
                         <input
+                         onClick={()=>setIsOpenPositionDropDown(false)}
                           type="radio"
                           name={name}
                           value={"Human Resources"}
@@ -111,7 +119,9 @@ export default function RegisterInput({
                         <label>Human Resources</label>
                       </div>
                       <div className="flex gap-2">
-                        <input type="radio" name={name} value={"IT Support"} />
+                        <input 
+                         onClick={()=>setIsOpenPositionDropDown(false)}
+                        type="radio" name={name} value={"IT Support"} />
                         <label>IT Support</label>
                       </div>
                     </div>
