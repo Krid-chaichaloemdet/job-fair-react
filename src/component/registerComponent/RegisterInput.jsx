@@ -41,7 +41,7 @@ export default function RegisterInput({
 
   // Return all inputs as a list of JSX elements
   return (
-    <div>
+    <div className="flex flex-row justify-between">
       {amout > 1 ? (
         inputs
       ) : (
@@ -49,11 +49,11 @@ export default function RegisterInput({
           {textArea ? (
             <textarea
             rows={4}
-              className={`resize-none ${textAreaWidth} rounded-sm`}
+            className={`resize-none ${textAreaWidth} rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem]`}
               name={name} 
             ></textarea>
           ) : (
-            <div>
+            <div className="w-full"> 
               {isDropDown ? (
                 <div>
              {  isOpenPositionDropDown !== true  && <div
@@ -118,7 +118,7 @@ export default function RegisterInput({
                   )}
                 </div>
               ) : (
-                <input className="rounded-md" type={typeOfInput} name={name} />
+                <input  className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem]" type={typeOfInput} name={name} />
               )}
             </div>
           )}
