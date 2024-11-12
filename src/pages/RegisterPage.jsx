@@ -67,11 +67,12 @@ export default function RegisterPage() {
   return (
     <form 
     onSubmit={handleSubmitForm}
-    className="w-screen h-screen bg-blue-500 p-10 flex flex-col gap-2">
+    className="w-screen px-[2rem] py-[1rem] flex flex-col gap-2">
+      <div className="font-semibold text-[1.75rem] tracking-[0.1em]">Profile</div>
       {arr.map((data, i) => {
         return (
           <div 
-          className="flex flex-col gap-1 w-full "
+          className="flex flex-col gap-1 w-full mb-[0.5rem]"
           onChange={handleInput} key={data.id}>
             <RegisterLabel label={arr[i].title} />
             <RegisterInput
@@ -92,7 +93,9 @@ export default function RegisterPage() {
           </div>
         );
       })}
-      <button className="bg-green-300">Submit</button>
+      <button className="bg-[#131E3C] rounded-full py-[0.5rem] mt-[0.5rem]">
+        <div className="text-[#ffffff]">Send Profile</div>
+      </button>
     </form>
   );
 }
