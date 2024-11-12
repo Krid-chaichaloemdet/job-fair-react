@@ -18,9 +18,9 @@ export default function RegisterInput({
   const inputs = [];
 
   const typeOfGender = [
-    { title: "male" },
-    { title: "female" },
-    { title: "other" },
+    { title: "Male" },
+    { title: "Female" },
+    { title: "Other" },
   ];
 
   if (amout > 1) {
@@ -63,7 +63,7 @@ export default function RegisterInput({
                     onClick={() =>
                       setIsOpenPositionDropDown(!isOpenPositionDropDown)
                     }
-                    className="cursor-pointer"
+                    className="cursor-pointer bg-[#f3f3f5] border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] rounded-md"
                   >
                     {" "}
                     {positionDropDown}
@@ -73,56 +73,56 @@ export default function RegisterInput({
                    
                     name={name} className="flex flex-col ">
                       <div   
-                         className="flex gap-2">
+                         className="flex gap-2 py-[0.25rem]">
                         <input
                          onClick={()=>setIsOpenPositionDropDown(false)}
                           type="radio"
                           name={name}
                           value={"Accounting & Purchasing"}
                         />
-                        <label htmlFor="">Accounting & Purchasing</label>
+                        <label className="text-[0.8rem]">Accounting & Purchasing</label>
                       </div>
-                      <div className="flex gap-2">
+                      <div className="flex gap-2 py-[0.25rem]">
                         <input
                          onClick={()=>setIsOpenPositionDropDown(false)}
                           type="radio"
                           name={name}
                           value={"Application Developer"}
                         />
-                        <label>Application Developer</label>
+                        <label className="text-[0.8rem]">Application Developer</label>
                       </div>
-                      <div className="flex gap-2">
+                      <div className="flex gap-2 py-[0.25rem]">
                         <input
                          onClick={()=>setIsOpenPositionDropDown(false)}
                           type="radio"
                           name={name}
                           value={"Administrator"}
                         />
-                        <label>Administrator</label>
+                        <label className="text-[0.8rem]">Administrator</label>
                       </div>
-                      <div className="flex gap-2">
+                      <div className="flex gap-2 py-[0.25rem]">
                         <input
                          onClick={()=>setIsOpenPositionDropDown(false)}
                           type="radio"
                           name={name}
                           value={"Graphics Designer"}
                         />
-                        <label>Graphics Designer</label>
+                        <label className="text-[0.8rem]">Graphics Designer</label>
                       </div>
-                      <div className="flex gap-2">
+                      <div className="flex gap-2 py-[0.25rem]">
                         <input
                          onClick={()=>setIsOpenPositionDropDown(false)}
                           type="radio"
                           name={name}
                           value={"Human Resources"}
                         />
-                        <label>Human Resources</label>
+                        <label className="text-[0.8rem]">Human Resources</label>
                       </div>
-                      <div className="flex gap-2">
+                      <div className="flex gap-2 py-[0.25rem]">
                         <input 
                          onClick={()=>setIsOpenPositionDropDown(false)}
                         type="radio" name={name} value={"IT Support"} />
-                        <label>IT Support</label>
+                        <label className="text-[0.8rem]">IT Support</label>
                       </div>
                     </div>
                   )}
