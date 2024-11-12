@@ -20,22 +20,24 @@ export default function RegisterInput({
   if (amout > 1) {
     for (let i = 0; i < amout; i++) {
       inputs.push(
-        <div className="flex gap-2">
-          <input
-            value={typeOfGender[i]?.title}
-            key={i}
-            name={name}
-            type={typeOfInput}
-          />
-          <label htmlFor="">{typeOfGender[i]?.title}</label>
-        </div>
+          <div className="rounded-md bg-[#f3f3f5] h-[2rem] w-full flex items-center border-[1px] mx-[0.25rem] border-[#DFE0E5]">
+            <input
+              value={typeOfGender[i]?.title}
+              key={i}
+              name={name}
+              type={typeOfInput}
+              className="mx-[0.5rem]"
+            />
+            <label htmlFor="">{typeOfGender[i]?.title}</label>
+          </div>
+          
       );
     }
   }
 
   // Return all inputs as a list of JSX elements
   return (
-    <div>
+    <div className="flex flex-row justify-between">
       {amout > 1 ? (
         inputs
       ) : (
@@ -43,11 +45,11 @@ export default function RegisterInput({
           {textArea ? (
             <textarea
             rows={4}
-              className={`resize-none ${textAreaWidth} rounded-sm`}
+              className={`resize-none ${textAreaWidth} rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem]`}
               name={name} 
             ></textarea>
           ) : (
-            <input className="rounded-md" type={typeOfInput} name={name} />
+            <input className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem]" type={typeOfInput} name={name} />
           )}
         </>
       )}
