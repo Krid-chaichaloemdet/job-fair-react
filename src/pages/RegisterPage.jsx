@@ -88,7 +88,9 @@ export default function RegisterPage() {
           </div>
         );
       })}
-      <button className="bg-green-300">Submit</button>
+      <button className="bg-[#131E3C] rounded-full py-[0.75rem] my-[0.5rem]">
+        <div className="text-[#ffffff] tracking-[0.12em]">Send Profile</div>
+      </button>
     </form>
   );
 }
