@@ -10,7 +10,6 @@ export default function RegisterInput({
   textAreaWidth,
   isDropDown,
   positionDropDown,
-  
 }) {
 
   const [isOpenPositionDropDown, setIsOpenPositionDropDown] = useState(false);
