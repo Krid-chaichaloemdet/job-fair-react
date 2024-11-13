@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 
 export default function PositionData({
   onClose,
@@ -6,7 +7,12 @@ export default function PositionData({
   jobDes,
   requirement,
 }) {
-  console.log("jobDes", jobDes);
+
+  const handleApply = () => {
+
+    localStorage.setItem('position',positionName)
+    console.log("first")
+  }
   return (
     <div className="fixed inset-0 bg-[#131E3c] bg-opacity-50 flex items-end z-50">
       <div className="bg-white rounded-[20px] w-full h-[80%] p shadow-lg relative">
@@ -27,7 +33,6 @@ export default function PositionData({
             {
               // eslint-disable-next-line react/prop-types, no-undef
               jobDes.map((data, i) => {
-                console.log(data);
                 return <li key={i}>{data.title}</li>;
               })
             }
@@ -43,9 +48,13 @@ export default function PositionData({
           </ul>
         </div>
         <div className="py-5 flex justify-center items-center">
-          <button className="bg-[#131E3c] rounded-[20px] h-[40px] w-52 text-white text-[14px]">
+          <Link to={'/registerPage'}>
+          <button
+          onClick={()=>handleApply()}
+          className="bg-[#131E3c] rounded-[20px] h-[40px] w-52 text-white text-[14px]">
             Apply for Job
           </button>
+          </Link>
         </div>
       </div>
     </div>

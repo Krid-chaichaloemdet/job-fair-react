@@ -14,7 +14,7 @@ export default function RegisterPage() {
     faculty: '',
     department : '',
     dateCanStartWorking :'',
-    interestedPosition : 'click here'
+    interestedPosition : localStorage.getItem('position')  ? localStorage.getItem('position')  :  'click here'
   });
 
   const handleInput = (e) => {
@@ -63,7 +63,6 @@ export default function RegisterPage() {
       console.log(error)
     }
   }
-  console.log(input)
   return (
     <form 
     onSubmit={handleSubmitForm}
