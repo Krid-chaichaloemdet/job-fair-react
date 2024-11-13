@@ -3,6 +3,7 @@ import HomePage from "../pages/HomePage";
 import RegisterPage from "../pages/RegisterPage";
 import TestingPage from "../pages/TestingPage";
 import Header from "../layouts/Header";
+import Footer from "../layouts/Footer";
 
 const router = createBrowserRouter([
   {
@@ -11,7 +12,7 @@ const router = createBrowserRouter([
       <>
         <Header />
         <Outlet />
-
+        <Footer />
       </>
     ),
     children: [
