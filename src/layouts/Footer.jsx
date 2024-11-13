@@ -1,4 +1,5 @@
 import React from 'react'
+
 import jobsicon from '../../public/icons/jobsIcon.svg'
 import profileicon from '../../public/icons/profileIcon.svg'
 import languageicon from '../../public/icons/langIcon.svg'
@@ -19,5 +20,6 @@ export default function Footer() {
         <div>language</div>
       </div>
     </div>
+
   )
 }

@@ -67,7 +67,9 @@ export default function RegisterPage() {
   return (
     <form 
     onSubmit={handleSubmitForm}
+
     className="w-screen px-[2rem] py-[1rem] flex flex-col gap-2 mb-[6rem]">
+
       <div className="font-semibold text-[1.75rem] tracking-[0.1em]">Profile</div>
       {arr.map((data, i) => {
         return (
