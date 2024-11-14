@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import RegisterInput from "../component/registerComponent/RegisterInput";
 import RegisterLabel from "../component/registerComponent/RegisterLabel";
 import axios from "axios";
 export default function RegisterPage() {
+
+  const navigate = useNavigate()
   const [input, setInput] = useState({
     firstName: "",
     lastName : "",
@@ -64,7 +68,7 @@ console.log(input)
   const handleSubmitForm =  async(e) =>{
     try {
       e.preventDefault()
-      axios.post('http://localhost:8000/user/register', input )
+    await  axios.post('http://localhost:8000/user/register', input ).then(()=>navigate('/')).finally(()=> localStorage.clear())
     } catch (error) {
       console.log(error)
     }

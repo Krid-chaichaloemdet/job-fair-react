@@ -4,13 +4,15 @@ import RegisterPage from "../pages/RegisterPage";
 import TestingPage from "../pages/TestingPage";
 import Header from "../layouts/Header";
 import Footer from "../layouts/Footer";
+import TestingDiiferPage from "../pages/TestingDifferPage";
 
 // Layout component that conditionally renders the Footer
 const Layout = () => {
   const location = useLocation();  // Get the current route
 
   // Conditionally render Footer based on the route
-  const shouldShowFooter = location.pathname !== "/testingPage";
+  // const shouldShowFooter = location.pathname !== "/testingDifferPage";
+  const shouldShowFooter = location.pathname !== "/testingPage" && location.pathname !== "/testingDifferPage";
 
   return (
     <>
@@ -29,6 +31,7 @@ const router = createBrowserRouter([
       { path: "/", element: <HomePage /> },
       { path: "/registerPage", element: <RegisterPage /> },
       { path: "/testingPage", element: <TestingPage /> },  // TestingPage will not show Footer
+      { path: "/testingDifferPage", element: <TestingDiiferPage /> }
     ],
   },
 ]);
