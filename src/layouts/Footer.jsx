@@ -15,10 +15,10 @@ export default function Footer() {
         <img src={profileicon} alt="" className='my-[0.25rem]'/>
         <div className='text-[0.8rem] text-center'>Send Profile</div>
       </div>
-      <div className='flex flex-col justify-start items-center w-full mx-[0.5rem] rounded-lg py-[0.5rem] duration-300 ease-in'>
+      {/* <div className='flex flex-col justify-start items-center w-full mx-[0.5rem] rounded-lg py-[0.5rem] duration-300 ease-in'>
         <img src={languageicon} alt="" className='my-[0.25rem]'/>
         <div className='text-[0.8rem] text-center'>language</div>
-      </div>
+      </div> */}
     </div>
 
   )

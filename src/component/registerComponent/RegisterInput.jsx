@@ -26,7 +26,7 @@ export default function RegisterInput({
   if (amout > 1) {
     for (let i = 0; i < amout; i++) {
       inputs.push(
-        <div className="rounded-md bg-[#f3f3f5] h-[2rem] w-full flex items-center border-[1px] mx-[0.25rem] border-[#DFE0E5]">
+        <div className="rounded-md bg-[#f3f3f5] h-[2rem] w-full flex items-center border-[1px] border-[#DFE0E5]">
           <input
             value={typeOfGender[i]?.title}
             key={i}
@@ -43,7 +43,7 @@ export default function RegisterInput({
   const po1 = document.getElementById('position1')
 
   return (
-    <div className="flex flex-row justify-between">
+    <div className="flex flex-row gap-[0.5rem] justify-between">
       {amout > 1 ? (
         inputs
       ) : (

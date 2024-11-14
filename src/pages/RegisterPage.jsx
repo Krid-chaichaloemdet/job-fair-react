@@ -41,7 +41,7 @@ export default function RegisterPage() {
       title: "Gender",
       name: "gender",
       typeOfInput: "radio",
-      amout: 3,
+      amout: 2,
       radio1: "male",
       radio2: "female",
       radio3: "other",
