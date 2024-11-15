@@ -1,4 +1,7 @@
-import React, { useState, useEffect } from "react";
+
+import React from "react";
+import { Link } from "react-router-dom"
+
 
 export default function PositionData({
   onClose,
@@ -6,6 +9,14 @@ export default function PositionData({
   jobDes,
   requirement,
 }) {
+
+
+  const handleApply = () => {
+
+    localStorage.setItem('position',positionName)
+    console.log("first")
+  }
+
   console.log("jobDes", jobDes);
 
   const [openModal, setOpenModal] = useState(false);
@@ -20,6 +31,7 @@ export default function PositionData({
       onClose(false);
     }, 300);
   };
+
 
 
   return (
@@ -43,37 +55,36 @@ export default function PositionData({
           </div>
         </div>
 
-        <div className="flex flex-col px-[1.5rem] py-[0.5rem] w-full h-full overflow-y-scroll">
-          <div className="my-[0.5rem]">
-            <div className="font-medium text-[1rem] py-[0.75rem] tracking-[0.1em]">Job Description</div>
-            <ul className="list-disc text-[12px] pl-5">
-              {
-                // eslint-disable-next-line react/prop-types, no-undef
-                jobDes.map((data, i) => {
-                  console.log(data);
-                  return <li key={i}>{data.title}</li>;
-                })
-              }
-            </ul>
-          </div>
-          <div className="my-[0.5rem]">
-            <div className="font-medium text-[1rem] py-[0.75rem] tracking-[0.1em]">Requirements</div>
-            <ul className="list-disc text-[12px] pl-5">
-              {
-                // eslint-disable-next-line react/prop-types
-                requirement.map((data, i) => {
-                  return <li key={i}>{data.title}</li>;
-                })
-              }
-            </ul>
-          </div>
-          
-          
+
+        <div className="flex flex-col pl-5 w-full h-[65%] overflow-y-scroll">
+          <h3 className="font-bold text-[14px] py-2">Job Description</h3>
+          <ul className="list-disc text-[12px] pl-5">
+            {
+              // eslint-disable-next-line react/prop-types, no-undef
+              jobDes.map((data, i) => {
+                return <li key={i}>{data.title}</li>;
+              })
+            }
+          </ul>
+          <h3 className="font-bold text-[14px] py-2">Requirements</h3>
+          <ul className="list-disc text-[12px] pl-5">
+            {
+              // eslint-disable-next-line react/prop-types
+              requirement.map((data, i) => {
+                return <li key={i}>{data.title}</li>;
+              })
+            }
+          </ul>
         </div>
         <div className="py-5 flex justify-center items-center">
-          <button className="bg-[#131E3c] rounded-full py-[0.75rem] w-[80%] text-white text-[0.9rem] tracking-[0.2em]">
+          <Link to={'/registerPage'}>
+          <button
+          onClick={()=>handleApply()}
+          className="bg-[#131E3c] rounded-[20px] h-[40px] w-52 text-white text-[14px]">
+
             Apply for Job
           </button>
+          </Link>
         </div>
       </div>
     </div>

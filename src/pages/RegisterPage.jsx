@@ -1,10 +1,15 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import RegisterInput from "../component/registerComponent/RegisterInput";
 import RegisterLabel from "../component/registerComponent/RegisterLabel";
 import axios from "axios";
 export default function RegisterPage() {
+
+  const navigate = useNavigate()
   const [input, setInput] = useState({
-    name: "",
+    firstName: "",
+    lastName : "",
     address: "",
     dateOfBirth: "",
     gender: "",
@@ -14,7 +19,7 @@ export default function RegisterPage() {
     faculty: '',
     department : '',
     dateCanStartWorking :'',
-    interestedPosition : 'click here'
+    interestedPosition : localStorage.getItem('position')  ? localStorage.getItem('position')  :  'click here'
   });
 
   const handleInput = (e) => {
@@ -23,11 +28,16 @@ export default function RegisterPage() {
   const arr = [
     {
       id: 1,
-      title: "First Name - Last Name",
-      name: "name",
+      title: "First Name",
+      name: "firstName",
     },
     {
       id: 2,
+      title: "Last Name",
+      name: "lastName",
+    },
+    {
+      id: 3,
       title: "Address",
       name: "address",
       typeOfInput: '',
@@ -35,9 +45,9 @@ export default function RegisterPage() {
       textAreaHight: 'h-10',
       textAreaWidth: 'w-2/5'
     },
-    { id: 3, title: "Date of birth MM/DD/YYYY", name: "dateOfBirth" , typeOfInput: 'date'},
+    { id: 4, title: "Date of birth MM/DD/YYYY", name: "dateOfBirth" , typeOfInput: 'date'},
     {
-      id: 4,
+      id: 5,
       title: "Gender",
       name: "gender",
       typeOfInput: "radio",
@@ -46,24 +56,23 @@ export default function RegisterPage() {
       radio2: "female",
       radio3: "other",
     },
-    { id: 5, title: "Phone Number", name: "phoneNumber" },
-    { id: 6, title: "E-mail", name: "email" },
-    { id: 7, title: "Education", name: "education" },
-    { id: 8, title: "Faculty", name: "faculty" },
-    { id: 9, title: "Department", name: "department" },
-    { id: 10, title: "Date you can start working MM/DD/YYYY", name: "dateCanStartWorking", typeOfInput: 'date' },
-    { id: 11, title: "Interested position", name: "interestedPosition", isDropDown: true  , positionDropDown: input.interestedPosition},
+    { id: 6, title: "Phone Number", name: "phoneNumber" },
+    { id: 7, title: "E-mail", name: "email" },
+    { id: 8, title: "Education", name: "education" },
+    { id: 9, title: "Faculty", name: "faculty" },
+    { id: 10, title: "Department", name: "department" },
+    { id: 11, title: "Date you can start working MM/DD/YYYY", name: "dateCanStartWorking", typeOfInput: 'date' },
+    { id: 12, title: "Interested position", name: "interestedPosition", isDropDown: true  , positionDropDown: input.interestedPosition},
   ];
-
+console.log(input)
   const handleSubmitForm =  async(e) =>{
     try {
       e.preventDefault()
-      axios.post('http://localhost:8000/user/register', input )
+    await  axios.post('http://localhost:8000/user/register', input ).then(()=>navigate('/')).finally(()=> localStorage.clear())
     } catch (error) {
       console.log(error)
     }
   }
-  console.log(input)
   return (
     <form 
     onSubmit={handleSubmitForm}
