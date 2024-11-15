@@ -7,6 +7,8 @@ import arrowup from "../assets/arrow-circle-down (1).png";
 import close from "../assets/close-circle.png";
 import PositionData from "../component/homePageComponent/PositionData";
 
+
+
 const HomePage = () => {
   const [isOpenJob1, setIsOpenJob1] = useState(false);
  
@@ -50,18 +52,18 @@ const HomePage = () => {
   ];
 
   return (
-    <div>
-      <div className='flex flex-row justify-start px-5 py-5 '>
-        <h1 className='font-bold text-[20px] text-[#131E3c] tracking-[0.1em]'>JOBS</h1>
+    <div className="w-full px-[2rem] py-[1rem] flex flex-col mb-[6rem]">
+      <div className='flex flex-row justify-start'>
+        <div className="font-medium text-[1.75rem] tracking-[0.1em]">Jobs</div>
       </div>
 
       {arr?.map((data, i) => {
         return (
           <div key={i}>
-            <div className="flex justify-between w-full items-center px-5 border-b-2 py-5">
-              <div>{data.positionName}</div>
+            <div className="flex justify-between w-full items-center border-b-2 py-[1.25rem]">
+              <div className="text-[0.7rem] tracking-[0.1em]">{data.positionName}</div>
               <img
-                className="w-4 h-4 cursor-pointer"
+                className="w-[1.25rem] h-[1.25rem] cursor-pointer"
                 src={isOpenJob1 ? arrowup : arrowdown}
                 alt=""
                 onClick={() => setIsOpenJob1(!isOpenJob1)}

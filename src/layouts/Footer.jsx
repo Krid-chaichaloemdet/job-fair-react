@@ -16,6 +16,7 @@ export default function Footer() {
   ];
 
   return (
+
     <div className="bottom-0 flex fixed bg-[#D9D9D9] w-full py-[1rem] px-[0.5rem]">
       {footerBar.map((data, i) => {
         return (
@@ -34,6 +35,7 @@ export default function Footer() {
           </div>
         );
       })}
+
     </div>
   );
 }
