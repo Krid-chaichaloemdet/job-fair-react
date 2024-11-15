@@ -41,7 +41,7 @@ export default function RegisterPage() {
       title: "Gender",
       name: "gender",
       typeOfInput: "radio",
-      amout: 3,
+      amout: 2,
       radio1: "male",
       radio2: "female",
       radio3: "other",
@@ -70,7 +70,7 @@ export default function RegisterPage() {
 
     className="w-full px-[2rem] py-[1rem] flex flex-col gap-2 mb-[6rem]">
 
-      <div className="font-semibold text-[1.75rem] tracking-[0.1em]">Profile</div>
+      <div className="font-medium text-[1.75rem] tracking-[0.1em]">Profile</div>
       {arr.map((data, i) => {
         return (
           <div 
