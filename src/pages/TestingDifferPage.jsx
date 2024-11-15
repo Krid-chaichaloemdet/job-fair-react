@@ -35,7 +35,7 @@ import Pic29 from "../pictures/Pic29";
 import Pic30 from "../pictures/Pic30";
 
 export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, input, setInput }) {
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(9999);
 
   const [countEachPhoto, setCountEachPhoto] = useState(0);
   const [pic, setPic] = useState(0);
@@ -468,7 +468,7 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
     }
   }, []);
   return (
-    <div className="absolute bg-black bg-opacity-50">
+    <div className="fixed h-full bg-black bg-opacity-50">
 
 
   {/* { pic == 30 &&   <div className=" w-full h-[10%] top-0 absolute flex justify-between z-30">
@@ -483,61 +483,49 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
       {isStart ? (
         <div
         // onClick={spot}
-          className={`md:w-screen md:h-screen  flex flex-col  gap-5 justify-center items-center  ${
+          className={`w-full h-full flex flex-col relative items-center justify-center  ${
             pic == 30 ? `bg-[url('BG.jpg')] bg-cover bg-center ` : `bg-black`
           } `}
         >
           {pic !== 30 && (
             <div
-              className={`flex   items-start xl:justify-center xl:absolute xl:top-0 xl:pt-5 w-full pl-10 gap-10  ${
+              className={`flex items-center justify-center absolute top-0 pt-5 w-full  ${
                 pages[30] && pic == 30
                   ? "text-5xl items-center justify-center"
                   : "text-3xl items-start"
               }`}
             >
-              <div className="text-red-500 ">
+              <div className="text-red-500 text-[1.5rem]">
                 {lang == "EN"
                   ? `Total Time : ${minutes + "m" + seconds + "s"}`
                   : `เวลาทั้งหมด : ${minutes + " นาที " + seconds + " วินาที"}`}
               </div>
               {/* <div className="text-red-500">Time for each : {countEachPhoto}</div> */}
-              <div className="text-green-500">
+              <div className="text-green-500 text-[1.5rem]">
                 {lang == "EN"
                   ? `Scores : ${input.score}`
                   : ` คะเเนน  : ${input.score}`}
               </div>
-              {pic !== 30 && (
-                <div className="text-green-500">
-                  {lang == "EN"
-                    ? `Picture : ${pic + 1 + "/30"}`
-                    : `รูปภาพ : ${pic + 1 + "/30"}`}
-                </div>
-              )}
-              <div className="text-blue-500">
+              
+              <div className="text-blue-500 text-[1.5rem]">
                 {lang == `EN`
                   ? `Total clicks : ${input.totalClick}`
                   : `คลิ๊กทั้งหมด: ${input.totalClick}`}
               </div>
               {/* <div className="text-blue-500">Skips : {countTo10}</div> */}
-              {pic !== 30 && (
-                <div
-                  onClick={handleSkip}
-                  className="bg-gray-400 text-xl p-1 rounded-md cursor-pointer"
-                >
-                  {" "}
-                  {lang == "EN" ? "SKIP" : `ข้าม`}
-                </div>
-              )}
+              
             </div>
           )}
+
+
           <div 
            onClick={spot}
-          className="flex  w-[1500px] h-[600px] gap-5 relative ">
-            <div className={`flex gap-5 w-full items-center  `}>
+          className="flex  w-full h-[600px] relative ">
+            <div className={`flex w-full items-center  `}>
               {pic == 30 && (
-                <div className="flex flex-col gap-5  items-center justify-center w-full h-full text-4xl  ">
+                <div className="flex flex-col items-center justify-center w-full h-full text-4xl  ">
                   <div className="bg-white pb-5 bg-opacity-70 w-[40%] rounded-xl flex flex-col gap-2  shadow-xl">
-                    <div className="w-full h-[10rem] rounded-t-xl flex items-center justify-center  bg-[#D70321] text-white flex justify-around">
+                    <div className="w-full h-[10rem] rounded-t-xl flex items-center justify-center  bg-[#D70321] text-white">
                       <div className="w-[50%]   flex flex-col h-full items-center">
                         <div className="w-full flex justify-center items-end text-7xl h-[70%]  ">
                           {input.score}
@@ -789,7 +777,7 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
      
             {pic !== 30 && (
               <div className="h-full w-full bg-red-20 absolute top-0 left-0 opacity-60">
-                <div className="w-[100%] h-[100%] bg-yellw-500 ">
+                <div className="w-[100%] h-[100%]">
                   <div
                     onClick={() => {
                       setCountTo10(0);
@@ -819,7 +807,7 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
                       );
                       setPic(nextFalse[0].id);
                     }}
-                    className={`absolute rounded-full  w-[70px] h-[70px] `}
+                    className={`absolute rounded-full  w-[70px] h-[70px] bg-yellow-300`}
                     style={{
                       // top: 510,
                       // left: 460,
@@ -857,7 +845,7 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
                       );
                       setPic(nextFalse[0].id);
                     }}
-                    className={`absolute rounded-full  w-[70px] h-[70px] `}
+                    className={`absolute rounded-full  w-[70px] h-[70px] bg-blue-200`}
                     style={{
                       top: pageY2,
                       left: pageX2,
@@ -867,7 +855,32 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
                     }}
                   ></div>
                 </div>
-                <div className="w-full h-[10%] absolute bottom-0  flex justify-center items-center"></div>
+
+
+                <div className="w-full bottom-0 absolute flex justify-center items-center flex-col">
+                  
+
+                  {pic !== 30 && (
+                    <div  
+                      onClick={handleSkip}
+                      className="bg-gray-400 text-xl p-1 rounded-md cursor-pointer"
+                    >
+                      {" "}
+                      {lang == "EN" ? "SKIP" : `ข้าม`}
+                    </div>
+                  )}
+
+                  {pic !== 30 && (
+                    <div className="text-green-500 text-[1.5rem]">
+                      {lang == "EN"
+                        ? `Picture : ${pic + 1 + "/30"}`
+                        : `รูปภาพ : ${pic + 1 + "/30"}`}
+                    </div>
+                  )}
+
+                </div>
+
+                
               </div>
             )}
           </div>

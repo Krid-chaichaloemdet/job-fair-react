@@ -266,7 +266,7 @@ export default function TestingPage() {
   return (
     <div
       // onSubmit={handleSubmitForm}
-      className="w-screen h-screen bg-blue-600 flex flex-col"
+      className="w-full bg-blue-600 flex flex-col"
     >
       <div className="w-full flex justify-center py-5 ">Challenge</div>
       <div className="grid grid-cols-2 gap-5 px-5">
