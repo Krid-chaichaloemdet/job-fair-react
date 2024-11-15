@@ -6,8 +6,11 @@ import profileicon from "../../public/icons/profileIcon.svg";
 import languageicon from "../../public/icons/langIcon.svg";
 
 export default function Footer() {
+
   const navigate = useNavigate();
   const [select, setSelect] = useState(1);
+
+
 
   const footerBar = [
     { id: 1, title: "Jobs", image: jobsicon, path: "/" },

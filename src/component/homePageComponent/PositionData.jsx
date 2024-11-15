@@ -1,5 +1,5 @@
-import React from "react";
 import { Link } from "react-router-dom"
+import React, { useState, useEffect } from "react";
 
 export default function PositionData({
   onClose,
@@ -13,18 +13,41 @@ export default function PositionData({
     localStorage.setItem('position',positionName)
     console.log("first")
   }
+  console.log("jobDes", jobDes);
+
+  const [openModal, setOpenModal] = useState(false);
+
+  useEffect(() => {
+    setOpenModal(true);
+  }, []);
+
+  const handleClose = () => {
+    setOpenModal(false);
+    setTimeout(() => {
+      onClose(false);
+    }, 300);
+  };
+
+
   return (
-    <div className="fixed inset-0 bg-[#131E3c] bg-opacity-50 flex items-end z-50">
-      <div className="bg-white rounded-[20px] w-full h-[80%] p shadow-lg relative">
+    <div className={`fixed inset-0 bg-[#131E3c] flex items-end z-50 duration-200 ease-in
+        ${
+          openModal ? "bg-opacity-50" : "bg-opacity-0"
+        }`}>
+      <div className={`bg-white rounded-t-[20px] w-full h-[80%] relative duration-300 flex flex-col justify-start transform 
+        ${
+          openModal ? "translate-y-0" : "translate-y-full"
+        }`}
+      >
         <img
-          onClick={() => onClose(false)}
+          onClick={handleClose}
           src={"src/assets/close-circle.png"}
-          className="absolute top-2 right-2  w-[1.5rem] z-100"
+          className="absolute top-3 right-3 w-[1.75rem] z-100 cursor-pointer rounded-full"
         ></img>
-        <div className="bg-[#131E3c] rounded-[20px] h-[100px] w-full flex justify-center items-center ">
-          <h1 className="text-center text-[#fff] text-[14px]">
+        <div className="flex bg-[#131E3c] rounded-[20px] min-h-[140px] w-full  justify-center items-center ">
+          <div className="text-center text-[#fff] text-[1rem] tracking-[0.2em] font-medium">
             {positionName}
-          </h1>
+          </div>
         </div>
 
         <div className="flex flex-col pl-5 w-full h-[65%] overflow-y-scroll">
