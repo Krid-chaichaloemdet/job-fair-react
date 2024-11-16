@@ -227,10 +227,251 @@ const HomePage = () => {
         { title: "Knowledge of ITIL and other best practices is a plus" },
       ],
     },
+    {
+      positionName: "Prepress Staff",
+      jobDes: [
+        { title: "Create artwork, prepare files, and make printing plates" },
+        { title: "Record daily work reports" },
+        { title: "Contact suppliers and coordinate with relevant departments" },
+        { title: "Create printing plates using CTP machine (occasionally)" },
+
+      ],
+      requirement: [
+        { title: "Proficient in Adobe Illustrator" },
+        { title: "Knowledge of color theory" },
+        { title: "Ability to work as part of a team" },
+        { title: "Detail-oriented" },
+        { title: "Preference will be given to those with education in printing technology or experience in printing-related work" },
+      ],
+    },
+    {
+      positionName: "Purchasing Manager",
+      jobDes: [
+        { title: "Develop and execute procurement strategies aligned with organizational goals" },
+        { title: "Analyze market trends and identify opportunities for cost savings and process improvements" },
+        { title: "Negotiated and managed contracts with key suppliers, ensuring favorable terms and delivery schedules" },
+        { title: "Implemented inventory control measures, leading to improved stock turnover and reduced carrying costs" },
+        { title: "Collaborated with cross-functional teams to understand and address department-specific procurement needs" },
+        { title: "Evaluate and select vendors based on performance, reliability, and quality standards" },
+        { title: "Lead and mentor the procurement team, providing guidance and support" },
+        { title: "Conduct regular cost analysis and implement measures to optimize procurement costs" },
+
+      ],
+      requirement: [
+        { title: "Bachelor’s degree in Business Administration, Supply Chain Management, or a related field" },
+        { title: "5 years of experience in procurement as a manager" },
+        { title: "Solve immediate problems and communication skills" },
+        { title: "Negotiation skills" },
+        { title: "Strong understanding of supply chain management principles and procurement best practices" },
+        { title: "Proficiency in procurement software and tools" },
+        { title: "Excellent communication, leadership, and organizational skills" },
+        { title: "Good command of English" },
+      ],
+    },
+    {
+      positionName: "Purchasing Supervisor",
+      jobDes: [
+        { title: "Negotiate price Terms of sale and delivery date with the supplier" },
+        { title: "Seek new suppliers" },
+        { title: "Monitor supplier performance to ensure quality, cost and delivery requirements are met" },
+        { title: "Check inventory levels and orders" },
+        { title: "Record the work activities of the purchasing department" },
+        { title: "Analyze markets and trends to help make predictions" },
+
+      ],
+      requirement: [
+        { title: "Bachelor’s degree in Business Administration, Supply Chain Management, or a related field" },
+        { title: "5 years of experience in procurement" },
+        { title: "At least 2 years of experience in purchasing as a supervisor" },
+        { title: "Knowledge of procurement best practices, industry trends, and supply chain management principles" },
+        { title: "Negotiation skills" },
+        { title: "Proficient in using procurement software and tools" },
+        { title: "Solve immediate problems and communication skills" },
+        { title: "Good command of English" },
+      ],
+    },
+    {
+      positionName: "Purchasing Officer",
+      jobDes: [
+        { title: "Source and purchase goods and services at cost-effective prices and within the specified time frame" },
+        { title: "Request quotes and negotiate with suppliers" },
+        { title: "Adhere to purchasing policies and company quality standards" },
+        { title: "Follow up on orders and evaluate supplier service performance" },
+        { title: "Communicate and coordinate effectively with relevant departments" },
+
+      ],
+      requirement: [
+        { title: "Higher vocational certificate up to bachelor’s degree, unlimited fields" },
+        { title: "Proficient in Microsoft Office and computers" },
+        { title: "Analytical planning skills" },
+        { title: "Detail-oriented" },
+        { title: "Excellent negotiation skills" },
+        { title: "Great coordination skills" },
+        { title: "Good command of English will be given special consideration" },
+        { title: "Previous experience in procurement will be given special consideration" },
+      ],
+    },
+    {
+      positionName: "Sales Coordinator Manager",
+      jobDes: [
+        { title: "Monthly customer sticker sales" },
+        { title: "Create satisfaction for the customers you care for" },
+        { title: "Recommend stickers to have more value" },
+        { title: "Lead and manage a team of Sales Coordinators, providing guidance, training, and support." },
+        { title: "Supervise and optimize administrative processes, including order processing, documentation management, and customer communication, to enhance efficiency and accuracy." },
+        { title: "Contact between the sales team and other departments, ensuring clear and effective communication channels." },
+        { title: "Oversee customer interactions to address inquiries, provide updates on order status, and gather necessary information for the sales team." },
+        { title: "Organize and coordinate sales meetings, preparing agendas." },
+
+      ],
+      requirement: [
+        { title: "Bachelor's degree in any field" },
+        { title: "5 years of experience in sales management" },
+        { title: "Proficient in Microsoft Office and PDF programs" },
+        { title: "Strong communication and presentation skills" },
+        { title: "Good command in English" },
+      ],
+    },
+    {
+      positionName: "Sales Coordinator",
+      jobDes: [
+        { title: "Seek new customers and present products for sale" },
+        { title: "Communicate with customers to get requirements or job details" },
+        { title: "Coordinate between customers and various departments to successfully close sales" },
+        { title: "Prepare and inspect various sales document work (such as checking orders, making quotations, checking delivery status, etc.)" },
+        { title: "Support various activities related to sales work and other duties as assigned" },
+        { title: "Summary of monthly sales, document storage and report various operational results" },
+
+      ],
+      requirement: [
+        { title: "Bachelor's degree in any field" },
+        { title: "Previous experience in sales" },
+        { title: "Proficient in Microsoft Office and PDF" },
+        { title: "Able to communicate and convey accurately" },
+        { title: "Basic use of office equipment" },
+        { title: "Excellent problem-solving skills" },
+        { title: "Always be enthusiastic" },
+        { title: "Be responsible for work as assigned" },
+        { title: "Ability to communicate in English will be given special consideration" },
+        { title: "Having a valid driver's license for cars will be given special consideration" },
+      ],
+    },
+    {
+      positionName: "Secretary",
+      jobDes: [
+        { title: "Manage and coordinate the executive's appointments and travel to ensure efficient time allocation" },
+        { title: "Prepare, organize, and facilitate meetings, including scheduling, setting agendas, taking minutes, and following up on meeting outcomes" },
+        { title: "Handle incoming phone calls, emails, and letters on behalf of the executive director, acting as the primary point of contact" },
+        { title: "Maintain and organize a comprehensive filing system, both in paper and digital formats, to support smooth office operations" },
+        { title: "Assist in preparing reports, presentations, and other important documents for executive decision-making" },
+        { title: "Act as an intermediary between the executive and internal and external contacts to ensure smooth communication and coordination" },
+        { title: "Maintain confidentiality and security of sensitive information, consistently adhering to high standards of discretion" },
+        { title: "Utilize strong negotiation skills to manage contracts, agreements, and communications with contacts effectively" },
+
+      ],
+      requirement: [
+        { title: "Bachelor's degree in Business Administration or other related fields" },
+        { title: "At least 2-4 years of experience as an executive assistant" },
+        { title: "Excellent coordination skills, interpersonal skills, and communication, including good presentation skills" },
+        { title: "Knowledge of computers (basic programs, internet, email, etc.)" },
+        { title: "Great English skills in listening, speaking, reading, and writing" },
+        { title: "Excellent problem-solving skills" },
+        { title: "Excellent management and time allocation skills" },
+        { title: "Ability to maintain confidentiality and security of confidential information" },
+        { title: "Excellent problem-solving skills" },
+      ],
+    },
+    {
+      positionName: "Sales Manager",
+      jobDes: [
+        { title: "Find new customers" },
+        { title: "Close the balance according to the company's goals." },
+        { title: "Provide advice about sales" },
+        { title: "Support team members to make their work easier" },
+        { title: "Develop sales and solve problems to close sales." },
+        { title: "Training for new employees is organized. to have skills" },
+        { title: "Team meeting to discuss problems encountered during the week" },
+        { title: "Plan the team's sales to meet the goals set by the company." },
+
+      ],
+      requirement: [
+        { title: "Bachelor's degree in business, marketing, or a related field (preferred)." },
+        { title: "5 years experiences, in sales management" },
+        { title: "MS Office (Word , Excel, Power Point)" },
+        { title: "Can drive a car, have a driver's license" },
+        { title: "Good Communication skills" },
+        { title: "Coordination skills" },
+        { title: "Leadership skills" },
+        { title: "Good command in English" },
+      ],
+    },
+    {
+      positionName: "Sales",
+      jobDes: [
+        { title: "Find new customers" },
+        { title: "Presenting products for sale" },
+        { title: "Close the balance according to the company's goals." },
+        { title: "Summary report of customer visits" },
+        { title: "Able to solve problems for customers initially" },
+
+
+      ],
+      requirement: [
+        { title: "Not less than Secondary 6" },
+        { title: "Have experience in sales at least 1 year" },
+        { title: "MS Office (Word , Excel, Power Point)" },
+        { title: "Have the ability to drive a car, have a driver's license" },
+        { title: "Have a passion for service" },
+        { title: "Good Communication skills" },
+        { title: "Good coordination and negotiation skills" },
+        { title: "Discipline and punctuality" },
+        { title: "Have responsibility for assigned tasks" },
+        { title: "Have a positive attitude" },
+      ],
+    },
+    {
+      positionName: "Social Media Manager",
+      jobDes: [
+        { title: "Develop and produce visually stunning content that resonates with our brand ethos." },
+        { title: "Keep our social media channels vibrant with regular postings and engaging interactions." },
+        { title: "Implement and oversee targeted advertising campaigns to amplify brand awareness." },
+        { title: "Actively manage social media platforms, engaging with users and fostering a supportive online community." },
+        { title: "Remain informed about the latest social media trends to maintain our brand's leading edge." },
+
+
+      ],
+      requirement: [
+        { title: "Bachelor's degree in business, marketing, or a related field (preferred)." },
+        { title: "At least 2 years of experience in managing social media." },
+        { title: "Exceptional writing abilities in both Thai and English for creating engaging content." },
+        { title: "Skilled in using major social media platforms." },
+        { title: "Proven track record in formulating and implementing effective social media strategies." },
+        { title: "Competent in using contemporary tools for streamlined content management." },
+      ],
+    },
+    {
+      positionName: "Social Media Content Creator",
+      jobDes: [
+        { title: "Plan and create content that aligns with market trends." },
+        { title: "Work together with In-house team to increase brand awareness and purchase intention." },
+        { title: "Analyze market trends and continually monitor and study new trends and tools." },
+        { title: "Manage and plan the production of online content for the company's various platforms, including offline advertising media." },
+        { title: "Able to measure and report the effectiveness of produced content." },
+
+
+      ],
+      requirement: [
+        { title: "Bachelor's degree in marketing, or a related field (preferred)." },
+        { title: "At least 1-3 years of experience in Digital Marketing." },
+        { title: "Proficient in using analytical tools such as Google Analytics, Facebook Insights, etc." },
+        { title: "Excellent communication and coordination skills." },
+        { title: "Ability to work as part of a team and adapt to a rapidly changing environment." },
+      ],
+    },
   ];
 
   return (
-    <div className="w-full px-[2rem] py-[1rem] flex flex-col mb-[6rem] overflow-y-scroll">
+    <div className="w-full h-[100%] px-[2rem] py-[1rem] flex flex-col mb-[6rem]">
       <div className='flex flex-row justify-start'>
         <div className="font-medium text-[1.75rem] tracking-[0.1em]">Jobs</div>
       </div>
@@ -245,8 +486,7 @@ const HomePage = () => {
               alt=""
               onClick={() => toggleJob(i)}
             />
-          </div>
-          {openJobs[i] && (
+          </div>          {openJobs[i] && (
             <PositionData
               onClose={() => toggleJob(i)}
               positionName={data.positionName}
