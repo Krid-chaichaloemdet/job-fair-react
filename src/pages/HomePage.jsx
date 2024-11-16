@@ -468,6 +468,54 @@ const HomePage = () => {
         { title: "Ability to work as part of a team and adapt to a rapidly changing environment." },
       ],
     },
+    {
+      positionName: "Accounting Manager",
+      jobDes: [
+        { title: "Prepare and analysis of financial statements, ensuring compliance with accounting standards and regulatory requirements." },
+        { title: "Supervise and mentor a team of accounting ,providing guidance, training, and support" },
+        { title: "Plan and prepare financial budgets Including checking the accuracy and analyzing various impacts." },
+        { title: "Oversee the month-end and year-end closing processes, including journal entries, reconciliations, and financial reporting." },
+        { title: "Manage external audit processes, liaising with auditors and ensuring timely and accurate provision of required documentation." },
+        { title: "Monitor and manage cash flow, optimizing working capital" },
+        { title: "Conduct financial analysis and present key insights to executive management, supporting strategic planning and decision-making." },
+
+
+      ],
+      requirement: [
+        { title: "Bachelor's degree in Accounting, Finance, or a related" },
+        { title: "Proven experience in accounting, with a minimum of 5 years in a supervisor or manager" },
+        { title: "analytical and problem-solving skills." },
+        { title: "communication skills." },
+        { title: "Leadership Skills." },
+        { title: "Team management skills." },
+        { title: "Proficient in accounting software and advanced knowledge of Microsoft Excel." },
+        { title: "Have knowledge of tax law." },
+      ],
+    },
+    {
+      positionName: "Accounting Supervisor",
+      jobDes: [
+        { title: "Supervise and guide a team of accounting, fostering a collaborative and high-performance work environment." },
+        { title: "Oversee the preparation of accurate and timely financial statements, ensuring compliance with accounting standards and organizational policies." },
+        { title: "Maintain the integrity of the general ledger, including journal entries, account reconciliations, and month-end close processes." },
+        { title: "Supervise the processing of invoices, payments, and receivables, ensuring efficient and accurate transactions." },
+        { title: "Conduct regular financial analysis, providing insights and recommendations to support strategic decision-making." },
+        { title: "Collaborate with internal and external auditors, ensuring timely provision of information and addressing audit findings." },
+        { title: "Streamline accounting procedures for increased efficiency." },
+        { title: "Assist in the development and monitoring of budgets, working closely with management to ensure financial goals are met." },
+        { title: "Provide training and development opportunities for the accounting team to enhance skills and knowledge." },
+
+
+      ],
+      requirement: [
+        { title: "Bachelor's degree in Accounting, Finance, or a related" },
+        { title: "Have experience in accounting At the supervisor level, 5 years or more" },
+        { title: "Leadership and team management skills, with the ability to motivate and develop." },
+        { title: "Excellent analytical and problem-solving skills, with the ability to interpret complex financial data." },
+        { title: "Communication skills for collaborating with cross-functional teams." },
+        { title: "Proficient in accounting software and advanced knowledge of Microsoft Excel." },
+      ],
+    },
   ];
 
   return (
