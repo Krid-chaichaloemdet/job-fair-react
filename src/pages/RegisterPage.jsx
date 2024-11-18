@@ -119,7 +119,7 @@ export default function RegisterPage() {
     <form 
     onSubmit={handleSubmitForm}
 
-    className="w-full px-[2rem] py-[1rem] flex flex-col gap-2 mb-[6rem]">
+    className="w-full px-[2rem] py-[1rem] mt-[80px] flex flex-col gap-2 mb-[6rem]">
       <div className='flex flex-row justify-start'>
       <div className="font-medium text-[1.75rem] tracking-[0.1em]">Profile</div>
       </div>

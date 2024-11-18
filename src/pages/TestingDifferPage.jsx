@@ -525,7 +525,7 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
 
           <div 
            onClick={spot}
-          className="flex  w-full h-[600px] relative ">
+          className="flex  w-full h-[1200px] relative ">
             <div className={`flex w-full items-center  `}>
 
               {pic == 30 && (
@@ -540,7 +540,7 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
                           {lang == `EN` ? `Total 30` : `ทั้งหมด 30 `}
                         </div>
                       </div>
-                      <div className="text-8xl flex h-[70%] w-[1%] items-center bg-black bg-white rounded-md"></div>
+                      <div className="text-8xl flex h-[70%] w-[1%] items-center bg-white rounded-md"></div>
                       <div className="w-[50%]  flex flex-col h-full">
                         {count > 0 && (
                           <div className="h-[70%]  flex">

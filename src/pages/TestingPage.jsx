@@ -267,8 +267,9 @@ export default function TestingPage() {
   return (
     <div
       // onSubmit={handleSubmitForm}
-      className="w-full  flex flex-col"
+      className="w-full flex flex-col justify-center items-center"
     >
+      <div className="h-screen flex justify-center flex-col">
       <div className="w-full flex justify-center py-5 ">Challenge</div>
       <div className="gap-5 px-5">
         {/* <div className="flex flex-col px-5 ">
@@ -344,6 +345,7 @@ export default function TestingPage() {
       )}
 
    { isTestFinish &&  <TestFinishLoading />}
+   </div>
     </div>
   );
 }
