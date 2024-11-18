@@ -51,7 +51,7 @@ export default function PositionData({
         </div>
 
         <div className="flex flex-col pl-5 w-full h-[65%] overflow-y-scroll">
-          <h3 className="font-bold text-[14px] py-2">Job Description</h3>
+          <h3 className="font-bold text-[14px] py-2">Responsibilities</h3>
           <ul className="list-disc text-[12px] pl-5">
             {
               // eslint-disable-next-line react/prop-types, no-undef
@@ -60,7 +60,7 @@ export default function PositionData({
               })
             }
           </ul>
-          <h3 className="font-bold text-[14px] py-2">Requirements</h3>
+          <h3 className="font-bold text-[14px] py-2">Qualifications</h3>
           <ul className="list-disc text-[12px] pl-5">
             {
               // eslint-disable-next-line react/prop-types
