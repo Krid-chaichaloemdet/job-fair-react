@@ -160,7 +160,6 @@ export default function TestingPage() {
     test7: 0,
     test8: 0,
   });
-  console.log(input)
   const testingData = [
     {
       title: "What number do you see?",
@@ -229,13 +228,14 @@ export default function TestingPage() {
 
   const handleSubmitForm = async (e) => {
     try {
+
       // e.preventDefault();
       await axios.post("http://localhost:8000/user/createTestRecord", input);
     } catch (error) {
       console.log(error);
     }
   };
-  const [count, setCount] = useState(10);
+  const [count, setCount] = useState(5);
 
 
 

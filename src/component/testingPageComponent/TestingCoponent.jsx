@@ -34,20 +34,28 @@ export default function TestingComponent({
               type="radio"
               name={`question-${testingPage}`}
               onClick={() => {
-                if (testingData[testingPage - 1].correct == i) {
-                  setInput({ ...input, [`test${testingPage}`]: 1   });
-                  setInput({ ...input, testScore : input.testScore + 1})
-                  
+                if (testingData[testingPage - 1].correct === i) {
+
+                  setInput((prevInput) => ({
+                    ...prevInput,
+                    [`test${testingPage}`]: 1,
+                    testScore: prevInput.testScore + 1,
+                  }));
+
                   return;
                 } else {
-                  setInput((pre) => ({
-                    ...pre,
-                    [`test${testingPage}`]: 0,
-                  }));
-                  if( input.testScore > 0){
+                  setInput((prevInput) => {
+                    const newTestScore =
+                      prevInput.testScore > 0
+                        ? prevInput.testScore - 1
+                        : prevInput.testScore;
 
-                    setInput({ ...input, testScore : input.testScore - 1})
-                  }
+                    return {
+                      ...prevInput,
+                      [`test${testingPage}`]: 0,
+                      testScore: newTestScore,
+                    };
+                  });
                 }
               }}
             />

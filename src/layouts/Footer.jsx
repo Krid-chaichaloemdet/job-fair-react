@@ -5,17 +5,17 @@ import jobsicon from "../../public/icons/jobsIcon.svg";
 import profileicon from "../../public/icons/profileIcon.svg";
 import languageicon from "../../public/icons/langIcon.svg";
 
-export default function Footer() {
+export default function Footer({select ,setSelect}) {
 
   const navigate = useNavigate();
-  const [select, setSelect] = useState(1);
+
 
 
 
   const footerBar = [
     { id: 1, title: "Jobs", image: jobsicon, path: "/" },
     { id: 2, title: "Send Profile", image: profileicon, path: "/registerPage" },
-    { id: 3, title: "language", image: languageicon, path: "/testingPage" },
+    { id: 3, title: "profile", image: languageicon, path: "/profilePage" },
   ];
 
   return (
