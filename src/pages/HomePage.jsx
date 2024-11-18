@@ -27,7 +27,8 @@ const HomePage = () => {
   const arr = t.positions; 
 
   return (
-    <div className="w-full h-[100%] px-[2rem] py-[1rem] flex flex-col mb-[6rem]">
+
+    <div className="w-full h-[100%] px-[2rem] py-[1rem] mt-[80px] flex flex-col mb-[6rem]">
       {/* ปุ่มเปลี่ยนภาษา */}
       <div className="flex justify-end mb-4">
         <button onClick={() => handleChangeLanguage("en")}>English</button>
@@ -36,6 +37,7 @@ const HomePage = () => {
 
       <div className="flex flex-row justify-start">
         <div className="font-medium text-[1.75rem] tracking-[0.1em]">{t.jobTitle}</div>
+
       </div>
 
       {arr.map((data, i) => (
