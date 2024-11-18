@@ -54,6 +54,550 @@
           "Detail-oriented",
           "Excellent communication skills"
         ]
+      },
+      {
+        "positionName": "Application Developer",
+        "jobDes": [
+          "Design and implement user-friendly, responsive web applications",
+          "Develop and maintain back-end infrastructure",
+          "Collaborate with cross-functional teams to design, develop, and test new features and functionalities",
+          "Utilize Zoho Deluge to integrate with Zoho applications",
+          "Develop IoT projects using Arduino or Raspberry Pi"
+        ],
+        "requirement": [
+          "Bachelor's degree in Computer Science, Software Engineering or a related field",
+          "Minimum of 2 years of professional experience in front-end and back-end development",
+          "Proficiency in JavaScript, JSON, HTML, CSS, and PHP",
+          "Experience with Zoho Deluge is a plus",
+          "Experience with Arduino or Raspberry Pi development is a plus",
+          "Strong analytical and problem-solving skills",
+          "Ability to work independently and as part of a team",
+          "Excellent communication and collaboration skills"
+        ]
+      },
+      {
+        "positionName": "Digital Media Creator",
+        "jobDes": [
+          "Conceptualize and design visually appealing graphics for various platforms, including digital and print media",
+          "Create engaging marketing materials, such as banners, brochures, and promotional assets",
+          "Ensure brand consistency across all design projects",
+          "Develop and produce high-quality videos from concept to completion",
+          "Collaborate with cross-functional teams to script, storyboard, and execute video projects",
+          "Edit and enhance video content, incorporating graphics and visual effects as needed",
+          "Integrate graphics and video elements seamlessly to create cohesive multimedia content",
+          "Stay updated on industry trends and technologies to bring innovative ideas to the creative process"
+        ],
+        "requirement": [
+          "Experienced in graphic design and video production",
+          "Proficient in using Adobe Creative Suite (Photoshop, Illustrator, Premiere Pro, After Effects)",
+          "Skilled in camera operation, photography, and videography",
+          "Strong communication and teamwork skills",
+          "Capable of managing multiple projects and meeting deadlines",
+          "Proficiency in BlackMagic DaVinci Resolve is a plus"
+        ]
+      },
+      {
+        "positionName": "Graphics Designer",
+        "jobDes": [
+          "Develop creative concepts and designs for a variety of marketing materials, including social media graphics, brochures, advertisements, and website visuals",
+          "Ensure consistency in branding elements across all design materials to maintain a unified and professional image",
+          "Work closely with cross-functional teams, including marketing, product development, and sales, to understand project requirements and deliver visually appealing solutions",
+          "Keep abreast of industry trends, design tools, and technologies to continuously improve design quality and efficiency",
+          "Ability to adapt design styles to suit different target audiences and project objectives"
+        ],
+        "requirement": [
+          "Bachelor's degree in Graphic Design, Fine Arts, or a related field",
+          "Proven experience as a Graphics Designer with a strong portfolio showcasing a diverse range of design projects",
+          "Proficient in Adobe Creative Suite (Photoshop, Illustrator, InDesign), and other relevant design tools",
+          "Strong creative and conceptual thinking skills with the ability to bring fresh ideas to the table",
+          "Meticulous, attention to detail, and a keen eye for aesthetics",
+          "Excellent verbal and written communication skills to effectively convey design ideas and collaborate with team members"
+        ]
+      },
+      {
+        "positionName": "Senior Human Resources Staff",
+        "jobDes": [
+          "Oversee the entire payroll calculation system",
+          "Manage recruitment and training (occasionally)",
+          "Conduct employee orientation training",
+          "Prepare and manage departmental documents",
+          "Coordinate with relevant departments",
+          "Organize company events",
+          "Administer employee benefits"
+        ],
+        "requirement": [
+          "At least 5 years of experience in human resources",
+          "Experience with payroll processing using the B-Plus system is an advantage",
+          "Experience in recruitment and training is an advantage",
+          "Knowledgeable in HR processes and policies",
+          "Excellent interpersonal and communication skills",
+          "Proficient in using HRIS and Microsoft Office",
+          "Possesses good judgment and maintains confidentiality effectively"
+        ]
+      },
+      {
+        "positionName": "Human Resources Staff",
+        "jobDes": [
+          "Payroll calculations in the B-Plus system",
+          "Conduct employee orientation training",
+          "Prepare and manage various types of departmental documents",
+          "Coordinate with relevant departments",
+          "Organize company events",
+          "Conduct internal personnel training",
+          "Manage employee benefits",
+          "Payroll experience is an advantage (especially with the B-Plus system)"
+        ],
+        "requirement": [
+          "Bachelor's degree in Human Resources, Business Administration, or a related field",
+          "Experience in HR or related fields will be given special consideration",
+          "Knowledge of human resource processes, policies, and best practices",
+          "Good interpersonal and communication skills",
+          "Proficient in using HRIS programs and Microsoft Office",
+          "Good judgment and ability to maintain confidentiality"
+        ]
+      },
+      {
+        "positionName": "IT Manager",
+        "jobDes": [
+          "Manage the IT department, including recruiting, training, and supervising IT staff",
+          "Develop and implement IT policies and procedures, ensuring compliance with industry standards and regulations",
+          "Plan and manage IT projects, including budgeting, resource allocation, and project timelines",
+          "Oversee the design, implementation, and maintenance of computer systems, networks, and servers",
+          "Ensure that the IT infrastructure meets the organization's needs, including security, performance, and availability",
+          "Monitor and manage software and hardware licenses",
+          "Maintain inventory of hardware, software, and peripherals",
+          "Develop and maintain disaster recovery and business continuity plans",
+          "Keep up-to-date with emerging trends and technologies in the field"
+        ],
+        "requirement": [
+          "Bachelor's degree in Computer Science, Information Technology, or related field",
+          "At least 8-10 years of experience in IT support and maintenance",
+          "Strong knowledge of computer hardware, software, and networking systems",
+          "Excellent analytical and problem-solving skills",
+          "Good communication and interpersonal skills",
+          "Ability to manage and lead a team",
+          "Knowledge of ITIL and other best practices",
+          "Experience in project management",
+          "Experience in budgeting and resource allocation"
+        ]
+      },
+      {
+        "positionName": "IT Support",
+        "jobDes": [
+          "Install and maintain computer hardware, software, and peripherals",
+          "Provide technical support to end-users on a timely basis",
+          "Troubleshoot and resolve hardware and software issues",
+          "Perform regular system backups and recovery operations",
+          "Manage and maintain the network infrastructure including switches, routers, and firewalls",
+          "Monitor network performance and security, and take corrective action as necessary",
+          "Manage software and hardware licenses",
+          "Maintain inventory of hardware, software, and peripherals",
+          "Document IT procedures and processes",
+          "Participate in planning and implementing IT projects",
+          "Keep up-to-date with emerging trends and technologies in the field"
+        ],
+        "requirement": [
+          "Bachelor's degree in Computer Science, Information Technology, or related field",
+          "At least 2-3 years of experience in IT support and maintenance",
+          "Strong knowledge of computer hardware, software, and networking systems",
+          "Excellent analytical and problem-solving skills",
+          "Good communication and interpersonal skills",
+          "Ability to work independently and in a team environment",
+          "Knowledge of ITIL and other best practices is a plus"
+        ]
+      },
+      {
+        "positionName": "Prepress Staff",
+        "jobDes": [
+          "Create artwork, prepare files, and make printing plates",
+          "Record daily work reports",
+          "Contact suppliers and coordinate with relevant departments",
+          "Create printing plates using CTP machine (occasionally)"
+        ],
+        "requirement": [
+          "Proficient in Adobe Illustrator",
+          "Knowledge of color theory",
+          "Ability to work as part of a team",
+          "Detail-oriented",
+          "Preference will be given to those with education in printing technology or experience in printing-related work"
+        ]
+      },
+      {
+        "positionName": "Purchasing Manager",
+        "jobDes": [
+          "Develop and execute procurement strategies aligned with organizational goals",
+          "Analyze market trends and identify opportunities for cost savings and process improvements",
+          "Negotiated and managed contracts with key suppliers, ensuring favorable terms and delivery schedules",
+          "Implemented inventory control measures, leading to improved stock turnover and reduced carrying costs",
+          "Collaborated with cross-functional teams to understand and address department-specific procurement needs",
+          "Evaluate and select vendors based on performance, reliability, and quality standards",
+          "Lead and mentor the procurement team, providing guidance and support",
+          "Conduct regular cost analysis and implement measures to optimize procurement costs"
+        ],
+        "requirement": [
+          "Bachelor’s degree in Business Administration, Supply Chain Management, or a related field",
+          "5 years of experience in procurement as a manager",
+          "Solve immediate problems and communication skills",
+          "Negotiation skills",
+          "Strong understanding of supply chain management principles and procurement best practices",
+          "Proficiency in procurement software and tools",
+          "Excellent communication, leadership, and organizational skills",
+          "Good command of English"
+        ]
+      },
+      {
+        "positionName": "Purchasing Supervisor",
+        "jobDes": [
+          "Negotiate price Terms of sale and delivery date with the supplier",
+          "Seek new suppliers",
+          "Monitor supplier performance to ensure quality, cost and delivery requirements are met",
+          "Check inventory levels and orders",
+          "Record the work activities of the purchasing department",
+          "Analyze markets and trends to help make predictions"
+        ],
+        "requirement": [
+          "Bachelor’s degree in Business Administration, Supply Chain Management, or a related field",
+          "5 years of experience in procurement",
+          "At least 2 years of experience in purchasing as a supervisor",
+          "Knowledge of procurement best practices, industry trends, and supply chain management principles",
+          "Negotiation skills",
+          "Proficient in using procurement software and tools",
+          "Solve immediate problems and communication skills",
+          "Good command of English"
+        ]
+      },
+      {
+        "positionName": "Purchasing Officer",
+        "jobDes": [
+          "Source and purchase goods and services at cost-effective prices and within the specified time frame",
+          "Request quotes and negotiate with suppliers",
+          "Adhere to purchasing policies and company quality standards",
+          "Follow up on orders and evaluate supplier service performance",
+          "Communicate and coordinate effectively with relevant departments"
+        ],
+        "requirement": [
+          "Higher vocational certificate up to bachelor’s degree, unlimited fields",
+          "Proficient in Microsoft Office and computers",
+          "Analytical planning skills",
+          "Detail-oriented",
+          "Excellent negotiation skills",
+          "Great coordination skills",
+          "Good command of English will be given special consideration",
+          "Previous experience in procurement will be given special consideration"
+        ]
+      },
+      {
+        "positionName": "Sales Coordinator Manager",
+        "jobDes": [
+          "Monthly customer sticker sales",
+          "Create satisfaction for the customers you care for",
+          "Recommend stickers to have more value",
+          "Lead and manage a team of Sales Coordinators, providing guidance, training, and support.",
+          "Supervise and optimize administrative processes, including order processing, documentation management, and customer communication, to enhance efficiency and accuracy.",
+          "Contact between the sales team and other departments, ensuring clear and effective communication channels.",
+          "Oversee customer interactions to address inquiries, provide updates on order status, and gather necessary information for the sales team.",
+          "Organize and coordinate sales meetings, preparing agendas."
+        ],
+        "requirement": [
+          "Bachelor's degree in any field",
+          "5 years of experience in sales management",
+          "Proficient in Microsoft Office and PDF programs",
+          "Strong communication and presentation skills",
+          "Good command in English"
+        ]
+      },
+      {
+        "positionName": "Sales Coordinator",
+        "jobDes": [
+          "Seek new customers and present products for sale",
+          "Communicate with customers to get requirements or job details",
+          "Coordinate between customers and various departments to successfully close sales",
+          "Prepare and inspect various sales document work (such as checking orders, making quotations, checking delivery status, etc.)",
+          "Support various activities related to sales work and other duties as assigned",
+          "Summary of monthly sales, document storage and report various operational results"
+        ],
+        "requirement": [
+          "Bachelor's degree in any field",
+          "Previous experience in sales",
+          "Proficient in Microsoft Office and PDF",
+          "Able to communicate and convey accurately",
+          "Basic use of office equipment",
+          "Excellent problem-solving skills",
+          "Always be enthusiastic",
+          "Be responsible for work as assigned",
+          "Ability to communicate in English will be given special consideration",
+          "Having a valid driver's license for cars will be given special consideration"
+        ]
+      },
+      {
+        "positionName": "Secretary",
+        "jobDes": [
+          "Manage and coordinate the executive's appointments and travel to ensure efficient time allocation",
+          "Prepare, organize, and facilitate meetings, including scheduling, setting agendas, taking minutes, and following up on meeting outcomes",
+          "Handle incoming phone calls, emails, and letters on behalf of the executive director, acting as the primary point of contact",
+          "Maintain and organize a comprehensive filing system, both in paper and digital formats, to support smooth office operations",
+          "Assist in preparing reports, presentations, and other important documents for executive decision-making",
+          "Act as an intermediary between the executive and internal and external contacts to ensure smooth communication and coordination",
+          "Maintain confidentiality and security of sensitive information, consistently adhering to high standards of discretion",
+          "Utilize strong negotiation skills to manage contracts, agreements, and communications with contacts effectively"
+        ],
+        "requirement": [
+          "Bachelor's degree in Business Administration or other related fields",
+          "At least 2-4 years of experience as an executive assistant",
+          "Excellent coordination skills, interpersonal skills, and communication, including good presentation skills",
+          "Knowledge of computers (basic programs, internet, email, etc.)",
+          "Great English skills in listening, speaking, reading, and writing",
+          "Excellent management and time allocation skills",
+          "Ability to maintain confidentiality and security of confidential information",
+          "Excellent problem-solving skills"
+        ]
+      },
+      {
+        "positionName": "Sales Manager",
+        "jobDes": [
+          "Find new customers",
+          "Close the balance according to the company's goals.",
+          "Provide advice about sales",
+          "Support team members to make their work easier",
+          "Develop sales and solve problems to close sales.",
+          "Training for new employees is organized. to have skills",
+          "Team meeting to discuss problems encountered during the week",
+          "Plan the team's sales to meet the goals set by the company."
+        ],
+        "requirement": [
+          "Bachelor's degree in business, marketing, or a related field (preferred).",
+          "5 years experiences, in sales management",
+          "MS Office (Word , Excel, Power Point)",
+          "Can drive a car, have a driver's license",
+          "Good Communication skills",
+          "Coordination skills",
+          "Leadership skills",
+          "Good command in English"
+        ]
+      },
+      {
+        "positionName": "Sales",
+        "jobDes": [
+          "Find new customers",
+          "Presenting products for sale",
+          "Close the balance according to the company's goals.",
+          "Summary report of customer visits",
+          "Able to solve problems for customers initially"
+        ],
+        "requirement": [
+          "Not less than Secondary 6",
+          "Have experience in sales at least 1 year",
+          "MS Office (Word , Excel, Power Point)",
+          "Have the ability to drive a car, have a driver's license",
+          "Have a passion for service",
+          "Good Communication skills",
+          "Good coordination and negotiation skills",
+          "Discipline and punctuality",
+          "Have responsibility for assigned tasks",
+          "Have a positive attitude"
+        ]
+      },
+      {
+        "positionName": "Social Media Manager",
+        "jobDes": [
+          "Develop and produce visually stunning content that resonates with our brand ethos.",
+          "Keep our social media channels vibrant with regular postings and engaging interactions.",
+          "Implement and oversee targeted advertising campaigns to amplify brand awareness.",
+          "Actively manage social media platforms, engaging with users and fostering a supportive online community.",
+          "Remain informed about the latest social media trends to maintain our brand's leading edge."
+        ],
+        "requirement": [
+          "Bachelor's degree in business, marketing, or a related field (preferred).",
+          "At least 2 years of experience in managing social media.",
+          "Exceptional writing abilities in both Thai and English for creating engaging content.",
+          "Skilled in using major social media platforms.",
+          "Proven track record in formulating and implementing effective social media strategies.",
+          "Competent in using contemporary tools for streamlined content management."
+        ]
+      },
+      {
+        "positionName": "Social Media Content Creator",
+        "jobDes": [
+          "Plan and create content that aligns with market trends.",
+          "Work together with In-house team to increase brand awareness and purchase intention.",
+          "Analyze market trends and continually monitor and study new trends and tools.",
+          "Manage and plan the production of online content for the company's various platforms, including offline advertising media.",
+          "Able to measure and report the effectiveness of produced content."
+        ],
+        "requirement": [
+          "Bachelor's degree in marketing, or a related field (preferred).",
+          "At least 1-3 years of experience in Digital Marketing.",
+          "Proficient in using analytical tools such as Google Analytics, Facebook Insights, etc.",
+          "Excellent communication and coordination skills.",
+          "Ability to work as part of a team and adapt to a rapidly changing environment."
+        ]
+      },
+      {
+        "positionName": "Accounting Manager",
+        "jobDes": [
+          "Prepare and analysis of financial statements, ensuring compliance with accounting standards and regulatory requirements.",
+          "Supervise and mentor a team of accounting ,providing guidance, training, and support",
+          "Plan and prepare financial budgets Including checking the accuracy and analyzing various impacts.",
+          "Oversee the month-end and year-end closing processes, including journal entries, reconciliations, and financial reporting.",
+          "Manage external audit processes, liaising with auditors and ensuring timely and accurate provision of required documentation.",
+          "Monitor and manage cash flow, optimizing working capital",
+          "Conduct financial analysis and present key insights to executive management, supporting strategic planning and decision-making."
+        ],
+        "requirement": [
+          "Bachelor's degree in Accounting, Finance, or a related",
+          "Proven experience in accounting, with a minimum of 5 years in a supervisor or manager",
+          "analytical and problem-solving skills.",
+          "communication skills.",
+          "Leadership Skills.",
+          "Team management skills.",
+          "Proficient in accounting software and advanced knowledge of Microsoft Excel.",
+          "Have knowledge of tax law."
+        ]
+      },
+      {
+        "positionName": "Accounting Supervisor",
+        "jobDes": [
+          "Supervise and guide a team of accounting, fostering a collaborative and high-performance work environment.",
+          "Oversee the preparation of accurate and timely financial statements, ensuring compliance with accounting standards and organizational policies.",
+          "Maintain the integrity of the general ledger, including journal entries, account reconciliations, and month-end close processes.",
+          "Supervise the processing of invoices, payments, and receivables, ensuring efficient and accurate transactions.",
+          "Conduct regular financial analysis, providing insights and recommendations to support strategic decision-making.",
+          "Collaborate with internal and external auditors, ensuring timely provision of information and addressing audit findings.",
+          "Streamline accounting procedures for increased efficiency.",
+          "Assist in the development and monitoring of budgets, working closely with management to ensure financial goals are met.",
+          "Provide training and development opportunities for the accounting team to enhance skills and knowledge."
+        ],
+        "requirement": [
+          "Bachelor's degree in Accounting, Finance, or a related",
+          "Have experience in accounting At the supervisor level, 5 years or more",
+          "Leadership and team management skills, with the ability to motivate and develop.",
+          "Excellent analytical and problem-solving skills, with the ability to interpret complex financial data.",
+          "Communication skills for collaborating with cross-functional teams.",
+          "Proficient in accounting software and advanced knowledge of Microsoft Excel."
+        ]
+      },
+      {
+        "positionName": "Safety Officer",
+        "jobDes": [
+          "Safety promotion work",
+          "- Create a safety plan",
+          "- Organize safety promotion activities",
+          "- Training employees on safety before starting work",
+          "Safety inspection work",
+          "- Daily safety inspections in the establishment",
+          "- Improve the working environment to be suitable for employees.",
+          "- Report the results of safety inspections that need to be corrected to the OEC.",
+          "Work accident prevention and investigation",
+          "- Assess risks in various work situations in the workplace",
+          "- Conduct an investigation when an accident occurs",
+          "- Report accidents to the Safety Committee",
+          "Emergency plans within the establishment",
+          "- Create an emergency plan in case of fire. and chemical spills",
+          "- Contact and coordinate with external agencies to provide training on emergency plans.",
+          "- Prepare fire escape layout",
+          "- Carry out firefighting training Annual fire evacuation",
+          "Improving and developing the establishment to comply with the law",
+          "- Make safety reports and submit them to government agencies as required by law.",
+          "- Evaluate compliance with laws and communicate to employees."
+        ],
+        "requirement": [
+          "Bachelor's degree Occupational Health and Safety Branch or equivalent",
+          "Hazard identification and risk assessment, safety inspection techniques, organizing safety knowledge training on various topics.",
+          "Reporting dangerous conditions, evaluating legal compliance, summarizing legal matters in which the company is involved.",
+          "Accident investigation, investigating causes and analyze dangers",
+          "Measure and evaluate the working environment",
+          "Have knowledge of quality management systems ,Occupational health, safety, environment",
+          "Various safety training licenses"
+        ]
+      },
+      {
+        "positionName": "ISO Officer",
+        "jobDes": [
+          "- Coordinate, follow up, and analyze various jobs. related to quality system",
+          "- Audit the ISO system within the company (Internal Audit)",
+          "- Able to prepare documents, Procedure, WI, Form.",
+          "- Organize internal training/coordinate training related to the ISO system."
+        ],
+        "requirement": [
+          "Bachelor's degree or higher",
+          "0-3 years experience or more",
+          "Communication skills, analysis, evaluation, report writing, and presentation.",
+          "Have the ability to lead a team and work as a team",
+          "Have knowledge of ISO system",
+          "Able to solve immediate problems",
+          "Able to use Microsoft Office computers well."
+        ]
+      },
+      {
+        "positionName": "Storage Supervisor",
+        "jobDes": [
+          "Plan, control and check product receipt information. Product storage and product disbursement",
+          "Manage and control product stock counts",
+          "Fixed the problem of receiving products that did not match the list",
+          "Decide to solve the problem of product storage and disbursement of goods",
+          "Coordinate with relevant departments",
+          "Summary of disbursement report"
+        ],
+        "requirement": [
+          "Bachelor's degree in logistics, supply chain management, or a related field (preferred).",
+          "5 years experience in a supervisor or manager , in a warehouse setting.",
+          "Proven experience in warehouse or storage management.",
+          "Strong leadership and team management skills.",
+          "Knowledge of inventory management systems and procedures.",
+          "Excellent organizational and problem-solving abilities.",
+          "Communication and interpersonal skills.",
+          "Attention to detail and accuracy."
+        ]
+      },
+      {
+        "positionName": "Storage Staff",
+        "jobDes": [
+          "Maintain, organize, and clean the warehouse area in accordance with company regulations and standards.",
+          "Check stock and prepare, store, and ensure production materials are always in suitable condition for use.",
+          "Assist the Logistics department in moving products from the warehouse to the vehicles."
+        ],
+        "requirement": [
+          "No educational qualifications required.",
+          "Detail-oriented.",
+          "Highly responsible.",
+          "Ability to drive both a car and a motorcycle will be given special consideration.",
+          "Having a driver's license for both cars and motorcycles will be given special consideration."
+        ]
+      },
+      {
+        "positionName": "Storage and Logistics Manager",
+        "jobDes": [
+          "Plan, control, and oversee the receipt and storage of goods, manage stock, and provide summary reports.",
+          "Plan product distribution, control and monitor disbursement, and make effective decisions on disbursement issues.",
+          "Plan the loading of goods onto transport vehicles and oversee the receipt and preparation of goods for transport.",
+          "Plan product deliveries, follow up with customers regarding delivery outcomes, and report delivery results.",
+          "Plan transport vehicle maintenance and supervise vehicle upkeep.",
+          "Coordinate and optimize storage processes, implement safety measures, and manage employee schedules.",
+          "Make decisions to solve storage-related problems and other relevant problems.",
+          "Supervise stock counting and disbursement activities.",
+          "Develop various quality systems.",
+          "Manage the preparation of the annual budget.",
+          "Oversee the day-to-day operations of the storage and logistics department."
+        ],
+        "requirement": [
+          "Bachelor's degree in logistics, supply chain management, or a related field (preferred).",
+          "At least 5 years of experience as a supervisor or manager in a warehouse and logistics setting.",
+          "Proven experience in warehouse or storage management and logistics.",
+          "Excellent leadership and team management skills.",
+          "Knowledge of inventory management systems and procedures.",
+          "Excellent organizational and problem-solving abilities.",
+          "Excellent communication and interpersonal skills.",
+          "Attention to detail and accuracy."
+        ]
+      },
+      {
+        "positionName": "Logistics Supervisor",
+        "jobDes":[
+          ""
+        ],
+        "requirement":[
+          
+        ]
       }
     ]
   },
@@ -63,55 +607,595 @@
       {
         "positionName": "พนักงานบัญชีเจ้าหนี้",
         "jobDes": [
-          "รับบิลและจ่ายเช็ค",
-          "เตรียมภาษีหัก ณ ที่จ่าย",
-          "เตรียมภาษีมูลค่าเพิ่ม",
-          "จัดเตรียมเอกสารเงินสดย่อย",
-          "บันทึกหนี้และรายการค่าใช้จ่าย",
-          "ตรวจสอบความถูกต้องและครบถ้วนของค่าใช้จ่ายรายเดือน",
-          "กระทบยอดบัญชีและจัดเตรียมรายงานที่เกี่ยวข้องกับเจ้าหนี้",
+          "รับวางบิล จ่ายเช็ค",
+          "จัดทำภาษีหัก ณ ที่จ่ายได้",
+          "จัดทำภาษีมูลค่าเพิ่ม",
+          "จัดทำเอกสารเงินสดย่อย",
+          "บันทึกรายการตั้งหนี้ค่าใช้จ่าย",
+          "ตรวจสอบความถูกต้องและครบถ้วนของค่าใช้จ่ายประจำเดือน",
+          "กระทบยอดบัญชีและจัดทำรายงานต่างๆ ที่เกี่ยวข้องกับด้าน AP ตามที่ได้รับมอบหมาย",
           "สนับสนุนข้อมูลและเอกสารสำหรับการตรวจสอบของผู้สอบบัญชี",
-          "ปฏิบัติงานบัญชีอื่น ๆ ตามที่ได้รับมอบหมาย"
+          "ปฏิบัติหน้าที่ด้านบัญชีอื่น ๆ ตามที่ได้รับมอบหมาย"
         ],
         "requirement": [
-          "ปริญญาตรีด้านการบัญชีหรือการเงิน",
-          "มีประสบการณ์ด้านบัญชี 1-2 ปีจะพิจารณาเป็นพิเศษ",
+          "ปริญญาตรี สาขาบัญชีหรือการเงิน",
+          "หากมีประสบการณ์ทำงานบัญชี 1-2 ปีขึ้นไปจะได้รับการพิจารณาเป็นพิเศษ",
           "มีความละเอียดรอบคอบ"
         ]
       },
       {
         "positionName": "พนักงานบัญชีลูกหนี้",
         "jobDes": [
-          "สร้างและออกใบแจ้งหนี้ให้ลูกค้าอย่างถูกต้อง",
-          "รับและดำเนินการชำระเงินจากลูกค้า",
-          "กระทบยอดบัญชีลูกหนี้",
-          "ติดตามและติดตามลูกค้าที่ค้างชำระ",
-          "ประเมินและกำหนดวงเงินเครดิตให้กับลูกค้า",
-          "ติดต่อกับลูกค้าเพื่อตรวจสอบปัญหาเกี่ยวกับการออกบิล",
-          "จัดเตรียมและวิเคราะห์รายงานลูกหนี้",
-          "จัดเก็บบันทึกการทำธุรกรรมของลูกค้าอย่างเป็นระเบียบ"
+          "สร้างและออกใบแจ้งหนี้ให้กับลูกค้าอย่างถูกต้องและทันเวลา",
+          "รับและประมวลผลการชำระเงินของลูกค้าผ่านช่องทางต่างๆ ทั้งเช็ค การโอนเงินทางอิเล็กทรอนิกส์ และธุรกรรมบัตรเครดิต",
+          "กระทบยอดบัญชีแยกประเภทลูกหนี้เพื่อให้ข้อมูลทางการเงินถูกต้องและครบถ้วน",
+          "ติดตามและติดตามบัญชีที่ค้างชำระ สื่อสารกับลูกค้าเพื่อแก้ไขความคลาดเคลื่อนในการชำระเงินและยอดคงค้าง",
+          "ประเมินและกำหนดวงเงินสินเชื่อสำหรับลูกค้า ตรวจสอบการขอสินเชื่อ และติดตามเงื่อนไขเครดิต",
+          "โต้ตอบกับลูกค้าเพื่อตอบคำถาม ให้ข้อมูลการเรียกเก็บเงิน และแก้ไขปัญหาที่เกี่ยวข้องกับการชำระเงิน",
+          "จัดทำและวิเคราะห์รายงานบัญชีลูกหนี้",
+          "ดูแลรักษาบันทึกธุรกรรมของลูกค้า ใบแจ้งหนี้ และประวัติการชำระเงินให้เป็นระเบียบและปัจจุบัน"
         ],
         "requirement": [
-          "ปริญญาตรีด้านการบัญชีหรือการเงิน",
-          "มีประสบการณ์ด้านบัญชี 1-2 ปีจะพิจารณาเป็นพิเศษ",
+          "ปริญญาตรี สาขาบัญชีหรือการเงิน",
+          "หากมีประสบการณ์ทำงานบัญชี 1-2 ปีขึ้นไปจะได้รับการพิจารณาเป็นพิเศษ",
           "มีความละเอียดรอบคอบ"
         ]
       },
       {
         "positionName": "เจ้าหน้าที่ธุรการ",
         "jobDes": [
-          "จัดเตรียมและสรุปรายงานของแผนก",
-          "สนับสนุนกิจกรรมของแผนก",
-          "ประสานงานกับแผนกอื่น ๆ",
-          "บันทึกข้อมูลเข้าสู่โปรแกรมคอมพิวเตอร์อย่างถูกต้อง",
-          "จัดเรียงเอกสารตามมาตรฐาน"
+          "ทำข้อมูลและสรุปรายงานของแผนก",
+          "สนับสนุนงานของแผนก",
+          "ประสานงานกับแผนกอื่น ๆ ที่เกี่ยวข้อง",
+          "บันทึกข้อมูลลงในโปรแกรมคอมพิวเตอร์อย่างถูกต้องแม่นยำ",
+          "คัดแยกและจัดเก็บเอกสารของแผนกให้เป็นไปตามมาตรฐานของบริษัท"
         ],
         "requirement": [
-          "วุฒิ ปวส. หรือ ปริญญาตรี",
+          "ปวส. ถึงปริญญาตรี ไม่จำกัดสาขา",
           "มีความสามารถในการใช้ Microsoft Office และคอมพิวเตอร์",
           "มีความละเอียดรอบคอบ",
-          "มีทักษะการสื่อสารที่ยอดเยี่ยม"
+          "มีทักษะการสื่อสารและการร่วมงานกับผู้อื่นที่ยอดเยี่ยม"
         ]
+      },
+      {
+        "positionName": "นักพัฒนาแอปพลิเคชัน",
+        "jobDes": [
+          "ออกแบบและปรับใช้แอปพลิเคชันเว็บที่ใช้งานง่ายและสามารถทำงานได้บนทุกรูปแบบหน้าจอ",
+          "พัฒนาและดูแลโครงสร้างแบ็กเอนด์",
+          "ทำงานร่วมกับทีมงานที่เกี่ยวข้องเพื่อออกแบบ พัฒนา และทดสอบคุณสมบัติและฟังก์ชันการใช้งานใหม่ ๆ",
+          "ใช้ Zoho Deluge เพื่อให้เชื่อมต่อกับแอปพลิเคชัน Zoho",
+          "พัฒนาโครงการ IoT โดยใช้ Arduino หรือ Raspberry Pi"
+        ],
+        "requirement": [
+          "ปริญญาตรี สาขาวิทยาการคอมพิวเตอร์, วิศวกรรมซอฟต์แวร์ หรือสาขาที่เกี่ยวข้อง",
+          "ประสบการณ์ทำงานอย่างน้อย 2 ปีในการพัฒนาทั้งด้านฟรอนต์เอนด์และแบ็กเอนด์",
+          "เชี่ยวชาญใน JavaScript, JSON, HTML, CSS, และ PHP",
+          "มีประสบการณ์ในการใช้ Zoho Deluge เป็นอย่างดี",
+          "มีประสบการณ์ในการพัฒนาด้วย Arduino หรือ Raspberry Pi เป็นอย่างดี",
+          "มีทักษะการวิเคราะห์และการแก้ปัญหาที่แข็งแกร่ง",
+          "สามารถทำงานแบบอิสระและทำงานเป็นทีมได้เป็นอย่างดี",
+          "มีทักษะการสื่อสารและการร่วมงานกับผู้อื่นที่ยอดเยี่ยม"
+        ]
+      },
+      {
+        "positionName": "ดิจิตอลมีเดียครีเอเตอร์",
+        "jobDes": [
+          "สร้างและออกแบบกราฟิกที่น่าสนใจสำหรับแพลตฟอร์มต่าง ๆ รวมถึงสื่อดิจิทัลและสื่อสิ่งพิมพ์",
+          "สร้างสื่อการตลาดที่น่าสนใจ เช่น แบนเนอร์ โบรชัวร์ และสื่อส่งเสริมการขาย",
+          "รักษาความสม่ำเสมอของแบรนด์ในโปรเจกต์งานออกแบบทั้งหมด",
+          "พัฒนาและผลิตวิดีโอที่มีคุณภาพสูงตั้งแต่แนวคิดจนเสร็จสิ้นกระบวนการ",
+          "ทำงานร่วมกับทีมที่มีความหลากหลายเพื่อเขียนสคริปต์ ทำสตอรี่บอร์ด และดำเนินโปรเจกต์",
+          "ตัดต่อและปรับปรุงเนื้อหาวิดีโอ รวมถึงการนำเข้ากราฟิกและวิชวลเอฟเฟกต์ตาที่ได้รับมอบหมาย",
+          "บูรณาการองค์ประกอบกราฟิกและวิดีโอเพื่อสร้างเนื้อหามัลติมีเดียที่มีความเชื่อมโยงกัน",
+          "ทำความเข้าใจและปรับตัวตามแนวโน้มและเทคโนโลยีใหม่ ๆ เพื่อนำเสนอไอเดียในกระบวนการสร้างสรรค์"
+        ],
+        "requirement": [
+          "มีประสบการณ์ทำงานด้านการออกแบบกราฟิกและการสร้างงานวิดีโอ",
+          "เชี่ยวชาญในการใช้โปรแกรม Adobe Creative Suite (Photoshop, Illustrator, Premiere Pro, After Effects)",
+          "มีทักษะและความสามารถใช้การใช้กล้อง การถ่ายภาพ และการถ่ายวิดีโอ",
+          "มีทักษะในการสื่อสารและการทำงานเป็นทีมที่ดี",
+          "สามารถจัดการโปรเจกต์หลาย ๆ รายการและจัดการได้ตามกำหนดเวลา",
+          "หากสามารถใช้งาน BlackMagic DaVinci Resolve ได้จะได้รับการพิจารณาเป็นพิเศษ"
+        ]
+      },
+      {
+        "positionName": "กราฟิกดีไซเนอร์",
+        "jobDes": [
+          "พัฒนาแนวคิดสร้างสรรค์และออกแบบสื่อการตลาดต่าง ๆ รวมถึงกราฟิกสำหรับโซเชียลมีเดีย โบรชัวร์ โฆษณา และภาพสำหรับเว็บไซต์",
+          "รักษาความสม่ำเสมอในองค์ประกอบของแบรนด์ในการออกแบบทั้งหมด เพื่อรักษาภาพลักษณ์ให้เป็นไปในทิศทางเดียวกันและเป็นมืออาชีพ",
+          "ทำงานใกล้ชิดกับทีมต่าง ๆ เช่น ทีมการตลาด ทีมพัฒนาผลิตภัณฑ์ และทีมขาย เพื่อทำความเข้าใจวัตถุประสงค์ของโปรเจกต์และนำเสนอทางออกที่น่าสนใจ",
+          "ติดตามแนวโน้มในแวดวง เครื่องมือสำหรับงานออกแบบ และเทคโนโลยี เพื่อพัฒนาคุณภาพและประสิทธิภาพของการออกแบบอย่างต่อเนื่อง",
+          "มีความสามารถในการปรับสไตล์การออกแบบให้เหมาะสมกับกลุ่มเป้าหมายและวัตถุประสงค์ของโปรเจกต์ต่าง ๆ"
+        ],
+        "requirement": [
+          "ปริญญาตรีในสาขาออกแบบกราฟิก ศิลปะ หรือสาขาที่เกี่ยวข้อง",
+          "ประสบการณ์ทำงานที่ยืนยันความสามารถในการออกแบบกราฟิกพร้อมพอร์ตโฟลิโอแสดงผลงานที่มีความหลากหลาย",
+          "เชี่ยวชาญในการใช้โปรแกรม Adobe Creative Suite (Photoshop, Illustrator, InDesign) และเครื่องมือออกแบบที่เกี่ยวข้อง",
+          "มีทักษะการคิดและความคิดทางคอนเซปต์ที่แข็งแกร่งพร้อมความสามารถในการนำเสนอไอเดียใหม่",
+          "มีความละเอียดถี่ถ้วน ใส่ใจรายละเอียด และความสามารถในการมองเห็นและเข้าใจความสวยงาม/ความเป็นศิลปะ",
+          "มีทักษะการสื่อสารทางบรรยายและการเขียนที่ยอดเยี่ยมเพื่อสื่อความคิดทางการออกแบบและร่วมงานกับสมาชิกทีมได้อย่างมีประสิทธิภาพ"
+        ]
+      },
+      {
+        "positionName": "เจ้าหน้าที่แผนกทรัพยากรบุคคลอาวุโส",
+        "jobDes": [
+          "ดูแลงานคำนวณเงินเดือนทั้งระบบ",
+          "ดูแลงานสรรหาบุคลากร และ การฝึกอบรม (บางครั้ง)",
+          "อบรมปฐมนิเทศพนักงาน",
+          "จัดทำเอกสารและควบคุมเอกสารต่างๆ ภายในแผนก",
+          "ติดต่อประสานงานกับหน่วยงานที่เกี่ยวข้อง",
+          "จัดกิจกรรมในบริษัท",
+          "ดูแลสวัสดิการพนักงาน"
+        ],
+        "requirement": [
+          "มีประสบการณ์ในสายงานทรัพยากรบุคคลไม่น้อยกว่า 5 ปี",
+          "หากมีประสบการณ์การทำเงินเดือนผ่านระบบ B-Plus จะพิจารณาเป็นพิเศษ",
+          "หากมีประสบการณ์การทำงานด้านสรรหาบุคลากรและฝึกอบรม จะพิจารณาเป็นพิเศษ",
+          "มีความรู้เกี่ยวกับกระบวนการทำงาน และ นโยบายด้านทรัพยากรบุคคล",
+          "มีมนุษยสัมพันธ์และทักษะในการสื่อสารที่ดีเยี่ยม",
+          "มีทักษะในการใช้โปรแกรม HRIS และ Microsoft Office",
+          "มีวิจารณญาณและรักษาความลับได้ดี"
+        ]
+      },
+      {
+        "positionName": "เจ้าหน้าที่แผนกทรัพยากรบุคคล",
+        "jobDes": [
+          "งานคำนวณเงินเดือนในระบบ B-Plus",
+          "อบรมปฐมนิเทศพนักงาน",
+          "จัดทำเอกสารและควบคุมเอกสารต่าง ๆ ภายในแผนก",
+          "ติดต่อประสานงานกับหน่วยงานที่เยวข้อง",
+          "จัดกิจกรรมในบริษัท",
+          "การฝึกอบรมบุคลากรภายใน",
+          "ดูแลสวัสดิการพนักงาน",
+          "หากมีประสบการณ์การทำเงินเดือนจะพิจาณาเป็นพิเศษ (โดยเฉพาะระบบ B-Plus)"
+        ],
+        "requirement": [
+          "ปริญญาตรีด้านทรัพยากรบุคคล บริหารธุรกิจ หรือสาขาที่เกี่ยวข้อง",
+          "หากมีประสบการณ์ด้านทรัพยากรบุคคลหรือสาขาที่เกี่ยวข้อง จะพิจารณาเป็นพิเศษ",
+          "มีความรู้เกี่ยวกับกระบวนการ นโยบาย และแนวปฏิบัติที่ดีที่สุดด้านทรัพยากรบุคคล",
+          "มีมนุษยสัมพันธ์และทักษะในการสื่อสารที่ดี",
+          "มีทักษะในการใช้โปรแกรม HRIS และ Microsoft Office",
+          "มีวิจารณญาณที่ดีและสามารถรักษาความลับได้"
+        ]
+      },
+      {
+        "positionName": "ผู้จัดการแผนกเทคโนโลยีสารสนเทส",
+        "jobDes": [
+          "จัดการแผนก IT รวมถึงการสรรหา บริการฝึกอบรม และการดูแลพนักงาน IT",
+          "พัฒนาและดำเนินนโยบายและขั้นตอนด้าน IT เพื่อให้แน่ใจว่าปฏิบัติตามมาตรฐานและข้อบังคับของอุตสาหกรรม",
+          "วางแผนและจัดการโครงการ IT รวมถึงการจัดสรรงงบประมาณ การจัดสรรทรัพยากร และกำหนดระยะเวลาโครงการ",
+          "ดูแลการออกแบบ การดำเนินงาน และการบำรุงรักษาของระบบคอมพิวเตอร์ เครือข่าย และเซิร์ฟเวอร์",
+          "ตรวจสอบว่าโครงสร้างพื้นฐานด้าน IT ตอบสนองความต้องการขององค์กร รวมถึงความปลอดภัย ประสิทธิภาพ และความพร้อมใช้งาน",
+          "ตรวจสอบและจัดการใบอนุญาตซอฟต์แวร์และฮาร์ดแวร์",
+          "จัดการสินค้าคงคลังของฮาร์ดแวร์ ซอฟต์แวร์ และอุปกรณ์เสริม",
+          "พัฒนาและบำรุงรักษาแผนการฟื้นฟูภัยพิบัติและการดำเนินธุรกิจต่อเนื่อง",
+          "ติดตามข่าวสารเกี่ยวกับเทรนด์และเทคโนโลยีใหม่ๆ ในสาขา"
+        ],
+        "requirement": [
+          "ปริญญาตรีสาขาคอมพิวเตอร์ เทคโนโลยีสารสนเทศ หรือสาขาที่เกี่ยวข้อง",
+          "ประสบการณ์อย่างน้อย 8-10 ปีในด้านการสนับสนุนและการบำรุงรักษา IT",
+          "ความรู้ที่แข็งแกร่งเกี่ยวกับฮาร์ดแวร์คอมพิวเตอร์ ซอฟต์แวร์ และระบบเครือข่าย",
+          "ทักษะการวิเคราะห์และแก้ปัญหาที่ยอดเยี่ยม",
+          "ทักษะการสื่อสารและการเข้าสังคมที่ดี",
+          "ความสามารถในการจัดการและนำทีม",
+          "ความรู้เกี่ยวกับ ITIL และแนวทางปฏิบัติที่ดีที่สุดอื่นๆ",
+          "ประสบการณ์ในการบริหารโครงการ",
+          "ประสบการณ์ในด้านการจัดสรรงงบประมาณและทรัพยากร"
+        ]
+      },
+      {
+        "positionName": "เจ้าหน้าที่แผนกเทคโนโลยีสารทนเทศ",
+        "jobDes": [
+          "ติดตั้งและบำรุงรักษาฮาร์ดแวร์คอมพิวเตอร์ ซอฟต์แวร์ และอุปกรณ์เสริม",
+          "ให้การสนับสนุนด้านเทคนิคแก่ผู้ใช้อย่างทันท่วงที",
+          "แก้ไขปัญหาและป้องกันปัญหาฮาร์ดแวร์และซอฟต์แวร์",
+          "ดำเนินการสำรองข้อมูลและการกู้คืนระบบอย่างสม่ำเสมอ",
+          "จัดการและบำรุงรักษาโครงสร้างพื้นฐานด้านเครือข่าย รวมถึงสวิตช์ เราเตอร์ และไฟร์วอลล์",
+          "ตรวจสอบประสิทธิภาพและความปลอดภัยของเครือข่าย และดำเนินการแก้ไขตามความจำเป็น",
+          "จัดการใบอนุญาตซอฟต์แวร์และฮาร์ดแวร์",
+          "จัดการสินค้าคงคลังของฮาร์ดแวร์ ซอฟต์แวร์ และอุปกรณ์เสริม",
+          "จัดทำเอกสารขั้นตอนและกระบวนการด้านไอที",
+          "มีส่วนร่วมในการวางแผนและดำเนินโครงการไอที",
+          "ติดตามข่าวสารเกี่ยวกับแนวโน้มและเทคโนโลยีใหม่ ๆ ในสาขานี้"
+        ],
+        "requirement": [
+          "ปริญญาตรีสาขาคอมพิวเตอร์ เทคโนโลยีสารสนเทศ หรือสาขาที่เกี่ยวข้อง",
+          "มีประสบการณ์ในการทำงาน  IT Support และประสบการณ์ในการบำรุงรักษาระบบอย่างน้อย 2-3 ปี",
+          "มีความรู้เกี่ยวกับฮาร์ดแวร์คอมพิวเตอร์ ซอฟต์แวร์ และระบบเครือข่าย",
+          "มีทักษะการวิเคราะห์และแก้ปัญหาที่ยอดเยี่ยม",
+          "ทักษะการสื่อสารและการเข้าสังคมที่ดี",
+          "มีความสามารถในการทำงานอย่างอิสระและในสภาพแวดล้อมการทำงานเป็นทีม",
+          "มีความรู้เกี่ยวกับ ITIL และแนวทางปฏิบัติที่ดีที่สุดอื่น ๆ เป็นข้อดี"
+        ]
+      },
+      {
+        "positionName": "เจ้าหน้าที่ทำแบบงานพิมพ์ (พรีเพรส)",
+        "jobDes": [
+          "จัดทำอาร์ตเวิร์ค เตรียมไฟล์ และออกเพลทงานพิมพ์",
+          "ลงบันทึกรายงานการปฏิบัติงานประจำวัน",
+          "ติดต่อซัพพลายเออร์และประสานงานกับฝ่ายที่เกี่ยวข้อง",
+          "จัดทำแม่พิมพ์ด้วยเครื่อง CTP (บางครั้ง)"
+        ],
+        "requirement": [
+          "เชี่ยวชาญในการใช้โปรแกรม Adobe Illustrator",
+          "มีความรู้เรื่องทฤษฎีสี",
+          "มีความสามารถในการทำงานเป็นทีม",
+          "มีความละเอียดรอบคอบ",
+          "หากจบการศึกษาในด้านเทคโนโลยีการพิมพ์หรือมีประสบการณ์เกี่ยวกับงานพิมพ์จะได้รับการพิจารณาเป็นพิเศษ"
+        ]
+      },
+      {
+        "positionName": "ผู้จัดการแผนกจัดซื้อ",
+        "jobDes": [
+          "พัฒนาและดำเนินกลยุทธ์การจัดซื้อที่สอดคล้องกับเป้าหมายขององค์กร",
+          "วิเคราะห์แนวโน้มของตลาดและแสวงหาโอกาสในการประหยัดต้นทุนและการปรับปรุงกระบวนการ",
+          "เจรจาและจัดการสัญญากับซัพพลายเออร์หลักเพื่อให้มั่นใจว่ามีเงื่อนไขและกำหนดการส่งมอบที่น่าพอใจ",
+          "ใช้มาตรการควบคุมสินค้าคงคลัง ซึ่งนำไปสู่การหมุนเวียนสินค้าคงคลังที่ดีขึ้นและลดต้นทุนการถือครอง",
+          "ร่วมมือกับหน่วยงานที่เกี่ยวข้องเพื่อทำความเข้าใจและตอบสนองความต้องการด้านการจัดซื้อเฉพาะแผนก",
+          "ประเมินและเลือกผู้จำหน่ายตามประสิทธิภาพ ความน่าเชื่อถือ และมาตรฐานคุณภาพ",
+          "เป็นผู้นำและให้คำปรึกษาแก่ทีมจัดซื้อจัดจ้าง รวมทั้งให้คำแนะนำและสนับสนุน",
+          "ดำเนินการวิเคราะห์ต้นทุนเป็นประจำและใช้มาตรการเพื่อเพิ่มประสิทธิภาพต้นทุนการจัดซื้อ"
+        ],
+        "requirement": [
+          "ปริญญาตรีสาขาบริหารธุรกิจ การจัดการห่วงโซ่อุปทาน หรือสาขาที่เกี่ยวข้อง",
+          "มีประสบการณ์ 5 ปีในการจัดซื้อจัดจ้างในตำแหน่งผู้จัดการ",
+          "แก้ไขปัญหาเฉพาะหน้าและทักษะการสื่อสาร",
+          "มีทักษะในการเจรจาต่อรอง",
+          "มีความเข้าใจที่ดีเกี่ยวกับหลักการจัดการห่วงโซ่อุปทานและแนวทางปฏิบัติที่ดีที่สุดในการจัดซื้อจัดจ้าง",
+          "มีความเชี่ยวชาญในซอฟต์แวร์และเครื่องมือจัดซื้อจัดจ้าง",
+          "มีทักษะการสื่อสาร ทักษะความเป็นผู้นำ และทักษะการจัดองค์กรที่ยอดเยี่ยม",
+          "สามารถใช้ภาษาอังกฤษได้ดี"
+        ]
+      },
+      {
+        "positionName": "หัวหน้าแผนกจัดซื้อ",
+        "jobDes": [
+          "เจรจาต่อรองราคา เงื่อนไขการขาย และวันที่ส่งมอบกับซัพพลายเออร์",
+          "จัดหาซัพพลายเออร์",
+          "ตรวจสอบประสิทธิภาพของซัพพลายเออร์เพื่อให้แน่ใจว่าเป็นไปตามข้อกำหนดด้านคุณภาพ ต้นทุน และการจัดส่ง",
+          "ตรวจสอบระดับสินค้าคงคลังและการสั่งซื้อ",
+          "บันทึกกิจกรรมการทำงานของฝ่ายจัดซื้อ",
+          "วิเคราะห์ตลาดและแนวโน้มเพื่อช่วยในการคาดการณ์"
+        ],
+        "requirement": [
+          "ปริญญาตรี สาขาบริหารธุรกิจ การจัดการห่วงโซ่อุปทาน หรือสาขาที่เกี่ยวข้อง",
+          "มีประสบการณ์ในสายงานจัดซื้อไม่น้อยกว่า 5 ปี",
+          "มีประสบการณ์ 2 ปีขึ้นไปในสายงานจัดซื้อ ตำแหน่งหัวหน้างาน",
+          "มีความรู้เกี่ยวกับแนวทางปฏิบัติในการจัดซื้อจัดจ้าง และแนวโน้มของอุตสาหกรรม",
+          "ทักษะการเจรจาต่อรองที่ดีเยี่ยม",
+          "มีความเชี่ยวชาญในการใช้ซอฟต์แวร์และเครื่องมือจัดซื้อจัดจ้าง",
+          "มีทักษะในการแก้ไขปัญหาเฉพาะหน้าและทักษะการสื่อสาร",
+          "สามารถใช้ภาษาอังกฤษได้ดี"
+        ]
+      },
+      {
+        "positionName": "เจ้าหน้าที่จัดซื้อ",
+        "jobDes": [
+          "จัดหาและจัดซื้อสินค้าและบริการให้ได้ราคาที่คุ้มค่าและทันตามเวลาที่กำหนด",
+          "ขอใบเสนอราคาและเจรจาต่อรองกับซัพพลายเออร์",
+          "ปฏิบัติตามนโยบายการจัดซื้อและตามมาตรฐานคุณภาพของบริษัท",
+          "ติดตามคำสั่งซื้อและประเมินประสิทธิภาพการให้บริการของซัพพลายเออร์",
+          "ติดต่อประสานงานกับฝ่ายที่เกี่ยวข้องอย่างมีประสิทธิภาพ"
+        ],
+        "requirement": [
+          "ปวส. ถึงปริญญาตรี ไม่จำกัดสาขา",
+          "มีความเชี่ยวชาญในการใช้ Microsoft Office และทักษะด้านคอมพิวเตอร์",
+          "มีทักษะการวิเคราะห์และการวางแผน",
+          "มีความละเอียดรอบคอบ",
+          "มีทักษะการเจรจาต่อรองที่ดีเยี่ยม",
+          "มีทักษะการประสานงานที่ดี",
+          "หากมีความสามารถด้านภาษาอังกฤษจะพิจารณาเป็นพิเศษ",
+          "หากมีประสบการณ์ในงานจัดซื้อจะพิจารณาเป็นพิเศษ"
+        ]
+      },
+      {
+        "positionName": "ผู้จัดการประสานงานการขาย",
+        "jobDes": [
+          "ยอดขายสติกเกอร์ลูกค้ารายเดือน",
+          "สร้างความพึงพอใจลูกค้าที่ดูแล",
+          "แนะนำสติ๊กเกอร์ให้มีมูลค่ามากขึ้น",
+          "เป็นผู้นำและจัดการทีมประสานงานการขาย ให้คำแนะนำ การฝึกอบรม และการสนับสนุน",
+          "ดูแลและเพิ่มประสิทธิภาพกระบวนการบริหาร รวมถึงการประมวลผลคำสั่ง การจัดการเอกสาร และการสื่อสารกับลูกค้า เพื่อเพิ่มประสิทธิภาพและความถูกต้อง",
+          "ติดต่อระหว่างทีมขายและแผนกอื่น ๆ เพื่อให้เกิดช่องทางการสื่อสารที่ชัดเจนและมีประสิทธิภาพ",
+          "ดูแลการโต้ตอบของลูกค้าเพื่อตอบคำถาม ให้ข้อมูลอัปเดตเกี่ยวกับสถานะคำสั่งซื้อ และรวบรวมข้อมูลที่จำเป็นสำหรับทีมขาย",
+          "จัดระเบียบและประสานงานการประชุมการขาย, จัดทำวาระการประชุม"
+        ],
+        "requirement": [
+          "ปริญญาตรี ไม่จำกัดสาขา",
+          "ประสบการณ์ 5 ปีในการจัดการการขาย",
+          "เชี่ยวชาญด้านโปรแกรม Microsoft Office และ PDF",
+          "ทักษะในการสื่อสารและถ่ายทอดได้ถูกต้อง",
+          "สามารถใช้ภาษาอังกฤษได้ดี"
+        ]
+      },
+      {
+        "positionName": "เจ้าหน้าที่ประสานงานขาย",
+        "jobDes": [
+          "หาลูกค้าใหม่และนำเสนอขายสินค้า",
+          "ติดต่อสื่อสารกับลูกค้าเพื่อรับข้อกำหนดหรือรายละเอียดงาน",
+          "ประสานงานระหว่างลูกค้าและฝ่ายต่าง ๆ เพื่อให้สามารถปิดการขายได้สำเร็จ",
+          "จัดเตรียมและตรวจสอบเอกสารงานขายต่างๆ (เช่น การตรวจสอบคำสั่งซื้อ การทำใบเสนอราคา การตรวจสอบสถานะการจัดส่ง ฯลฯ)",
+          "สนับสนุนกิจกรรมต่าง ๆ ที่เกี่ยวข้องกับงานขายและหน้าที่อื่น ๆ ตามที่ได้รับมอบหมาย",
+          "สรุปยอดขายประจำเดือน การจัดเก็บเอกสาร และรายงานผลการดำเนินงานต่าง ๆ"
+        ],
+        "requirement": [
+          "ปริญญาตรี ไม่จำกัดสาขา",
+          "มีประสบการณ์ด้านงานขาย",
+          "มีทักษะการใช้ Microsoft Office และ PDF",
+          "สามารถสื่อสารและถ่ายทอดได้อย่างถูกต้อง",
+          "มีทักษะพื้นฐานในการใช้เครื่องมือสำนักงาน",
+          "มีทักษะในการแก้ปัญหาเฉพาะหน้าที่ดีเยี่ยม",
+          "มีความกระตือรือร้นอยู่เสมอ",
+          "สามารถรับผิดชอบงานตามที่ได้รับมอบหมายได้",
+          "หากสามารถสื่อสารภาษาอังกฤษได้จะได้รับการพิจารณาเป็นพิเศษ",
+          "หากมีใบขับขี่รถยนต์จะได้รับการพิจารณาเป็นพิเศษ"
+        ]
+      },
+      {
+        "positionName": "เลขานุการ",
+        "jobDes": [
+          "จัดการและประสานงานตารางนัดหมายและการเดินทางของผู้บริหาร เพื่อให้การจัดสรรเวลาเป็นไปอย่างมีประสิทธิภาพ",
+          "เตรียม จัดระเบียบ และอำนวยความสะดวกในการประชุม รวมถึงกำหนดเวลา วาระการประชุม การจดบันทึกการประชุม และการติดตามผลการประชุม",
+          "จัดการโทรศัพท์ อีเมล และจดหมายที่เข้ามาในนามของผู้อำนวยการบริหาร ทำหน้าที่เป็นจุดติดต่อหลัก",
+          "รักษาและจัดระบบการจัดเก็บข้อมูลที่ครอบคลุม ทั้งในรูปแบบเอกสารกระดาษ และดิจิตอล เพื่อสนับสนุนการดำเนินงานของสำนักงานให้เป็นไปอย่างราบรื่น",
+          "ช่วยในการเตรียมรายงาน การนำเสนอ และเอกสารสำคัญอื่น ๆ เพื่อการตัดสินใจของผู้บริหาร",
+          "ทำหน้าที่เป็นตัวกลางระหว่างผู้บริหารกับผู้ติดต่อทั้งภายในและภายนอกองค์กร เพื่อให้การสื่อสารและการประสานงานเป็นไปอย่างราบรื่น",
+          "รักษาความลับและความปลอดภัยของข้อมูลที่มีความอ่อนไหว โดยรักษามาตรฐานความรอบคอบอยู่เสมอ",
+          "ใช้ทักษะการเจรจาต่อรองที่แข็งแกร่งในการจัดการสัญญา ข้อตกลง และการติดต่อกับผู้ติดต่ออย่างมีประสิทธิภาพ"
+        ],
+        "requirement": [
+          "ปริญญาตรี สาขาบริหารธุรกิจหรือสาขาอื่น ๆ ที่เกี่ยวข้อง",
+          "มีประสบการณ์ในการเป็นผู้ช่วยผู้บริหารอย่างน้อย 2-4 ปีขึ้นไป",
+          "ทักษะการประสานงานดีเยี่ยม มีมนุษยสัมพันธ์ และทักษะในการสื่อสารรวมถึงการถ่ายทอดที่ดี",
+          "มีความรู้ด้านคอมพิวเตอร์ (โปรแกรมพื้นฐาน, อินเทอร์เน็ต, อีเมล ฯลฯ )",
+          "มีทักษะภาษาอังกฤษทั้งฟัง พูด อ่าน และเขียนได้ดีเยี่ยม",
+          "มีทักษะการจัดการและจัดสรรเวลาที่ยอดเยี่ยม",
+          "สามารถรักษาความลับและและความปลอดภัยของข้อมูลที่เป็นความลับ",
+          "มีทักษะการแก้ปัญหาที่ยอดเยี่ยม"
+        ]
+      },
+      {
+        "positionName": "ผู้จัดการฝ่ายขาย",
+        "jobDes": [
+          "หาลูกค้าใหม่",
+          "ปิดยอดให้ได้ตามเป้าหมายของบริษัท",
+          "ให้คำปรึกษาเกี่ยวกับการขาย",
+          "ซัพพอร์ตลูกทีมให้ทำงานได้ง่ายขึ้น",
+          "พัฒนาการขายและแก้ปัญหาเพื่อให้ปิดการขายได้",
+          "มีการจัดเทรนนิ่งพนักงานใหม่ เพื่อให้มีทักษะ",
+          "ประชุมทีม ปรึกษาปัญหาที่พบเจอในสัปดาห์",
+          "วางแผนการขายของทีมให้เป็นไปตามเป้าหมายที่บริษัทกำหนด"
+        ],
+        "requirement": [
+          "ปริญญาตรีสาขาธุรกิจ การตลาด หรือสาขาที่เกี่ยวข้อง (พิจารณาเป็นพิเศษ)",
+          "มีประสบการณ์ 5 ปี ในการจัดการการขาย",
+          "MS Office (Word , Excel ,Power Point)",
+          "ขับรถยนต์ได้ มีใบขับขี่",
+          "ทักษะการสื่อสารที่ดี",
+          "ทักษะการประสานงาน",
+          "ทักษะความเป็นผู้นำ",
+          "สามารถใช้ภาษาอังกฤษได้ดี"
+        ]
+      },
+      {
+        "positionName": "เจ้าหน้าที่ฝ่ายขาย",
+        "jobDes": [
+          "หาลูกค้าใหม่",
+          "นำเสนอขายสินค้า",
+          "ปิดยอดให้ได้ตามเป้าหมายของบริษัท",
+          "สรุปรายงานการเข้าพบลูกค้า",
+          "สามารถแก้ไขปัญหาให้ลูกค้าในเบื้องต้นได้"
+        ],
+        "requirement": [
+          "ไม่ต่ำกว่า มัธยมศึกษาปีที่ 6",
+          "มีประสบการณ์ด้านงานขายอย่างน้อย 1 ปี",
+          "MS Office (Word , Excel, Power Point)",
+          "มีความสามารถในการขับขี่รถยนต์ มีใบขับขี่",
+          "มีใจรักในงานบริการ",
+          "ทักษะการสื่อสารที่ดี",
+          "มีทักษะการประสานงาน และทักษะการเจรจาต่อรองได้ดี",
+          "มีวินัยและมีความตรงต่อเวลา",
+          "มีความรับผิดชอบในงานที่ได้รับมอบหมาย",
+          "มีทัศนะคติในเชิงบวก"
+        ]
+      },
+      {
+        "positionName": "ผู้จัดการโซเชียลมีเดีย",
+        "jobDes": [
+          "พัฒนาและผลิตเนื้อหาที่น่าสนใจ มีความสวยงาม เข้ากับจิตวิญญาณของแบรนด์บริษัท",
+          "รักษาช่องทางโซเชียลมีเดียของบริษัท ให้มีความคึกคักด้วยการโพสต์และมีกิจกรรมที่น่าสนใจอย่างสม่ำเสมอ",
+          "ดำเนินการและดูแลแคมเปญโฆษณาโดยมีเป้าหมายเพื่อเพิ่มการเข้าถึงแบรนด์บริษัท",
+          "ดูแลจัดการช่องทางโซเชียลมีเดียของบริษัทอย่างเป็นประจำ มีการสร้างความสัมพันธ์และสร้างชุมชนออนไลน์เพื่อสนับสนุนผู้ใช้งาน",
+          "ติดตามแนวโน้มสื่อโซเชียลมีเดียอย่างสม่ำเสมอ อัพเดทกิจกรรมให้ทันตามกระแส เพื่อรักษาความเป็นผู้นำของแบรนด์บริษัท"
+        ],
+        "requirement": [
+          "ปริญญาตรีสาขาธุรกิจ การตลาด หรือสาขาที่เกี่ยวข้อง (พิจารณาเป็นพิเศษ)",
+          "ประสบการณ์การจัดการสื่อสังคมออนไลน์อย่างน้อย 2 ปี",
+          "มีทักษะการเขียนที่โดดเด่นเพื่อสร้างเนื้อหาที่น่าสนใจทั้งภาษาไทยและภาษาอังกฤษ",
+          "มีทักษะในการใช้งานแพลตฟอร์มสื่อโซเชียลมีเดียที่หลากหลาย",
+          "มีประสบการณ์ในการพัฒนาและดำเนินกลยุทธ์ด้านโซเชียลมีเดียที่ประสบผลสำเร็จ",
+          "มีความสามารถในการใช้เครื่องมือสมัยใหม่เพื่อการจัดการเนื้อหาที่มีประสิทธิภาพ"
+        ]
+      },
+      {
+        "positionName": "นักสร้างคอนเทนต์ (คอนเทนต์ครีเอเตอร์)",
+        "jobDes": [
+          "วางแผนและผลิตคอนเทนต์ที่สอดคล้องกับแนวโน้มของตลาด",
+          "ทำงานร่วมกับทีมต่าง ๆ ในการสร้างภาพลักษณ์ของบริษัทให้เป็นที่รู้จักยิ่งขึ้น และเพื่อเป็นการกระตุ้นยอดขายให้กับบริษัท",
+          "วิเคราะห์แนวโน้มของตลาด รวมทั้งติดตามศึกษาเทรนด์และเครื่องมือใหม่ ๆ อยู่เสมอ",
+          "ดูแลและวางแผนการผลิตคอนเทนต์ออนไลน์ให้กับแพลตฟอร์มต่าง ๆ ของบริษัท รวมถึงสื่อโฆษณาออฟไลน์",
+          "สามารถวัดผลและรายงานประสิทธิภาพของคอนเทนต์ที่ผลิตออกมา"
+        ],
+        "requirement": [
+          "ปริญญาตรีสาขาธุรกิจ การตลาด หรือสาขาที่เกี่ยวข้อง (พิจารณาเป็นพิเศษ)",
+          "มีประสบการณ์ทำงานด้าน Digital Marketing อย่างน้อย 1-3 ปี",
+          "มีความสามารถในการใช้เครื่องมือวิเคราะห์ เช่น Google Analytics, Facebook Insights เป็นต้น",
+          "ทักษะในการสื่อสารและประสานงานที่ดีเยี่ยม",
+          "มีความสามารถในการทำงานเป็นทีม และการทำงานในสภาพแวดล้อมที่เปลี่ยนแปลงอย่างรวดเร็วอยู่เสมอ"
+        ]
+      },
+      {
+        "positionName": "ผู้จัดการฝ่ายบัญชี",
+        "jobDes": [
+          "จัดทำและวิเคราะห์งบการเงินเพื่อให้มั่นใจว่ามีการปฏิบัติตามมาตรฐานการบัญชีและข้อกำหนดด้านกฎระเบียบ",
+          "ดูแลและให้คำปรึกษาทีมบัญชี ให้คำแนะนำ ฝึกอบรม และสนับสนุน",
+          "วางแผนและจัดเตรียมงบประมาณทางการเงิน รวมถึงตรวจสอบความถูกต้องและวิเคราะห์ผลกระทบต่างๆ",
+          "ดูแลกระบวนการปิดบัญชีสิ้นเดือนและสิ้นปี รวมถึงรายการบันทึกประจำวัน การกระทบยอด และการรายงานทางการเงิน",
+          "จัดการกระบวนการตรวจสอบภายนอก ติดต่อประสานงานกับผู้ตรวจสอบบัญชี และรับรองการจัดหาเอกสารที่จำเป็นอย่างทันท่วงทีและถูกต้อง",
+          "ติดตามและจัดการกระแสเงินสด เพิ่มประสิทธิภาพเงินทุนหมุนเวียน",
+          "ดำเนินการวิเคราะห์ทางการเงินและนำเสนอข้อมูลเชิงลึกที่สำคัญแก่ฝ่ายบริหาร สนับสนุนการวางแผนเชิงกลยุทธ์และการตัดสินใจ"
+        ],
+        "requirement": [
+          "วุฒิปริญญาตรี สาขาบัญชี การเงิน หรือสาขาที่เกี่ยวข้อง",
+          "มีประสบการณ์ด้านบัญชีมาแล้ว อย่างน้อย 5 ปีในตำแหน่งหัวหน้างานหรือผู้จัดการ",
+          "ทักษะการวิเคราะห์และการแก้ปัญหา",
+          "ความสามารถในการสื่อสาร",
+          "ทักษะความเป็นผู้นำ",
+          "ทักษะการบริหารจัดการทีม",
+          "มีความรู้ด้านโปรแกรมบัญชี และความรู้ขั้นสูงเกี่ยวกับ Microsoft Excel",
+          "มีความรู้เรื่องกฎหมายภาษีอากร"
+        ]
+      },
+      {
+        "positionName": "หัวหน้างานฝ่ายบัญชี",
+        "jobDes": [
+          "กำกับดูแลและชี้แนะทีมงานบัญชี ส่งเสริมสภาพแวดล้อมการทำงานที่ทำงานร่วมกันให้มีประสิทธิภาพสูง",
+          "ดูแลการจัดทำงบการเงินให้ถูกต้องและทันเวลาเพื่อให้มั่นใจว่ามีการปฏิบัติตามมาตรฐานการบัญชีและนโยบายองค์กร",
+          "ดูแลความถูกต้องในเรื่องทั่วไปของบัญชีแต่ละประเภท รวมถึงรายการบันทึกประจำวัน การกระทบยอดบัญชี และการปิดบัญชีสิ้นเดือน",
+          "ควบคุมดูแลจัดระเบียบในเรื่องของใบแจ้งหนี้ การชำระเงินของลูกหนี้ เพื่อให้มั่นใจว่าการดำเนินการมีประสิทธิภาพและถูกต้อง",
+          "ดำเนินการวิเคราะห์ทางการเงินอย่างสม่ำเสมอ ให้ข้อมูลเชิงลึกและคำแนะนำเพื่อสนับสนุนการตัดสินใจเชิงกลยุทธ์",
+          "ทำงานร่วมกับผู้ตรวจสอบภายในและภายนอกเพื่อให้มั่นใจว่ามีการให้ข้อมูลอย่างทันท่วงทีและจัดการกับผลการตรวจสอบ",
+          "ปรับปรุงขั้นตอนการบัญชีให้มีประสิทธิภาพเพิ่มขึ้น",
+          "ช่วยในการพัฒนาและติดตามงบประมาณทำงานอย่างใกล้ชิดกับฝ่ายบริหารเพื่อให้แน่ใจว่าบรรลุเป้าหมายทางการเงิน",
+          "ให้โอกาสการฝึกอบรมและพัฒนาแก่ทีมงานบัญชีเพื่อเพิ่มทักษะและความรู้"
+        ],
+        "requirement": [
+          "วุฒิปริญญาตรี สาขาบัญชี การเงิน หรือสาขาที่เกี่ยวข้อง",
+          "มีประสบการณ์ด้านบัญชี ในระดับหัวหน้างาน 5 ปีขึ้นไป",
+          "มีความเป็นผู้นำและการจัดการทีมพร้อมความสามารถในการจูงใจและพัฒนาทีม",
+          "มีทักษะการคิดวิเคราะห์และการแก้ปัญหาที่ยอดเยี่ยม พร้อมความสามารถในการประมวลผลข้อมูลทางการเงินที่ซับซ้อน",
+          "ทักษะการสื่อสารในการทำงานร่วมกับทีมงาน แผนกที่เกี่ยวข้อง",
+          "มีความรู้ด้านโปรแกรมบัญชี และความรู้ขั้นสูงเกี่ยวกับ Microsoft Excel"
+        ]
+      },
+      {
+        "positionName": "เจ้าหน้าที่ความปลอดภัย",
+        "jobDes": [
+          "งานส่งเสริมความปลอดภัย",
+          "- จัดทำแผนงานด้านความปลอดภัย",
+          "- จัดกิจกรรมส่งเสริมความปลอดภัย",
+          "- อบรมให้ความรู้พนักงานด้านความปลอดภัยก่อนเริ่มงาน",
+          "งานตรวจความปลอดภัย",
+          "- ตรวจความปลอดภัยประจำวันในสถานประกอบการ",
+          "- ปรับปรุงสภาพแวดล้อมการทำงานให้เหมาะสมแก่พนักงาน",
+          "- รายงานผลการตรวจความปลอดภัยที่ต้องแก้ไขกับคปอ.",
+          "งานป้องกันและสอบสวนอุบัติเหตุในการทำงาน",
+          "- ประเมินความเสี่ยงในการทำงานต่างๆในสถานประกอบการ",
+          "- ดำเนินการสอบสวนเมื่อเกิดอุบัติเหตุ",
+          "- รายงานการเกิดอุบัติเหตุให้กับคณะกรรมการความปลอดภัย",
+          "แผนฉุกเฉินภายในสถานประกอบการ",
+          "- จัดทำแผนฉุกเฉินกรณีอัคคีภัย และสารเคมีรั่วไหล",
+          "- ติดต่อประสานงานหน่วยงานภายนอกเข้ามาอบรมแผนฉุกเฉิน",
+          "- จัดทำ Layout ทางหนีไฟ",
+          "- ดำเนินการจัดอบรมดับเพลิง อพยพหนีไฟประจำปี",
+          "ปรับปรุงพัฒนาให้สถานประกอบการสอดคล้องตามกฏหมาย",
+          "- ทำเอกสารรายงานความปลอดภัยส่งราชการตามกฎหมายกำหนด",
+          "- ประเมินความสอดคล้องกฎหมายและสื่อสารให้พนักงานทรา"
+        ],
+        "requirement": [
+          "วุฒิปริญญาตรี สาขาอาชีวอนามัยและความปลอดภัย หรือเทียบเท่า",
+          "สามารถชี้บ่งอันตรายและประเมินความเสี่ยง เทคนิคการตรวจความปลอดภัย รวมถึงจัดอบรมความรู้เรื่องความปลอดภัยในหัวข้อต่างๆ",
+          "การรายงานสถานการณ์ที่เป็นอันตราย การประเมินความสอดคล้องตามกฎหมายรวมถึงสรุปสาระสำคัญของกฎหมายด้านความปลอดภัยที่เกี่ยวข้องกับบริษัท",
+          "สอบสวนอุบัติเหตุ ตรวจสอบสาเหตุ และวิเคราะห์การประสบอันตราย ที่เกิดขึ้น",
+          "ตรวจวัด และประเมินสภาพแวดล้อมในการทำงาน",
+          "มีความรู้ด้านระบบการจัดการคุณภาพ, อาชีวอนามัยความปลอดภัย ,สิ่งแวดล้อม",
+          "มีใบอนุญาตด้านการอบรมความปลอดภัยต่างๆ"
+        ]
+      },
+      {
+        "positionName": "เจ้าหน้าที่ระบบคุณภาพ ISO",
+        "jobDes": [
+          "ประสานงาน ติดตามงาน และวิเคราะห์งานต่างๆ ที่เกี่ยวข้องกับระบบคุณภาพ",
+          "ตรวจประเมินระบบ ISO ภายในบริษัท (Internal Audit)",
+          "จัดทำเอกสาร Procedure, WI, Form ที่เกี่ยวข้อง",
+          "จัดอบรมภายใน/ประสานงานการอบรมที่เกี่ยวข้องกับระบบ ISO"
+        ],
+        "requirement": [
+          "ปริญญาตรีขึ้นไป",
+          "ประสบการณ์ 0-3 ปี หรือมากกว่า",
+          "ทักษะในการติดต่อสื่อสาร การวิเคราะห์ การประเมินผล การเขียนรายงาน และการนำเสนอ",
+          "มีความสามารถในการนำทีมและการทำงานเป็นทีม",
+          "มีความรู้ด้านระบบ ISO",
+          "สามารถแก้ไขปัญหาเฉพาะหน้าได้",
+          "สามารถใช้คอมพิวเตอร์ Microsoft Office ได้เป็นอย่างดี"
+        ]
+      },
+      {
+        "positionName": "หัวหน้างานคลังสินค้า",
+        "jobDes": [
+          "วางแผน ควบคุมและตรวจสอบข้อมูลการรับสินค้า การจัดเก็บสินค้า และการจัดเบิกจ่ายสินค้า",
+          "บริหาร ควบคุมการตรวจนับสต๊อกสินค้า",
+          "แก้ไขปัญหาการรับสินค้าที่ไม่ตรงกับรายการ",
+          "ตัดสินใจแก้ปัญหาในการจัดเก็บสินค้า และการเบิกจ่ายสินค้า",
+          "ประสานงานกับแผนกที่เกี่ยวข้อง",
+          "สรุปรายงานการเบิกจ่าย"
+        ],
+        "requirement": [
+          "ปริญญาตรีสาขาโลจิสติกส์ การจัดการห่วงโซ่อุปทาน หรือสาขาที่เกี่ยวข้อง (จะพิจารณาเป็นพิเศษ)",
+          "มีประสบการณ์ 5 ปี ระดับหัวหน้างานหรือผู้จัดการด้านคลังสินค้า",
+          "มีประสบการณ์ด้านการจัดการคลังสินค้าหรือคลังสินค้า",
+          "มีทักษะความเป็นผู้นำและการบริหารทีมที่แข็งแกร่ง",
+          "มีความรู้เกี่ยวกับระบบและขั้นตอนการจัดการสินค้าคงคลัง",
+          "ความสามารถในการจัดองค์กรและการแก้ปัญหาที่ยอดเยี่ยม",
+          "ทักษะการสื่อสารและมนุษยสัมพันธ์",
+          "ใส่ใจในรายละเอียดและความถูกต้อง"
+        ]
+      },
+      {
+        "positionName": "เจ้าหน้าที่คลังสินค้า",
+        "jobDes": [
+          "ดูแล จัดเก็บ และรักษาความสะอาดภายในพื้นที่คลังสินค้าให้เป็นไปตามระเบียบและมาตรฐานของบริษัท",
+          "เช็คสต็อกและจัดเตรียม จัดเก็บวัตถุดิบในการผลิตให้พร้อมต่อการนำมาใช้งานและอยู่ในสภาพที่เหมาะสมอยู่เสมอ",
+          "ขนย้ายสินค้าจากคลังสินค้าไปยังพาหนะของแผนกขนส่ง"
+        ],
+        "requirement": [
+          "ไม่จำกัดวุฒิการศึกษา",
+          "มีความละเอียด รอบคอบ ใส่ใจรายละเอียด",
+          "มีความรับผิดชอบสูง",
+          "หากสามารถขับรถยนต์และมอเตอร์ไซค์ได้จะได้รับการพิจารณาเป็นพิเศษ",
+          "หากมีใบขับขี่รถยนต์และรถมอเตอร์ไซค์จะได้รับการพิจารณาเป็นพิเศษ"
+        ]
+      },
+      {
+        "positionName": "ผู้จัดการแผนกคลังสินค้าและแผนกขนส่ง",
+        "jobDes": [
+          "วางแผน ควบคุม และตรวจสอบการรับสินค้า รวมถึงการจัดเก็บสินค้า บริหารสต็อคสินค้า และสรุปรายงาน",
+          "วางแผนการจ่ายสินค้า ควบคุมและตรวจสอบการจัดเบิกจ่าย รวมถึงตัดสินใจแก้ปัญหาในการเบิกจ่ายอย่างมีประสิทธิภาพ",
+          "วางแผนการจัดเตรียมสินค้าขึ้นรถขนส่งและควบคุมการรับจัดเตรียมสินค้าขึ้นรถ",
+          "วางแผนการจัดส่งสินค้า ติดตามสอบถามผลการจัดส่งกับลูกค้า และสรุปรายงานผลการจัดส่ง",
+          "วางแผนการบำรุงรักษารถขนส่ง ควบคุมการบำรุงรักษารถขนส่ง กำกับดูแลการดำเนินงานประจำวันของแผนกคลังสินค้า",
+          "ประสานงานและเพิ่มประสิทธิภาพกระบวนการจัดเก็บ ดำเนินการตามมาตรการความปลอดภัย และจัดการตารางเวลาของพนักงาน",
+          "ตัดสินใจแก้ปัญหาในการจัดเก็บและปัญหาอื่น ๆ ที่เกี่ยวข้อง",
+          "ควบคุมการตรวจนับสต็อคสินค้าและงานเบิกจ่าย",
+          "พัฒนาระบบคุณภาพต่าง ๆ",
+          "บริหารการจัดทำงบประมาณประจำปี",
+          "กำกับดูแลการดำเนินงานประจำวันของแผนกคลังสินค้าและแผนกขนส่ง"
+        ],
+        "requirement": [
+          "ปริญญาตรี สาขาโลจิสติกส์ การจัดการซัพพลายเชน หรือสาขาที่เกี่ยวข้อง (จะได้รับการพิจารณาเป็นพิเศษ)",
+          "มีประสบการณ์ในตำแหน่งหัวหน้าหรือผู้จัดการงานคลังสินค้าและงานโลจิสติกส์ อย่างน้อย 5 ปี",
+          "มีประสบการณ์ในด้านการบริหารจัดการคลังสินค้าหรือการจัดเก็บสินค้า และงานโลจิสติกส์",
+          "มีความเป็นผู้นำและทักษะการบริหารทีมที่ยอดเยี่ยม",
+          "มีความรู้ในระบบและกระบวนการจัดการสินค้าคงคลัง",
+          "มีความสามารถในการจัดระเบียบและแก้ปัญหาได้ดีเยี่ยม",
+          "มีทักษะการสื่อสารและมนุษยสัมพันธ์ที่ดีเยี่ยม",
+          "ใส่ใจในรายละเอียดและความถูกต้อง"
+        ]
+      },
+      {
+        "positionName": "หัวหน้างานด้านโลจิสติกส์",
+        "jobDes": [],
+        "requirement": []
       }
     ]
   }
