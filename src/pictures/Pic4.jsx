@@ -1,20 +1,18 @@
-
 export default function Pic4() {
-    return (
-      <div className="flex pt-3 gap-2 w-full justify-between">
+  return (
+    <div className="flex gap-[0.5rem] mx-[0.5rem] justify-between">
       <div className="">
         <img
-          className="h-[600px] w-[800px]  object-cover"
+          className="object-scale-down"
           src="images/pic4-1.jpg"
         />
       </div>
       <div>
         <img
-          className="h-[600px] w-[800px]  object-cover"
+          className="object-scale-down"
           src="images/pic4-2.jpg"
         />
       </div>
     </div>
-    )
-  }
-  
+  );
+}

@@ -1,19 +1,18 @@
 export default function Pic3() {
   return (
-    <div className="flex pt-3 gap-2 w-full justify-between">
-    <div className="">
-      <img
-        className="h-[600px] w-[800px]  object-cover"
-        src="images/pic3-1.jpg"
-      />
+    <div className="flex gap-[0.5rem] mx-[0.5rem] justify-between">
+      <div className="">
+        <img
+          className="object-scale-down"
+          src="images/pic3-1.jpg"
+        />
+      </div>
+      <div>
+        <img
+          className="object-scale-down"
+          src="images/pic3-2.jpg"
+        />
+      </div>
     </div>
-    <div>
-      <img
-        className="h-[600px] w-[800px]  object-cover"
-        src="images/pic3-2.jpg"
-      />
-    </div>
-  </div>
-
   );
 }

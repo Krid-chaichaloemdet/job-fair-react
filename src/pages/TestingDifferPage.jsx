@@ -36,7 +36,7 @@ import Pic30 from "../pictures/Pic30";
 
 
 export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, input, setInput }) {
-  const [count, setCount] = useState(9999);
+  const [count, setCount] = useState(10);
 
 
   const [countEachPhoto, setCountEachPhoto] = useState(0);
@@ -191,7 +191,7 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
     const saveRecord = () => {
       axios.post("http://192.168.0.169:4567/create", input);
     };
-    if (pic === 30) {
+    if (pic === 15) {
       saveRecord();
     }
   }, [pic]);
@@ -221,21 +221,21 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
     { pic: 12, y1: 105, x1: 625, y2: 105, x2: 1380 },
     { pic: 13, y1: 245, x1: 400, y2: 245, x2: 1150 },
     { pic: 14, y1: 520, x1: 710, y2: 520, x2: 1460 },
-    { pic: 15, y1: 150, x1: 720, y2: 150, x2: 1475 },
-    { pic: 16, y1: 100, x1: 315, y2: 100, x2: 1070 },
-    { pic: 17, y1: 340, x1: 155, y2: 340, x2: 910 },
-    { pic: 18, y1: 50, x1: 310, y2: 50, x2: 1070 },
-    { pic: 19, y1: 190, x1: 280, y2: 190, x2: 1020 },
-    { pic: 20, y1: 485, x1: 660, y2: 485, x2: 1410 },
-    { pic: 21, y1: 250, x1: 250, y2: 250, x2: 1000 },
-    { pic: 22, y1: 215, x1: 650, y2: 215, x2: 1405 },
-    { pic: 23, y1: 385, x1: 495, y2: 385, x2: 1250 },
-    { pic: 24, y1: 110, x1: 690, y2: 110, x2: 1440 },
-    { pic: 25, y1: 305, x1: 190, y2: 305, x2: 945 },
-    { pic: 26, y1: 30, x1: 440, y2: 30, x2: 1190 },
-    { pic: 27, y1: 435, x1: 50, y2: 435, x2: 805 },
-    { pic: 28, y1: 365, x1: 450, y2: 365, x2: 1200 },
-    { pic: 29, y1: 510, x1: 460, y2: 510, x2: 1215 },
+    // { pic: 15, y1: 150, x1: 720, y2: 150, x2: 1475 },
+    // { pic: 16, y1: 100, x1: 315, y2: 100, x2: 1070 },
+    // { pic: 17, y1: 340, x1: 155, y2: 340, x2: 910 },
+    // { pic: 18, y1: 50, x1: 310, y2: 50, x2: 1070 },
+    // { pic: 19, y1: 190, x1: 280, y2: 190, x2: 1020 },
+    // { pic: 20, y1: 485, x1: 660, y2: 485, x2: 1410 },
+    // { pic: 21, y1: 250, x1: 250, y2: 250, x2: 1000 },
+    // { pic: 22, y1: 215, x1: 650, y2: 215, x2: 1405 },
+    // { pic: 23, y1: 385, x1: 495, y2: 385, x2: 1250 },
+    // { pic: 24, y1: 110, x1: 690, y2: 110, x2: 1440 },
+    // { pic: 25, y1: 305, x1: 190, y2: 305, x2: 945 },
+    // { pic: 26, y1: 30, x1: 440, y2: 30, x2: 1190 },
+    // { pic: 27, y1: 435, x1: 50, y2: 435, x2: 805 },
+    // { pic: 28, y1: 365, x1: 450, y2: 365, x2: 1200 },
+    // { pic: 29, y1: 510, x1: 460, y2: 510, x2: 1215 },
   ];
   useEffect(() => {
     setCountTo10(0);
@@ -253,11 +253,11 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
     setTestX(x);
     setTestY(y);
   };
-  if (isStart === true && pic !== 30) {
+  if (isStart === true && pic !== 15) {
     setTimeout(() => {
       setCount(count - 1);
       setCountEachPhoto(countEachPhoto + 1);
-      if (pic !== 30) {
+      if (pic !== 15) {
         setInput((prevInput) => ({ ...prevInput, time: input.time + 1 }));
       }
       if (pic === 0) {
@@ -290,7 +290,6 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
       if (pic === 9) {
         setInput((prevInput) => ({ ...prevInput, pic10: input.pic10 + 1 }));
       }
-
       if (pic === 10) {
         setInput((prevInput) => ({ ...prevInput, pic11: input.pic11 + 1 }));
       }
@@ -306,52 +305,51 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
       if (pic === 14) {
         setInput((prevInput) => ({ ...prevInput, pic15: input.pic15 + 1 }));
       }
-      if (pic === 15) {
-        setInput((prevInput) => ({ ...prevInput, pic16: input.pic16 + 1 }));
-      }
-      if (pic === 16) {
-        setInput((prevInput) => ({ ...prevInput, pic17: input.pic17 + 1 }));
-      }
-      if (pic === 17) {
-        setInput((prevInput) => ({ ...prevInput, pic18: input.pic18 + 1 }));
-      }
-      if (pic === 18) {
-        setInput((prevInput) => ({ ...prevInput, pic19: input.pic19 + 1 }));
-      }
-      if (pic === 19) {
-        setInput((prevInput) => ({ ...prevInput, pic20: input.pic20 + 1 }));
-      }
-
-      if (pic === 20) {
-        setInput((prevInput) => ({ ...prevInput, pic21: input.pic21 + 1 }));
-      }
-      if (pic === 21) {
-        setInput((prevInput) => ({ ...prevInput, pic22: input.pic22 + 1 }));
-      }
-      if (pic === 22) {
-        setInput((prevInput) => ({ ...prevInput, pic23: input.pic23 + 1 }));
-      }
-      if (pic === 23) {
-        setInput((prevInput) => ({ ...prevInput, pic24: input.pic24 + 1 }));
-      }
-      if (pic === 24) {
-        setInput((prevInput) => ({ ...prevInput, pic25: input.pic25 + 1 }));
-      }
-      if (pic === 25) {
-        setInput((prevInput) => ({ ...prevInput, pic26: input.pic26 + 1 }));
-      }
-      if (pic === 26) {
-        setInput((prevInput) => ({ ...prevInput, pic27: input.pic27 + 1 }));
-      }
-      if (pic === 27) {
-        setInput((prevInput) => ({ ...prevInput, pic28: input.pic28 + 1 }));
-      }
-      if (pic === 28) {
-        setInput((prevInput) => ({ ...prevInput, pic29: input.pic29 + 1 }));
-      }
-      if (pic === 29) {
-        setInput((prevInput) => ({ ...prevInput, pic30: input.pic30 + 1 }));
-      }
+      // if (pic === 15) {
+      //   setInput((prevInput) => ({ ...prevInput, pic16: input.pic16 + 1 }));
+      // }
+      // if (pic === 16) {
+      //   setInput((prevInput) => ({ ...prevInput, pic17: input.pic17 + 1 }));
+      // }
+      // if (pic === 17) {
+      //   setInput((prevInput) => ({ ...prevInput, pic18: input.pic18 + 1 }));
+      // }
+      // if (pic === 18) {
+      //   setInput((prevInput) => ({ ...prevInput, pic19: input.pic19 + 1 }));
+      // }
+      // if (pic === 19) {
+      //   setInput((prevInput) => ({ ...prevInput, pic20: input.pic20 + 1 }));
+      // }
+      // if (pic === 20) {
+      //   setInput((prevInput) => ({ ...prevInput, pic21: input.pic21 + 1 }));
+      // }
+      // if (pic === 21) {
+      //   setInput((prevInput) => ({ ...prevInput, pic22: input.pic22 + 1 }));
+      // }
+      // if (pic === 22) {
+      //   setInput((prevInput) => ({ ...prevInput, pic23: input.pic23 + 1 }));
+      // }
+      // if (pic === 23) {
+      //   setInput((prevInput) => ({ ...prevInput, pic24: input.pic24 + 1 }));
+      // }
+      // if (pic === 24) {
+      //   setInput((prevInput) => ({ ...prevInput, pic25: input.pic25 + 1 }));
+      // }
+      // if (pic === 25) {
+      //   setInput((prevInput) => ({ ...prevInput, pic26: input.pic26 + 1 }));
+      // }
+      // if (pic === 26) {
+      //   setInput((prevInput) => ({ ...prevInput, pic27: input.pic27 + 1 }));
+      // }
+      // if (pic === 27) {
+      //   setInput((prevInput) => ({ ...prevInput, pic28: input.pic28 + 1 }));
+      // }
+      // if (pic === 28) {
+      //   setInput((prevInput) => ({ ...prevInput, pic29: input.pic29 + 1 }));
+      // }
+      // if (pic === 29) {
+      //   setInput((prevInput) => ({ ...prevInput, pic30: input.pic30 + 1 }));
+      // }
       if (count == 0) {
         setIsStartDiffer(false)
         // setPic(30);
@@ -379,22 +377,22 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
     { id: 12, data: <Pic13 />, isChecked: false },
     { id: 13, data: <Pic14 />, isChecked: false },
     { id: 14, data: <Pic15 />, isChecked: false },
-    { id: 15, data: <Pic16 />, isChecked: false },
-    { id: 16, data: <Pic17 />, isChecked: false },
-    { id: 17, data: <Pic18 />, isChecked: false },
-    { id: 18, data: <Pic19 />, isChecked: false },
-    { id: 19, data: <Pic20 />, isChecked: false },
-    { id: 20, data: <Pic21 />, isChecked: false },
-    { id: 21, data: <Pic22 />, isChecked: false },
-    { id: 22, data: <Pic23 />, isChecked: false },
-    { id: 23, data: <Pic24 />, isChecked: false },
-    { id: 24, data: <Pic25 />, isChecked: false },
-    { id: 25, data: <Pic26 />, isChecked: false },
-    { id: 26, data: <Pic27 />, isChecked: false },
-    { id: 27, data: <Pic28 />, isChecked: false },
-    { id: 28, data: <Pic29 />, isChecked: false },
-    { id: 29, data: <Pic30 />, isChecked: false },
-    { id: 30, data: <PicEnd scoreData={input.score} />, isChecked: false },
+    // { id: 15, data: <Pic16 />, isChecked: false },
+    // { id: 16, data: <Pic17 />, isChecked: false },
+    // { id: 17, data: <Pic18 />, isChecked: false },
+    // { id: 18, data: <Pic19 />, isChecked: false },
+    // { id: 19, data: <Pic20 />, isChecked: false },
+    // { id: 20, data: <Pic21 />, isChecked: false },
+    // { id: 21, data: <Pic22 />, isChecked: false },
+    // { id: 22, data: <Pic23 />, isChecked: false },
+    // { id: 23, data: <Pic24 />, isChecked: false },
+    // { id: 24, data: <Pic25 />, isChecked: false },
+    // { id: 25, data: <Pic26 />, isChecked: false },
+    // { id: 26, data: <Pic27 />, isChecked: false },
+    // { id: 27, data: <Pic28 />, isChecked: false },
+    // { id: 28, data: <Pic29 />, isChecked: false },
+    // { id: 29, data: <Pic30 />, isChecked: false },
+    { id: 15, data: <PicEnd scoreData={input.score} />, isChecked: false },
   ]);
   const isChecking = () => {
     const updatedPages = pages.map((page, index) => {
@@ -409,7 +407,7 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
 
   const [countTo10, setCountTo10] = useState(0);
   const spot = () => {
-    if (pic == 30) {
+    if (pic == 15) {
       return;
     }
     setInput((prevInput) => ({
@@ -470,54 +468,49 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
     }
   }, []);
   return (
-    <div className="fixed h-full bg-black bg-opacity-50">
+    <div className="fixed left-0 top-0 w-full h-full overflow-y-scroll">
 
-
-      {/* { pic == 30 &&   <div className=" w-full h-[10%] top-0 absolute flex justify-between z-30">
-        {pic == 0 ||
-          (pic == 30 && (
-            <div className="pl-5">
-              <img className={`w-[50%] h-[100%] `} src="EVA.svg" alt="" />
-            </div>
-          ))}
-
-      </div>} */}
       {isStart ? (
         <div
 
         // onClick={spot}
-          className={`w-full h-full flex flex-col relative items-center justify-center  ${
-            pic == 30 ? `bg-[url('BG.jpg')] bg-cover bg-center ` : `bg-black`
+          className={`w-full flex flex-col relative items-center justify-start mt-[80px]  ${
+            pic == 15 ? `bg-[url('BG.jpg')] bg-cover bg-center ` : `bg-black`
           } `}
         >
-          {pic !== 30 && (
+          {pic !== 15 && (
             <div
-              className={`flex items-center justify-center absolute top-0 pt-5 w-full  ${
-                pages[30] && pic == 30
-
+              className={`flex items-center justify-between relative top-0 w-full pt-[1.5rem] pb-[0.5rem] ${
+                pages[15] && pic == 15
                   ? "text-5xl items-center justify-center"
                   : "text-3xl items-start"
                 }`}
             >
-              <div className="text-red-500 text-[1.5rem]">
-                {lang == "EN"
-                  ? `Total Time : ${minutes + "m" + seconds + "s"}`
-                  : `เวลาทั้งหมด : ${minutes + " นาที " + seconds + " วินาที"}`}
-              </div>
+              
               {/* <div className="text-red-500">Time for each : {countEachPhoto}</div> */}
-              <div className="text-green-500 text-[1.5rem]">
+              <div className="text-white text-[1rem] w-[25%] text-center flex justify-center">
                 {lang == "EN"
                   ? `Scores : ${input.score}`
                   : ` คะเเนน  : ${input.score}`}
               </div>
               
-              <div className="text-blue-500 text-[1.5rem]">
+              <div className="text-white text-[1rem] w-[25%] text-center flex justify-center">
                 {lang == `EN`
                   ? `Total clicks : ${input.totalClick}`
                   : `คลิ๊กทั้งหมด: ${input.totalClick}`}
               </div>
               {/* <div className="text-blue-500">Skips : {countTo10}</div> */}
-              
+              {/* <div className="text-white text-[1.5rem] w-[33%] text-center flex justify-center">
+                {lang == "EN"
+                  ? `Time : ${minutes + "m" + seconds + "s"}`
+                  : `เวลาทั้งหมด : ${minutes + " นาที " + seconds + " วินาที"}`}
+              </div> */}
+              <div className="text-white text-[1rem] w-[25%] text-center flex justify-center">
+                {lang == "EN"
+                  ? `Time : ${seconds + "s"}`
+                  : `เวลาทั้งหมด : ${seconds + " วินาที"}`}
+              </div>
+
             </div>
           )}
 
@@ -525,10 +518,10 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
 
           <div 
            onClick={spot}
-          className="flex  w-full h-[1200px] relative ">
-            <div className={`flex w-full items-center  `}>
+          className="flex  w-full relative justify-center items-center flex-col">
+            <div className={`flex w-full items-center`}>
 
-              {pic == 30 && (
+              {pic == 15 && (
                 <div className="flex flex-col items-center justify-center w-full h-full text-4xl  ">
                   <div className="bg-white pb-5 bg-opacity-70 w-[40%] rounded-xl flex flex-col gap-2  shadow-xl">
                     <div className="w-full h-[10rem] rounded-t-xl flex items-center justify-center  bg-[#D70321] text-white">
@@ -537,7 +530,7 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
                           {input.score}
                         </div>
                         <div className="w-full flex justify-center text-xl">
-                          {lang == `EN` ? `Total 30` : `ทั้งหมด 30 `}
+                          {lang == `EN` ? `Total 15` : `ทั้งหมด 15 `}
                         </div>
                       </div>
                       <div className="text-8xl flex h-[70%] w-[1%] items-center bg-white rounded-md"></div>
@@ -608,7 +601,7 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
                     <button
                       className="bg-white text-2xl pr-10 pl-10 pt-2 pb-2 rounded-md   shadow-xl"
                       onClick={() => {
-                        if (pic === 30) {
+                        if (pic === 15) {
                           setPic(0);
                           setInput({
                             ...input,
@@ -781,9 +774,9 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
               {/* {pic === pages[pic].id &&  pages[pic].data} */}
             </div>
 
-            {pic !== 30 && (
-              <div className="h-full w-full bg-red-20 absolute top-0 left-0 opacity-60">
-                <div className="w-[100%] h-[100%]">
+            {pic !== 15 && (
+              <div className="h-full w-full bg-red-20">
+                <div className="w-[100%] h-[100%] absolute top-0">
                   <div
                     onClick={() => {
                       setCountTo10(0);
@@ -802,7 +795,7 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
                       );
                       let lastPic = isFalse.length - 2;
                       if (lastPic == 0) {
-                        return setPic(30);
+                        return setPic(15);
                       }
                       if (isFalse[lastPic].id === pic) {
                         setPic(isFalse[0].id);
@@ -822,6 +815,7 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
                       transform: "translate(-50%, -50%)", // Center the location indicator
                     }}
                   ></div>
+
                   <div
                     onClick={() => {
                       setCountTo10(0);
@@ -840,7 +834,7 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
                       );
                       let lastPic = isFalse.length - 2;
                       if (lastPic == 0) {
-                        return setPic(30);
+                        return setPic(15);
                       }
                       if (isFalse[lastPic].id === pic) {
                         setPic(isFalse[0].id);
@@ -862,34 +856,31 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
                   ></div>
                 </div>
 
-
-                <div className="w-full bottom-0 absolute flex justify-center items-center flex-col">
+              </div>
+            )}
+          </div>
+          <div className="w-full bottom-0 relative flex justify-center items-center flex-col py-[2rem]">
                   
 
-                  {pic !== 30 && (
+                  {pic !== 15 && (
                     <div  
                       onClick={handleSkip}
-                      className="bg-gray-400 text-xl p-1 rounded-md cursor-pointer"
+                      className="bg-white p-1 rounded-full cursor-pointer px-[2rem] text-[#131E3C] font-medium "
                     >
                       {" "}
                       {lang == "EN" ? "SKIP" : `ข้าม`}
                     </div>
                   )}
 
-                  {pic !== 30 && (
+                  {/* {pic !== 30 && (
                     <div className="text-green-500 text-[1.5rem]">
                       {lang == "EN"
                         ? `Picture : ${pic + 1 + "/30"}`
                         : `รูปภาพ : ${pic + 1 + "/30"}`}
                     </div>
-                  )}
+                  )} */}
 
                 </div>
-
-                
-              </div>
-            )}
-          </div>
 
         </div>
       ) : (
