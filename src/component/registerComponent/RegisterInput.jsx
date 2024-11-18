@@ -14,6 +14,10 @@ export default function RegisterInput({
   district,
   subDistrict,
   isAddress,
+  errorValidator,
+  setInput,
+  input,
+  keyProp
 }) {
   const [isOpenPositionDropDown, setIsOpenPositionDropDown] = useState(false);
 
@@ -24,7 +28,9 @@ export default function RegisterInput({
     { title: "Female" },
     { title: "Other" },
   ];
+  const testHaned = () =>{
 
+  }
   if (amout > 1) {
     for (let i = 0; i < amout; i++) {
       inputs.push(
@@ -35,8 +41,11 @@ export default function RegisterInput({
             name={name}
             type={typeOfInput}
             className="mx-[0.5rem]"
+            onChange={testHaned}
           />
-          <label htmlFor="">{typeOfGender[i]?.title}</label>
+          <div>
+            <label htmlFor="">{typeOfGender[i]?.title}</label>
+          </div>
         </div>
       );
     }
@@ -58,67 +67,98 @@ export default function RegisterInput({
 
   const [isOpenSearchDistrict, setIsOpenSearchDistrict] = useState(false);
   const [searchDistrictData, setSearchDistrictData] = useState([]);
-  const [selectDistrict, setSelectDistrict] = useState('')
+  const [selectDistrict, setSelectDistrict] = useState("");
 
-  const [isOpenSearchSubDistrict, setIsOpenSearchSubDistrict] = useState(false)
-  const [searchSubDistrictData, setSearchSubDistrictData] = useState([])
-  const [selectSubDistrict, setSelectSubDistrict] = useState('')
+  const [isOpenSearchSubDistrict, setIsOpenSearchSubDistrict] = useState(false);
+  const [searchSubDistrictData, setSearchSubDistrictData] = useState([]);
+  const [selectSubDistrict, setSelectSubDistrict] = useState("");
   const handleSearchProvince = async (e) => {
     try {
       if (e.target.value !== "") {
-        setSelectDistrict('')
-        setSelectSubDistrict('')
+        setSelectDistrict("");
+        setSelectSubDistrict("");
         setIsOpenSearchProvince(true);
       }
 
-
-      const response = await axios.get(
-        `http://localhost:8000/user/searchProvince?q=${e.target.value}`
-      ).then((res)=>  setSearchProvinceData(res.data))
-
+      const response = await axios
+        .get(`http://localhost:8000/user/searchProvince?q=${e.target.value}`)
+        .then((res) => setSearchProvinceData(res.data));
     } catch (error) {
       console.error("Error fetching province data:", error);
     }
   };
   const handleSearchDistrict = async (e) => {
     try {
-      if(e.target.value !== ''){
-        setSelectSubDistrict('')
+      if (e.target.value !== "") {
+        setSelectSubDistrict("");
         // setIsOpenSearchDistrict(true)
       }
-      if(!selectProvince){
-        return
+      if (!selectProvince) {
+        return;
       }
       const resposne = await axios
         .get(
           `http://localhost:8000/user/searchDistrict?q=${selectProvince.province_code}`
         )
-        .then((res) => setSearchDistrictData(res.data)).finally(()=>setIsOpenSearchDistrict(true))
-      
+        .then((res) => setSearchDistrictData(res.data))
+        .finally(() => setIsOpenSearchDistrict(true));
     } catch (error) {
       console.log(error);
     }
   };
 
-  const handleSearchSubDistrict = async () =>{
+  const handleSearchSubDistrict = async () => {
     try {
-      if(!selectDistrict){
-        return
+      if (!selectDistrict) {
+        return;
       }
-        await axios.get(`http://localhost:8000/user/searchSubDistrict?q=${selectDistrict.district_code}`)
-        .then((res)=>setSearchSubDistrictData(res.data)).finally(()=>setIsOpenSearchSubDistrict(true))
+      await axios
+        .get(
+          `http://localhost:8000/user/searchSubDistrict?q=${selectDistrict.district_code}`
+        )
+        .then((res) => setSearchSubDistrictData(res.data))
+        .finally(() => setIsOpenSearchSubDistrict(true));
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
   // useEffect(() => {e
   //   axios
   //     .get("http://localhost:8000/user/searchProvince")
   //     .then((res) => setSearchProvinceData(res.data));
   // }, [isSearchProvince]);
+  const [isSearchUniversity, setIsSearchUniversity] = useState(false);
+  const [universityData, setUniversityData] = useState([]);
+  const [selectUniversity, setSelectUniversity] = useState({
+    uni: "",
+  });
+  const handleSearchUniversity = async (e) => {
+    if (e.target.value) {
+      // setSelectUniversity({ ...selectUniversity.uni , uni : e.target.value })
+      // if(selectUniversity.uni == ''){
+      //   setIsSearchUniversity(false);
+      // }
+      setIsSearchUniversity(true);
+      await axios
+        .get(`http://localhost:8000/user/searchUniversity?q=${e.target.value}`)
+        .then((res) => setUniversityData(res.data));
+    }
+  };
+
+  const [isSearchEducation, setIsSearchEducation] = useState(false)
+  const [educationData, setEducationData] = useState([])
+  const [selectEducation, setSelectEducation] = useState('')
+
+  const handleSearchEducation = async () => {
+
+
+    
+    await axios.get(`http://localhost:8000/user/searchEducation`)
+    .then((res)=> setEducationData(res.data)).finally(()=>    setIsSearchEducation(true))
+  }
 
   return (
-    <div className="flex flex-row gap-[0.5rem] justify-between">
+    <div key={keyProp} className="flex flex-row gap-[0.5rem] justify-between">
       {amout > 1 ? (
         inputs
       ) : (
@@ -146,12 +186,18 @@ export default function RegisterInput({
                         onClick={() => {
                           setIsOpenSearchProvince(false);
                           setSelectProvince(data);
+                          setInput({
+                            ...input,
+                            address: "จ." + data.province_name_th,
+                          });
                         }}
                         className="bg-gray-200 hover:bg-gray-50 cursor-pointer "
                         key={i}
                       >
                         {" "}
-                        {data.province_name_en ? data.province_name_th : data.province_name_th}{" "}
+                        {data.province_name_en
+                          ? data.province_name_th
+                          : data.province_name_th}{" "}
                       </div>
                     );
                   })}
@@ -160,6 +206,7 @@ export default function RegisterInput({
               <label htmlFor="">District</label>
               <input
                 // onChange={handleSearchDistrict}
+                onChange={testHaned}
                 value={selectDistrict && selectDistrict.district_name_th}
                 onClick={handleSearchDistrict}
                 className={`bg-[#f3f3f5] border-[1px] border-[#DFE0E5]`}
@@ -168,37 +215,59 @@ export default function RegisterInput({
               {isOpenSearchDistrict && (
                 <div className="h-[150px] overflow-auto ">
                   {searchDistrictData?.map((data, i) => {
-                                        console.log(data);
-                    return <div
-                    onClick={()=>{
-                      
-                      setIsOpenSearchDistrict(false)
-                      setSelectDistrict(data)
-                    }}
-                     className="bg-gray-200 hover:bg-gray-50 cursor-pointer "
-                    key={i}>{data.district_name_th}</div>;
+                    return (
+                      <div
+                        onClick={() => {
+                          setIsOpenSearchDistrict(false);
+                          setSelectDistrict(data);
+                          setInput({
+                            ...input,
+                            address:
+                              input.address + " อ." + data.district_name_th,
+                          });
+                        }}
+                        className="bg-gray-200 hover:bg-gray-50 cursor-pointer"
+                        key={i}
+                      >
+                        {data.district_name_th}
+                      </div>
+                    );
                   })}
                 </div>
               )}
               <label htmlFor="">Sub District</label>
               <input
-                value={selectSubDistrict && selectSubDistrict.sub_district_name_th}
-              onClick={handleSearchSubDistrict}
+              onChange={testHaned}
+                value={
+                  selectSubDistrict && selectSubDistrict.sub_district_name_th
+                }
+                onClick={handleSearchSubDistrict}
                 className="bg-[#f3f3f5] border-[1px] border-[#DFE0E5]"
                 type="text"
               />
-           {  isOpenSearchSubDistrict &&   <div className="h-[150px] overflow-auto ">
+              {isOpenSearchSubDistrict && (
+                <div className="h-[150px] overflow-auto ">
                   {searchSubDistrictData?.map((data, i) => {
-                                        console.log(data);
-                    return <div
-                    onClick={()=>{
-                      setIsOpenSearchSubDistrict(false)
-                      setSelectSubDistrict(data)
-                    }}
-                     className="bg-gray-200 hover:bg-gray-50 cursor-pointer "
-                    key={i}>{data. sub_district_name_th}</div>;
+                    return (
+                      <div
+                        onClick={() => {
+                          setIsOpenSearchSubDistrict(false);
+                          setSelectSubDistrict(data);
+                          setInput({
+                            ...input,
+                            address:
+                              input.address + " ต." + data.sub_district_name_th,
+                          });
+                        }}
+                        className="bg-gray-200 hover:bg-gray-50 cursor-pointer "
+                        key={i}
+                      >
+                        {data.sub_district_name_th}
+                      </div>
+                    );
                   })}
-                </div>}
+                </div>
+              )}
             </div>
           ) : (
             <div className="w-full">
@@ -220,6 +289,7 @@ export default function RegisterInput({
                     <div name={name} className="flex flex-col ">
                       <div className="flex gap-2 py-[0.25rem]">
                         <input
+
                           onClick={() => setIsOpenPositionDropDown(false)}
                           type="radio"
                           name={name}
@@ -282,11 +352,91 @@ export default function RegisterInput({
                   )}
                 </div>
               ) : (
-                <input
-                  className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem]"
-                  type={typeOfInput}
-                  name={name}
-                />
+                <div>
+                  {name == "university" ? (
+                    <input
+                      onChange={handleSearchUniversity}
+                      onClick={() => setSelectUniversity(null)}
+                      className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0"
+                      type={typeOfInput}
+                      name={name}
+                      value={selectUniversity?.uni}
+                    />
+                  ) : (
+                    <>
+                      {name == "education" ? (
+                        <input
+                        onClick={() =>{
+                          handleSearchEducation()
+                          setSelectEducation(null)}}
+                          // onChange={handleSearchEducation}
+                          className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0"
+                          type={typeOfInput}
+                          name={name}
+                          value={selectEducation}
+                        />
+                      ) : (
+                        <input
+                          // onChange={handleSearchUniversity}
+                          className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0"
+                          type={typeOfInput}
+                          name={name}
+                        />
+                      )}
+                    </>
+                  )}
+
+                  {
+                    name == 'education' && isSearchEducation && (
+                      <div className=" h-auto overflow-auto "> 
+                        {
+                          educationData.map((data, i)=>{
+                            return(
+                              <div 
+                              onClick={()=>{
+                                setInput({...input, education: data.education_th})
+                                setSelectEducation(data.education_th)
+                              
+                              setIsSearchEducation(false)
+                              }}
+                              className="hover:bg-gray-300 cursor-pointer"
+                              key={i}>
+                                {data.education_th}
+                                 </div>
+                            )
+                          })
+                        }
+                      </div>
+                    )
+                  }
+
+                  {name == "university" && isSearchUniversity && (
+                    <div className=" h-40 overflow-auto">
+                      {universityData.map((data, i) => {
+                        return (
+                          <div
+                            onClick={() => {
+                              setInput({
+                                ...input,
+                                university: data.university,
+                              });
+                              setSelectUniversity({
+                                ...selectUniversity,
+                                uni: data.university,
+                              });
+                              setIsSearchUniversity(false);
+                            }}
+                            className="z-10 hover:bg-gray-200 cursor-pointer"
+                            key={i}
+                          >
+                            {" "}
+                            {data.university}{" "}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
               )}
             </div>
           )}

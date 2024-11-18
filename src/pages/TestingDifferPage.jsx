@@ -36,7 +36,7 @@ import Pic30 from "../pictures/Pic30";
 
 
 export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, input, setInput }) {
-  const [count, setCount] = useState(10);
+  const [count, setCount] = useState(100);
 
 
   const [countEachPhoto, setCountEachPhoto] = useState(0);

@@ -8,11 +8,14 @@ import Camera from "./Camera";
 export default function RegisterPage() {
   const navigate = useNavigate();
 
-  if(!localStorage.getItem('photo')){
-    window.location = '/camera'
+  if (!localStorage.getItem("photo")) {
+    window.location = "/camera";
   }
-  const [isPhotoSuccess, setIsPhotoSuccess] =useState(true)
+  const [isPhotoSuccess, setIsPhotoSuccess] = useState(true);
+
+  const [errorValidator, setErrorValidator] = useState("");
   const [input, setInput] = useState({
+    targetUserId : localStorage.getItem('userId'),
     firstName: "",
     lastName: "",
     address: "",
@@ -20,10 +23,11 @@ export default function RegisterPage() {
     gender: "",
     phoneNumber: "",
     email: "",
+    university: "",
     education: "",
     faculty: "",
     department: "",
-    dateCanStartWorking: "",
+    // dateCanStartWorking: "",
     interestedPosition: localStorage.getItem("position")
       ? localStorage.getItem("position")
       : "click here",
@@ -37,11 +41,13 @@ export default function RegisterPage() {
       id: 1,
       title: "First Name",
       name: "firstName",
+      err: "firstName",
     },
     {
       id: 2,
       title: "Last Name",
       name: "lastName",
+      err: "lastName",
     },
     // {
     //   id: 3,
@@ -64,12 +70,14 @@ export default function RegisterPage() {
       // subDistrict: 'Sub District',
       // name3: 'subDistrict',
       // addressAmout: 3,
+      err: "address",
     },
     {
       id: 4,
       title: "Date of birth MM/DD/YYYY",
       name: "dateOfBirth",
       typeOfInput: "date",
+      err: "dateOfBirth",
     },
     {
       id: 5,
@@ -80,18 +88,27 @@ export default function RegisterPage() {
       radio1: "male",
       radio2: "female",
       radio3: "other",
+      err: "gender",
     },
-    { id: 6, title: "Phone Number", name: "phoneNumber" },
-    { id: 7, title: "E-mail", name: "email" },
-    { id: 8, title: "Education", name: "education" },
-    { id: 9, title: "Faculty", name: "faculty" },
-    { id: 10, title: "Department", name: "department" },
+    { id: 6, title: "Phone Number", name: "phoneNumber", err: "phoneNumber" },
+    { id: 7, title: "E-mail", name: "email", err: "email" },
+    { id: 8, title: "University", name: "university",},
+    { id: 9, title: "Education", name: "education", err: "education" },
     {
-      id: 11,
-      title: "Date you can start working MM/DD/YYYY",
-      name: "dateCanStartWorking",
-      typeOfInput: "date",
+      id: 10,
+      title: "Faculty",
+      name: "faculty",
+
+      err: "faculty",
     },
+    { id: 11, title: "Department", name: "department", err: "department" },
+    // {
+    //   id: 12,
+    //   title: "Date you can start working MM/DD/YYYY",
+    //   name: "dateCanStartWorking",
+    //   typeOfInput: "date",
+    //   err: "dateCanStartWorking",
+    // },
     {
       id: 12,
       title: "Interested position",
@@ -100,28 +117,51 @@ export default function RegisterPage() {
       positionDropDown: input.interestedPosition,
     },
   ];
-  console.log(input);
+  const requiredFields = [
+    { field: "firstName", errorId: 1 },
+    { field: "lastName", errorId: 2 },
+    { field: "address", errorId: 3 },
+    { field: "dateOfBirth", errorId: 4 },
+    { field: "phoneNumber", errorId: 5 },
+
+    { field: "gender", errorId: 6 },
+    { field: "email", errorId: 7 },
+    { field: "university", errorId: 8 },
+    { field: "education", errorId: 9 },
+    { field: "faculty", errorId: 10 },
+    { field: "department", errorId: 11 },
+    // { field: "dateCanStartWorking", errorId: 12 },
+    { field: "interestedPosition", errorId: 12 },
+  ];
   const handleSubmitForm = async (e) => {
     try {
-      if (!input.firstName) {
-        return;
-      }
       e.preventDefault();
+
+      for (const { field, errorId } of requiredFields) {
+        if (!input[field]) {
+          setErrorValidator(errorId);
+          return;
+        }
+      }
+
       await axios
         .post("http://localhost:8000/user/register", input)
         .then(() => navigate("/"))
-        .finally(() => localStorage.clear());
+        .finally(() => localStorage.removeItem("position"));
     } catch (error) {
       console.log(error);
     }
   };
+  console.log(input);
   return (
-    <form 
-    onSubmit={handleSubmitForm}
-
-    className="w-full px-[2rem] py-[1rem] mt-[80px] flex flex-col gap-2 mb-[6rem]">
-      <div className='flex flex-row justify-start'>
-      <div className="font-medium text-[1.75rem] tracking-[0.1em]">Profile</div>
+    <form
+      onSubmit={handleSubmitForm}
+      className="w-full px-[2rem] py-[1rem] mt-[80px] flex flex-col gap-2 mb-[6rem]"
+    >
+      <div className="flex flex-row justify-start">
+        <div className="font-medium text-[1.75rem] tracking-[0.1em]">
+          Profile
+        </div>
       </div>
       {arr.map((data, i) => {
         return (
@@ -130,7 +170,11 @@ export default function RegisterPage() {
             onChange={handleInput}
             key={data.id}
           >
-            <RegisterLabel label={arr[i].title} />
+            <RegisterLabel
+              id={data.id}
+              errorValidator={errorValidator}
+              label={arr[i].title}
+            />
             <RegisterInput
               name={arr[i].name}
               // value={arr[i].name}
@@ -150,16 +194,20 @@ export default function RegisterPage() {
               subDistrict={arr[i].subDistrict}
               isAddress={arr[i].isAddress}
               addressAmout={arr[i].addressAmout}
+              setInput={setInput}
+              input={input}
+              keyProp={arr[i].id}
             />
           </div>
         );
       })}
       <button
-      onClick={handleSubmitForm}
-      className="bg-[#131E3C] rounded-full py-[0.75rem] my-[0.5rem]">
+        onClick={handleSubmitForm}
+        className="bg-[#131E3C] rounded-full py-[0.75rem] my-[0.5rem]"
+      >
         <div className="text-[#ffffff] tracking-[0.12em]">Send Profile</div>
       </button>
-   {/* { localStorage.getItem('photo') !== 'true' &&  <Camera setIsPhotoSuccess={setIsPhotoSuccess}/>} */}
+      {/* { localStorage.getItem('photo') !== 'true' &&  <Camera setIsPhotoSuccess={setIsPhotoSuccess}/>} */}
     </form>
   );
 }
