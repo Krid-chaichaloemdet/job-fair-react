@@ -1,5 +1,5 @@
 import { RouterProvider, createBrowserRouter, Outlet, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import HomePage from "../pages/HomePage";
 import RegisterPage from "../pages/RegisterPage";
 import TestingPage from "../pages/TestingPage";
@@ -11,8 +11,17 @@ import ProfilePage from "../pages/ProfilePage";
 
 // Layout component that conditionally renders the Footer
 const Layout = () => {
-  const location = useLocation();  // Get the current route
 
+  const footerBar = [
+    { id: 1, title: "Jobs", path: "/" },
+    { id: 2, title: "Send Profile",  path: "/registerPage" },
+    { id: 3, title: "profile",  path: "/profilePage" },
+  ];
+
+
+  const location = useLocation();  // Get the current route
+console.log(location.pathname)
+const [isActive, setIsActive] =useState(location.pathname)
   // Conditionally render Footer based on the route
   // const shouldShowFooter = location.pathname !== "/testingDifferPage";
   const shouldShowFooter = location.pathname !== "/testingPage" && location.pathname !== "/testingDifferPage";
@@ -21,7 +30,7 @@ const Layout = () => {
     <>
       <Header />
       <Outlet />  {/* Render child route components here */}
-      {shouldShowFooter && <Footer setSelect={setSelect} select={select}/>}  {/* Show Footer unless on /testingPage */}
+      {shouldShowFooter && <Footer setIsActive={setIsActive} isActive={isActive} setSelect={setSelect} select={select}/>}  {/* Show Footer unless on /testingPage */}
     </>
   );
 };
