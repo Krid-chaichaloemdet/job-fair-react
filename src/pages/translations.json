@@ -1,0 +1,118 @@
+{
+  "en": {
+    "jobTitle": "Jobs",
+    "positions": [
+      {
+        "positionName": "Account Payable Staff",
+        "jobDes": [
+          "Receive bills, pay checks",
+          "Prepare withholding tax",
+          "Prepare Value Added Tax",
+          "Prepare petty cash documents",
+          "Record debt and expense transactions",
+          "Check the accuracy and completeness of monthly expenses",
+          "Reconcile accounts and prepare various reports related to AP",
+          "Support information and documents for auditor inspection",
+          "Perform other accounting duties as assigned"
+        ],
+        "requirement": [
+          "Bachelor's degree in Accounting or Finance",
+          "Experience in accounting of 1-2 years is an advantage.",
+          "Detail-oriented"
+        ]
+      },
+      {
+        "positionName": "Account Receivable Staff",
+        "jobDes": [
+          "Generate and issue invoices to customers accurately",
+          "Receive and process customer payments",
+          "Reconcile accounts receivable ledger",
+          "Monitor and follow up on overdue accounts",
+          "Evaluate and set credit limits for customers",
+          "Interact with customers for billing inquiries",
+          "Prepare and analyze accounts receivable reports",
+          "Maintain organized records of customer transactions"
+        ],
+        "requirement": [
+          "Bachelor's degree in Accounting or Finance",
+          "Experience in accounting of 1-2 years is an advantage.",
+          "Detail-oriented"
+        ]
+      },
+      {
+        "positionName": "Administrator",
+        "jobDes": [
+          "Prepare and summarize department reports",
+          "Support the department's activities",
+          "Coordinate with other departments",
+          "Accurately enter data into computer programs",
+          "Sort and organize documents according to standards"
+        ],
+        "requirement": [
+          "Higher vocational certificate or bachelor's degree",
+          "Proficient in Microsoft Office and computers",
+          "Detail-oriented",
+          "Excellent communication skills"
+        ]
+      }
+    ]
+  },
+  "th": {
+    "jobTitle": "ตำแหน่งงาน",
+    "positions": [
+      {
+        "positionName": "พนักงานบัญชีเจ้าหนี้",
+        "jobDes": [
+          "รับบิลและจ่ายเช็ค",
+          "เตรียมภาษีหัก ณ ที่จ่าย",
+          "เตรียมภาษีมูลค่าเพิ่ม",
+          "จัดเตรียมเอกสารเงินสดย่อย",
+          "บันทึกหนี้และรายการค่าใช้จ่าย",
+          "ตรวจสอบความถูกต้องและครบถ้วนของค่าใช้จ่ายรายเดือน",
+          "กระทบยอดบัญชีและจัดเตรียมรายงานที่เกี่ยวข้องกับเจ้าหนี้",
+          "สนับสนุนข้อมูลและเอกสารสำหรับการตรวจสอบของผู้สอบบัญชี",
+          "ปฏิบัติงานบัญชีอื่น ๆ ตามที่ได้รับมอบหมาย"
+        ],
+        "requirement": [
+          "ปริญญาตรีด้านการบัญชีหรือการเงิน",
+          "มีประสบการณ์ด้านบัญชี 1-2 ปีจะพิจารณาเป็นพิเศษ",
+          "มีความละเอียดรอบคอบ"
+        ]
+      },
+      {
+        "positionName": "พนักงานบัญชีลูกหนี้",
+        "jobDes": [
+          "สร้างและออกใบแจ้งหนี้ให้ลูกค้าอย่างถูกต้อง",
+          "รับและดำเนินการชำระเงินจากลูกค้า",
+          "กระทบยอดบัญชีลูกหนี้",
+          "ติดตามและติดตามลูกค้าที่ค้างชำระ",
+          "ประเมินและกำหนดวงเงินเครดิตให้กับลูกค้า",
+          "ติดต่อกับลูกค้าเพื่อตรวจสอบปัญหาเกี่ยวกับการออกบิล",
+          "จัดเตรียมและวิเคราะห์รายงานลูกหนี้",
+          "จัดเก็บบันทึกการทำธุรกรรมของลูกค้าอย่างเป็นระเบียบ"
+        ],
+        "requirement": [
+          "ปริญญาตรีด้านการบัญชีหรือการเงิน",
+          "มีประสบการณ์ด้านบัญชี 1-2 ปีจะพิจารณาเป็นพิเศษ",
+          "มีความละเอียดรอบคอบ"
+        ]
+      },
+      {
+        "positionName": "เจ้าหน้าที่ธุรการ",
+        "jobDes": [
+          "จัดเตรียมและสรุปรายงานของแผนก",
+          "สนับสนุนกิจกรรมของแผนก",
+          "ประสานงานกับแผนกอื่น ๆ",
+          "บันทึกข้อมูลเข้าสู่โปรแกรมคอมพิวเตอร์อย่างถูกต้อง",
+          "จัดเรียงเอกสารตามมาตรฐาน"
+        ],
+        "requirement": [
+          "วุฒิ ปวส. หรือ ปริญญาตรี",
+          "มีความสามารถในการใช้ Microsoft Office และคอมพิวเตอร์",
+          "มีความละเอียดรอบคอบ",
+          "มีทักษะการสื่อสารที่ยอดเยี่ยม"
+        ]
+      }
+    ]
+  }
+}
