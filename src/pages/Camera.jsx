@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { saveAs } from "file-saver";
 import axios from "axios";
 export default function Camera({ setIsPhotoSuccess }) {
   const navigate = useNavigate();
