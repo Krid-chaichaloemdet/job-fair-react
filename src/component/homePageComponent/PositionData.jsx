@@ -64,13 +64,14 @@ export default function PositionData({
           </ul>
         </div>
         <div className="py-5 flex justify-center items-center">
-          <Link to={"/registerPage"}>
-            <button
-              onClick={() => handleApply()}
-              className="bg-[#131E3c] rounded-[20px] h-[40px] w-52 text-white text-[14px]"
-            >
-              Apply for Job
-            </button>
+
+          <Link to={ localStorage.getItem('photo') !== 'true' ? '/camera' : '/registerPage'}>
+          <button
+          onClick={()=>handleApply()}
+          className="bg-[#131E3c] rounded-[20px] h-[40px] w-52 text-white text-[14px]">
+            Apply for Job
+          </button>
+
           </Link>
         </div>
       </div>

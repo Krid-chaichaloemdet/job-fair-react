@@ -5,17 +5,17 @@ import jobsicon from "../../public/icons/jobsIcon.svg";
 import profileicon from "../../public/icons/profileIcon.svg";
 import languageicon from "../../public/icons/langIcon.svg";
 
-export default function Footer() {
+export default function Footer({select ,setSelect, isActive, setIsActive}) {
 
   const navigate = useNavigate();
-  const [select, setSelect] = useState(1);
+
 
 
 
   const footerBar = [
     { id: 1, title: "Jobs", image: jobsicon, path: "/" },
     { id: 2, title: "Send Profile", image: profileicon, path: "/registerPage" },
-    // { id: 3, title: "language", image: languageicon, path: "/testingPage" },
+    { id: 3, title: "profile", image: languageicon, path: "/profilePage" },
   ];
 
   return (
@@ -24,13 +24,12 @@ export default function Footer() {
         return (
           <div
             onClick={() => {
+              setIsActive(data.path)
               navigate(data.path);
               setSelect(data.id);
             }}
             key={i}
-            className={`flex flex-col justify-start items-center w-full mx-[0.5rem] rounded-lg py-[0.5rem] duration-300 ease-in ${
-              data.id == select ? "bg-[#b2b5be] " : "bg-[#D9D9D9]"
-            } `}
+            className={`flex flex-col justify-start items-center w-full mx-[0.5rem] rounded-lg py-[0.5rem] duration-300 ease-in ${isActive == data.path ? "bg-[#b2b5be] " : "bg-[#D9D9D9]" }`}
           >
             <img className="my-[0.25rem]" src={data.image} alt="" />
             <div className="text-[0.8rem] text-center">{data.title}</div>
@@ -40,3 +39,4 @@ export default function Footer() {
     </div>
   );
 }
+

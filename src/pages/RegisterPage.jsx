@@ -4,22 +4,29 @@ import { useNavigate } from "react-router-dom";
 import RegisterInput from "../component/registerComponent/RegisterInput";
 import RegisterLabel from "../component/registerComponent/RegisterLabel";
 import axios from "axios";
+import Camera from "./Camera";
 export default function RegisterPage() {
+  const navigate = useNavigate();
 
-  const navigate = useNavigate()
+  if(!localStorage.getItem('photo')){
+    window.location = '/camera'
+  }
+  const [isPhotoSuccess, setIsPhotoSuccess] =useState(true)
   const [input, setInput] = useState({
     firstName: "",
-    lastName : "",
+    lastName: "",
     address: "",
     dateOfBirth: "",
     gender: "",
     phoneNumber: "",
-    email: '',
-    education: '',
-    faculty: '',
-    department : '',
-    dateCanStartWorking :'',
-    interestedPosition : localStorage.getItem('position')  ? localStorage.getItem('position')  :  'click here'
+    email: "",
+    education: "",
+    faculty: "",
+    department: "",
+    dateCanStartWorking: "",
+    interestedPosition: localStorage.getItem("position")
+      ? localStorage.getItem("position")
+      : "click here",
   });
 
   const handleInput = (e) => {
@@ -36,16 +43,34 @@ export default function RegisterPage() {
       title: "Last Name",
       name: "lastName",
     },
+    // {
+    //   id: 3,
+    //   title: "Address",
+    //   name: "address",
+    //   typeOfInput: '',
+    //   textArea : true,
+    //   textAreaHight: 'h-10',
+    //   textAreaWidth: 'w-2/5'
+    // },
     {
       id: 3,
-      title: "Address",
-      name: "address",
-      typeOfInput: '',
-      textArea : true,
-      textAreaHight: 'h-10',
-      textAreaWidth: 'w-2/5'
+      title: "address",
+      isAddress: true,
+      addresData: ["Province", "District", "Sub District"],
+      // province: 'Province',
+      // name1: 'province',
+      // district: 'District',
+      // name2: 'district',
+      // subDistrict: 'Sub District',
+      // name3: 'subDistrict',
+      // addressAmout: 3,
     },
-    { id: 4, title: "Date of birth MM/DD/YYYY", name: "dateOfBirth" , typeOfInput: 'date'},
+    {
+      id: 4,
+      title: "Date of birth MM/DD/YYYY",
+      name: "dateOfBirth",
+      typeOfInput: "date",
+    },
     {
       id: 5,
       title: "Gender",
@@ -61,18 +86,35 @@ export default function RegisterPage() {
     { id: 8, title: "Education", name: "education" },
     { id: 9, title: "Faculty", name: "faculty" },
     { id: 10, title: "Department", name: "department" },
-    { id: 11, title: "Date you can start working MM/DD/YYYY", name: "dateCanStartWorking", typeOfInput: 'date' },
-    { id: 12, title: "Interested position", name: "interestedPosition", isDropDown: true  , positionDropDown: input.interestedPosition},
+    {
+      id: 11,
+      title: "Date you can start working MM/DD/YYYY",
+      name: "dateCanStartWorking",
+      typeOfInput: "date",
+    },
+    {
+      id: 12,
+      title: "Interested position",
+      name: "interestedPosition",
+      isDropDown: true,
+      positionDropDown: input.interestedPosition,
+    },
   ];
-console.log(input)
-  const handleSubmitForm =  async(e) =>{
+  console.log(input);
+  const handleSubmitForm = async (e) => {
     try {
-      e.preventDefault()
-    await  axios.post('http://localhost:8000/user/register', input ).then(()=>navigate('/')).finally(()=> localStorage.clear())
+      if (!input.firstName) {
+        return;
+      }
+      e.preventDefault();
+      await axios
+        .post("http://localhost:8000/user/register", input)
+        .then(() => navigate("/"))
+        .finally(() => localStorage.clear());
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
   return (
     <form 
     onSubmit={handleSubmitForm}
@@ -83,9 +125,11 @@ console.log(input)
       </div>
       {arr.map((data, i) => {
         return (
-          <div 
-          className="flex flex-col gap-1 w-full mb-[0.5rem]"
-          onChange={handleInput} key={data.id}>
+          <div
+            className="flex flex-col gap-1 w-full mb-[0.5rem]"
+            onChange={handleInput}
+            key={data.id}
+          >
             <RegisterLabel label={arr[i].title} />
             <RegisterInput
               name={arr[i].name}
@@ -101,13 +145,21 @@ console.log(input)
               isDropDown={arr[i].isDropDown}
               positionDropDown={arr[i].positionDropDown}
               setInputPosition={setInput}
+              province={arr[i].province}
+              district={arr[i].district}
+              subDistrict={arr[i].subDistrict}
+              isAddress={arr[i].isAddress}
+              addressAmout={arr[i].addressAmout}
             />
           </div>
         );
       })}
-      <button className="bg-[#131E3C] rounded-full py-[0.75rem] my-[0.5rem]">
+      <button
+      onClick={handleSubmitForm}
+      className="bg-[#131E3C] rounded-full py-[0.75rem] my-[0.5rem]">
         <div className="text-[#ffffff] tracking-[0.12em]">Send Profile</div>
       </button>
+   {/* { localStorage.getItem('photo') !== 'true' &&  <Camera setIsPhotoSuccess={setIsPhotoSuccess}/>} */}
     </form>
   );
 }
