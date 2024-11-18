@@ -8,6 +8,9 @@ import Camera from "./Camera";
 export default function RegisterPage() {
   const navigate = useNavigate();
 
+  if(!localStorage.getItem('photo')){
+    window.location = '/camera'
+  }
   const [isPhotoSuccess, setIsPhotoSuccess] =useState(true)
   const [input, setInput] = useState({
     firstName: "",
@@ -156,7 +159,7 @@ export default function RegisterPage() {
       className="bg-[#131E3C] rounded-full py-[0.75rem] my-[0.5rem]">
         <div className="text-[#ffffff] tracking-[0.12em]">Send Profile</div>
       </button>
-   { localStorage.getItem('photo') !== 'true' &&  <Camera setIsPhotoSuccess={setIsPhotoSuccess}/>}
+   {/* { localStorage.getItem('photo') !== 'true' &&  <Camera setIsPhotoSuccess={setIsPhotoSuccess}/>} */}
     </form>
   );
 }

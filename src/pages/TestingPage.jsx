@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import TestingCoponent from "../component/testingPageComponent/TestingCoponent";
@@ -263,14 +263,15 @@ export default function TestingPage() {
 
   },[count])
 
+  const navigate = useNavigate()
   return (
     <div
       // onSubmit={handleSubmitForm}
-      className="w-full bg-blue-600 flex flex-col"
+      className="w-full  flex flex-col"
     >
       <div className="w-full flex justify-center py-5 ">Challenge</div>
-      <div className="grid grid-cols-2 gap-5 px-5">
-        <div className="flex flex-col px-5 ">
+      <div className="gap-5 px-5">
+        {/* <div className="flex flex-col px-5 ">
           <label htmlFor="">Your first name</label>
           <input
             onChange={handleInput}
@@ -278,8 +279,8 @@ export default function TestingPage() {
             className="rounded-sm"
             type="text"
           />
-        </div>
-        <div className="flex flex-col px-5 ">
+        </div> */}
+        {/* <div className="flex flex-col px-5 ">
           <label htmlFor="">Your last name</label>
           <input
             onChange={handleInput}
@@ -287,17 +288,17 @@ export default function TestingPage() {
             className="rounded-sm"
             type="text"
           />
-        </div>
-        <div className="flex flex-col px-5 ">
+        </div> */}
+        <div className="flex flex-col px-5 w-full items-center justify-center ">
           <label htmlFor="">Phone number</label>
           <input
             onChange={handleInput}
             name="phoneNumber"
-            className="rounded-sm"
+            className="rounded-sm bg-gray-300"
             type="text"
           />
         </div>
-        <div className="flex flex-col px-5 ">
+        {/* <div className="flex flex-col px-5 ">
           <label htmlFor="">E-mail</label>
           <input
             onChange={handleInput}
@@ -305,15 +306,22 @@ export default function TestingPage() {
             className="rounded-sm"
             type="text"
           />
-        </div>
+        </div> */}
       </div>
-      <div className="flex justify-center py-5  w-full ">
+      <div className="flex justify-center gap-5 py-5  w-full ">
         <button
           onClick={() => setIsStartDiffer(true)}
           className="bg-blue-950 text-white px-16 py-2 rounded-3xl"
         >
           {" "}
           Start Challenge
+        </button>
+        <button
+          onClick={() => navigate('/')}
+          className="bg-blue-950 text-white px-16 py-2 rounded-3xl"
+        >
+          {" "}
+          Back To Home
         </button>
       </div>
       {isStartTesting && (
