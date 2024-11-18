@@ -113,11 +113,13 @@ export default function RegisterPage() {
     }
   };
   return (
-    <div
-      onSubmit={handleSubmitForm}
-      className="w-full px-[2rem] py-[1rem] flex flex-col gap-2 mb-[6rem]"
-    >
+    <form 
+    onSubmit={handleSubmitForm}
+
+    className="w-full px-[2rem] py-[1rem] flex flex-col gap-2 mb-[6rem]">
+      <div className='flex flex-row justify-start'>
       <div className="font-medium text-[1.75rem] tracking-[0.1em]">Profile</div>
+      </div>
       {arr.map((data, i) => {
         return (
           <div
@@ -155,6 +157,6 @@ export default function RegisterPage() {
         <div className="text-[#ffffff] tracking-[0.12em]">Send Profile</div>
       </button>
    { localStorage.getItem('photo') !== 'true' &&  <Camera setIsPhotoSuccess={setIsPhotoSuccess}/>}
-    </div>
+    </form>
   );
 }
