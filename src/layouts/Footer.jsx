@@ -15,7 +15,7 @@ export default function Footer() {
   const footerBar = [
     { id: 1, title: "Jobs", image: jobsicon, path: "/" },
     { id: 2, title: "Send Profile", image: profileicon, path: "/registerPage" },
-    { id: 3, title: "language", image: languageicon, path: "/testingPage" },
+    // { id: 3, title: "language", image: languageicon, path: "/testingPage" },
   ];
 
   return (
