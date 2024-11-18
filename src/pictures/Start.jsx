@@ -36,60 +36,60 @@ export default function Start({ setIsStart }) {
     setIsStart(true);
   };
   return (
-    <div className="  w-screen h-screen flex items-center justify-center flex-col gap-10 bg-[url('BG.jpg')] bg-cover bg-center">
+    <div className="w-full h-screen flex items-center justify-center flex-col gap-10 bg-[url('BG.jpg')] bg-cover bg-center">
       {popup && (
-        <div className="w-screen h-screen absolute bg-gray-900 bg-opacity-40 flex items-center justify-center text-[1.5rem]  ">
-          <div className="w-auto pb-28 bg-white rounded-md relative">
-            <div className=" p-10">
+        <div className="w-full h-screen absolute bg-gray-900 bg-opacity-40 flex items-center justify-center  ">
+          <div className="w-[80%] px-[2rem] py-[2rem] bg-white rounded-md relative">
+            <div className="">
               <div className=" ">
-                <div className="flex items-center gap-5 ">
-                  <div className="w-5 h-5 bg-[#131E3C]  rounded-full"></div>
-                  <div>
+              <div className="flex flex-row items-center justify-between ">
+                  <div className="w-[1rem] h-[1rem] bg-[#131E3C] rounded-full"></div>
+                  <div className="text-[1rem] w-[94%]">
                     {lang === "EN"
                       ? "The test consists of 30 images. It's a spot-the-difference game."
                       : "การทดสอบประกอบด้วยภาพ 30 ภาพ เป็นเกมจับผิดภาพค่ะ"}
                   </div>
                 </div>
-                <div className="flex items-center gap-5 ">
-                  <div className="w-5 h-5 bg-[#131E3C]  rounded-full"></div>
-                  <div>
+                <div className="flex flex-row items-center justify-between ">
+                <div className="w-[1rem] h-[1rem] bg-[#131E3C] rounded-full"></div>
+                <div className="text-[1rem] w-[94%]">
                     {lang == "EN"
                       ? `You have 1 minutes to complete the test.`
                       : `คุณมีเวลา 10 นาทีในการทำแบบทดสอบค่ะ`}
                   </div>
                 </div>
-                <div className="flex items-center gap-5 ">
-                  <div className="w-5 h-5 bg-[#131E3C]  rounded-full"></div>
-                  <div>
+                <div className="flex flex-row items-center justify-between ">
+                <div className="w-[1rem] h-[1rem] bg-[#131E3C] rounded-full"></div>
+                <div className="text-[1rem] w-[94%]">
                     {lang === "EN"
                       ? `You can skip images.`
                       : `คุณสามารถข้ามภาพได้ค่ะ`}
                   </div>
                 </div>
-                <div className="flex items-center gap-5 ">
-                  <div className="w-5 h-5 bg-[#131E3C]  rounded-full"></div>
-                  <div>
+                <div className="flex flex-row items-center justify-between ">
+                <div className="w-[1rem] h-[1rem] bg-[#131E3C] rounded-full"></div>
+                <div className="text-[1rem] w-[94%]">
                     {lang == "EN"
-                      ? `      When you make 10 incorrect clicks, the game will  automatically skip the image for you. `
-                      : ` เมื่อคุณคลิกผิด 10 ครั้ง เกมจะข้ามภาพนั้นให้คุณโดยอัตโนมัติค่ะ`}
+                      ? `When you make 10 incorrect clicks, the game will automatically skip the image for you. `
+                      : `เมื่อคุณคลิกผิด 10 ครั้ง เกมจะข้ามภาพนั้นให้คุณโดยอัตโนมัติค่ะ`}
                   </div>
                 </div>
-                <div className="flex items-center gap-5 ">
-                  <div className="w-5 h-5 bg-[#131E3C]  rounded-full"></div>
-                  <div>
+                <div className="flex flex-row items-center justify-between ">
+                <div className="w-[1rem] h-[1rem] bg-[#131E3C] rounded-full"></div>
+                <div className="text-[1rem] w-[94%]">
                     {lang == "EN"
-                      ? `     Each picture will have only one point that is incorrect.`
+                      ? `Each picture will have only one point that is incorrect.`
                       : `เเต่ละภาพจะมีจุดผิดเเค่1จุดเท่านั้น`}
                   </div>
                 </div>
               </div>
             </div>
-            <div className="w-full h-[50%] flex justify-center items-center absolute bottom-0">
+            <div className="w-full h-[50%] mt-[2rem] flex justify-center items-center  bottom-0">
               <button
                 onClick={() =>{
                   setIsStart(true)
                   setPopup(false)}}
-                className="bg-[#131E3C]  w-[20%] h-[30%] rounded-md text-white flex items-center justify-center"
+                className="bg-[#131E3C]  w-full py-[0.5rem] rounded-full text-white flex items-center justify-center"
               >
                 {lang == "EN" ? "START" : `ตกลง`}
               </button>
@@ -97,37 +97,7 @@ export default function Start({ setIsStart }) {
           </div>
         </div>
       )}
-      <div className=" w-full h-[10%] top-0 absolute flex justify-between">
-        <div className="pl-5">
-          <img className="w-[50%] h-[100%] " src="EVA.svg" alt="" />
-        </div>
-        <div className="pr-5 cursor-pointer  text-[2rem]">
-          <div onClick={() => setIsOpenLand(true)}>{lang}</div>
-          {isOpenLang && (
-            <div>
-              <div
-                onClick={() => {
-                  setIsOpenLand(false);
-                  localStorage.setItem("LANG", "EN");
-                  return setLang("EN");
-                }}
-              >
-                EN
-              </div>
-              <div
-                onClick={() => {
-                  setIsOpenLand(false);
-                  localStorage.setItem("LANG", "TH");
-                  return setLang("TH");
-                }}
-              >
-                TH
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
-      <div className="text-3xl flex flex-col gap-5 items-center  p-10">
+      {/* <div className="text-3xl flex flex-col gap-5 items-center  p-10">
         <div className=" w-[100%] text-5xl ">
           {lang == "EN" ? ` Find Differences Test` : `แบบทดสอบหาความแตกต่าง`}
         </div>
@@ -136,9 +106,6 @@ export default function Start({ setIsStart }) {
           {lang == "EN"
             ? ` Please enter your name`
             : `กรุณากรอกชื่อของคุณ
-
-
-
 `}
         </div>
         <div className="flex flex-col  gap-5">
@@ -175,7 +142,7 @@ export default function Start({ setIsStart }) {
           <div className="flex gap-5 justify-between">
             <div
               onClick={startGame}
-              className="text-2xl w-[40%] cursor-pointer text-white bg-[#131E3C] p-3 rounded-md flex justify-center"
+              className="text-2xl w-full cursor-pointer text-white bg-[#131E3C] p-3 rounded-md flex justify-center"
             >
               {lang == "EN" ? " START" : `เริ่ม`}
             </div>
@@ -187,7 +154,7 @@ export default function Start({ setIsStart }) {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* <div className="w-full h-[10%] absolute bottom-0  flex justify-center items-center">
         <div className="cursor-pointer">

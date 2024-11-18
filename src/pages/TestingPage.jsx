@@ -267,11 +267,11 @@ export default function TestingPage() {
   return (
     <div
       // onSubmit={handleSubmitForm}
-      className="w-full flex flex-col justify-center items-center"
+      className="w-full h-screen flex flex-col justify-center items-center"
     >
-      <div className="h-screen flex justify-center flex-col">
-      <div className="w-full flex justify-center py-5 ">Challenge</div>
-      <div className="gap-5 px-5">
+      <div className="h-full flex justify-center flex-col w-full px-[8rem]">
+      <div className="w-full flex justify-center mb-[2rem] font-medium text-[1.75rem] tracking-[0.1em]">Challenge</div>
+      <div className="">
         {/* <div className="flex flex-col px-5 ">
           <label htmlFor="">Your first name</label>
           <input
@@ -290,12 +290,12 @@ export default function TestingPage() {
             type="text"
           />
         </div> */}
-        <div className="flex flex-col px-5 w-full items-center justify-center ">
-          <label htmlFor="">Phone number</label>
+        <div className="flex flex-col w-full items-start justify-center ">
+          <label htmlFor="" className="text-[0.8rem] mb-[0.5rem]">Phone number</label>
           <input
             onChange={handleInput}
             name="phoneNumber"
-            className="rounded-sm bg-gray-300"
+            className="bg-[#f3f3f5] border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] rounded-md w-full"
             type="text"
           />
         </div>
@@ -309,17 +309,17 @@ export default function TestingPage() {
           />
         </div> */}
       </div>
-      <div className="flex justify-center gap-5 py-5  w-full ">
+      <div className="flex justify-center gap-5 pt-[2rem] mb-[6rem] w-full ">
         <button
           onClick={() => setIsStartDiffer(true)}
-          className="bg-blue-950 text-white px-16 py-2 rounded-3xl"
+          className="bg-[#131E3C] rounded-full py-[0.75rem] my-[0.5rem] text-white w-full"
         >
           {" "}
           Start Challenge
         </button>
         <button
           onClick={() => navigate('/')}
-          className="bg-blue-950 text-white px-16 py-2 rounded-3xl"
+          className="bg-[#131E3C] rounded-full py-[0.75rem] my-[0.5rem] text-white w-full"
         >
           {" "}
           Back To Home
