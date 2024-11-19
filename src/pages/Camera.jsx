@@ -64,7 +64,7 @@ export default function Camera({ setIsPhotoSuccess }) {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-[100%]">
+    <div className="flex flex-col items-center justify-center h-[100%] p-14">
       {isPhotoAllow ? (
         <div className="fixed top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center bg-white tracking-widest p-12 ">
            <p className="tracking-widest text-center">Please remove your mask</p>
