@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import jobsicon from "../../public/icons/jobsIcon.svg";
-import profileicon from "../../public/icons/profileIcon.svg";
-import languageicon from "../../public/icons/langIcon.svg";
+import profileicon from "../../public/icons/profile-circle.svg";
+import sendprofile from "../../public/icons/user-add.svg";
 
 export default function Footer({select ,setSelect, isActive, setIsActive}) {
 
@@ -14,8 +14,8 @@ export default function Footer({select ,setSelect, isActive, setIsActive}) {
 
   const footerBar = [
     { id: 1, title: "Jobs", image: jobsicon, path: "/" },
-    { id: 2, title: "Send Profile", image: profileicon, path: "/registerPage" },
-    { id: 3, title: "profile", image: languageicon, path: "/profilePage" },
+    { id: 2, title: "Send Profile", image: sendprofile, path: "/registerPage" },
+    { id: 3, title: "profile", image: profileicon, path: "/profilePage" },
   ];
 
   return (
