@@ -705,6 +705,88 @@
           "Knowledgeable about relevant international standards",
           "Coordination and communication skills"
         ]
+      },
+      {
+        "positionName": "Quality Control Staff",
+        "jobDes": [
+          "Check and release approval of print jobs",
+          "Maintain inspection tools",
+          "Record production data"
+        ],
+        "requirement": [
+          "Secondary 3 or more",
+          "Experience in quality inspection will be given special consideration.",
+          "Able to work in shifts."
+        ]
+      },
+      {
+        "positionName": "Quality Control Administrator",
+        "jobDes": [
+          "Review and manage documents within the quality control department.",
+          "Ensure that inspection equipment meets company or client specifications.",
+          "Record and store data for the quality control department efficiently."
+        ],
+        "requirement": [
+          "At least secondary school",
+          "Experience in quality inspection will be given special consideration.",
+          "Proficient in basic computer programs (e.g. Microsoft Office, etc.)",
+          "Have patience and pay a huge amount of attention to details."
+        ]
+      },
+      {
+        "positionName": "Quality Control Supervisor",
+        "jobDes": [
+          "Ensure that team members perform their duties efficiently and effectively.",
+          "Implement and maintain quality control processes and procedures.",
+          "Conduct regular audits to ensure compliance with established standards and specifications.",
+          "Oversee the inspection and testing of products or services to verify conformity to quality standards.",
+          "Monitor and report on key quality metrics, providing regular updates to management.",
+          "Conduct investigations into the root causes of quality issues and non-conformities.",
+          "Collaborate with teams to develop and implement corrective and preventive actions.",
+          "Develop and deliver training programs for quality control staff.",
+          "Propose and implement efficiency improvements in quality control processes.",
+          "Collaborate with suppliers to address quality concerns, implement corrective actions, and ensure the quality of incoming materials and components.",
+          "Stay informed about changes in quality requirements and update processes accordingly.",
+          "Quality management system ISO:9001, FSC, UL"
+        ],
+        "requirement": [
+          "Bachelor's degree in a relevant field (e.g., Quality Management, Engineering, Sciences).",
+          "3-5 years of experience in quality control",
+          "Have a knowledge in printing quality control",
+          "Proficiency in data analysis and reporting.",
+          "Ability to communicate effectively with cross-functional teams and management.",
+          "Analytical and problem-solving skills, with an ability to identify and address quality issues.",
+          "Have a Attention to Detail",
+          "Understanding of quality control methodologies, tools, and techniques."
+        ]
+      },
+      {
+        "positionName": "Quality Control Manager",
+        "jobDes": [
+         "Leading and managing the quality control team, providing guidance, coaching, and support to ensure team effectiveness.",
+          "Ensure compliance with industry standards, regulations, and company policies.",
+          "Oversee and participate in the inspection and testing of products or services to verify adherence to quality standards.",
+          "Analyze and interpret test results, and collaborate with relevant departments to problem",
+          "Conduct data analysis on quality metrics, trends, and performance indicators.",
+          "Prepare and present regular reports on quality control activities, highlighting areas for improvement.",
+          "Investigate and analyze root causes of quality issues and non-conformities.",
+          "Work with cross-functional teams to develop and implement corrective and preventive actions.",
+          "Assist in the development and delivery of training programs for quality control staff.",
+          "Ensure that team members are adequately trained on quality control procedures and processes.",
+          "Participate in continuous improvement initiatives to enhance quality control processes and efficiency.",
+          "Recommend and implement best practices to drive overall quality improvement.",
+          "Collaborate with customer support and other relevant departments to address customer complaints related to product or service quality."
+        ],
+        "requirement": [
+          "Bachelor's degree in a relevant field (e.g., Quality Management, Engineering, Sciences).",
+          "5 years of progressive experience in quality control, with a significant portion in a supervisor or manager",
+          "Strong understanding of quality control methodologies, tools, and techniques.",
+          "Proficiency in data analysis and reporting.",
+          "Ability to communicate effectively with cross-functional teams and management.",
+          "Analytical and problem-solving skills, with an ability to identify and address quality issues.",
+          "Have a knowledge in printing quality control",
+          "Have an understanding of quality management systems ISO:9001, FSC, UL"
+        ]
       }
     ]
   },
@@ -1300,6 +1382,66 @@
         ]
       },
       {
+        "positionName": "หัวหน้างานด้านโลจิสติกส์",
+        "jobDes": [
+          "งานเตรียมการจัดส่ง",
+          "- วางแผนการจัดเตรียมสินค้าขึ้นรถขนส่ง",
+          "- ควบคุมการรับจัดเตรียมสินค้าขึ้นรถ",
+          "งานจัดส่ง",
+          "- วางแผนการจัดส่งสินค้า",
+          "- ติดตามสอบถามผลการจัดส่งกับลูกค้า",
+          "- สรุปรายงานผลการจัดส่ง",
+          "งานดูแลรถขนส่ง",
+          "- วางแผนการบำรุงรักษารถขนส่ง",
+          "- ควบคุมการบำรุงรักษารถขนส่ง",
+          "- ประสานงานกับหน่วยงานที่เกี่ยวข้อง",
+          "- ติดต่อผู้ให้บริการซ่อมบำรุงภายนอก"
+        ],
+        "requirement": [
+          "ปริญญาตรีขึ้นไปในสาขาโลจิสติกส์ หรือที่เกี่ยวข้อง",
+          "มีประสบการณ์ด้านงานโลจิสติกส์ ระดับหัวหน้างาน 3-5 ปี",
+          "สามารถวางแผน วิเคราะห์ข้อมูลและแก้ไขปัญหาเฉพาะหน้า",
+          "มีทักษะการสื่อสารและประสานงานที่ดี",
+          "มีภาวะผู้นำ กระตือรีอร้นในการทำงาน",
+          "มีมนุษยสัมพันธ์ที่ดี มีความอดทน ขยัน มีความซื่อสัตย์"
+        ]
+      },
+      {
+        "positionName": "เจ้าหน้าที่โลจิสติกส์",
+        "jobDes": [
+          "จัดส่งสินค้าให้กับลูกค้า",
+          "ตรวจเช็คสภาพรถ"
+        ],
+        "requirement": [
+          "ม.3 ขึ้นไป",
+          "ประสบการณ์การทำงานมากกว่า 1ปี",
+          "ความรู้ด้านเส้นทางทักษะด้านการขับรถสุภาพเรียบร้อย มีไหวพริบในการขับขี่",
+          "มีความรู้เกี่ยวกับซ่อมบำรุงรักษารถยนต์",
+          "มีใบอนุญาตในการขับขี่",
+          "มีความรู้ด้านความปลอดภัย,",
+          "ไม่เป็นโรคตาบอดสี",
+          "ต้องมีรถยนต์หรือรถจักรยานยนต์ส่วนตัว"
+        ]
+      },
+      {
+        "positionName": "ผู้ช่วยผู้จัดการโรงงาน",
+        "jobDes": [
+          "ช่วยเหลือในการประสานงานและควบคุมกิจกรรมการผลิตให้บรรลุเป้าหมายการผลิตและมาตรฐานคุณภาพ",
+          "ร่วมมือกับผู้จัดการโรงงานเพื่อพัฒนาและดำเนินการตามตารางการผลิตที่มีประสิทธิภาพ",
+          "สนับสนุนขั้นตอนการควบคุมคุณภาพเพื่อให้แน่ใจว่าผลิตภัณฑ์เป็นไปตามมาตรฐานที่กำหนด",
+          "มีส่วนร่วมในการริเริ่มการปรับปรุงอย่างต่อเนื่องโดยมีเป้าหมายเพื่อเพิ่มคุณภาพผลิตภัณฑ์",
+          "ช่วยเหลือในการจัดการและเพิ่มประสิทธิภาพทรัพยากร รวมถึงกำลังคน อุปกรณ์ และวัตถุดิบ",
+          "ทำงานร่วมกับผู้จัดการโรงงานและแผนกที่เกี่ยวข้องเพื่อปรับปรุงขั้นตอนการทำงาน"
+        ],
+        "requirement": [
+          "ปริญญาตรี สาขาวิศวกรรมอุตสาหการ การจัดการการผลิต หรือสาขาที่เกี่ยวข้อง",
+          "มีประสบการณ์ 2-3 ปีในด้านการผลิต ในบทบาทหัวหน้างานหรือผู้ช่วยผู้บริหาร",
+          "มีความรู้เกี่ยวกับกระบวนการผลิต การควบคุมคุณภาพ และมาตรฐานความปลอดภัย",
+          "มีทักษะความเป็นผู้นำที่แข็งแกร่งพร้อมความสามารถในการทำงานร่วมกันเป็นทีม",
+          "มีความสามารถในการแก้ปัญหาและการตัดสินใจ"
+        ]
+      },
+      {
         "positionName": "เจ้าหน้าที่ธุรการประจำโรงงาน",
         "jobDes": [
           "ทำข้อมูล Report สรุปรายงาน Report ของฝ่ายผลิต",
@@ -1319,14 +1461,15 @@
           "มีทักษะในการสื่อสารและการประสานงานเป็นอย่างดี",
           "สามารถใช้คอมพิวเตอร์ Microsoft Office ได้เป็นอย่างดี"
         ]
-      },{
+      },
+      {
         "positionName": "เจ้าหน้าที่ด้านประกันคุณภาพ",
         "jobDes": [
           "ควบคุมการตรวจสอบวัตถุดิบ",
           "- ควบคุมการตรวจสอบคุณภาพวัตถุดิบ",
           "- ประสานงานการตรวจรับวัตถุดิบกับฝ่ายจัดซื้อ",
           "- ประสานงานกับแผนกผลิต",
-         " ควบคุมการตรวจสอบผลิตภัณฑ์",
+          " ควบคุมการตรวจสอบผลิตภัณฑ์",
           "- กำหนดตารางการตรวจสอบ",
           "- มอบหมายและติดตามงาน",
           "- ตรวจสอบและแก้ไขปัญหา",
@@ -1336,10 +1479,10 @@
           "- มอบหมายและติดตามงาน",
           "- ตรวจสอบและแก้ไขปัญหา",
           "- ประสานงานกับแผนกคลังสินค้า",
-         " จัดทำสรุปรายงานผลการตรวจสอบ"
+          " จัดทำสรุปรายงานผลการตรวจสอบ"
         ],
         "requirement": [
-         " ปริญญาตรีในสาขาที่เกี่ยวข้อง (เช่น การจัดการคุณภาพ วิศวกรรมศาสตร์ หรือสาขาวิชาที่เกี่ยวข้อง)",
+          " ปริญญาตรีในสาขาที่เกี่ยวข้อง (เช่น การจัดการคุณภาพ วิศวกรรมศาสตร์ หรือสาขาวิชาที่เกี่ยวข้อง)",
           "มีประสบการณ์ด้านการประกันคุณภาพ การควบคุมคุณภาพ หรือสายงานที่เกี่ยวข้อง",
           "ความรู้เกี่ยวกับวัตถุดิบและผลิตภัณฑ์",
           "สามารถใช้ภาษาอังกฤษได้ดี",
@@ -1354,11 +1497,87 @@
           "ทักษะการประสานงานและการสื่อสาร"
         ]
       },
-      
       {
-        "positionName": "หัวหน้างานด้านโลจิสติกส์",
-        "jobDes": [],
-        "requirement": []
+        "positionName": "เจ้าหน้าที่ควบคุมคุณภาพ",
+        "jobDes": [
+          "ตรวจสอบ ปล่อยอนุมัติงานพิมพ์",
+          "ดูแลรักษาเครื่องมือในการตรวจสอบ",
+          "บันทึกข้อมูลการผลิต"
+        ],
+        "requirement": [
+          "มัธยมศึกษาปีที่ 3 ขึ้นไป",
+          "หากมีประสบการณ์ด้านการตรวจสอบคุณภาพ จะได้รับการพิจารณาเป็นพิเศษ",
+          "สามารถเข้างานเป็นกะได้"
+        ]
+      },
+      {
+        "positionName": "เจ้าหน้าที่ธุรการฝ่ายควบคุมคุณภาพ",
+        "jobDes": [
+          "ตรวจสอบ ดูแลเอกสารในแผนกความคุมคุณภาพ",
+          "ดูแลรักษาเครื่องมือในการตรวจสอบให้ตรงตามนโยบายของบริษัทหรือตามที่ลูกค้ากำหนด",
+          "บันทึกและจัดเก็บข้อมูลของแผนกควบคุมคุณภาพให้เป็นไปอย่างมีประสิทธิภาพ"
+        ],
+        "requirement": [
+          "มัธยมศึกษาปีที่ ม.3 ขึ้นไป",
+          "หากมีประสบการณ์ด้านการตรวจสอบคุณภาพ จะได้รับการพิจารณาเป็นพิเศษ",
+          "สามารถใช้โปรแกรมคอมพิวเตอร์พื้นฐานได้ เช่น Microsoft Office และอื่น ๆ",
+          "มีความอดทนและมีความละเอียดรอบคอบสูง"
+        ]
+      },
+      {
+        "positionName": "หัวหน้างานควบคุมคุณภาพ",
+        "jobDes": [
+          "ดูแลสมาชิกในทีมให้ปฏิบัติหน้าที่อย่างมีประสิทธิภาพและประสิทธิผล",
+          "ดำเนินการและรักษากระบวนการและขั้นตอนการควบคุมคุณภาพ",
+          "ดำเนินการตรวจสอบอย่างสม่ำเสมอเพื่อให้มั่นใจว่าเป็นไปตามมาตรฐานและข้อกำหนดที่กำหนดไว้",
+          "ดูแลการตรวจสอบและทดสอบผลิตภัณฑ์หรือบริการเพื่อตรวจสอบการปฏิบัติตามมาตรฐานคุณภาพ",
+          "ตรวจสอบและรายงานตัวชี้วัดคุณภาพที่สำคัญ โดยให้ข้อมูลอัปเดตแก่ฝ่ายบริหารเป็นประจำ",
+          "ดำเนินการตรวจสอบสาเหตุที่แท้จริงของปัญหาด้านคุณภาพและการไม่ปฏิบัติตามข้อกำหนด",
+          "ทำงานร่วมกับทีมเพื่อพัฒนาและดำเนินการแก้ไขและป้องกัน",
+          "พัฒนาและจัดทำโปรแกรมการฝึกอบรมสำหรับพนักงานควบคุมคุณภาพ",
+          "เสนอและดำเนินการปรับปรุงประสิทธิภาพในกระบวนการควบคุมคุณภาพ",
+          "ทำงานร่วมกับซัพพลายเออร์เพื่อจัดการกับปัญหาด้านคุณภาพ ดำเนินการแก้ไข และรับประกันคุณภาพของวัสดุและส่วนประกอบที่เข้ามา",
+          "รับข่าวสารเกี่ยวกับการเปลี่ยนแปลงข้อกำหนดด้านคุณภาพและอัพเดตกระบวนการให้สอดคล้องกัน",
+          "งานระบบบริหารคุณภาพ ISO:9001 , FSC , UL"
+        ],
+        "requirement": [
+          "ปริญญาตรีในสาขาที่เกี่ยวข้อง (เช่น การจัดการคุณภาพ วิศวกรรมศาสตร์ วิทยาศาสตร์)",
+          "มีประสบการณ์ 3-5 ปี ในด้านการควบคุมคุณภาพ",
+          "มีความรู้ด้านการควบคุมคุณภาพการพิมพ์",
+          "มีทักษะในการวิเคราะห์ข้อมูลและการรายงาน",
+          "ความสามารถในการสื่อสารอย่างมีประสิทธิภาพกับทีมงานและผู้บริหารข้ามสายงาน",
+          "ทักษะการวิเคราะห์และการแก้ปัญหาพร้อมความสามารถในการระบุและแก้ไขปัญหาด้านคุณภาพ",
+          "มีความใส่ใจในรายละเอียด",
+          "ความเข้าใจที่ดีเกี่ยวกับวิธีการ เครื่องมือ และเทคนิคการควบคุมคุณภาพ"
+        ]
+      },
+      {
+        "positionName": "ผู้จัดการฝ่ายควบคุมคุณภาพ",
+        "jobDes": [
+          "เป็นผู้นำและการจัดการทีมควบคุมคุณภาพ ให้คำแนะนำ การฝึกสอน และการสนับสนุนเพื่อให้มั่นใจว่าทีมมีประสิทธิผล",
+          "ตรวจสอบการปฏิบัติตามมาตรฐานอุตสาหกรรม กฎระเบียบ และนโยบายของบริษัท",
+          "ดูแลและมีส่วนร่วมในการตรวจสอบและทดสอบผลิตภัณฑ์หรือบริการเพื่อตรวจสอบการปฏิบัติตามมาตรฐานคุณภาพ",
+          "วิเคราะห์และตีความผลการทดสอบและทำงานร่วมกับหน่วยงานที่เกี่ยวข้องในการแก้ไขปัญหา",
+          "ดำเนินการวิเคราะห์ข้อมูลเกี่ยวกับตัวชี้วัดคุณภาพ แนวโน้ม และตัวชี้วัดประสิทธิภาพ",
+          "จัดทำและนำเสนอรายงานเกี่ยวกับกิจกรรมการควบคุมคุณภาพอย่างสม่ำเสมอโดยเน้นประเด็นที่ต้องปรับปรุง",
+          "ตรวจสอบและวิเคราะห์สาเหตุของปัญหาด้านคุณภาพและความไม่สอดคล้อง",
+          "ทำงานร่วมกับแผนกที่เกี่ยวข้องเพื่อพัฒนาและดำเนินการแก้ไขและป้องกัน",
+          "ช่วยในการพัฒนาและจัดส่งโปรแกรมการฝึกอบรมสำหรับพนักงานควบคุมคุณภาพ",
+          "ตรวจสอบให้แน่ใจว่าสมาชิกในทีมได้รับการฝึกอบรมอย่างเพียงพอเกี่ยวกับขั้นตอนและกระบวนการควบคุมคุณภาพ",
+          "มีส่วนร่วมในการริเริ่มการปรับปรุงอย่างต่อเนื่องเพื่อปรับปรุงกระบวนการควบคุมคุณภาพและประสิทธิภาพ",
+          "แนะนำและใช้แนวทางปฏิบัติที่ดีที่สุดเพื่อขับเคลื่อนการปรับปรุงคุณภาพโดยรวม",
+          "ทำงานร่วมกับฝ่ายสนับสนุนลูกค้าและแผนกอื่นๆ ที่เกี่ยวข้องเพื่อแก้ไขข้อร้องเรียนของลูกค้าที่เกี่ยวข้องกับคุณภาพของผลิตภัณฑ์หรือบริการ"
+        ],
+        "requirement": [
+          "ปริญญาตรีในสาขาที่เกี่ยวข้อง (เช่น การจัดการคุณภาพ วิศวกรรมศาสตร์ วิทยาศาสตร์)",
+          "ประสบการณ์ 5 ปีในการควบคุมคุณภาพโดยมีส่วนสำคัญในหัวหน้างานหรือผู้จัดการ",
+          "ความเข้าใจที่ดีเกี่ยวกับวิธีการ เครื่องมือ และเทคนิคการควบคุมคุณภาพ",
+          "มีทักษะในการวิเคราะห์ข้อมูลและการรายงาน",
+          "ความสามารถในการสื่อสารอย่างมีประสิทธิภาพกับทีมงานและผู้บริหารข้ามสายงาน",
+          "ทักษะการวิเคราะห์และการแก้ปัญหาพร้อมความสามารถในการระบุและแก้ไขปัญหาด้านคุณภาพ",
+          "มีความรู้ด้านการควบคุมคุณภาพการพิมพ์",
+          "มีความเข้าใจงานระบบบริหารคุณภาพ ISO:9001, FSC, UL."
+        ]
       }
     ]
   }
