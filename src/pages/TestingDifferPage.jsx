@@ -36,7 +36,7 @@ import Pic30 from "../pictures/Pic30";
 
 
 export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, input, setInput }) {
-  const [count, setCount] = useState(100);
+  const [count, setCount] = useState(1000);
 
 
   const [countEachPhoto, setCountEachPhoto] = useState(0);
@@ -392,7 +392,7 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
     // { id: 27, data: <Pic28 />, isChecked: false },
     // { id: 28, data: <Pic29 />, isChecked: false },
     // { id: 29, data: <Pic30 />, isChecked: false },
-    { id: 15, data: <PicEnd scoreData={input.score} />, isChecked: false },
+    // { id: 15, data: <PicEnd scoreData={input.score} />, isChecked: false },
   ]);
   const isChecking = () => {
     const updatedPages = pages.map((page, index) => {
@@ -775,7 +775,7 @@ export default function TestingDiiferPage({setIsStartTesting,setIsStartDiffer, i
             </div>
 
             {pic !== 15 && (
-              <div className="h-full w-full bg-red-20">
+              <div className="h-full w-full bg-red-200">
                 <div className="w-[100%] h-[100%] absolute top-0">
                   <div
                     onClick={() => {
