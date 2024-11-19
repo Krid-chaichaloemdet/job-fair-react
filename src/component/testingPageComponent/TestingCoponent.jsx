@@ -11,23 +11,32 @@ export default function TestingComponent({
   setTestingPage,
 }) {
   return (
-    <div className="bg-white w-full h-screen absolute">
-      <div className="flex w-full justify-between px-10">
-        <div>Question {testingPage} of 20</div>
+    <div className="bg-white w-full h-full absolute top-0 left-0">
+      <div className="flex w-full justify-between px-10  p-5">
+        <div className="">Question {testingPage} of 8</div>
         <div>Count: {count}</div>
       </div>
-      <div>{testingData[testingPage - 1].title}</div>
-      {testingData[testingPage - 1].image && (
-        <img
-          style={{
-            width: testingData[testingPage - 1].width,
-            height: testingData[testingPage - 1].height,
-          }}
-          src={"" + testingData[testingPage - 1].image}
-          alt="Question Image"
-        />
-      )}
-      <div>
+      <div className=" flex flex-col  items-center">
+        <div className="p-5 w-full  ">
+          <div className="">
+
+          {testingData[testingPage - 1].title}
+          </div>
+        </div>
+
+        {testingData[testingPage - 1].image && (
+          <img
+            // className="w-40 h-40  "
+            style={{
+              width: testingData[testingPage - 1].width,
+              height: testingData[testingPage - 1].height,
+            }}
+            src={"" + testingData[testingPage - 1].image}
+            alt="Question Image"
+          />
+        )}
+      </div>
+      <div className=" pl-20">
         {testingData[testingPage - 1].choice.map((choice, i) => (
           <div className="flex gap-2" key={`choice-${testingPage}-${i}`}>
             <input
@@ -35,7 +44,6 @@ export default function TestingComponent({
               name={`question-${testingPage}`}
               onClick={() => {
                 if (testingData[testingPage - 1].correct === i) {
-
                   setInput((prevInput) => ({
                     ...prevInput,
                     [`test${testingPage}`]: 1,
@@ -64,8 +72,7 @@ export default function TestingComponent({
         ))}
       </div>
 
-      <div className="flex gap-16 items-center">
-        {/* <=== */}
+      <div className="flex justify-center gap-16 items-center ">
         <IoIosArrowDropleft
           onClick={() => {
             if (testingPage === 1) {
@@ -79,7 +86,6 @@ export default function TestingComponent({
               : "cursor-pointer"
           }`}
         />
-        {/* ===> */}
         <IoIosArrowDropright
           onClick={() => {
             if (testingPage === 8) {

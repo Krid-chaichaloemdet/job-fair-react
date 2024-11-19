@@ -8,6 +8,7 @@ export default function Camera({ setIsPhotoSuccess }) {
   const [isPhotoAllow, setIsPhotoAllow] = useState(localStorage.getItem('photp') ? true : false);
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
+  
   const handleAllowCamera = async () => {
     setIsPhotoAllow(true);
     const stream = await navigator.mediaDevices.getUserMedia({ video: true });

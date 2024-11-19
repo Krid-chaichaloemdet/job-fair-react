@@ -166,24 +166,32 @@ export default function TestingPage() {
       image: "public/testingImages/Picture1.png",
       choice: [12, 48, 88, 42, 82],
       correct: 3,
+      width: 350,
+      height: 350
     },
     {
       title: "What number do you see?",
       image: "public/testingImages/Picture2.jpg",
       choice: [28, 73, 18, 42, 82],
       correct: 3,
+      width: 350,
+      height: 350
     },
     {
       title: "1,3,6,10,",
       image: "public/testingImages/Picture3.png",
       choice: [11, 15, 19, 26],
       correct: 1,
+      width: 350,
+      height: 350
     },
     {
       title: "8,6,7,5,6,4,",
       image: "public/testingImages/Picture3.png",
       choice: [3, 5, 1, 0],
       correct: 1,
+      width: 350,
+      height: 350
     },
     {
       title:
@@ -191,28 +199,32 @@ export default function TestingPage() {
       // image: "public/testingImages/Picture5.png",
       choice: [1, 48, 20, 12],
       correct: 3,
+      width: 350,
+      height: 350
     },
     {
       // mps with a face value of 10 Baht make a dozen. So, how many stamps with a face value of 40 Baht make a dozen?",
       image: "public/testingImages/Picture5.png",
-      choice: [<img key={1} src="public/testingImages/Picture5-a.png" alt="" />, <img key={2} src="public/testingImages/Picture5-b.png" alt="" />, <img key={3} src="public/testingImages/Picture5-c.png" alt="" />, <img key={4} src="public/testingImages/Picture5-d.png" alt="" />],
+      choice: [<img key={1} className="w-16 h-14" src="public/testingImages/Picture5-a.png" alt="" />, <img key={2}  className="w-16 h-14" src="public/testingImages/Picture5-b.png" alt="" />, <img className="w-16 h-14" key={3} src="public/testingImages/Picture5-c.png" alt="" />, <img className="w-16 h-14" key={4} src="public/testingImages/Picture5-d.png" alt="" />],
       correct: 3,
+      width: 250,
+      height: 250
     },
     {
-      title: "Based on the following dialogue, what are they talking about?",
-      image: "public/testingImages/Picture7.png",
-      choice: ['Smart Shopping', 'Financial Planning', 'Saving Money', 'Spending Less'],
-      correct: 3,
-      width: 600,
-      height: 500
+      title: "当你听到“异于常人”这个表达时，你会怎么理解？",
+      image: "public/testingImages/Picture1.jpg",
+      choice: ['这是指某人的行为、想法或爱好不同于大多数人，可能显得有点奇怪或不合常规', '这是指某人和大多数人完全相同，没有什么区别', '这是指某人非常保守，总是按部就班，不愿意冒险', '这是指某人很普通，什么都不特别'],
+      correct: 0,
+      width: 350,
+      height: 350
     },
     {
-      title: "Based on the following dialogue, what are they talking about?",
-      image: "public/testingImages/Picture8.png",
-      choice: ['Growing Up', 'Maturity', 'Adulthood', 'Fashion Choices'],
-      correct: 3,
-      width: 600,
-      height: 500
+      title: "你理解的“坏心思”是什么意思？",
+      image: "public/testingImages/Picture8.jpg",
+      choice: ['指心中有些無關緊要的想法，沒有特別的目的', '指心中有好意，希望能幫助他人解決問題', '指心中有惡意的念頭，想做一些對他人不利的事情', '指心中沒有任何念頭，只是保持冷靜和理智'],
+      correct: 2,
+      width: 350,
+      height: 350
     },
   ];
 
@@ -235,9 +247,9 @@ export default function TestingPage() {
       console.log(error);
     }
   };
-  const [count, setCount] = useState(5);
+  const [count, setCount] = useState(10);
 
-
+console.log(input)
 
   useEffect(() => {
     // Only run the timer if `isStartTesting` is true
