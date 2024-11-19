@@ -66,7 +66,8 @@ export default function Camera({ setIsPhotoSuccess }) {
     <div className="flex flex-col items-center justify-center h-[100%]">
       {isPhotoAllow ? (
         <div className="fixed top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center bg-white tracking-widest p-12 ">
-           <p className="py-5 tracking-widest">Please remove your mask to take a photo of your face.</p>
+           <p className="tracking-widest text-center">Please remove your mask</p>
+           <p className="py-5 tracking-widest text-center">to take a photo of your face.</p>
           <video
             ref={videoRef}
             autoPlay
