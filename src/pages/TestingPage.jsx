@@ -227,6 +227,7 @@ export default function TestingPage() {
       height: 350
     },
   ];
+  const [count, setCount] = useState(10);   ////////game time
 
   const [testingPage, setTestingPage] = useState(1);
 
@@ -237,19 +238,30 @@ export default function TestingPage() {
   const handleInput = (e) => {
     setInput({ ...input, [e.target.name]: e.target.value });
   };
-
+  const [errorInput, setErrorInput] = useState(false)
   const handleSubmitForm = async (e) => {
     try {
+      // e.preventDefault();
 
+      // if(!input.phoneNumber){
+      //   setErrorInput(true)
+      //   return
+      // }
+      // setIsStartDiffer(true)
       // e.preventDefault();
       await axios.post("http://localhost:8000/user/createTestRecord", input);
     } catch (error) {
       console.log(error);
     }
   };
-  const [count, setCount] = useState(10);
 
-console.log(input)
+const handleStartTest = () =>{
+  if(!input.phoneNumber){
+    setErrorInput(true)
+    return
+  }
+  setIsStartDiffer(true)
+}
 
   useEffect(() => {
     // Only run the timer if `isStartTesting` is true
@@ -274,7 +286,7 @@ console.log(input)
     }
 
   },[count])
-
+  console.log("count", count)
   const navigate = useNavigate()
   return (
     <div
@@ -303,7 +315,10 @@ console.log(input)
           />
         </div> */}
         <div className="flex flex-col w-full items-start justify-center ">
+          <div className="">
           <label htmlFor="" className="text-[0.8rem] mb-[0.5rem]">Phone number</label>
+         { errorInput &&  <div className="text-red-500">Please enter your phone number</div>}
+          </div>
           <input
             onChange={handleInput}
             name="phoneNumber"
@@ -323,7 +338,7 @@ console.log(input)
       </div>
       <div className="flex justify-center gap-5 pt-[2rem] mb-[6rem] w-full ">
         <button
-          onClick={() => setIsStartDiffer(true)}
+          onClick={handleStartTest}
           className="bg-[#131E3C] rounded-full py-[0.75rem] my-[0.5rem] text-white w-full"
         >
           {" "}

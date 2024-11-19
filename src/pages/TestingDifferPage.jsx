@@ -40,7 +40,7 @@ export default function TestingDiiferPage({
   input,
   setInput,
 }) {
-  const [count, setCount] = useState(3);
+  const [count, setCount] = useState(10);
 
   const [countEachPhoto, setCountEachPhoto] = useState(0);
   const [pic, setPic] = useState(0);
@@ -488,7 +488,7 @@ export default function TestingDiiferPage({
       ...prevInput,
       totalSkip: prevInput.totalSkip + 1,
     }));
-    console.log(pages)
+    console.log(pages);
     let isFalse = pages.filter((data) => data.isChecked == false);
     let lastPic = isFalse.length - 2;
     let nextFalse = isFalse.filter((data) => data.id >= pic + 1);
