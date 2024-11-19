@@ -592,11 +592,118 @@
       },
       {
         "positionName": "Logistics Supervisor",
-        "jobDes":[
-          ""
+        "jobDes": [
+          "Delivery preparation work",
+          "- Plan the preparation of products onto transport vehicles.",
+          "- Control the preparation of products onto the vehicle.",
+          "Delivery work",
+          "- Plan product delivery",
+          "- Follow up and inquire about delivery results with customers",
+          "- Summary report on delivery results",
+          "Transportation care work",
+          "- Plan maintenance of transportation vehicles",
+          "- Control the maintenance of transportation vehicles",
+          "- Coordinate with relevant agencies",
+          "- Contact an external maintenance service provider."
         ],
-        "requirement":[
-          
+        "requirement": [
+          "Bachelor's degree or higher in logistics or related",
+          "3-5 years experiences in logistics, In Supervisor.",
+          "Able to plan, analyze data and solve immediate problems",
+          "Have good communication and coordination skills",
+          "Has leadership qualities and is enthusiastic about working",
+          "Have good human relations, be patient, diligent, and honest."
+        ]
+      },
+      {
+        "positionName": "Logistics Staff",
+        "jobDes": [
+          "Deliver products to customers",
+          "Check car condition"
+        ],
+        "requirement": [
+          "Secondary 3 or higher",
+          "More than 1 year of work experience",
+          "Knowledge of routes and driving skills in a polite and polite manner. Be smart in driving",
+          "Have knowledge about automobile maintenance.",
+          "Have a driving license",
+          "Have knowledge about safety,",
+          "Eyes are not color blind.",
+          "Must have a personal car or motorcycle."
+        ]
+      },
+      {
+        "positionName": "Assistant Factory Manager",
+        "jobDes": [
+          "Assist in coordinating and supervising manufacturing activities to meet production targets and quality standards.",
+          "Collaborate with the Factory Manager to develop and implement efficient production schedules.",
+          "Support quality control procedures to ensure products meet specified standards.",
+          "Contribute to continuous improvement initiatives aimed at enhancing product quality.",
+          "Assist in managing and optimizing resources, including manpower, equipment, and raw materials.",
+          "Collaborate with the Factory Manager and relevant departments to streamline workflows."
+        ],
+        "requirement": [
+          "Bachelor’s degree in Industrial Engineering, Manufacturing Management, or a related field.",
+          "2-3 years of experience in manufacturing, in a supervisor or assistant management role.",
+          "Knowledge of manufacturing processes, quality control, and safety standards.",
+          "Strong leadership skills with the ability to work collaboratively in a team.",
+          "Problem-solving and decision-making abilities."
+        ]
+      },
+      {
+        "positionName": "Factory Operations Administrator",
+        "jobDes": [
+          "Generate and summarize production reports.",
+          "Prepare documents for incentive wages and overtime.",
+          "Support the production department's activities.",
+          "Coordinate with other departments.",
+          "Record data in computer programs.",
+          "Sort and store documents of the production department.",
+          "Check stock of raw materials/equipment to ensure sufficient supply for production."
+        ],
+        "requirement": [
+          "Diploma or Bachelor's degree or higher.",
+          "Work experience: 0-2 years of experience in clerical and documentation work.",
+          "Able to solve immediate problems.",
+          "Responsible, hardworking, and meticulous.",
+          "Agile and enthusiastic in work.",
+          "Excellent communication and coordination skills.",
+          "Proficient in using Microsoft Office."
+        ]
+      },
+      {
+        "positionName": "Quality Assurance Staff",
+        "jobDes": [
+          "Control inspection of raw materials",
+          "- Control inspection of raw material quality",
+          "- Coordinate the inspection of raw materials with the purchasing department.",
+          "- Coordination with the production department",
+          "Control product inspection",
+          "- Set inspection schedule",
+          "- Assign and follow up on work",
+          "- Check and fix problems",
+          "- Coordinate with the production department",
+          "Control inspection of finished products",
+          "- Set inspection schedule",
+          "- Assign and follow up on work",
+          "- Check and fix problems",
+          "- Coordinate with the warehouse department",
+          "Prepare a summary report of inspection results."
+        ],
+        "requirement": [
+          "Bachelor's degree in a relevant field (e.g., quality management, engineering, or related discipline).",
+          "Proven experience in quality assurance, quality control, or a related field.",
+          "Knowledge about raw materials and products",
+          "Good Command of English",
+          "Leadership skills",
+          "Have knowledge about the production process",
+          "Able to use basic computers",
+          "Planning skills and job tracking",
+          "The company's quality assurance system",
+          "Using measuring tools",
+          "Solving immediate problems",
+          "Knowledgeable about relevant international standards",
+          "Coordination and communication skills"
         ]
       }
     ]
@@ -1192,6 +1299,62 @@
           "ใส่ใจในรายละเอียดและความถูกต้อง"
         ]
       },
+      {
+        "positionName": "เจ้าหน้าที่ธุรการประจำโรงงาน",
+        "jobDes": [
+          "ทำข้อมูล Report สรุปรายงาน Report ของฝ่ายผลิต",
+          "จัดทำเอกสารค่าแรงจูงใจ , ล่วงเวลา",
+          "สนับสนุนงานของฝ่ายผลิต",
+          "ประสานงานกับแผนกอื่นๆ",
+          "บันทึกข้อมูลลงในโปรแกรมคอมพิวเตอร์",
+          "คัดแยก และจัดเก็บเอกสารของฝ่ายผลิต",
+          "เช็คสต็อค วัตถุดิบ/อุปกรณ์ให้เพียงพอต่อการผลิต"
+        ],
+        "requirement": [
+          "ปวส. หรือปริญญาตรีขึ้นไป",
+          "ประสบการณ์ทำงาน: มีประสบการณ์ในการทำงานด้านงานเอกสารธุรการ 0-2 ปี",
+          "สามารถแก้ไขปัญหาเฉพาะหน้า",
+          "มีความรับผิดชอบ ขยันอดทน และละเอียดรอบคอบ",
+          "มีความคล่องแคล่ว กระตือร้นในการทำงาน",
+          "มีทักษะในการสื่อสารและการประสานงานเป็นอย่างดี",
+          "สามารถใช้คอมพิวเตอร์ Microsoft Office ได้เป็นอย่างดี"
+        ]
+      },{
+        "positionName": "เจ้าหน้าที่ด้านประกันคุณภาพ",
+        "jobDes": [
+          "ควบคุมการตรวจสอบวัตถุดิบ",
+          "- ควบคุมการตรวจสอบคุณภาพวัตถุดิบ",
+          "- ประสานงานการตรวจรับวัตถุดิบกับฝ่ายจัดซื้อ",
+          "- ประสานงานกับแผนกผลิต",
+         " ควบคุมการตรวจสอบผลิตภัณฑ์",
+          "- กำหนดตารางการตรวจสอบ",
+          "- มอบหมายและติดตามงาน",
+          "- ตรวจสอบและแก้ไขปัญหา",
+          "- ประสานงานกับฝ่ายผลิต",
+          "ควบคุมการตรวจสอบสินค้าสำเร็จรูป",
+          "- กำหนดตารางการตรวจสอบ",
+          "- มอบหมายและติดตามงาน",
+          "- ตรวจสอบและแก้ไขปัญหา",
+          "- ประสานงานกับแผนกคลังสินค้า",
+         " จัดทำสรุปรายงานผลการตรวจสอบ"
+        ],
+        "requirement": [
+         " ปริญญาตรีในสาขาที่เกี่ยวข้อง (เช่น การจัดการคุณภาพ วิศวกรรมศาสตร์ หรือสาขาวิชาที่เกี่ยวข้อง)",
+          "มีประสบการณ์ด้านการประกันคุณภาพ การควบคุมคุณภาพ หรือสายงานที่เกี่ยวข้อง",
+          "ความรู้เกี่ยวกับวัตถุดิบและผลิตภัณฑ์",
+          "สามารถใช้ภาษาอังกฤษได้ดี",
+          "มีทักษะภาวะผู้นำ",
+          "มีความรู้เกี่ยวกับกระบวนการผลิต",
+          "สามารถใช้คอมพิวเตอร์เบื้องต้น",
+          "มีทักษะการวางแผน และการติดตามงาน",
+          "ระบบประกันคุณภาพของบริษัทฯ",
+          "การใช้เครื่องมือวัด",
+          "การแก้ไขปัญหาเฉพาะหน้า",
+          "มีความรู้เกี่ยวกับมาตรฐานสากลที่เกี่ยวข้อง",
+          "ทักษะการประสานงานและการสื่อสาร"
+        ]
+      },
+      
       {
         "positionName": "หัวหน้างานด้านโลจิสติกส์",
         "jobDes": [],
