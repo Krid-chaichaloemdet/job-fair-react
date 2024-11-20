@@ -203,32 +203,7 @@ export default function TestingPage() {
     },
     {
       image: "public/testingImages/Picture5.png",
-      choice: [
-        <img
-          key={1}
-          className="w-16 h-14"
-          src="public/testingImages/Picture5-a.png"
-          alt=""
-        />,
-        <img
-          key={2}
-          className="w-16 h-14"
-          src="public/testingImages/Picture5-b.png"
-          alt=""
-        />,
-        <img
-          className="w-16 h-14"
-          key={3}
-          src="public/testingImages/Picture5-c.png"
-          alt=""
-        />,
-        <img
-          className="w-16 h-14"
-          key={4}
-          src="public/testingImages/Picture5-d.png"
-          alt=""
-        />,
-      ],
+      choice: [<img key={1} className="w-16 h-14" src="public/testingImages/Picture5-a.png" alt="" />, <img key={2}  className="w-16 h-14" src="public/testingImages/Picture5-b.png" alt="" />, <img className="w-16 h-14" key={3} src="public/testingImages/Picture5-c.png" alt="" />, <img className="w-16 h-14" key={4} src="public/testingImages/Picture5-d.png" alt="" />],
       correct: 3,
       width: 250,
       height: 250,
@@ -288,14 +263,14 @@ export default function TestingPage() {
       ]
     }
   ];
-  const [count, setCount] = useState(100000); ////////game time
+  const [count, setCount] = useState(10);   ////////game time
 
   const [testingPage, setTestingPage] = useState(1);
 
   const [isStartTesting, setIsStartTesting] = useState(false);
   const [isStartDiffer, setIsStartDiffer] = useState(false);
 
-  const [isTestFinish, setIsTestFinish] = useState(false);
+  const [isTestFinish, setIsTestFinish] =useState(false)
   const handleInput = (e) => {
     setInput({ ...input, [e.target.name]: e.target.value });
   };
@@ -308,13 +283,13 @@ export default function TestingPage() {
     }
   };
 
-  const handleStartTest = () => {
-    if (!input.phoneNumber) {
-      setErrorInput(true);
-      return;
-    }
-    setIsStartDiffer(true);
-  };
+const handleStartTest = () =>{
+  if(!input.phoneNumber){
+    setErrorInput(true)
+    return
+  }
+  setIsStartDiffer(true)
+}
 
   useEffect(() => {
     if (isStartTesting && count > 0) {
@@ -330,75 +305,99 @@ export default function TestingPage() {
     }
   }, [isStartTesting, count]);
 
-  useEffect(() => {
-    if (count === 0) {
-      setIsStartTesting(false);
-      setIsTestFinish(true);
-      handleSubmitForm();
+  
+  useEffect(()=>{
+    if(count === 0 ) {
+      setIsStartTesting(false)
+      setIsTestFinish(true)
+      handleSubmitForm()
     }
-  }, [count]);
-  console.log("count", count);
-  const navigate = useNavigate();
+
+  },[count])
+  console.log("count", count)
+  const navigate = useNavigate()
   return (
-    <div className="w-full h-screen flex flex-col justify-center items-center">
+    <div
+      // onSubmit={handleSubmitForm}
+      className="w-full h-screen flex flex-col justify-center items-center"
+    >
       <div className="h-full flex justify-center flex-col w-full px-[8rem]">
-        <div className="w-full flex justify-center mb-[2rem] font-medium text-[1.75rem] tracking-[0.1em]">
-          Challenge
-        </div>
-        <div className="">
-          <div className="flex flex-col w-full items-start justify-center ">
-            <div className="">
-              <label htmlFor="" className="text-[0.8rem] mb-[0.5rem]">
-                Phone number
-              </label>
-              {errorInput && (
-                <div className="text-red-500">
-                  Please enter your phone number
-                </div>
-              )}
-            </div>
-            <input
-              onChange={handleInput}
-              name="phoneNumber"
-              className="bg-[#f3f3f5] border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] rounded-md w-full"
-              type="text"
-            />
+      <div className="w-full flex justify-center mb-[2rem] font-medium text-[1.75rem] tracking-[0.1em]">Challenge</div>
+      <div className="">
+        {/* <div className="flex flex-col px-5 ">
+          <label htmlFor="">Your first name</label>
+          <input
+            onChange={handleInput}
+            name="firstName"
+            className="rounded-sm"
+            type="text"
+          />
+        </div> */}
+        {/* <div className="flex flex-col px-5 ">
+          <label htmlFor="">Your last name</label>
+          <input
+            onChange={handleInput}
+            name="lastName"
+            className="rounded-sm"
+            type="text"
+          />
+        </div> */}
+        <div className="flex flex-col w-full items-start justify-center ">
+          <div className="">
+          <label htmlFor="" className="text-[0.8rem] mb-[0.5rem]">Phone number</label>
+         { errorInput &&  <div className="text-red-500">Please enter your phone number</div>}
           </div>
-        </div>
-        <div className="flex justify-center gap-5 pt-[2rem] mb-[6rem] w-full ">
-          <button
-            onClick={handleStartTest}
-            className="bg-[#131E3C] rounded-full py-[0.75rem] my-[0.5rem] text-white w-full"
-          >
-            {" "}
-            Start Challenge
-          </button>
-          <button
-            onClick={() => navigate("/")}
-            className="bg-[#131E3C] rounded-full py-[0.75rem] my-[0.5rem] text-white w-full"
-          >
-            {" "}
-            Back To Home
-          </button>
-        </div>
-        {isStartTesting && (
-          <TestingCoponent
-            testingPage={testingPage}
-            count={count}
-            input={input}
-            setInput={setInput}
-            testingData={testingData}
-            setTestingPage={setTestingPage}
+          <input
+            onChange={handleInput}
+            name="phoneNumber"
+            className="bg-[#f3f3f5] border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] rounded-md w-full"
+            type="text"
           />
-        )}
-        {isStartDiffer && (
-          <TestingDiiferPage
-            setIsStartTesting={setIsStartTesting}
-            setIsStartDiffer={setIsStartDiffer}
-            input={input}
-            setInput={setInput}
+        </div>
+        {/* <div className="flex flex-col px-5 ">
+          <label htmlFor="">E-mail</label>
+          <input
+            onChange={handleInput}
+            name="email"
+            className="rounded-sm"
+            type="text"
           />
-        )}
+        </div> */}
+      </div>
+      <div className="flex justify-center gap-5 pt-[2rem] mb-[6rem] w-full ">
+        <button
+          onClick={handleStartTest}
+          className="bg-[#131E3C] rounded-full py-[0.75rem] my-[0.5rem] text-white w-full"
+        >
+          {" "}
+          Start Challenge
+        </button>
+        <button
+          onClick={() => navigate('/')}
+          className="bg-[#131E3C] rounded-full py-[0.75rem] my-[0.5rem] text-white w-full"
+        >
+          {" "}
+          Back To Home
+        </button>
+      </div>
+      {isStartTesting && (
+        <TestingCoponent
+          testingPage={testingPage}
+          count={count}
+          input={input}
+          setInput={setInput}
+          testingData={testingData}
+          setTestingPage={setTestingPage}
+        />
+      )}
+      {isStartDiffer && (
+        <TestingDiiferPage
+          setIsStartTesting={setIsStartTesting}
+          setIsStartDiffer={setIsStartDiffer}
+          input={input}
+          setInput={setInput}
+        />
+      )}
 
         {isTestFinish && <TestFinishLoading />}
       </div>
