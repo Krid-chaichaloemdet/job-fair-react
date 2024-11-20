@@ -787,6 +787,264 @@
           "Have a knowledge in printing quality control",
           "Have an understanding of quality management systems ISO:9001, FSC, UL"
         ]
+      },
+      {
+        "positionName": "Maintenance Engineer Staff",
+        "jobDes": [
+          "Conduct regular inspections of equipment, machinery, and facilities to identify potential issues and ensure compliance with safety and maintenance standards.",
+          "Perform repairs and maintenance tasks on mechanical, electrical, and plumbing systems.",
+          "Troubleshoot equipment malfunctions, identifying root causes and implementing effective solutions.",
+          "Maintain accurate records of maintenance activities, including work performed and parts used"
+        ],
+        "requirement": [
+          "Vocational certificate or higher, Bachelor's degree in mechanical engineering, electrical engineering, or a related field Professional Experiences",
+          "Experience in maintenance engineering, facilities management, or a related role.",
+          "Proven experience in maintenance or a similar role.",
+          "Strong technical skills in troubleshooting and repairing mechanical and electrical systems.",
+          "Knowledge of preventive maintenance best practices and techniques.",
+          "Excellent communication and teamwork skills."
+        ]
+      },
+      {
+        "positionName": "Maintenance Engineer Supervisor",
+        "jobDes": [
+          "Lead, mentor, and manage a team of maintenance engineers, training to ensure optimal performance and a collaborative work environment.",
+          "- Develop and implement preventive maintenance strategies to ensure the reliability and longevity of equipment and facilities.",
+          "- Plan and coordinate maintenance activities, including routine inspections, repairs, and preventive maintenance tasks. Ensure that maintenance schedules align with production and operational needs.",
+          "- Assist in the development and management of the maintenance budget. Monitor expenditures, identify cost-saving opportunities, and report on budget performance.",
+          "- Maintain accurate records of maintenance activities, including work performed, equipment status, and parts inventory. Generate regular reports on maintenance metrics and key performance indicators.",
+          "- Enforce safety protocols and regulations within the maintenance department. Conduct safety training and promote a culture of safety awareness.",
+          "- Drive continuous improvement initiatives within the maintenance department. Identify and implement process enhancements and efficiency improvements.",
+          "- Coordinate responses to emergency maintenance situations, providing direction to the team and ensuring timely resolution of critical issues."
+        ],
+        "requirement": [
+          "Bachelor's degree in mechanical engineering, electrical engineering, or a related field (preferred).",
+          "5 years experiences in maintenance or a related role, with a focus on supervisor and manager.",
+          "Proven experience in maintenance engineering or a similar role",
+          "Strong technical skills in troubleshooting and repairing mechanical and electrical systems.",
+          "Knowledge of preventive maintenance best practices and techniques.",
+          "Excellent leadership, communication, and teamwork skills."
+        ]
+      },
+      {
+        "positionName": "Production Control Staff",
+        "jobDes": [
+          "Assist in the creation and maintenance of production schedules based on customer demand and resource availability.",
+          "Coordinate with production teams to ensure adherence to schedules and timely completion of orders.",
+          "Monitor and track inventory levels of raw materials and finished goods.",
+          "Maintain accurate and organized production records, including production schedules, resource allocation, and inventory levels."
+        ],
+        "requirement": [
+          "Diploma/High Vocational Certificate or Bachelor's degree.",
+          "Work experience 0- 3 years or more",
+          "Basic proficiency in production planning software and Microsoft Office applications.",
+          "Communication skills.",
+          "Ability to work collaboratively within a team.",
+          "Problem-solving skills.",
+          "Adaptability skills."
+        ]
+      },
+      {
+        "positionName": "Senior Production Control Staff",
+        "jobDes": [
+          "Control production according to schedule.",
+          "- Creation and maintenance of comprehensive production schedules based on demand forecasts, inventory levels, and operational capacities.",
+          "- Collaborate with cross-functional teams to align production plans with organizational objectives.",
+          "- Collaborate with inventory management teams to maintain optimal stock levels and minimize holding costs."
+        ],
+        "requirement": [
+          "Bachelor's degree in Industrial Engineering, Manufacturing, Operations Management, or a related field.",
+          "2-3 years of experience in production planning.",
+          "Communication skills",
+          "Analytical and problem-solving skills",
+          "Have an understanding of quality management system work ISO:9001, FSC, UL.",
+          "Have knowledge in Safety systems, 5S., etc.",
+          "Ability to work collaboratively within a team.",
+          "Adaptability skills."
+        ]
+      },
+      {
+        "positionName": "Production Control Supervisor",
+        "jobDes": [
+          "Lead and supervise the production planning team, providing guidance, training, and support.",
+          "Foster a collaborative and results-driven work environment to ensure the team meets production planning targets.",
+          "Manage the allocation of manpower, equipment, and materials to meet production goals.",
+          "Collaborate with production control, procurement, and logistics teams to optimize resource utilization.",
+          "Conduct capacity planning assessments to identify bottlenecks and constraints in the production process.",
+          "Supervise inventory planning processes, ensuring accurate records of raw materials and finished goods.",
+          "Collaborate with inventory management teams to maintain optimal stock levels and minimize excess inventory.",
+          "Ensure accurate and organized documentation of production schedules, resource allocation, and inventory plans.",
+          "Collaborate with production teams, procurement, logistics, and other relevant departments to facilitate smooth communication and workflow.",
+          "Address any production-related issues promptly and coordinate solutions with cross-functional teams.",
+          "Implement best practices and industry standards to improve production planning procedures."
+        ],
+        "requirement": [
+          "Bachelor's degree in Industrial Engineering, Operations Management, or a related field.",
+          "5 years of experience in production planning, with a significant portion in a supervisor",
+          "Proficient in production planning software, ERP systems, and Microsoft Office",
+          "Communication skills.",
+          "Strong problem-solving skills.",
+          "Have an understanding of quality management system work ISO:9001, FSC, UL.",
+          "Have knowledge in Safety systems, 5S., etc."
+        ]
+      },
+      {
+        "positionName": "Production Control Manager",
+        "jobDes": [
+          "Plan work, control the work of the production unit and coordinate production planning.",
+          "Plan the use of raw materials to meet the specified goals.",
+          "Participate in planning and coordinating with relevant agencies and customers.",
+          "Analyze and plan production",
+          "Control and manage production costs",
+          "Control and manage the inventory system",
+          "Control and manage the delivery of products to customers.",
+          "Coordinate with relevant departments to plan production.",
+          "Analyze and solve problems and develop the production planning work system"
+        ],
+        "requirement": [
+          "Bachelor's degree in Industrial Engineering, Manufacturing, Operations Management, or a related field.",
+          "5 years of experience in production control, in a manager or supervisor.",
+          "Have an understanding of quality management systems ISO:9001, FSC, UL.",
+          "Have knowledge in Safety system, 5S., etc.",
+          "Have communication and coordination skills",
+          "Have negotiation skills",
+          "Able to solve immediate problems",
+          "Have the ability to plan production",
+          "Knowledge of engineering laws such as factory laws, machinery laws and environmental law"
+        ]
+      },
+      {
+        "positionName": "Prepress Staff",
+        "jobDes": [
+          "Create artwork, prepare files, and output files for printing plates.",
+          "Record daily work reports.",
+          "Communicate with suppliers and coordinate with relevant departments.",
+          "Operate CTP machinery to produce printing plates (occasionally)."
+        ],
+        "requirement": [
+          "High Vocational - Bachelor's Degree",
+          "Proficient in Adobe Illustrator.",
+          "Knowledge of color theory.",
+          "Ability to work as part of a team.",
+          "Detail-oriented.",
+          "Preference will be given to those with education in printing technology or experience in printing-related work.",
+          "Knowledge of FSC-CoC certification systems will be considered an advantage."
+        ]
+      },
+      {
+        "positionName": "Prepress Supervisor",
+        "jobDes": [
+          "Screen and check basic job details.",
+          "Create layout formats Give it to the prepress proceed with issuing plates according to the specified format.",
+          "Coordinate both internally and externally",
+          "Prepare monthly reports and KPI",
+          "Prepare and update various ISO documents",
+          "Manage personnel within the department",
+          "Manage annual budget preparation"
+        ],
+        "requirement": [
+          "Bachelor's degree in Printing Technology or related fields",
+          "Experience in artwork, printing techniques, color separation, plate making for at least 3 years or experience at a sticker printing for at least 5 years.",
+          "At least 3 years of experience as supervisor of the pre-press department using Flexo, Rotary, Letterpress systems."
+        ]
+      },
+      {
+        "positionName": "Senior Production Staff",
+        "jobDes": [
+          "Take a hands-on approach to production tasks, applying advanced skills and knowledge to ensure the highest quality and efficiency.",
+          "Serve as a subject matter expert in production processes.",
+          "Collaborate with production planners to create and optimize production schedules.",
+          "Utilize experience to make informed decisions on resource allocation and production sequencing.",
+          "Oversee and enforce stringent quality control measures to guarantee the production of high-quality goods.",
+          "Analyze and optimize production workflows for maximum efficiency and resource utilization.",
+          "Implement strategies to reduce downtime and enhance overall operational effectiveness.",
+          "Implement best practices and new technologies to further improve production efficiency.",
+          "Monitor and analyze key production performance metrics.",
+          "Prepare comprehensive reports highlighting performance trends, areas for improvement, and potential solutions."
+        ],
+        "requirement": [
+          "Bachelor's degree in Industrial Engineering, Manufacturing, Operations Management, or a related field.",
+          "2-3 years of experience in a production or manufacturing, with a significant portion in a senior.",
+          "Knowledge of production processes and equipment.",
+          "Proven leadership and team management skills, with the ability to inspire and guide teams.",
+          "Communication skills",
+          "Analytical and problem-solving skills",
+          "Have an understanding of quality management system work ISO:9001, FSC, UL.",
+          "Have knowledge in Safety systems, 5S., etc."
+        ]
+      }
+      ,
+      {
+        "positionName": "Production Supervisor",
+        "jobDes": [
+          "Lead and supervise production teams in the Printing Department, fostering a collaborative and results-driven work environment.",
+          "Collaborate with production planners to create and manage printing schedules, considering job priorities and deadlines.",
+          "Allocate resources effectively to meet production goals and optimize machine utilization.",
+          "Coordinate and optimize the printing workflow, ensuring efficient use of equipment and materials.",
+          "Monitor and adjust production schedules to accommodate changes in demand or job specifications.",
+          "Address equipment malfunctions promptly to minimize downtime and maintain optimal performance.",
+          "Provide training to production staff on printing processes, safety protocols, and equipment operation.",
+          "Ensure compliance with safety regulations and company policies.",
+          "Monitor production performance metrics, analyze data, and identify areas for improvement.",
+          "Implement measures to enhance efficiency, reduce waste, and improve overall production effectiveness.",
+          "Communicate production goals, objectives, and performance updates to the production team."
+        ],
+        "requirement": [
+          "Bachelor's degree in Industrial Engineering, Manufacturing, Operations Management, or a related field.",
+          "Proven experience in production management, with a minimum of 5 years in a supervisor or manager",
+          "Have knowledge in Safety, 5S systems, etc.",
+          "Have an understanding of quality management systems ISO:9001, FSC, UL.",
+          "Have communication and coordination skills",
+          "There is strictness in the work process that emphasizes quality.",
+          "Have negotiation skills",
+          "Able to solve immediate problems",
+          "Have knowledge in sticker production or printing"
+        ]
+      },
+      {
+        "positionName": "Production Administrator",
+        "jobDes": [
+          "Make report data, summarize reports, reports of the production department.",
+          "Prepare documents for incentives, overtime",
+          "Support the work of the production department",
+          "Coordinate with other departments",
+          "Save data into a computer program",
+          "Sorting and storing production department documents"
+        ],
+        "requirement": [
+          "Diploma Vocational Certificate or Bachelor's degree or higher",
+          "0-2 years of experience working in administrative documents",
+          "Able to solve immediate problems",
+          "Responsible, diligent, patient and meticulous",
+          "Be agile Enthusiastic in working",
+          "Have good communication and coordination skills.",
+          "Able to use Microsoft Office and computers well."
+        ]
+      },
+      {
+        "positionName": "Production Manager",
+        "jobDes": [
+          "Structure and plan production, Ready to set the budget, manpower, and production time.",
+          "Survey the production process and adjust the plan and develop a better production plan.",
+          "Train employees in the department about production procedures.",
+          "Contact and coordinate with relevant departments, including outside companies to ensure smooth operation.",
+          "Make reports about production and present to executives Customers or related persons know.",
+          "Control and ensure that the product production process goes smoothly.",
+          "Ensure compliance with safety regulations and company policies.",
+          "Monitor production performance metrics, analyze data, and identify areas for improvement.",
+          "Implement measures to enhance efficiency, reduce waste, and improve overall production effectiveness.",
+          "Communicate production goals, objectives, and performance updates to the production team."
+        ],
+        "requirement": [
+          "Bachelor's degree in Industrial Engineering, Manufacturing, Operations Management, or a related field.",
+          "Proven experience in production management, with a minimum of 5 years in a supervisor or manager.",
+          "Have knowledge in Safety, 5S systems, etc.",
+          "Have an understanding of quality management systems ISO:9001, FSC, UL.",
+          "Have communication and coordination skills",
+          "There is strictness in the work process that emphasizes quality.",
+          "Have negotiation skills",
+          "Able to solve immediate problems"
+        ]
       }
     ]
   },
@@ -1577,6 +1835,44 @@
           "ทักษะการวิเคราะห์และการแก้ปัญหาพร้อมความสามารถในการระบุและแก้ไขปัญหาด้านคุณภาพ",
           "มีความรู้ด้านการควบคุมคุณภาพการพิมพ์",
           "มีความเข้าใจงานระบบบริหารคุณภาพ ISO:9001, FSC, UL."
+        ]
+      },
+      {
+        "positionName": "เจ้าหน้าที่ซ่อมบำรุง ",
+        "jobDes": [
+          "ดำเนินการตรวจสอบอุปกรณ์ เครื่องจักร และสิ่งอำนวยความสะดวกอย่างสม่ำเสมอ เพื่อระบุปัญหาที่อาจเกิดขึ้นและรับรองการปฏิบัติตามมาตรฐานความปลอดภัยและการบำรุงรักษา",
+          "ดำเนินการซ่อมแซมและบำรุงรักษาระบบเครื่องกล ไฟฟ้า ประปา",
+          "แก้ไขปัญหาความผิดปกติของอุปกรณ์ ระบุสาเหตุที่แท้จริง และดำเนินการแก้ไขปัญหาอย่างมีประสิทธิภาพ",
+          "ดูแลบันทึกข้อมูลการบำรุงรักษาให้ถูกต้อง รวมถึงรายละเอียดงานที่ทำและชิ้นส่วนอะไหล่ที่ใช้"
+        ],
+        "requirement": [
+          "ปวช. ขึ้นไป ,วุฒิปริญญาตรี สาขาวิศวกรรมเครื่องกล วิศวกรรมไฟฟ้า หรือสาขาที่เกี่ยวข้อง",
+          "มีประสบการณ์ด้านวิศวกรรมซ่อมบำรุง การจัดการสิ่งอำนวยความสะดวก หรือสายงานที่เกี่ยวข้อง",
+          "มีประสบการณ์ด้านการบำรุงรักษาหรือบทบาทที่คล้ายกัน",
+          "มีทักษะด้านเทคนิคที่แข็งแกร่งในการแก้ไขปัญหาและซ่อมแซมระบบเครื่องกลและไฟฟ้า",
+          "ความรู้เกี่ยวกับแนวทางปฏิบัติและเทคนิคที่ดีที่สุดในการบำรุงรักษาเชิงป้องกัน",
+          "ทักษะการสื่อสารและการทำงานเป็นทีมที่ยอดเยี่ยม"
+        ]
+      },
+      {
+        "positionName": "หัวหน้างานซ่อมบำรุง ",
+        "jobDes": [
+          "เป็นผู้นำ ให้คำปรึกษา และจัดการทีมซ่อมบำรุง ในเรื่องการฝึกอบรม เพื่อให้มั่นใจถึงประสิทธิภาพสูงสุดและสร้างสภาพแวดล้อมการทำงานร่วมกัน",
+          "พัฒนาและใช้กลยุทธ์การบำรุงรักษาที่เหมาะสม เพื่อให้มั่นใจและมีความน่าเชื่อถือ และเพื่อยืดอายุการใช้งานที่ของอุปกรณ์และสิ่งอำนวยความสะดวกต่างๆ",
+          "วางแผนและประสานงานเกี่ยวกับการบำรุงรักษา การซ่อมแซม รวมถึงการตรวจสอบเพื่อให้แน่ใจว่ากำหนดการบำรุงรักษาสอดคล้องกับความต้องการด้านการผลิตและการปฏิบัติงาน",
+          "ช่วยในการพัฒนาและบริหารจัดการงบประมาณการบำรุงรักษา ควบคุมค่าใช้จ่ายต่างๆ เสนอแนะแนวทางในการประหยัดต้นทุน และรายงานผลการปฏิบัติงานด้านงบประมาณ",
+          "ดูแลบันทึกข้อมูลการบำรุงรักษาให้ถูกต้อง รวมถึงรายละเอียดงานที่ทำ สถานะอุปกรณ์ และสินค้าคงคลังของชิ้นส่วนอะไหล่ต่างๆ  และจัดทำรายงานเกี่ยวกับตัวชี้วัดการบำรุงรักษาและตัวบ่งชี้ประสิทธิภาพหลักเป็นประจำ",
+          "บังคับใช้ระเบียบปฏิบัติด้านความปลอดภัยและกฎระเบียบภายในแผนกซ่อมบำรุง ดำเนินการฝึกอบรมด้านความปลอดภัยและส่งเสริมวัฒนธรรมการตระหนักรู้ด้านความปลอดภัย",
+          "ขับเคลื่อนความคิดริเริ่มในการปรับปรุงอย่างต่อเนื่องภายในแผนกซ่อมบำรุง ระบุและดำเนินการปรับปรุงกระบวนการทำงานให้มีประสิทธิภาพยิ่งขึ้น",
+          "ประสานงานและแก้ไขปัญหาต่อสถานการณ์ฉุกเฉินเกี่ยวกับการซ่อมบำรุงรักษา ให้คำแนะนำแก่ทีมซ่อมบำรุง และแก้ไขปัญหาที่สำคัญได้อย่างทันท่วงที"
+        ],
+        "requirement": [
+          "วุฒิปริญญาตรี สาขาวิศวกรรมเครื่องกล วิศวกรรมไฟฟ้า หรือสาขาที่เกี่ยวข้อง (จะพิจารณาเป็นพิเศษ)",
+          "มีประสบการณ์ 5 ปีในด้านการบำรุงรักษา หรือสายงานที่เกี่ยวข้อง โดยเน้นที่หัวหน้างานและผู้จัดการ",
+          "มีประสบการณ์ด้านวิศวกรรมซ่อมบำรุงหรือตำแหน่งที่คล้ายกัน",
+          "มีทักษะด้านเทคนิคที่แข็งแกร่งในการแก้ไขปัญหาและซ่อมแซมระบบเครื่องกลและไฟฟ้า",
+          "ความรู้เกี่ยวกับแนวทางปฏิบัติและเทคนิคที่ดีที่สุดในการบำรุงรักษาที่เหมาะสม",
+          "มีทักษะความเป็นผู้นำ การสื่อสาร และการทำงานเป็นทีมที่ดีเยี่ยม"
         ]
       }
     ]

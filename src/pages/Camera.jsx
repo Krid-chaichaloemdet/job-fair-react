@@ -62,25 +62,24 @@ export default function Camera({ setIsPhotoSuccess }) {
       {showLightbox && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
           <div className="bg-white p-8 rounded-lg shadow-lg max-w-md text-center">
-            <h2 className="text-lg font-semibold mb-4">Dear Applicant</h2>
+            <h2 className="text-lg font-semibold mb-4">Guideline</h2>
             <p className="mb-4 text-[12px]">
-            To assist in creating a profile and supporting documents for job applications, we kindly request your permission to take a photo of you. 
-            The photo will be used exclusively for job application purposes and will be stored securely. If you consent, please let us know so we can proceed.
+              We respectfully ask for your permission to take a picture of you to complete your job application. This picture will only be used for the application process and will be securely stored.
             </p>
-            <p className="text-[12px] text-gray-600 mb-6">Thank you for your cooperation!</p>
-            <div className="flex justify-center gap-4">
+            <p className="text-[12px] text-gray-600 mb-6"></p>
+            <div className="flex flex-col justify-center gap-1">
               <button
-                className="text-[12px] px-6 py-2 bg-[#131E3C] text-white rounded-lg"
+                className="text-[12px] px-6 pb-1 pt-1 bg-[#131E3C] text-white rounded-lg"
                 onClick={handleAllowCamera}
               >
-                Consent
+                change to Continue
               </button>
-              <button
-                className="text-[12px] px-6 py-2 bg-gray-300 text-[#131E3C] rounded-lg"
+              <p
+                className="text-gray-600 text-[10px] px-6 pt-1 pb-0 underline decoration-[#131E3C] cursor-pointer"
                 onClick={() => navigate("/")}
               >
-                Back
-              </button>
+                I do not want to apply for a job.
+              </p>
             </div>
           </div>
         </div>
