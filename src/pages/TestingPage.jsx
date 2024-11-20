@@ -149,8 +149,8 @@ export default function TestingPage() {
     isCorrect29: 0,
     isCorrect30: 0,
 
-    testTime : 0,
-    testScore : 0,
+    testTime: 0,
+    testScore: 0,
     test1: 0,
     test2: 0,
     test3: 0,
@@ -164,18 +164,18 @@ export default function TestingPage() {
     {
       title: "What number do you see?",
       image: "public/testingImages/Picture1.png",
-      choice: [12, 48, 88, 42, 82],
+      choice: [12, 48, 88, 42],
       correct: 3,
       width: 350,
-      height: 350
+      height: 350,
     },
     {
       title: "What number do you see?",
       image: "public/testingImages/Picture2.jpg",
-      choice: [28, 73, 18, 42, 82],
-      correct: 3,
+      choice: [28, 73, 18, 42],
+      correct: 1,
       width: 350,
-      height: 350
+      height: 350,
     },
     {
       title: "1,3,6,10,",
@@ -183,7 +183,7 @@ export default function TestingPage() {
       choice: [11, 15, 19, 26],
       correct: 1,
       width: 350,
-      height: 350
+      height: 350,
     },
     {
       title: "8,6,7,5,6,4,",
@@ -191,188 +191,217 @@ export default function TestingPage() {
       choice: [3, 5, 1, 0],
       correct: 1,
       width: 350,
-      height: 350
+      height: 350,
     },
     {
       title:
         "12 stamps with a face value of 10 Baht make a dozen. So, how many stamps with a face value of 40 Baht make a dozen?",
-      // image: "public/testingImages/Picture5.png",
       choice: [1, 48, 20, 12],
       correct: 3,
       width: 350,
-      height: 350
+      height: 350,
     },
     {
-      // mps with a face value of 10 Baht make a dozen. So, how many stamps with a face value of 40 Baht make a dozen?",
       image: "public/testingImages/Picture5.png",
-      choice: [<img key={1} className="w-16 h-14" src="public/testingImages/Picture5-a.png" alt="" />, <img key={2}  className="w-16 h-14" src="public/testingImages/Picture5-b.png" alt="" />, <img className="w-16 h-14" key={3} src="public/testingImages/Picture5-c.png" alt="" />, <img className="w-16 h-14" key={4} src="public/testingImages/Picture5-d.png" alt="" />],
+      choice: [
+        <img
+          key={1}
+          className="w-16 h-14"
+          src="public/testingImages/Picture5-a.png"
+          alt=""
+        />,
+        <img
+          key={2}
+          className="w-16 h-14"
+          src="public/testingImages/Picture5-b.png"
+          alt=""
+        />,
+        <img
+          className="w-16 h-14"
+          key={3}
+          src="public/testingImages/Picture5-c.png"
+          alt=""
+        />,
+        <img
+          className="w-16 h-14"
+          key={4}
+          src="public/testingImages/Picture5-d.png"
+          alt=""
+        />,
+      ],
       correct: 3,
       width: 250,
-      height: 250
+      height: 250,
     },
     {
-      title: "当你听到“异于常人”这个表达时，你会怎么理解？",
-      image: "public/testingImages/Picture1.jpg",
-      choice: ['这是指某人的行为、想法或爱好不同于大多数人，可能显得有点奇怪或不合常规', '这是指某人和大多数人完全相同，没有什么区别', '这是指某人非常保守，总是按部就班，不愿意冒险', '这是指某人很普通，什么都不特别'],
-      correct: 0,
+      title: "Based on the following dialogue, what are they talking about?",
+      image: "public/testingImages/Picture7.png",
+      choice: [
+        "A.	Methods to control monthly costs.",
+        "B.	Practicing mindful spending habits.",
+        "C.	Finding balance between needs and wants.",
+        "D.	Adjusting lifestyle to meet financial goals.",
+        "E.	Understands English but cannot respond.",
+        "F.	Does not understand English. / ไม่เข้าใจภาษาอังกฤษ"
+      ],
+      correct: 1,
       width: 350,
-      height: 350
+      height: 350,
     },
     {
-      title: "你理解的“坏心思”是什么意思？",
-      image: "public/testingImages/Picture8.jpg",
-      choice: ['指心中有些無關緊要的想法，沒有特別的目的', '指心中有好意，希望能幫助他人解決問題', '指心中有惡意的念頭，想做一些對他人不利的事情', '指心中沒有任何念頭，只是保持冷靜和理智'],
+      title: "在这张对话中，求职者因为什么原因被录取了？",
+      image: "public/testingImages/PictureCh.jpg",
+      choice: [
+        "A.	他懂得如何使用最新技术",
+        "B.	他会做美味的炒饭",
+        "C.	他擅长重复利用旧的东西",
+        "D.	他有丰富的领导经验",
+        "E.	懂中文但无法回答",
+        "F.	Does not understand Chinese / ไม่เข้าใจภาษาจีน"
+      ],
       correct: 2,
       width: 350,
-      height: 350
+      height: 350,
     },
+    {
+      title: "Which of the following statements do you agree with the most?",
+      choice: [
+        "A. Work is just a means to earn enough money to sustain life.",
+        "B. Work is the primary means of earning money, but if possible, one should also fulfill personal needs.",
+        "c. Work is everything in life."
+      ]
+    },
+    {
+      title: "What do you dislike the most happening during work?",
+      choice: [
+        "A. I have no rest time of my own.",
+        "B. I have too much leisure time and don't know what to do.",
+        "C. Unable to work according to your own thoughts."
+      ]
+    },
+    {
+      title: "คุณชอบวิธีการรับสมัครงานของบริษัทเรามากน้อยเพียงใด? How much do you like our company's recruitment process?",
+      choice: [
+        "5 ชอบมากที่สุด/Very much",
+        "4 ชอบมาก/Quite a lot",
+        "3 ชอบปานกลาง/Netral"
+      ]
+    }
   ];
-  const [count, setCount] = useState(10);   ////////game time
+  const [count, setCount] = useState(100000); ////////game time
 
   const [testingPage, setTestingPage] = useState(1);
 
   const [isStartTesting, setIsStartTesting] = useState(false);
   const [isStartDiffer, setIsStartDiffer] = useState(false);
 
-  const [isTestFinish, setIsTestFinish] =useState(false)
+  const [isTestFinish, setIsTestFinish] = useState(false);
   const handleInput = (e) => {
     setInput({ ...input, [e.target.name]: e.target.value });
   };
-  const [errorInput, setErrorInput] = useState(false)
+  const [errorInput, setErrorInput] = useState(false);
   const handleSubmitForm = async (e) => {
     try {
-      // e.preventDefault();
-
-      // if(!input.phoneNumber){
-      //   setErrorInput(true)
-      //   return
-      // }
-      // setIsStartDiffer(true)
-      // e.preventDefault();
       await axios.post("http://localhost:8000/user/createTestRecord", input);
     } catch (error) {
       console.log(error);
     }
   };
 
-const handleStartTest = () =>{
-  if(!input.phoneNumber){
-    setErrorInput(true)
-    return
-  }
-  setIsStartDiffer(true)
-}
+  const handleStartTest = () => {
+    if (!input.phoneNumber) {
+      setErrorInput(true);
+      return;
+    }
+    setIsStartDiffer(true);
+  };
 
   useEffect(() => {
-    // Only run the timer if `isStartTesting` is true
     if (isStartTesting && count > 0) {
       const timer = setTimeout(() => {
-        // Update testing time and decrement count
-        setInput(prevInput => ({ ...prevInput, testTime: prevInput.testTime + 1 }));
-        setCount(prevCount => prevCount - 1);
+        setInput((prevInput) => ({
+          ...prevInput,
+          testTime: prevInput.testTime + 1,
+        }));
+        setCount((prevCount) => prevCount - 1);
       }, 1000);
 
-      // Cleanup function to clear the timeout when the component unmounts or dependencies change
       return () => clearTimeout(timer);
     }
   }, [isStartTesting, count]);
 
-  
-  useEffect(()=>{
-    if(count === 0 ) {
-      setIsStartTesting(false)
-      setIsTestFinish(true)
-      handleSubmitForm()
+  useEffect(() => {
+    if (count === 0) {
+      setIsStartTesting(false);
+      setIsTestFinish(true);
+      handleSubmitForm();
     }
-
-  },[count])
-  console.log("count", count)
-  const navigate = useNavigate()
+  }, [count]);
+  console.log("count", count);
+  const navigate = useNavigate();
   return (
-    <div
-      // onSubmit={handleSubmitForm}
-      className="w-full h-screen flex flex-col justify-center items-center"
-    >
+    <div className="w-full h-screen flex flex-col justify-center items-center">
       <div className="h-full flex justify-center flex-col w-full px-[8rem]">
-      <div className="w-full flex justify-center mb-[2rem] font-medium text-[1.75rem] tracking-[0.1em]">Challenge</div>
-      <div className="">
-        {/* <div className="flex flex-col px-5 ">
-          <label htmlFor="">Your first name</label>
-          <input
-            onChange={handleInput}
-            name="firstName"
-            className="rounded-sm"
-            type="text"
-          />
-        </div> */}
-        {/* <div className="flex flex-col px-5 ">
-          <label htmlFor="">Your last name</label>
-          <input
-            onChange={handleInput}
-            name="lastName"
-            className="rounded-sm"
-            type="text"
-          />
-        </div> */}
-        <div className="flex flex-col w-full items-start justify-center ">
-          <div className="">
-          <label htmlFor="" className="text-[0.8rem] mb-[0.5rem]">Phone number</label>
-         { errorInput &&  <div className="text-red-500">Please enter your phone number</div>}
-          </div>
-          <input
-            onChange={handleInput}
-            name="phoneNumber"
-            className="bg-[#f3f3f5] border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] rounded-md w-full"
-            type="text"
-          />
+        <div className="w-full flex justify-center mb-[2rem] font-medium text-[1.75rem] tracking-[0.1em]">
+          Challenge
         </div>
-        {/* <div className="flex flex-col px-5 ">
-          <label htmlFor="">E-mail</label>
-          <input
-            onChange={handleInput}
-            name="email"
-            className="rounded-sm"
-            type="text"
+        <div className="">
+          <div className="flex flex-col w-full items-start justify-center ">
+            <div className="">
+              <label htmlFor="" className="text-[0.8rem] mb-[0.5rem]">
+                Phone number
+              </label>
+              {errorInput && (
+                <div className="text-red-500">
+                  Please enter your phone number
+                </div>
+              )}
+            </div>
+            <input
+              onChange={handleInput}
+              name="phoneNumber"
+              className="bg-[#f3f3f5] border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] rounded-md w-full"
+              type="text"
+            />
+          </div>
+        </div>
+        <div className="flex justify-center gap-5 pt-[2rem] mb-[6rem] w-full ">
+          <button
+            onClick={handleStartTest}
+            className="bg-[#131E3C] rounded-full py-[0.75rem] my-[0.5rem] text-white w-full"
+          >
+            {" "}
+            Start Challenge
+          </button>
+          <button
+            onClick={() => navigate("/")}
+            className="bg-[#131E3C] rounded-full py-[0.75rem] my-[0.5rem] text-white w-full"
+          >
+            {" "}
+            Back To Home
+          </button>
+        </div>
+        {isStartTesting && (
+          <TestingCoponent
+            testingPage={testingPage}
+            count={count}
+            input={input}
+            setInput={setInput}
+            testingData={testingData}
+            setTestingPage={setTestingPage}
           />
-        </div> */}
-      </div>
-      <div className="flex justify-center gap-5 pt-[2rem] mb-[6rem] w-full ">
-        <button
-          onClick={handleStartTest}
-          className="bg-[#131E3C] rounded-full py-[0.75rem] my-[0.5rem] text-white w-full"
-        >
-          {" "}
-          Start Challenge
-        </button>
-        <button
-          onClick={() => navigate('/')}
-          className="bg-[#131E3C] rounded-full py-[0.75rem] my-[0.5rem] text-white w-full"
-        >
-          {" "}
-          Back To Home
-        </button>
-      </div>
-      {isStartTesting && (
-        <TestingCoponent
-          testingPage={testingPage}
-          count={count}
-          input={input}
-          setInput={setInput}
-          testingData={testingData}
-          setTestingPage={setTestingPage}
-        />
-      )}
-      {isStartDiffer && (
-        <TestingDiiferPage
-          setIsStartTesting={setIsStartTesting}
-          setIsStartDiffer={setIsStartDiffer}
-          input={input}
-          setInput={setInput}
-        />
-      )}
+        )}
+        {isStartDiffer && (
+          <TestingDiiferPage
+            setIsStartTesting={setIsStartTesting}
+            setIsStartDiffer={setIsStartDiffer}
+            input={input}
+            setInput={setInput}
+          />
+        )}
 
-   { isTestFinish &&  <TestFinishLoading />}
-   </div>
+        {isTestFinish && <TestFinishLoading />}
+      </div>
     </div>
   );
 }
