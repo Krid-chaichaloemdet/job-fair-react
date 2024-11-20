@@ -5,7 +5,7 @@ import meworxlogo from '../../public/logo/meworxlogo.svg'
 
 export default function Header() {
   return (
-    <div className='bg-[#131E3C] flex flex-row justify-center items-center py-[1.5rem] fixed w-full top-0'>
+    <div className='bg-[#131E3C] flex flex-row justify-center items-center py-[1.5rem] fixed w-full top-0 z-40'>
       <img src={evalogo} className='mx-[2%] h-[2rem]' alt="" />
       <img src={kcilogo} className='mx-[2%] h-[2rem]' alt='' />
       <img src={meworxlogo} className='mx-[2%] h-[1.35rem]' alt='' />

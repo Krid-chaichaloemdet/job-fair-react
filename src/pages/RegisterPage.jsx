@@ -120,7 +120,7 @@ export default function RegisterPage() {
   const requiredFields = [
     { field: "firstName", errorId: 1 },
     { field: "lastName", errorId: 2 },
-    { field: "address", errorId: 3 },
+    // { field: "address", errorId: 3 },
     { field: "dateOfBirth", errorId: 4 },
     { field: "phoneNumber", errorId: 5 },
 

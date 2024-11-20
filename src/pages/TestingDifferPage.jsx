@@ -510,7 +510,7 @@ export default function TestingDiiferPage({
     }
   }, []);
   return (
-    <div className="fixed left-0 top-0 w-full h-full ">
+    <div className="fixed left-0 top-0 w-full h-full overflow-y-scroll">
       {isStart ? (
         <div
           // onClick={spot}
@@ -520,7 +520,7 @@ export default function TestingDiiferPage({
         >
           {pic !== 17 && (
             <div
-              className={`flex items-center justify-between relative top-0 w-full pb-[0.5rem] ${
+              className={`flex items-center justify-between relative top-0 w-full pb-[1rem] mt-[2rem] ${
                 pages[15] && pic == 15
                   ? "text-5xl items-center justify-center"
                   : "text-3xl items-start"
@@ -533,34 +533,35 @@ export default function TestingDiiferPage({
                   : ` คะเเนน  : ${input.score}`}
               </div>
 
-              <div className="text-white text-[1rem] w-[45%] text-center flex justify-center">
+              <div className="text-white text-[1rem] w-[25%] text-center flex justify-center">
                 {lang == `EN`
                   ? `Total clicks : ${input.totalClick} `
                   : `คลิ๊กทั้งหมด: ${input.totalClick} `}
-                <div style={{ textAlign: "center", marginTop: "50px" }}></div>{" "}
-                <div
+                {/* <div style={{ textAlign: "center", marginTop: "50px" }}></div>{" "} */}
+                {/* <div
                   onClick={handleSkip}
                   className="bg-white  cursor-pointer text-[#131E3C] "
                 >
                   {" "}
                   {lang == "EN" ? "SKIP" : `ข้าม`}
                 </div>
-                <div>page : {pic}</div>
+                <div>page : {pic}</div> */}
               </div>
               {/* <div className="text-blue-500">Skips : {countTo10}</div> */}
-              <div className="text-white text-[1.5rem] w-[33%] text-center flex justify-center">
+              {/* <div className="text-white text-[1.5rem] w-[33%] text-center flex justify-center">
                 {lang == "EN"
                   ? `Time : ${minutes + "m" + seconds + "s"}`
                   : `เวลาทั้งหมด : ${minutes + " นาที " + seconds + " วินาที"}`}
-              </div>
-              {/* <div className="text-white text-[1rem] w-[25%] text-center flex justify-center">
+              </div> */}
+              <div className="text-white text-[1rem] w-[25%] text-center flex justify-center">
                 {lang == "EN"
                   ? `Time : ${seconds + "s"}`
                   : `เวลาทั้งหมด : ${seconds + " วินาที"}`}
-              </div> */}
+              </div>
             </div>
           )}
 
+          <div className="h-[70%] flex justify-center items-center">
           <div
             onClick={spot}
             className="flex  w-[800px] bg-black relative justify-center items-center flex-col"
@@ -903,6 +904,8 @@ export default function TestingDiiferPage({
               </div>
             )}
           </div>
+          </div>
+          
           <div className="w-full bottom-0 relative flex justify-center items-center flex-col py-[2rem]">
             {pic !== 16 && (
               <div
