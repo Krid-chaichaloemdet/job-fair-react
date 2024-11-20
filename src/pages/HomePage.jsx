@@ -7,7 +7,7 @@ import arrowup from "../assets/arrow-circle-down (1).png";
 import close from "../assets/close-circle.png";
 import Vector from "../assets/Vector (1).svg"
 import PositionData from "../component/homePageComponent/PositionData";
-import translations from "../pages/translations.json";
+import translations from "../data/translations.json";
 
 const HomePage = () => {
   const [openJobs, setOpenJobs] = useState({});
@@ -36,7 +36,7 @@ const HomePage = () => {
 
       <div className="flex flex-row justify-between">
         <div className="font-medium text-[1.75rem] tracking-[0.1em]">{t.jobTitle}</div>
-        <div className="flex justify-end mb-4 relative text-[12px]">
+        <div className="flex justify-end mb-4 text-[12px]">
           <button
             onClick={() => setShowDropdown(!showDropdown)}
             className="px-4 py-2 bg-white border border-[#131E3C] shadow-lg rounded-[26px] w-15 text-[#131E3C] flex items-center space-x-2"

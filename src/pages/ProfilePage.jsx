@@ -8,23 +8,23 @@ export default function ProfilePage() {
       </div>
       <div className='flex flex-col justify-center w-full py-2'>
         <div className='py-2'>
-          <p className='pb-2'>Your first name</p>
-          <input class="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0" type="text" name="firstName" fdprocessedid="6kf01q"></input>
+          <p className='pb-2 text-[12px]'>Your first name</p>
+          <input className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0" type="text" name="firstName" fdprocessedid="6kf01q"></input>
         </div>
         <div className='py-2'>
-          <p className='pb-2'>Your last name</p>
-          <input class="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0 " type="text" name="lastName" fdprocessedid="6kf01q"></input>
+          <p className='pb-2 text-[12px]'>Your last name</p>
+          <input className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0 " type="text" name="lastName" fdprocessedid="6kf01q"></input>
         </div>
         <div className='py-2'>
-          <p className='pb-2'>Phone number</p>
-          <input class="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0 " type="number" name="phonenumber" fdprocessedid="6kf01q"></input>
+          <p className='pb-2 text-[12px]'>Phone number</p>
+          <input className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0 " type="number" name="phonenumber" fdprocessedid="6kf01q"></input>
         </div>
         <div className='py-2'>
-          <p className='pb-2'>Email</p>
-          <input class="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0 " type="email" name="email" fdprocessedid="6kf01q"></input>
+          <p className='pb-2 text-[12px]'>Email</p>
+          <input className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0 " type="email" name="email" fdprocessedid="6kf01q"></input>
         </div>
       </div>
-      <button class="bg-[#131E3C] rounded-full py-[0.75rem] my-[0.5rem]" fdprocessedid="rfa0wpn"><div class="text-[#ffffff] tracking-[0.12em]">Edit Profile</div></button>
+      <button className="bg-[#131E3C] rounded-full py-[0.75rem] my-[0.5rem]" fdprocessedid="rfa0wpn"><div class="text-[#ffffff] tracking-[0.12em]">Edit Profile</div></button>
     </div>
   )
 }
