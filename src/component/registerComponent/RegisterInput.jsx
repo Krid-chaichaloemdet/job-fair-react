@@ -50,16 +50,7 @@ export default function RegisterInput({
       );
     }
   }
-  // const addressArr = []
-  // if(isAddress){
-  //   for (let i = 0; i < addressAmout; i++){
-  //     addressArr.push(
-  //       <div>
 
-  //       </div>
-  //     )
-  //   }
-  // }
 
   const [isSearchProvince, setIsOpenSearchProvince] = useState(false);
   const [searchProvinceData, setSearchProvinceData] = useState([]);
@@ -91,7 +82,6 @@ export default function RegisterInput({
     try {
       if (e.target.value !== "") {
         setSelectSubDistrict("");
-        // setIsOpenSearchDistrict(true)
       }
       if (!selectProvince) {
         return;
@@ -122,11 +112,7 @@ export default function RegisterInput({
       console.log(error);
     }
   };
-  // useEffect(() => {e
-  //   axios
-  //     .get("http://localhost:8000/user/searchProvince")
-  //     .then((res) => setSearchProvinceData(res.data));
-  // }, [isSearchProvince]);
+
   const [isSearchUniversity, setIsSearchUniversity] = useState(false);
   const [universityData, setUniversityData] = useState([]);
   const [selectUniversity, setSelectUniversity] = useState({
@@ -134,10 +120,7 @@ export default function RegisterInput({
   });
   const handleSearchUniversity = async (e) => {
     if (e.target.value) {
-      // setSelectUniversity({ ...selectUniversity.uni , uni : e.target.value })
-      // if(selectUniversity.uni == ''){
-      //   setIsSearchUniversity(false);
-      // }
+
       setIsSearchUniversity(true);
       await axios
         .get(`http://localhost:8000/user/searchUniversity?q=${e.target.value}`)
@@ -164,13 +147,9 @@ export default function RegisterInput({
       ) : (
         <>
           {isAddress ? (
-            // <textarea
-            // rows={4}
-            // className={`resize-none ${textAreaWidth} rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem]`}
-            //   name={name}
-            // ></textarea>
+
             <div className="flex flex-col text-[14px] gap-0.5">
-              <label htmlFor="">Province</label>
+              <label className="text-xs" htmlFor="">Province</label>
               <input
                 onClick={() => setSelectProvince(null)}
                 value={selectProvince && selectProvince.province_name_th}
@@ -203,9 +182,8 @@ export default function RegisterInput({
                   })}
                 </div>
               )}
-              <label htmlFor="">District</label>
+              <label  className="text-xs" htmlFor="">District</label>
               <input
-                // onChange={handleSearchDistrict}
                 onChange={testHaned}
                 value={selectDistrict && selectDistrict.district_name_th}
                 onClick={handleSearchDistrict}
@@ -235,7 +213,7 @@ export default function RegisterInput({
                   })}
                 </div>
               )}
-              <label htmlFor="">Sub District</label>
+              <label className="text-xs" htmlFor="">Sub District</label>
               <input
               onChange={testHaned}
                 value={
@@ -413,16 +391,17 @@ export default function RegisterInput({
                   {name == "university" && isSearchUniversity && (
                     <div className=" h-40 overflow-auto">
                       {universityData.map((data, i) => {
+                        console.log(data)
                         return (
                           <div
                             onClick={() => {
                               setInput({
                                 ...input,
-                                university: data.university,
+                                university: `[${data.enCode}] - ` + data.university,
                               });
                               setSelectUniversity({
                                 ...selectUniversity,
-                                uni: data.university,
+                                uni: `[${data.enCode}] - ` + data.university,
                               });
                               setIsSearchUniversity(false);
                             }}
@@ -430,7 +409,7 @@ export default function RegisterInput({
                             key={i}
                           >
                             {" "}
-                            {data.university}{" "}
+                            {`[${data.enCode}] - ` + data.university}{" "}
                           </div>
                         );
                       })}
