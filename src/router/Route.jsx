@@ -1,4 +1,9 @@
-import { RouterProvider, createBrowserRouter, Outlet, useLocation } from "react-router-dom";
+import {
+  RouterProvider,
+  createBrowserRouter,
+  Outlet,
+  useLocation,
+} from "react-router-dom";
 import { useEffect, useState } from "react";
 import HomePage from "../pages/HomePage";
 import RegisterPage from "../pages/RegisterPage";
@@ -10,33 +15,38 @@ import Camera from "../pages/Camera";
 import ProfilePage from "../pages/ProfilePage";
 import RegisterSuccessLoading from "../component/registerComponent/RegisterSuccessLoading";
 
-import JobPage from "../pages/JobPage"
+import JobPage from "../pages/JobPage";
 
 import ResultPage from "../pages/ResultPage";
 
-
-// Layout component that conditionally renders the Footer
 const Layout = () => {
-
   const footerBar = [
     { id: 1, title: "Jobs", path: "/" },
-    { id: 2, title: "Send Profile",  path: "/registerPage" },
-    { id: 3, title: "profile",  path: "/profilePage" },
+    { id: 2, title: "Send Profile", path: "/registerPage" },
+    { id: 3, title: "profile", path: "/profilePage" },
   ];
 
+  const location = useLocation();
+  console.log(location.pathname);
+  const [isActive, setIsActive] = useState(location.pathname);
 
-  const location = useLocation();  // Get the current route
-console.log(location.pathname)
-const [isActive, setIsActive] =useState(location.pathname)
-  // Conditionally render Footer based on the route
-  // const shouldShowFooter = location.pathname !== "/testingDifferPage";
-  const shouldShowFooter = location.pathname !== "/testingPage" && location.pathname !== "/testingDifferPage" && location.pathname !== '/registerSuccess';
+  const shouldShowFooter =
+    location.pathname !== "/testingPage" &&
+    location.pathname !== "/testingDifferPage" &&
+    location.pathname !== "/registerSuccess";
   const [select, setSelect] = useState(1);
   return (
     <>
       <Header />
-      <Outlet />  {/* Render child route components here */}
-      {shouldShowFooter && <Footer setIsActive={setIsActive} isActive={isActive} setSelect={setSelect} select={select}/>}  {/* Show Footer unless on /testingPage */}
+      <Outlet />
+      {shouldShowFooter && (
+        <Footer
+          setIsActive={setIsActive}
+          isActive={isActive}
+          setSelect={setSelect}
+          select={select}
+        />
+      )}{" "}
     </>
   );
 };
@@ -44,37 +54,26 @@ const [isActive, setIsActive] =useState(location.pathname)
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,  // Use the Layout component that includes Header and Footer
+    element: <Layout />,
     children: [
-      { path: "/", element: <HomePage  /> },
+      { path: "/", element: <HomePage /> },
       { path: "/registerPage", element: <RegisterPage /> },
-      { path: "/testingPage", element: <TestingPage /> },  // TestingPage will not show Footer
+      { path: "/testingPage", element: <TestingPage /> },
       { path: "/testingDifferPage", element: <TestingDiiferPage /> },
       { path: "/profilePage", element: <ProfilePage /> },
-<<<<<<< HEAD
       { path: "/registerSuccess", element: <RegisterSuccessLoading /> },
-=======
 
-      
-
-      { path: "/resultPage", element: <ResultPage />}
-
->>>>>>> 109c45d8d85b88a67d9a44d9f6665ae9d986735d
+      { path: "/resultPage", element: <ResultPage /> },
     ],
   },
   {
     path: "/camera",
-    element: <Camera />
+    element: <Camera />,
   },
-<<<<<<< HEAD
 
-=======
-  { path: "/jobPage"
-    ,element: <JobPage /> }
->>>>>>> 109c45d8d85b88a67d9a44d9f6665ae9d986735d
+  { path: "/jobPage", element: <JobPage /> },
 ]);
 
-// Router component to provide the router to the app
 export default function Router() {
   return <RouterProvider router={router} />;
 }
