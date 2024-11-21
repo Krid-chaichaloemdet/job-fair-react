@@ -40,7 +40,7 @@ export default function TestingDiiferPage({
   input,
   setInput,
 }) {
-  const [count, setCount] = useState(10);
+  const [count, setCount] = useState(20);
 
   const [countEachPhoto, setCountEachPhoto] = useState(0);
   const [pic, setPic] = useState(0);
@@ -204,14 +204,12 @@ export default function TestingDiiferPage({
   );
   const [isIpad, setIsIpad] = useState(false);
 
-  // Function to check device type (iPad or not)
   const checkIfIpad = () => {
     const isIpadDevice =
       /iPad|Macintosh/.test(navigator.userAgent) && "ontouchend" in document;
     setIsIpad(isIpadDevice);
   };
 
-  // Function to update orientation
   const updateOrientation = () => {
     setOrientation(
       window.innerWidth > window.innerHeight ? "Landscape (X)" : "Portrait (Y)"
@@ -219,13 +217,10 @@ export default function TestingDiiferPage({
   };
 
   useEffect(() => {
-    // Check if the device is an iPad on component mount
     checkIfIpad();
 
-    // Listen for resize events to detect orientation changes
     window.addEventListener("resize", updateOrientation);
 
-    // Cleanup listener on component unmount
     return () => window.removeEventListener("resize", updateOrientation);
   }, []);
 
@@ -234,9 +229,6 @@ export default function TestingDiiferPage({
 
   const [pageX2, setPageX2] = useState("");
   const [pageY2, setPageY2] = useState("");
-
-  const [testX, setTestX] = useState("");
-  const [testY, setTestY] = useState("");
 
   let picss = [
     { pic: 0, y1: 35, x1: 260, y2: 35, x2: 665 },
@@ -290,13 +282,6 @@ export default function TestingDiiferPage({
     setPageY2(picss[pic]?.y2);
   }, [pic]);
 
-  const handleOnClick = (event) => {
-    const rect = event.currentTarget.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
-    setTestX(x);
-    setTestY(y);
-  };
   if (isStart === true && pic !== 15) {
     setTimeout(() => {
       setCount(count - 1);
@@ -396,9 +381,6 @@ export default function TestingDiiferPage({
       // }
       if (count == 0) {
         setIsStartDiffer(false);
-        // setPic(30);
-        // window.location = "/testingPage"
-        // setCount("time out");
 
         setIsStartTesting(true);
       }
@@ -488,7 +470,6 @@ export default function TestingDiiferPage({
       ...prevInput,
       totalSkip: prevInput.totalSkip + 1,
     }));
-    console.log(pages);
     let isFalse = pages.filter((data) => data.isChecked == false);
     let lastPic = isFalse.length - 2;
     let nextFalse = isFalse.filter((data) => data.id >= pic + 1);
@@ -503,7 +484,6 @@ export default function TestingDiiferPage({
   const seconds = count % 60;
 
   const [lang, setLang] = useState(`EN`);
-  const [isOpenLang, setIsOpenLand] = useState(false);
   useEffect(() => {
     if (localStorage.getItem("LANG")) {
       setLang(localStorage.getItem("LANG"));
@@ -513,7 +493,6 @@ export default function TestingDiiferPage({
     <div className="fixed left-0 top-0 w-full h-full overflow-y-scroll">
       {isStart ? (
         <div
-          // onClick={spot}
           className={`w-full h-full flex flex-col relative items-center justify-start mt-[80px]  ${
             pic == 17 ? `bg-[url('BG.jpg')] bg-cover bg-center ` : `bg-black`
           } `}
@@ -526,7 +505,6 @@ export default function TestingDiiferPage({
                   : "text-3xl items-start"
               }`}
             >
-              {/* <div className="text-red-500">Time for each : {countEachPhoto}</div> */}
               <div className="text-white text-[1rem] w-[25%] text-center flex justify-center">
                 {lang == "EN"
                   ? `Scores : ${input.score}`
@@ -537,22 +515,8 @@ export default function TestingDiiferPage({
                 {lang == `EN`
                   ? `Total clicks : ${input.totalClick} `
                   : `คลิ๊กทั้งหมด: ${input.totalClick} `}
-                {/* <div style={{ textAlign: "center", marginTop: "50px" }}></div>{" "} */}
-                {/* <div
-                  onClick={handleSkip}
-                  className="bg-white  cursor-pointer text-[#131E3C] "
-                >
-                  {" "}
-                  {lang == "EN" ? "SKIP" : `ข้าม`}
-                </div>
-                <div>page : {pic}</div> */}
               </div>
-              {/* <div className="text-blue-500">Skips : {countTo10}</div> */}
-              {/* <div className="text-white text-[1.5rem] w-[33%] text-center flex justify-center">
-                {lang == "EN"
-                  ? `Time : ${minutes + "m" + seconds + "s"}`
-                  : `เวลาทั้งหมด : ${minutes + " นาที " + seconds + " วินาที"}`}
-              </div> */}
+
               <div className="text-white text-[1rem] w-[25%] text-center flex justify-center">
                 {lang == "EN"
                   ? `Time : ${seconds + "s"}`
@@ -562,350 +526,347 @@ export default function TestingDiiferPage({
           )}
 
           <div className="h-[70%] flex justify-center items-center">
-          <div
-            onClick={spot}
-            className="flex  w-[800px] bg-black relative justify-center items-center flex-col"
-          >
-            <div className={`flex w-full items-center`}>
-              {pic == 16 && (
-                <div className="flex flex-col items-center justify-center w-full h-full text-4xl  ">
-                  <div className="bg-white pb-5 bg-opacity-70 w-[40%] rounded-xl flex flex-col gap-2  shadow-xl">
-                    <div className="w-full h-[10rem] rounded-t-xl flex items-center justify-center  bg-[#D70321] text-white">
-                      <div className="w-[50%]   flex flex-col h-full items-center">
-                        <div className="w-full flex justify-center items-end text-7xl h-[70%]  ">
-                          {input.score}
+            <div
+              onClick={spot}
+              className="flex  w-[800px] bg-black relative justify-center items-center flex-col"
+            >
+              <div className={`flex w-full items-center`}>
+                {pic == 16 && (
+                  <div className="flex flex-col items-center justify-center w-full h-full text-4xl  ">
+                    <div className="bg-white pb-5 bg-opacity-70 w-[40%] rounded-xl flex flex-col gap-2  shadow-xl">
+                      <div className="w-full h-[10rem] rounded-t-xl flex items-center justify-center  bg-[#D70321] text-white">
+                        <div className="w-[50%]   flex flex-col h-full items-center">
+                          <div className="w-full flex justify-center items-end text-7xl h-[70%]  ">
+                            {input.score}
+                          </div>
+                          <div className="w-full flex justify-center text-xl">
+                            {lang == `EN` ? `Total 15` : `ทั้งหมด 15 `}
+                          </div>
                         </div>
-                        <div className="w-full flex justify-center text-xl">
-                          {lang == `EN` ? `Total 15` : `ทั้งหมด 15 `}
+                        <div className="text-8xl flex h-[70%] w-[1%] items-center bg-white rounded-md"></div>
+                        <div className="w-[50%]  flex flex-col h-full">
+                          {count > 0 && (
+                            <div className="h-[70%]  flex">
+                              {" "}
+                              {lang == `EN` ? (
+                                <div className="w-full flex justify-center text-4xl  items-end">
+                                  <div> {10 - minutes + "m "}</div>
+                                  <div className="text-[#D70321]">{" d"}</div>
+                                  <div>{60 - seconds + "s"}</div>
+                                </div>
+                              ) : (
+                                <div className="w-full flex justify-center text-4xl  items-end">
+                                  <div> {10 - minutes + "นาที"}</div>
+                                  <div className="text-[#D70321]">{" d"}</div>
+                                  <div>{60 - seconds + "วินาที"}</div>
+                                </div>
+                              )}
+                            </div>
+                          )}
+                          {count < 0 && <div> 10m</div>}
+                          <div className="text-xl w-full flex justify-center">
+                            {lang == `EN` ? `Used Time ` : `เวลาที่ใช้ไป`}
+                          </div>
                         </div>
                       </div>
-                      <div className="text-8xl flex h-[70%] w-[1%] items-center bg-white rounded-md"></div>
-                      <div className="w-[50%]  flex flex-col h-full">
-                        {count > 0 && (
-                          <div className="h-[70%]  flex">
-                            {" "}
-                            {lang == `EN` ? (
-                              <div className="w-full flex justify-center text-4xl  items-end">
-                                <div> {10 - minutes + "m "}</div>
-                                <div className="text-[#D70321]">{" d"}</div>
-                                <div>{60 - seconds + "s"}</div>
-                              </div>
-                            ) : (
-                              <div className="w-full flex justify-center text-4xl  items-end">
-                                <div> {10 - minutes + "นาที"}</div>
-                                <div className="text-[#D70321]">{" d"}</div>
-                                <div>{60 - seconds + "วินาที"}</div>
-                              </div>
-                            )}
+                      <div className="text-white flex flex-col gap-1 text-2xl pt-5 pb-5">
+                        <div className="text-black flex w-full ">
+                          <div className=" w-[50%] flex justify-start pl-[10%] ">
+                            {lang == "EN" ? `First Name ` : `ชื่อ`}
                           </div>
-                        )}
-                        {count < 0 && <div> 10m</div>}
-                        <div className="text-xl w-full flex justify-center">
-                          {lang == `EN` ? `Used Time ` : `เวลาที่ใช้ไป`}
+                          <div className=" w-[50%] flex justify-center">
+                            {input.firstName}
+                          </div>
+                        </div>
+                        <div className="text-black flex w-full ">
+                          <div className=" w-[50%] flex justify-start pl-[10%] ">
+                            {" "}
+                            {lang == "EN" ? `Last Name  ` : `นามสกุล  `}
+                          </div>
+                          <div className=" w-[50%] flex justify-center">
+                            {input.lastName}{" "}
+                          </div>
+                        </div>
+                        <div className="text-black flex w-full ">
+                          <div className=" w-[50%] flex justify-start pl-[10%] ">
+                            {" "}
+                            {lang == `EN` ? ` Total clicks ` : ` คลิ๊กทั้งหมด `}
+                          </div>
+                          <div className=" w-[50%] flex justify-center">
+                            {input.totalClick}{" "}
+                          </div>
+                        </div>
+                        <div className="text-black flex w-full ">
+                          <div className=" w-[50%] flex justify-start pl-[10%] ">
+                            {" "}
+                            {lang == `EN` ? ` Total skips ` : ` ข้ามทั้งหมด `}
+                          </div>
+                          <div className=" w-[50%] flex justify-center">
+                            {input.totalSkip}{" "}
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div className="text-white flex flex-col gap-1 text-2xl pt-5 pb-5">
-                      <div className="text-black flex w-full ">
-                        <div className=" w-[50%] flex justify-start pl-[10%] ">
-                          {lang == "EN" ? `First Name ` : `ชื่อ`}
-                        </div>
-                        <div className=" w-[50%] flex justify-center">
-                          {input.firstName}
-                        </div>
-                      </div>
-                      <div className="text-black flex w-full ">
-                        <div className=" w-[50%] flex justify-start pl-[10%] ">
-                          {" "}
-                          {lang == "EN" ? `Last Name  ` : `นามสกุล  `}
-                        </div>
-                        <div className=" w-[50%] flex justify-center">
-                          {input.lastName}{" "}
-                        </div>
-                      </div>
-                      <div className="text-black flex w-full ">
-                        <div className=" w-[50%] flex justify-start pl-[10%] ">
-                          {" "}
-                          {lang == `EN` ? ` Total clicks ` : ` คลิ๊กทั้งหมด `}
-                        </div>
-                        <div className=" w-[50%] flex justify-center">
-                          {input.totalClick}{" "}
-                        </div>
-                      </div>
-                      <div className="text-black flex w-full ">
-                        <div className=" w-[50%] flex justify-start pl-[10%] ">
-                          {" "}
-                          {lang == `EN` ? ` Total skips ` : ` ข้ามทั้งหมด `}
-                        </div>
-                        <div className=" w-[50%] flex justify-center">
-                          {input.totalSkip}{" "}
-                        </div>
-                      </div>
+                    <div className="flex gap-10 pt-5">
+                      <button
+                        className="bg-white text-2xl pr-10 pl-10 pt-2 pb-2 rounded-md   shadow-xl"
+                        onClick={() => {
+                          if (pic === 15) {
+                            setPic(0);
+                            setInput({
+                              ...input,
+                              firstName: "",
+                              lastName: "",
+                              totalClick: 0,
+                              score: 0,
+                              time: 0,
+                              pic1: 0,
+                              pic2: 0,
+                              pic3: 0,
+                              pic4: 0,
+                              pic5: 0,
+                              pic6: 0,
+                              pic7: 0,
+                              pic8: 0,
+                              pic9: 0,
+                              pic10: 0,
+
+                              pic11: 0,
+                              pic12: 0,
+                              pic13: 0,
+                              pic14: 0,
+                              pic15: 0,
+                              pic16: 0,
+                              pic17: 0,
+                              pic18: 0,
+                              pic19: 0,
+                              pic20: 0,
+
+                              pic21: 0,
+                              pic22: 0,
+                              pic23: 0,
+                              pic24: 0,
+                              pic25: 0,
+                              pic26: 0,
+                              pic27: 0,
+                              pic28: 0,
+                              pic29: 0,
+                              pic30: 0,
+
+                              click1: 0,
+                              click2: 0,
+                              click3: 0,
+                              click4: 0,
+                              click5: 0,
+                              click6: 0,
+                              click7: 0,
+                              click8: 0,
+                              click9: 0,
+                              click10: 0,
+
+                              click11: 0,
+                              click12: 0,
+                              click13: 0,
+                              click14: 0,
+                              click15: 0,
+                              click16: 0,
+                              click17: 0,
+                              click18: 0,
+                              click19: 0,
+                              click20: 0,
+
+                              click21: 0,
+                              click22: 0,
+                              click23: 0,
+                              click24: 0,
+                              click25: 0,
+                              click26: 0,
+                              click27: 0,
+                              click28: 0,
+                              click29: 0,
+                              click30: 0,
+
+                              skip1: 0,
+                              skip2: 0,
+                              skip3: 0,
+                              skip4: 0,
+                              skip5: 0,
+                              skip6: 0,
+                              skip7: 0,
+                              skip8: 0,
+                              skip9: 0,
+                              skip10: 0,
+
+                              skip11: 0,
+                              skip12: 0,
+                              skip13: 0,
+                              skip14: 0,
+                              skip15: 0,
+                              skip16: 0,
+                              skip17: 0,
+                              skip18: 0,
+                              skip19: 0,
+                              skip20: 0,
+
+                              skip21: 0,
+                              skip22: 0,
+                              skip23: 0,
+                              skip24: 0,
+                              skip25: 0,
+                              skip26: 0,
+                              skip27: 0,
+                              skip28: 0,
+                              skip29: 0,
+                              skip30: 0,
+
+                              isCorrect1: 0,
+                              isCorrect2: 0,
+                              isCorrect3: 0,
+                              isCorrect4: 0,
+                              isCorrect5: 0,
+                              isCorrect6: 0,
+                              isCorrect7: 0,
+                              isCorrect8: 0,
+                              isCorrect9: 0,
+                              isCorrect10: 0,
+
+                              isCorrect11: 0,
+                              isCorrect12: 0,
+                              isCorrect13: 0,
+                              isCorrect14: 0,
+                              isCorrect15: 0,
+                              isCorrect16: 0,
+                              isCorrect17: 0,
+                              isCorrect18: 0,
+                              isCorrect19: 0,
+                              isCorrect20: 0,
+
+                              isCorrect21: 0,
+                              isCorrect22: 0,
+                              isCorrect23: 0,
+                              isCorrect24: 0,
+                              isCorrect25: 0,
+                              isCorrect26: 0,
+                              isCorrect27: 0,
+                              isCorrect28: 0,
+                              isCorrect29: 0,
+                              isCorrect30: 0,
+                            });
+                            setCountTo10(0);
+                            setCount(600);
+                            setIsStart(false);
+                            setPages(
+                              pages.map((page) => {
+                                if (page.isChecked) {
+                                  return { ...page, isChecked: false }; 
+                                }
+                                return page; 
+                              })
+                            );
+                          }
+                        }}
+                      >
+                        {lang == `EN` ? `  Try again` : `ลองอีกครั้ง`}
+                      </button>
+                      <button
+                        onClick={() => (window.location = "/")}
+                        className="bg-[#D70321] text-2xl pr-10 pl-10 pt-2 pb-2  rounded-md text-white shadow-xl"
+                      >
+                        {lang == `EN` ? `Back To Home` : `กลับไปหน้าโฮม`}
+                      </button>
                     </div>
                   </div>
-                  <div className="flex gap-10 pt-5">
-                    <button
-                      className="bg-white text-2xl pr-10 pl-10 pt-2 pb-2 rounded-md   shadow-xl"
+                )}
+
+                {pic === pages[pic]?.id &&
+                  pages[pic]?.isChecked === false &&
+                  pages[pic]?.data}
+              </div>
+
+              {pic !== 16 && (
+                <div className="h-full w-full bg-red-500">
+                  <div className="w-[100%] h-[100%] absolute top-0">
+                    <div
                       onClick={() => {
-                        if (pic === 15) {
-                          setPic(0);
-                          setInput({
-                            ...input,
-                            firstName: "",
-                            lastName: "",
-                            totalClick: 0,
-                            score: 0,
-                            time: 0,
-                            pic1: 0,
-                            pic2: 0,
-                            pic3: 0,
-                            pic4: 0,
-                            pic5: 0,
-                            pic6: 0,
-                            pic7: 0,
-                            pic8: 0,
-                            pic9: 0,
-                            pic10: 0,
-
-                            pic11: 0,
-                            pic12: 0,
-                            pic13: 0,
-                            pic14: 0,
-                            pic15: 0,
-                            pic16: 0,
-                            pic17: 0,
-                            pic18: 0,
-                            pic19: 0,
-                            pic20: 0,
-
-                            pic21: 0,
-                            pic22: 0,
-                            pic23: 0,
-                            pic24: 0,
-                            pic25: 0,
-                            pic26: 0,
-                            pic27: 0,
-                            pic28: 0,
-                            pic29: 0,
-                            pic30: 0,
-
-                            click1: 0,
-                            click2: 0,
-                            click3: 0,
-                            click4: 0,
-                            click5: 0,
-                            click6: 0,
-                            click7: 0,
-                            click8: 0,
-                            click9: 0,
-                            click10: 0,
-
-                            click11: 0,
-                            click12: 0,
-                            click13: 0,
-                            click14: 0,
-                            click15: 0,
-                            click16: 0,
-                            click17: 0,
-                            click18: 0,
-                            click19: 0,
-                            click20: 0,
-
-                            click21: 0,
-                            click22: 0,
-                            click23: 0,
-                            click24: 0,
-                            click25: 0,
-                            click26: 0,
-                            click27: 0,
-                            click28: 0,
-                            click29: 0,
-                            click30: 0,
-
-                            skip1: 0,
-                            skip2: 0,
-                            skip3: 0,
-                            skip4: 0,
-                            skip5: 0,
-                            skip6: 0,
-                            skip7: 0,
-                            skip8: 0,
-                            skip9: 0,
-                            skip10: 0,
-
-                            skip11: 0,
-                            skip12: 0,
-                            skip13: 0,
-                            skip14: 0,
-                            skip15: 0,
-                            skip16: 0,
-                            skip17: 0,
-                            skip18: 0,
-                            skip19: 0,
-                            skip20: 0,
-
-                            skip21: 0,
-                            skip22: 0,
-                            skip23: 0,
-                            skip24: 0,
-                            skip25: 0,
-                            skip26: 0,
-                            skip27: 0,
-                            skip28: 0,
-                            skip29: 0,
-                            skip30: 0,
-
-                            isCorrect1: 0,
-                            isCorrect2: 0,
-                            isCorrect3: 0,
-                            isCorrect4: 0,
-                            isCorrect5: 0,
-                            isCorrect6: 0,
-                            isCorrect7: 0,
-                            isCorrect8: 0,
-                            isCorrect9: 0,
-                            isCorrect10: 0,
-
-                            isCorrect11: 0,
-                            isCorrect12: 0,
-                            isCorrect13: 0,
-                            isCorrect14: 0,
-                            isCorrect15: 0,
-                            isCorrect16: 0,
-                            isCorrect17: 0,
-                            isCorrect18: 0,
-                            isCorrect19: 0,
-                            isCorrect20: 0,
-
-                            isCorrect21: 0,
-                            isCorrect22: 0,
-                            isCorrect23: 0,
-                            isCorrect24: 0,
-                            isCorrect25: 0,
-                            isCorrect26: 0,
-                            isCorrect27: 0,
-                            isCorrect28: 0,
-                            isCorrect29: 0,
-                            isCorrect30: 0,
-                          });
-                          setCountTo10(0);
-                          setCount(600);
-                          setIsStart(false);
-                          setPages(
-                            pages.map((page) => {
-                              if (page.isChecked) {
-                                return { ...page, isChecked: false }; // Update isChecked to false
-                              }
-                              return page; // Return the original object if no change
-                            })
-                          );
+                        setCountTo10(0);
+                        setInput((prevInput) => ({
+                          ...prevInput,
+                          score: input.score + 1,
+                        }));
+                        setInput((prevInput) => ({
+                          ...prevInput,
+                          [`isCorrect${pic + 1}`]: 1,
+                        }));
+                        isChecking();
+                        let isFalse = pages.filter(
+                          (data) => data.isChecked == false
+                        );
+                        let lastPic = isFalse.length - 2;
+                        if (lastPic == 0) {
+                          return setPic(15);
                         }
+                        if (isFalse[lastPic].id === pic) {
+                          setPic(isFalse[0].id);
+                          return;
+                        }
+                        let nextFalse = isFalse.filter(
+                          (data) => data.id >= pic + 1
+                        );
+                        setPic(nextFalse[0].id);
                       }}
-                    >
-                      {lang == `EN` ? `  Try again` : `ลองอีกครั้ง`}
-                    </button>
-                    <button
-                      onClick={() => (window.location = "/")}
-                      className="bg-[#D70321] text-2xl pr-10 pl-10 pt-2 pb-2  rounded-md text-white shadow-xl"
-                    >
-                      {lang == `EN` ? `Back To Home` : `กลับไปหน้าโฮม`}
-                    </button>
+                      className={`absolute rounded-full  w-[70px] h-[70px] `}
+                      style={{
+                        // top: 215,
+                        // left: 335,
+                        top: pageY1,
+                        left: pageX1,
+                        transform: "translate(-50%, -50%)", // Center the location indicator
+                      }}
+                    ></div>
+
+                    <div
+                      onClick={() => {
+                        setCountTo10(0);
+                        setInput((prevInput) => ({
+                          ...prevInput,
+                          score: input.score + 1,
+                        }));
+                        setInput((prevInput) => ({
+                          ...prevInput,
+                          [`isCorrect${pic + 1}`]: 1,
+                        }));
+                        isChecking();
+                        let isFalse = pages.filter(
+                          (data) => data.isChecked == false
+                        );
+                        let lastPic = isFalse.length - 2;
+                        if (lastPic == 0) {
+                          return setPic(15);
+                        }
+                        if (isFalse[lastPic].id === pic) {
+                          setPic(isFalse[0].id);
+                          return;
+                        }
+                        let nextFalse = isFalse.filter(
+                          (data) => data.id >= pic + 1
+                        );
+                        setPic(nextFalse[0].id);
+                      }}
+                      className={`absolute rounded-full  w-[70px] h-[70px] `}
+                      style={{
+                        top: pageY2,
+                        left: pageX2,
+                        // top: 215,
+                        // left: 735,
+                        transform: "translate(-50%, -50%)",
+                      }}
+                    ></div>
                   </div>
                 </div>
               )}
-
-              {pic === pages[pic]?.id &&
-                pages[pic]?.isChecked === false &&
-                pages[pic]?.data}
-              {/* {pic === pages[pic].id &&  pages[pic].data} */}
             </div>
-
-            {pic !== 16 && (
-              <div className="h-full w-full bg-red-500">
-                <div className="w-[100%] h-[100%] absolute top-0">
-                  <div
-                    onClick={() => {
-                      setCountTo10(0);
-                      setInput((prevInput) => ({
-                        ...prevInput,
-                        score: input.score + 1,
-                      }));
-                      setInput((prevInput) => ({
-                        ...prevInput,
-                        [`isCorrect${pic + 1}`]: 1,
-                      }));
-                      isChecking();
-                      // alert("CORRECT !!!");
-                      let isFalse = pages.filter(
-                        (data) => data.isChecked == false
-                      );
-                      let lastPic = isFalse.length - 2;
-                      if (lastPic == 0) {
-                        return setPic(15);
-                      }
-                      if (isFalse[lastPic].id === pic) {
-                        setPic(isFalse[0].id);
-                        return;
-                      }
-                      let nextFalse = isFalse.filter(
-                        (data) => data.id >= pic + 1
-                      );
-                      setPic(nextFalse[0].id);
-                    }}
-                    className={`absolute rounded-full  w-[70px] h-[70px] bg-yellow-300`}
-                    style={{
-                      // top: 215,
-                      // left: 335,
-                      top: pageY1,
-                      left: pageX1,
-                      transform: "translate(-50%, -50%)", // Center the location indicator
-                    }}
-                  ></div>
-
-                  <div
-                    onClick={() => {
-                      setCountTo10(0);
-                      setInput((prevInput) => ({
-                        ...prevInput,
-                        score: input.score + 1,
-                      }));
-                      setInput((prevInput) => ({
-                        ...prevInput,
-                        [`isCorrect${pic + 1}`]: 1,
-                      }));
-                      isChecking();
-                      // alert("CORRECT !!!");
-                      let isFalse = pages.filter(
-                        (data) => data.isChecked == false
-                      );
-                      let lastPic = isFalse.length - 2;
-                      if (lastPic == 0) {
-                        return setPic(15);
-                      }
-                      if (isFalse[lastPic].id === pic) {
-                        setPic(isFalse[0].id);
-                        return;
-                      }
-                      let nextFalse = isFalse.filter(
-                        (data) => data.id >= pic + 1
-                      );
-                      setPic(nextFalse[0].id);
-                    }}
-                    className={`absolute rounded-full  w-[70px] h-[70px] bg-blue-500`}
-                    style={{
-                      top: pageY2,
-                      left: pageX2,
-                      // top: 215,
-                      // left: 735,
-                      transform: "translate(-50%, -50%)",
-                    }}
-                  ></div>
-                </div>
-              </div>
-            )}
           </div>
-          </div>
-          
+
           <div className="w-full bottom-0 relative flex justify-center items-center flex-col py-[2rem]">
             {pic !== 16 && (
               <div
@@ -916,14 +877,6 @@ export default function TestingDiiferPage({
                 {lang == "EN" ? "SKIP" : `ข้าม`}
               </div>
             )}
-
-            {/* {pic !== 30 && (
-                    <div className="text-green-500 text-[1.5rem]">
-                      {lang == "EN"
-                        ? `Picture : ${pic + 1 + "/30"}`
-                        : `รูปภาพ : ${pic + 1 + "/30"}`}
-                    </div>
-                  )} */}
           </div>
         </div>
       ) : (

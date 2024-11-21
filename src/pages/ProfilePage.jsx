@@ -14,12 +14,12 @@ export default function ProfilePage() {
   return (
     <div className="w-full h-[100%] px-[2rem] py-[1rem] mt-[80px] flex flex-col mb-[6rem]">
       <div className="flex flex-row items-start justify-start">
-        <h1 className="font-medium text-[1.75rem] tracking-[0.1em]">Profile</h1>
+        <h1 className="font-medium text-[1.75rem] tracking-[0.1em]">Your Profile</h1>
       </div>
  
       <div className="flex flex-col justify-center w-full py-2">
         <div className="py-2">
-          <p className="pb-2">Your first name</p>
+          <p className="pb-2">First Name</p>
           {/* <input
             className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0"
             type="text"
@@ -31,7 +31,7 @@ export default function ProfilePage() {
           >{user.firstName ? user.firstName : '--'}</div>
         </div>
         <div className="py-2">
-          <p className="pb-2">Your last name</p>
+          <p className="pb-2">Last Name</p>
           {/* <input
             className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0 "
             type="text"
@@ -43,7 +43,7 @@ export default function ProfilePage() {
           >{user.lastName ? user.lastName : '--'}</div>
         </div>
         <div className="py-2">
-          <p className="pb-2">Phone number</p>
+          <p className="pb-2">Phone Number</p>
           {/* <input
             className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0 "
             type="number"
@@ -55,7 +55,7 @@ export default function ProfilePage() {
           >{user.phoneNumber ? user.phoneNumber : '--'}</div>
         </div>
         <div className="py-2">
-          <p className="pb-2">Email</p>
+          <p className="pb-2">E-mail</p>
           {/* <input
             className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0 "
             type="email"

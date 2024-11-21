@@ -3,11 +3,14 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import TestingCoponent from "../component/testingPageComponent/TestingCoponent";
-import DifferTestComponent from "../component/testingPageComponent/DifferTestComponent";
 import TestingDiiferPage from "./TestingDifferPage";
 import TestFinishLoading from "../component/loadingComponent/TestFinishLoading";
 
 export default function TestingPage() {
+  const navigate = useNavigate();
+
+  const [count, setCount] = useState(20); ////////game time
+
   const [input, setInput] = useState({
     firstName: "",
     lastName: "",
@@ -159,6 +162,9 @@ export default function TestingPage() {
     test6: 0,
     test7: 0,
     test8: 0,
+    test9: 0,
+    test10: 0,
+    test11: 0,
   });
   const testingData = [
     {
@@ -203,7 +209,32 @@ export default function TestingPage() {
     },
     {
       image: "public/testingImages/Picture5.png",
-      choice: [<img key={1} className="w-16 h-14" src="public/testingImages/Picture5-a.png" alt="" />, <img key={2}  className="w-16 h-14" src="public/testingImages/Picture5-b.png" alt="" />, <img className="w-16 h-14" key={3} src="public/testingImages/Picture5-c.png" alt="" />, <img className="w-16 h-14" key={4} src="public/testingImages/Picture5-d.png" alt="" />],
+      choice: [
+        <img
+          key={1}
+          className=" h-14 object-scale-down"
+          src="public/testingImages/Picture5-a.png"
+          alt=""
+        />,
+        <img
+          key={2}
+          className=" h-14 object-scale-down"
+          src="public/testingImages/Picture5-b.png"
+          alt=""
+        />,
+        <img
+          className=" h-14 object-scale-down"
+          key={3}
+          src="public/testingImages/Picture5-c.png"
+          alt=""
+        />,
+        <img
+          className=" h-14 object-scale-down"
+          key={4}
+          src="public/testingImages/Picture5-d.png"
+          alt=""
+        />,
+      ],
       correct: 3,
       width: 250,
       height: 250,
@@ -217,7 +248,7 @@ export default function TestingPage() {
         "C.	Finding balance between needs and wants.",
         "D.	Adjusting lifestyle to meet financial goals.",
         "E.	Understands English but cannot respond.",
-        "F.	Does not understand English. / ไม่เข้าใจภาษาอังกฤษ"
+        "F.	Does not understand English. / ไม่เข้าใจภาษาอังกฤษ",
       ],
       correct: 1,
       width: 350,
@@ -232,7 +263,7 @@ export default function TestingPage() {
         "C.	他擅长重复利用旧的东西",
         "D.	他有丰富的领导经验",
         "E.	懂中文但无法回答",
-        "F.	Does not understand Chinese / ไม่เข้าใจภาษาจีน"
+        "F.	Does not understand Chinese / ไม่เข้าใจภาษาจีน",
       ],
       correct: 2,
       width: 350,
@@ -243,38 +274,46 @@ export default function TestingPage() {
       choice: [
         "A. Work is just a means to earn enough money to sustain life.",
         "B. Work is the primary means of earning money, but if possible, one should also fulfill personal needs.",
-        "c. Work is everything in life."
-      ]
+        "c. Work is everything in life.",
+      ],
+      optional: true,
     },
     {
       title: "What do you dislike the most happening during work?",
       choice: [
         "A. I have no rest time of my own.",
         "B. I have too much leisure time and don't know what to do.",
-        "C. Unable to work according to your own thoughts."
-      ]
+        "C. Unable to work according to your own thoughts.",
+      ],
+      optional: true,
     },
     {
-      title: "คุณชอบวิธีการรับสมัครงานของบริษัทเรามากน้อยเพียงใด? How much do you like our company's recruitment process?",
+      title:
+        "คุณชอบวิธีการรับสมัครงานของบริษัทเรามากน้อยเพียงใด? How much do you like our company's recruitment process?",
       choice: [
-        "5 ชอบมากที่สุด/Very much",
-        "4 ชอบมาก/Quite a lot",
-        "3 ชอบปานกลาง/Netral"
-      ]
-    }
+        "5 ชอบมากที่สุด / Very much",
+        "4 ชอบมาก / Quite a lot",
+        "3 ชอบปานกลาง / Netral",
+        "2 ไม่ค่อยชอบ / Not much",
+        "1 ไม่ชอบเลย / Not at all",
+      ],
+      optional: true,
+    },
   ];
-  const [count, setCount] = useState(10);   ////////game time
 
   const [testingPage, setTestingPage] = useState(1);
 
   const [isStartTesting, setIsStartTesting] = useState(false);
   const [isStartDiffer, setIsStartDiffer] = useState(false);
 
-  const [isTestFinish, setIsTestFinish] =useState(false)
+  const [isTestFinish, setIsTestFinish] = useState(false);
   const handleInput = (e) => {
     setInput({ ...input, [e.target.name]: e.target.value });
   };
   const [errorInput, setErrorInput] = useState(false);
+
+  const [isOpenComplete, setIsOpenComPlete] = useState(false);
+
   const handleSubmitForm = async (e) => {
     try {
       await axios.post("http://localhost:8000/user/createTestRecord", input);
@@ -283,123 +322,135 @@ export default function TestingPage() {
     }
   };
 
-const handleStartTest = () =>{
-  if(!input.phoneNumber){
-    setErrorInput(true)
-    return
-  }
-  setIsStartDiffer(true)
-}
+  const [isErrorCheckNumber, setIsErrorCheckNumber] = useState(false);
+  const handleCheckPhoneNumber = async () => {
+    try {
+      await axios
+        .post("http://localhost:8000/user/checkPhoneNumber", {
+          phoneNumber: input.phoneNumber,
+        })
+        .then(() => {
+          setIsErrorCheckNumber(false);
+          handleStartTest();
+        })
+        .catch((res) => setIsErrorCheckNumber(res.response.data.message));
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
+  const handleStartTest = () => {
+    if (!input.phoneNumber) {
+      setErrorInput(true);
+      return;
+    }
+    setIsStartDiffer(true);
+  };
   useEffect(() => {
     if (isStartTesting && count > 0) {
-      const timer = setTimeout(() => {
-        setInput((prevInput) => ({
-          ...prevInput,
-          testTime: prevInput.testTime + 1,
-        }));
-        setCount((prevCount) => prevCount - 1);
-      }, 1000);
-
-      return () => clearTimeout(timer);
+      if (!isOpenComplete) {
+        const timer = setTimeout(() => {
+          setInput((prevInput) => ({
+            ...prevInput,
+            testTime: prevInput.testTime + 1,
+          }));
+          setCount((prevCount) => prevCount - 1);
+        }, 1000);
+        return () => clearTimeout(timer);
+      }
     }
-  }, [isStartTesting, count]);
+  }, [isStartTesting, count,isOpenComplete]);
 
-  
-  useEffect(()=>{
-    if(count === 0 ) {
-      setIsStartTesting(false)
-      setIsTestFinish(true)
-      handleSubmitForm()
+  useEffect(() => {
+    // if(isTestFinish){
+
+    // }
+    if (count === 0) {
+      setIsStartTesting(false);
+      setIsTestFinish(true);
+      handleSubmitForm();
     }
-
-  },[count])
-  console.log("count", count)
-  const navigate = useNavigate()
+  }, [count]);
+  console.log(input);
   return (
-    <div
-      // onSubmit={handleSubmitForm}
-      className="w-full h-screen flex flex-col justify-center items-center"
-    >
+    <div className="w-full h-screen flex flex-col justify-center items-center  overflow-y-hidden">
       <div className="h-full flex justify-center flex-col w-full px-[8rem]">
-      <div className="w-full flex justify-center mb-[2rem] font-medium text-[1.75rem] tracking-[0.1em]">Challenge</div>
-      <div className="">
-        {/* <div className="flex flex-col px-5 ">
-          <label htmlFor="">Your first name</label>
-          <input
-            onChange={handleInput}
-            name="firstName"
-            className="rounded-sm"
-            type="text"
-          />
-        </div> */}
-        {/* <div className="flex flex-col px-5 ">
-          <label htmlFor="">Your last name</label>
-          <input
-            onChange={handleInput}
-            name="lastName"
-            className="rounded-sm"
-            type="text"
-          />
-        </div> */}
-        <div className="flex flex-col w-full items-start justify-center ">
-          <div className="">
-          <label htmlFor="" className="text-[0.8rem] mb-[0.5rem]">Phone number</label>
-         { errorInput &&  <div className="text-red-500">Please enter your phone number</div>}
-          </div>
-          <input
-            onChange={handleInput}
-            name="phoneNumber"
-            className="bg-[#f3f3f5] border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] rounded-md w-full"
-            type="text"
-          />
+        <div className="w-full flex justify-center mb-[2rem] font-medium text-[1.75rem] tracking-[0.1em]">
+          Quiz
         </div>
-        {/* <div className="flex flex-col px-5 ">
-          <label htmlFor="">E-mail</label>
-          <input
-            onChange={handleInput}
-            name="email"
-            className="rounded-sm"
-            type="text"
+        <div className="">
+          <div className="flex flex-col w-full items-start justify-center ">
+            <div className="mb-[0.25rem]">
+              <label htmlFor="" className="text-[0.8rem] ">
+                Please enter the phone number you submitted during the registration.
+              </label>
+              {isErrorCheckNumber && (
+                <div className="text-red-500" htmlFor="">
+                  {isErrorCheckNumber}
+                </div>
+              )}
+              {errorInput && (
+                <div className="text-red-500">This field is required.</div>
+              )}
+            </div>
+            <input
+              onChange={handleInput}
+              name="phoneNumber"
+              className="bg-[#f3f3f5] border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] rounded-md w-full"
+              type="text"
+              value={input.phoneNumber}
+            />
+          </div>
+        </div>
+        <div className="flex justify-center gap-5 pt-[2rem] mb-[6rem] w-full ">
+          <button
+            onClick={handleCheckPhoneNumber}
+            className="bg-[#131E3C] rounded-full py-[0.75rem] my-[0.5rem] text-white w-full"
+          >
+            {" "}
+            Start The Quiz
+          </button>
+          <button
+            onClick={() => navigate("/")}
+            className="bg-[#131E3C] rounded-full py-[0.75rem] my-[0.5rem] text-white w-full"
+          >
+            {" "}
+            Back to Home
+          </button>
+        </div>
+        {isStartTesting && (
+          <TestingCoponent
+            testingPage={testingPage}
+            count={count}
+            input={input}
+            setInput={setInput}
+            testingData={testingData}
+            setTestingPage={setTestingPage}
+            handleSubmitForm={handleSubmitForm}
+            setIsTestFinish={setIsTestFinish}
+            setIsStartTesting={setIsStartTesting}
+            isOpenComplete={isOpenComplete}
+            setIsOpenComPlete={setIsOpenComPlete}
           />
-        </div> */}
-      </div>
-      <div className="flex justify-center gap-5 pt-[2rem] mb-[6rem] w-full ">
-        <button
-          onClick={handleStartTest}
-          className="bg-[#131E3C] rounded-full py-[0.75rem] my-[0.5rem] text-white w-full"
-        >
-          {" "}
-          Start Challenge
-        </button>
-        <button
-          onClick={() => navigate('/')}
-          className="bg-[#131E3C] rounded-full py-[0.75rem] my-[0.5rem] text-white w-full"
-        >
-          {" "}
-          Back To Home
-        </button>
-      </div>
-      {isStartTesting && (
-        <TestingCoponent
-          testingPage={testingPage}
-          count={count}
-          input={input}
-          setInput={setInput}
-          testingData={testingData}
-          setTestingPage={setTestingPage}
-        />
-      )}
-      {isStartDiffer && (
-        <TestingDiiferPage
-          setIsStartTesting={setIsStartTesting}
-          setIsStartDiffer={setIsStartDiffer}
-          input={input}
-          setInput={setInput}
-        />
-      )}
+        )}
+        {isStartDiffer && (
+          <TestingDiiferPage
+            setIsStartTesting={setIsStartTesting}
+            setIsStartDiffer={setIsStartDiffer}
+            input={input}
+            setInput={setInput}
+          />
+        )}
 
-        {isTestFinish && <TestFinishLoading />}
+        {isTestFinish && (
+          <TestFinishLoading
+            setCount={setCount}
+            setInput={setInput}
+            setIsTestFinish={setIsTestFinish}
+            setIsOpenComPlete={setIsOpenComPlete}
+            setIsStartTesting={setIsStartTesting}
+          />
+        )}
       </div>
     </div>
   );

@@ -104,13 +104,13 @@ export default function Camera({ setIsPhotoSuccess }) {
                   onClick={handleConfirmToUpload}
                   className="mt-4 px-6 py-2 w-full bg-[#131E3C] text-white rounded-3xl tracking-widest"
                 >
-                  Confirm to upload
+                  Confirm
                 </button>
                 <button
                   onClick={() => setIsPreviewPhoto(false)}
                   className="mt-4 px-6 py-2 w-full bg-[#ECEEF3] text-[#131E3C] rounded-3xl border-2 border-[#131E3C]  transition-all"
                 >
-                  Cancel
+                  Retake
                 </button>
               </div>
             )}
@@ -120,7 +120,7 @@ export default function Camera({ setIsPhotoSuccess }) {
                   className="mt-4 px-6 py-2 w-full bg-[#131E3C] text-white rounded-3xl tracking-widest"
                   onClick={handleCaptureAndSend}
                 >
-                  Take photo
+                  Take Photo
                 </button>
                 <button
                   className="mt-4 px-6 py-2 w-full bg-[#ECEEF3] text-[#131E3C] rounded-3xl border-2 border-[#131E3C]  transition-all"
@@ -129,7 +129,7 @@ export default function Camera({ setIsPhotoSuccess }) {
                     setIsPhotoAllow(false);
                   }}
                 >
-                  back
+                  Back
                 </button>
               </div>
             )}
@@ -139,21 +139,21 @@ export default function Camera({ setIsPhotoSuccess }) {
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center py-14">
             <img className="pb-14" src={photo} alt="" />
-            <p className="text-center w-[100%]">Please make sure your photo</p>
-            <p className="text-center w-[100%]"> clearly shows your face.</p>
+            <p className="text-center font-extrabold w-[100%]">Guideline</p>
+            <p className="text-center w-[100%]"> We respectfully ask for your permission to take a picture of you to complete your job application. This picture will only be used for the application process and will be securely stored.</p>
           </div>
           <div className="flex flex-col gap-3">
             <button
               onClick={handleAllowCamera}
               className="h-10 bg-[#131E3C] border shadow-lg rounded-[26px] text-[#fff] "
             >
-              take a photo
+              Take a Photo
             </button>
             <button
-              className="h-10 w-[18rem] bg-white border border-[#131E3C] shadow-lg rounded-[26px] "
+              className="text-gray-600 text-[10px] px-6 pt-1 pb-0 underline decoration-[#131E3C] cursor-pointer"
               onClick={() => navigate("/")}
             >
-              back to home page
+              I do not want to apply for a job
             </button>
           </div>
         </div>

@@ -4,18 +4,16 @@ import { useNavigate } from "react-router-dom";
 import RegisterInput from "../component/registerComponent/RegisterInput";
 import RegisterLabel from "../component/registerComponent/RegisterLabel";
 import axios from "axios";
-import Camera from "./Camera";
 export default function RegisterPage() {
   const navigate = useNavigate();
 
   if (!localStorage.getItem("photo")) {
     window.location = "/camera";
   }
-  const [isPhotoSuccess, setIsPhotoSuccess] = useState(true);
 
   const [errorValidator, setErrorValidator] = useState("");
   const [input, setInput] = useState({
-    targetUserId : localStorage.getItem('userId'),
+    targetUserId: localStorage.getItem("userId"),
     firstName: "",
     lastName: "",
     address: "",
@@ -27,7 +25,6 @@ export default function RegisterPage() {
     education: "",
     faculty: "",
     department: "",
-    // dateCanStartWorking: "",
     interestedPosition: localStorage.getItem("position")
       ? localStorage.getItem("position")
       : "click here",
@@ -41,42 +38,24 @@ export default function RegisterPage() {
       id: 1,
       title: "First Name",
       name: "firstName",
-      err: "firstName",
     },
     {
       id: 2,
       title: "Last Name",
       name: "lastName",
-      err: "lastName",
     },
-    // {
-    //   id: 3,
-    //   title: "Address",
-    //   name: "address",
-    //   typeOfInput: '',
-    //   textArea : true,
-    //   textAreaHight: 'h-10',
-    //   textAreaWidth: 'w-2/5'
-    // },
+
     {
       id: 3,
       title: "Address",
       isAddress: true,
       addresData: ["Province", "District", "Sub District"],
-      // province: 'Province',
-      // name1: 'province',
-      // district: 'District',
-      // name2: 'district',
-      // subDistrict: 'Sub District',
-      // name3: 'subDistrict',
-      // addressAmout: 3,
     },
     {
       id: 4,
-      title: "Date of birth MM/DD/YYYY",
+      title: "Date Of Birth MM/DD/YYYY",
       name: "dateOfBirth",
       typeOfInput: "date",
-      err: "dateOfBirth",
     },
     {
       id: 5,
@@ -86,28 +65,18 @@ export default function RegisterPage() {
       amout: 2,
       radio1: "male",
       radio2: "female",
-      radio3: "other",
-      err: "gender",
     },
     { id: 6, title: "Phone Number", name: "phoneNumber", err: "phoneNumber" },
     { id: 7, title: "E-mail", name: "email", err: "email" },
-    { id: 8, title: "University", name: "university",},
+    { id: 8, title: "University", name: "university" },
     { id: 9, title: "Highest Education", name: "education", err: "education" },
     {
       id: 10,
       title: "Faculty",
       name: "faculty",
-
-      err: "faculty",
     },
     { id: 11, title: "Department", name: "department", err: "department" },
-    // {
-    //   id: 12,
-    //   title: "Date you can start working MM/DD/YYYY",
-    //   name: "dateCanStartWorking",
-    //   typeOfInput: "date",
-    //   err: "dateCanStartWorking",
-    // },
+
     {
       id: 12,
       title: "Interested Position",
@@ -115,23 +84,36 @@ export default function RegisterPage() {
       isDropDown: true,
       positionDropDown: input.interestedPosition,
     },
+    {
+      id: 13,
+      title: "How interested are you in applying for a job with our company?",
+      name: "interestingRate",
+      rateChoice: [
+        "5. สนใจมากที่สุด/Very interested",
+        "4. สนใจมาก/Interested",
+        "3. สนใจปานกลาง/Netral",
+        "2. ไม่ค่อยสนใจ/Slightly interested",
+        "1. ไม่สนใจเลย/Not interested at all",
+      ],
+      amout: 5,
+      typeOfInput: "radio",
+    },
   ];
   const requiredFields = [
     { field: "firstName", errorId: 1 },
     { field: "lastName", errorId: 2 },
-    // { field: "address", errorId: 3 },
+    { field: "address", errorId: 3 },
     { field: "dateOfBirth", errorId: 4 },
     { field: "phoneNumber", errorId: 5 },
-
     { field: "gender", errorId: 6 },
     { field: "email", errorId: 7 },
     { field: "university", errorId: 8 },
     { field: "education", errorId: 9 },
     { field: "faculty", errorId: 10 },
     { field: "department", errorId: 11 },
-    // { field: "dateCanStartWorking", errorId: 12 },
     { field: "interestedPosition", errorId: 12 },
   ];
+
   const handleSubmitForm = async (e) => {
     try {
       e.preventDefault();
@@ -146,7 +128,10 @@ export default function RegisterPage() {
       await axios
         .post("http://localhost:8000/user/register", input)
         .then(() => navigate("/"))
-        .finally(() => localStorage.removeItem("position"));
+        .finally(() => {
+          localStorage.setItem("register", true);
+          localStorage.removeItem("position");
+        });
     } catch (error) {
       console.log(error);
     }
@@ -155,7 +140,7 @@ export default function RegisterPage() {
   return (
     <form
       onSubmit={handleSubmitForm}
-      className="w-full px-[2rem] py-[1rem] mt-[80px] flex flex-col gap-2 mb-[6rem]"
+      className="w-full px-[2rem] py-[1rem] mt-[80px] flex flex-col gap-2 mb-[6rem] "
     >
       <div className="flex flex-row justify-start">
         <div className="font-medium text-[1.75rem] tracking-[0.1em]">
@@ -176,15 +161,11 @@ export default function RegisterPage() {
             />
             <RegisterInput
               name={arr[i].name}
-              // value={arr[i].name}
               typeOfInput={arr[i].typeOfInput}
               amout={arr[i].amout}
               radio1={arr[i].radio1}
               radio2={arr[i].radio2}
               radio3={arr[i].radio3}
-              textArea={arr[i].textArea}
-              textAreaHight={arr[i].textAreaHight}
-              textAreaWidth={arr[i].textAreaWidth}
               isDropDown={arr[i].isDropDown}
               positionDropDown={arr[i].positionDropDown}
               setInputPosition={setInput}
@@ -206,7 +187,6 @@ export default function RegisterPage() {
       >
         <div className="text-[#ffffff] tracking-[0.12em]">Send Profile</div>
       </button>
-      {/* { localStorage.getItem('photo') !== 'true' &&  <Camera setIsPhotoSuccess={setIsPhotoSuccess}/>} */}
     </form>
   );
 }

@@ -4,20 +4,12 @@ export default function RegisterInput({
   name,
   typeOfInput = "text",
   amout,
-  value,
-  // textArea,
-  // textAreaHight,
-  // textAreaWidth,
   isDropDown,
   positionDropDown,
-  province,
-  district,
-  subDistrict,
   isAddress,
-  errorValidator,
   setInput,
   input,
-  keyProp
+  keyProp,
 }) {
   const [isOpenPositionDropDown, setIsOpenPositionDropDown] = useState(false);
 
@@ -28,20 +20,18 @@ export default function RegisterInput({
     { title: "Female" },
     { title: "Other" },
   ];
-  const testHaned = () =>{
 
-  }
-  if (amout > 1) {
+  const testHaned = () => {};
+  if (keyProp == 5) {
     for (let i = 0; i < amout; i++) {
       inputs.push(
-        <div className="rounded-md bg-[#f3f3f5] h-[2rem] w-full flex items-center border-[1px] border-[#DFE0E5]">
+        <div className="rounded-md text-xs bg-[#f3f3f5] h-[2rem] w-full flex items-center border-[1px] border-[#DFE0E5]">
           <input
             value={typeOfGender[i]?.title}
             key={i}
             name={name}
             type={typeOfInput}
             className="mx-[0.5rem]"
-            onChange={testHaned}
           />
           <div>
             <label htmlFor="">{typeOfGender[i]?.title}</label>
@@ -51,6 +41,31 @@ export default function RegisterInput({
     }
   }
 
+  const howInterested = [
+    "5. สนใจมากที่สุด / Very interested",
+    "4. สนใจมาก / Interested",
+    "3. สนใจปานกลาง / Netral",
+    "2. ไม่ค่อยสนใจ / Slightly interested",
+    "1. ไม่สนใจเลย / Not interested at all",
+  ];
+  if (keyProp == 13) {
+    for (let i = 0; i < amout; i++) {
+      inputs.push(
+        <div className="rounded-md text-xs bg-[#f3f3f5] h-[2rem] w-full flex items-center border-[1px] border-[#DFE0E5]">
+          <input
+            value={howInterested[i]}
+            key={i}
+            name={name}
+            type={typeOfInput}
+            className="mx-[0.5rem]"
+          />
+          <div>
+            <label htmlFor="">{howInterested[i]}</label>
+          </div>
+        </div>
+      );
+    }
+  }
 
   const [isSearchProvince, setIsOpenSearchProvince] = useState(false);
   const [searchProvinceData, setSearchProvinceData] = useState([]);
@@ -71,7 +86,7 @@ export default function RegisterInput({
         setIsOpenSearchProvince(true);
       }
 
-      const response = await axios
+      await axios
         .get(`http://localhost:8000/user/searchProvince?q=${e.target.value}`)
         .then((res) => setSearchProvinceData(res.data));
     } catch (error) {
@@ -86,7 +101,7 @@ export default function RegisterInput({
       if (!selectProvince) {
         return;
       }
-      const resposne = await axios
+      await axios
         .get(
           `http://localhost:8000/user/searchDistrict?q=${selectProvince.province_code}`
         )
@@ -120,7 +135,6 @@ export default function RegisterInput({
   });
   const handleSearchUniversity = async (e) => {
     if (e.target.value) {
-
       setIsSearchUniversity(true);
       await axios
         .get(`http://localhost:8000/user/searchUniversity?q=${e.target.value}`)
@@ -128,28 +142,30 @@ export default function RegisterInput({
     }
   };
 
-  const [isSearchEducation, setIsSearchEducation] = useState(false)
-  const [educationData, setEducationData] = useState([])
-  const [selectEducation, setSelectEducation] = useState('')
+  const [isSearchEducation, setIsSearchEducation] = useState(false);
+  const [educationData, setEducationData] = useState([]);
+  const [selectEducation, setSelectEducation] = useState("");
 
   const handleSearchEducation = async () => {
-
-
-    
-    await axios.get(`http://localhost:8000/user/searchEducation`)
-    .then((res)=> setEducationData(res.data)).finally(()=>    setIsSearchEducation(true))
-  }
+    await axios
+      .get(`http://localhost:8000/user/searchEducation`)
+      .then((res) => setEducationData(res.data))
+      .finally(() => setIsSearchEducation(true));
+  };
 
   return (
     <div key={keyProp} className="flex flex-row gap-[0.5rem] justify-between">
-      {amout > 1 ? (
-        inputs
+      {amout ? (
+        <div className={`${keyProp == 5 ? "flex w-[100%]" : "w-[100%]"} `}>
+          {inputs}
+        </div>
       ) : (
         <>
           {isAddress ? (
-
             <div className="flex flex-col text-[14px] gap-0.5">
-              <label className="text-xs" htmlFor="">Province</label>
+              <label className="text-xs" htmlFor="">
+                Province
+              </label>
               <input
                 onClick={() => setSelectProvince(null)}
                 value={selectProvince && selectProvince.province_name_th}
@@ -182,7 +198,9 @@ export default function RegisterInput({
                   })}
                 </div>
               )}
-              <label  className="text-xs" htmlFor="">District</label>
+              <label className="text-xs" htmlFor="">
+                District
+              </label>
               <input
                 onChange={testHaned}
                 value={selectDistrict && selectDistrict.district_name_th}
@@ -213,9 +231,10 @@ export default function RegisterInput({
                   })}
                 </div>
               )}
-              <label className="text-xs" htmlFor="">Sub District</label>
+              <label className="text-xs" htmlFor="">
+                Sub District
+              </label>
               <input
-              onChange={testHaned}
                 value={
                   selectSubDistrict && selectSubDistrict.sub_district_name_th
                 }
@@ -267,7 +286,6 @@ export default function RegisterInput({
                     <div name={name} className="flex flex-col ">
                       <div className="flex gap-2 py-[0.25rem]">
                         <input
-
                           onClick={() => setIsOpenPositionDropDown(false)}
                           type="radio"
                           name={name}
@@ -344,10 +362,10 @@ export default function RegisterInput({
                     <>
                       {name == "education" ? (
                         <input
-                        onClick={() =>{
-                          handleSearchEducation()
-                          setSelectEducation(null)}}
-                          // onChange={handleSearchEducation}
+                          onClick={() => {
+                            handleSearchEducation();
+                            setSelectEducation(null);
+                          }}
                           className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0"
                           type={typeOfInput}
                           name={name}
@@ -355,7 +373,6 @@ export default function RegisterInput({
                         />
                       ) : (
                         <input
-                          // onChange={handleSearchUniversity}
                           className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0"
                           type={typeOfInput}
                           name={name}
@@ -364,40 +381,40 @@ export default function RegisterInput({
                     </>
                   )}
 
-                  {
-                    name == 'education' && isSearchEducation && (
-                      <div className=" h-auto overflow-auto "> 
-                        {
-                          educationData.map((data, i)=>{
-                            return(
-                              <div 
-                              onClick={()=>{
-                                setInput({...input, education: data.education_th})
-                                setSelectEducation(data.education_th)
-                              
-                              setIsSearchEducation(false)
-                              }}
-                              className="hover:bg-gray-300 cursor-pointer"
-                              key={i}>
-                                {data.education_th}
-                                 </div>
-                            )
-                          })
-                        }
-                      </div>
-                    )
-                  }
-
-                  {name == "university" && isSearchUniversity && (
-                    <div className=" h-40 overflow-auto">
-                      {universityData.map((data, i) => {
-                        console.log(data)
+                  {name == "education" && isSearchEducation && (
+                    <div className=" h-auto overflow-auto ">
+                      {educationData.map((data, i) => {
                         return (
                           <div
                             onClick={() => {
                               setInput({
                                 ...input,
-                                university: `[${data.enCode}] - ` + data.university,
+                                education: data.education_th,
+                              });
+                              setSelectEducation(data.education_th);
+
+                              setIsSearchEducation(false);
+                            }}
+                            className="hover:bg-gray-300 cursor-pointer"
+                            key={i}
+                          >
+                            {data.education_th}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
+
+                  {name == "university" && isSearchUniversity && (
+                    <div className=" h-40 overflow-auto">
+                      {universityData.map((data, i) => {
+                        return (
+                          <div
+                            onClick={() => {
+                              setInput({
+                                ...input,
+                                university:
+                                  `[${data.enCode}] - ` + data.university,
                               });
                               setSelectUniversity({
                                 ...selectUniversity,

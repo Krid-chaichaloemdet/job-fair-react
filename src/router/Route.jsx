@@ -8,6 +8,7 @@ import Footer from "../layouts/Footer";
 import TestingDiiferPage from "../pages/TestingDifferPage";
 import Camera from "../pages/Camera";
 import ProfilePage from "../pages/ProfilePage";
+import RegisterSuccessLoading from "../component/registerComponent/RegisterSuccessLoading";
 
 // Layout component that conditionally renders the Footer
 const Layout = () => {
@@ -24,7 +25,7 @@ console.log(location.pathname)
 const [isActive, setIsActive] =useState(location.pathname)
   // Conditionally render Footer based on the route
   // const shouldShowFooter = location.pathname !== "/testingDifferPage";
-  const shouldShowFooter = location.pathname !== "/testingPage" && location.pathname !== "/testingDifferPage";
+  const shouldShowFooter = location.pathname !== "/testingPage" && location.pathname !== "/testingDifferPage" && location.pathname !== '/registerSuccess';
   const [select, setSelect] = useState(1);
   return (
     <>
@@ -45,12 +46,14 @@ const router = createBrowserRouter([
       { path: "/testingPage", element: <TestingPage /> },  // TestingPage will not show Footer
       { path: "/testingDifferPage", element: <TestingDiiferPage /> },
       { path: "/profilePage", element: <ProfilePage /> },
+      { path: "/registerSuccess", element: <RegisterSuccessLoading /> },
     ],
   },
   {
     path: "/camera",
     element: <Camera />
-  }
+  },
+
 ]);
 
 // Router component to provide the router to the app
