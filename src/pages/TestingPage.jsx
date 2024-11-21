@@ -227,7 +227,7 @@ export default function TestingPage() {
       height: 350
     },
   ];
-  const [count, setCount] = useState(999);   ////////game time
+  const [count, setCount] = useState(120);   ////////game time
 
   const [testingPage, setTestingPage] = useState(1);
 
