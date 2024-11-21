@@ -40,99 +40,92 @@ export default function Start({ setIsStart }) {
       {popup && (
         <div className="w-full h-screen absolute bg-gray-900 bg-opacity-40 flex items-center justify-center  ">
           <div className="w-[80%] px-[2rem] py-[2rem] bg-white rounded-md relative">
-            <div className="mb-[1rem]">
-              <div>Part 1</div>
+            <div className="w-full flex justify-center mb-[2rem] text-[1.5rem]">Instruction</div>
+            <div className="mb-[1.5rem]">
+              <div className="mb-[0.25rem]"><span className="font-medium text-[1.25rem]">Part 1 :</span> Spot the Differences</div>
               <div className=" ">
-                <div className="flex flex-row items-center justify-between ">
+              <div className="flex flex-row items-center justify-end gap-[1rem]">
                   <div className="w-[0.75rem] h-[0.75rem] bg-[#131E3C] rounded-full"></div>
                   <div className="text-[1rem] w-[94%]">
                     {lang === "EN"
-                      ? "The test consists of 30 images. It's a spot-the-difference game."
-                      : "การทดสอบประกอบด้วยภาพ 30 ภาพ เป็นเกมจับผิดภาพค่ะ"}
+                      ? "The Spot the Difference game includes a total of 30 images."
+                      : "เกมจับผิดภาพประกอบไปด้วยภาพทั้งหมด 30 รูป"}
                   </div>
                 </div>
-                <div className="flex flex-row items-center justify-between ">
+                <div className="flex flex-row items-center justify-end gap-[1rem]">
                   <div className="w-[0.75rem] h-[0.75rem] bg-[#131E3C] rounded-full"></div>
                   <div className="text-[1rem] w-[94%]">
                     {lang == "EN"
-                      ? `You have 1 minutes to complete the test.`
-                      : `คุณมีเวลา 10 นาทีในการทำแบบทดสอบค่ะ`}
+                      ? `You have 1 minute to complete the test.`
+                      : `คุณมีเวลา 1 นาทีในการทำแบบทดสอบให้เสร็จ`}
                   </div>
                 </div>
-                <div className="flex flex-row items-center justify-between ">
+                <div className="flex flex-row items-center justify-end gap-[1rem]">
                   <div className="w-[0.75rem] h-[0.75rem] bg-[#131E3C] rounded-full"></div>
                   <div className="text-[1rem] w-[94%]">
                     {lang === "EN"
-                      ? `You can skip images.`
-                      : `คุณสามารถข้ามภาพได้ค่ะ`}
+                      ? `You can skip to any image at any time.`
+                      : `คุณสามารถข้ามไปยังรูปภาพใด ๆ ได้ตามที่ต้องการ`}
                   </div>
                 </div>
-                <div className="flex flex-row items-center justify-between ">
+                <div className="flex flex-row items-center justify-end gap-[1rem]">
                   <div className="w-[0.75rem] h-[0.75rem] bg-[#131E3C] rounded-full"></div>
                   <div className="text-[1rem] w-[94%]">
                     {lang == "EN"
-                      ? `When you make 10 incorrect clicks, the game will automatically skip the image for you. `
-                      : `เมื่อคุณคลิกผิด 10 ครั้ง เกมจะข้ามภาพนั้นให้คุณโดยอัตโนมัติค่ะ`}
+                      ? `If you make 10 incorrect guesses, the game will automatically change the image for you.`
+                      : `หากคุณทายผิดครบ 10 ครั้ง เกมจะเปลี่ยนรูปภาพให้คุณโดยอัตโนมัติ`}
                   </div>
                 </div>
-                <div className="flex flex-row items-center justify-between ">
+                <div className="flex flex-row items-center justify-end gap-[1rem]">
                   <div className="w-[0.75rem] h-[0.75rem] bg-[#131E3C] rounded-full"></div>
                   <div className="text-[1rem] w-[94%]">
                     {lang == "EN"
-                      ? `Each picture will have only one point that is incorrect.`
-                      : `เเต่ละภาพจะมีจุดผิดเเค่1จุดเท่านั้น`}
+                      ? `Each image contains only one spot that is different.`
+                      : `แต่ละภาพมีจุดที่แตกต่างกันเพียงจุดเดียวเท่านั้น`}
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="">
-              <div>Part 2</div>
+            <div className="mb-[1.5rem]">
+            <div className="mb-[0.25rem]"><span className="font-medium text-[1.25rem]">Part 2 :</span> Multiple-Choice Quiz</div>
               <div className=" ">
-                <div className="flex flex-row items-center justify-between ">
+                <div className="flex flex-row items-center justify-end gap-[1rem]">
                   <div className="w-[0.75rem] h-[0.75rem] bg-[#131E3C] rounded-full"></div>
                   <div className="text-[1rem] w-[94%]">
                     {lang === "EN"
-                      ? "The test consists of 30 images. It's a spot-the-difference game."
-                      : "การทดสอบประกอบด้วยภาพ 30 ภาพ เป็นเกมจับผิดภาพค่ะ"}
+                      ? "The quiz consists of 10 questions."
+                      : "แบบทดสอบประกอบไปด้วยคำถามทั้งหมด 10 ข้อ"}
                   </div>
                 </div>
-                <div className="flex flex-row items-center justify-between ">
+                <div className="flex flex-row items-center justify-end gap-[1rem]">
                   <div className="w-[0.75rem] h-[0.75rem] bg-[#131E3C] rounded-full"></div>
                   <div className="text-[1rem] w-[94%]">
                     {lang == "EN"
-                      ? `You have 1 minutes to complete the test.`
-                      : `คุณมีเวลา 10 นาทีในการทำแบบทดสอบค่ะ`}
+                      ? `Choose the most accurate answer.`
+                      : `จงเลือกคำตอบที่ถูกต้องที่สุด`}
                   </div>
                 </div>
-                <div className="flex flex-row items-center justify-between ">
+                <div className="flex flex-row items-center justify-end gap-[1rem]">
                   <div className="w-[0.75rem] h-[0.75rem] bg-[#131E3C] rounded-full"></div>
                   <div className="text-[1rem] w-[94%]">
                     {lang === "EN"
-                      ? `You can skip images.`
-                      : `คุณสามารถข้ามภาพได้ค่ะ`}
+                      ? `You have 2 minutes to complete the test.`
+                      : `คุณมีเวลา 2 นาทีในการทำแบบทดสอบให้เสร็จ`}
                   </div>
                 </div>
-                <div className="flex flex-row items-center justify-between ">
+                <div className="flex flex-row items-center justify-end gap-[1rem]">
                   <div className="w-[0.75rem] h-[0.75rem] bg-[#131E3C] rounded-full"></div>
                   <div className="text-[1rem] w-[94%]">
                     {lang == "EN"
-                      ? `When you make 10 incorrect clicks, the game will automatically skip the image for you. `
-                      : `เมื่อคุณคลิกผิด 10 ครั้ง เกมจะข้ามภาพนั้นให้คุณโดยอัตโนมัติค่ะ`}
-                  </div>
-                </div>
-                <div className="flex flex-row items-center justify-between ">
-                  <div className="w-[0.75rem] h-[0.75rem] bg-[#131E3C] rounded-full"></div>
-                  <div className="text-[1rem] w-[94%]">
-                    {lang == "EN"
-                      ? `Each picture will have only one point that is incorrect.`
-                      : `เเต่ละภาพจะมีจุดผิดเเค่1จุดเท่านั้น`}
+                      ? `You can skip or go back to any question as needed.`
+                      : `คุณสามารถข้ามหรือย้อนกลับไปยังคำถามใด ๆ ได้ตามที่ต้องการ`}
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="w-full h-[50%] mt-[2rem] flex justify-center items-center  bottom-0">
+            <div className="w-full h-[50%] mt-[2.5rem] flex justify-center items-center  bottom-0">
               <button
                 onClick={() => {
                   setIsStart(true)
