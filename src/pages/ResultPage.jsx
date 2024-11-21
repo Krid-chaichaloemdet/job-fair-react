@@ -95,9 +95,7 @@ export default function ResultPage() {
         });
 
         axios
-            .get(
-                `http://192.168.0.169:4567/readSingleCandidate?targetId=${selectCandidate}`
-            )
+            .get(`http://192.168.0.169:4567/readSingleCandidate?targetId=${selectCandidate}`)
             .then((res) => {
                 setSingleCandidateData(res.data);
             });
@@ -122,16 +120,16 @@ export default function ResultPage() {
                     <div className="w-[25%] flex justify-center">
                         Name
                     </div>
-                    <div className="w-[14%] flex justify-center">
+                    <div className="w-[14%] flex justify-center text-center">
                         P.1 Score
                     </div>
-                    <div className="w-[14%] flex justify-center">
+                    <div className="w-[14%] flex justify-center text-center">
                         P.2 Score
                     </div>
-                    <div className="w-[14%] flex justify-center">
+                    <div className="w-[14%] flex justify-center text-center">
                         Total Score
                     </div>
-                    <div className="w-[27%] flex justify-center">
+                    <div className="w-[27%] flex justify-center text-center">
                         Date Time
                     </div>
                 </div>
@@ -188,55 +186,129 @@ export default function ResultPage() {
                                     <path d="M6 18 18 6M6 6l12 12"></path></svg>
                             </div>
 
-                            <div className="h-full w-full overflow-y-scroll">
-                                <div>
-                                    
+                            <div className="h-full w-full overflow-y-scroll flex flex-col items-center justify-start">
+                                <div className="flex w-full flex-col justify-center  gap-2 p-[1rem] relative border-[#b2b5be] border-b-[1px]">
+                                    <div className="font-medium text-[1.75rem] tracking-[0.1em] mb-[0.25rem]">
+                                        Profile
+                                    </div>
+                                    <div>
+                                        <p>name lastname</p>
+                                    </div>
+                                    <div>
+                                        gender
+                                    </div>
+                                    <div>
+                                        <p>date of birt</p>
+                                    </div>
+                                    <div>
+                                        <p>phone number</p>
+                                    </div>
+                                    <div>
+                                        <p>email</p>
+                                    </div>
+                                    <div>
+                                        <p>Province + District + Sub District</p>
+                                    </div>
+                                    <div>
+                                        <p>Highest education</p>
+                                    </div>
+                                    <div>
+                                        <p>university</p>
+                                    </div>
+                                    <div>
+                                        <p>faculty</p>
+                                    </div>
+                                    <div>
+                                        <p>department</p>
+                                    </div>
+                                    <div>
+                                        <p>interestedPosition</p>
+                                    </div>
                                 </div>
 
-                                <div className="flex w-full h-full flex-wrap justify-center  gap-2 p-[1rem] relative">
-                                    {previewArrays.map((data, i) => {
-                                        return (
-                                            <div
-                                                onClick={() => setSelectPicturePreview(data.id)}
-                                                key={data.id}
-                                                className={`w-[32%] h-[30%] p-3 rounded-md text-white  ${scoreCountsArray && scoreCountsArray[0][i] > 0
-                                                    ? "bg-green-500 "
-                                                    : "bg-gray-500"
-                                                    } flex flex-col items-center gap-1`}
-                                            >
-                                                <div>Picture {data.id}</div>
-                                                <img
-                                                    className={`w-[90%] h-[60%] object-cover cursor-pointer rounded-md `}
-                                                    onClick={() =>
-                                                        setIsOpenPreviewPicture(!isOpenPreviewPicture)
-                                                    }
-                                                    src={`images/pic${data.id}-1.jpg`}
-                                                    alt=""
-                                                />
-                                                <div className=" justify-around  text-[100%] flex ">
-                                                    <div className="flex gap-1 items-center ">
-                                                        <FaMousePointer />
-                                                        <div>
-                                                            {clickCountsArray && clickCountsArray[0][i]}
+
+                                <div className="w-full p-[1rem] relative border-[#b2b5be] border-b-[1px]">
+                                    <div className="font-medium text-[1.75rem] tracking-[0.1em] mb-[0.25rem]">
+                                        Part 1 : <span className="text-[1rem]">Spot the Differences</span>
+                                    </div>
+                                    <div className="flex w-full flex-wrap justify-center  gap-2 relative">
+                                        {previewArrays.map((data, i) => {
+                                            return (
+                                                <div
+                                                    onClick={() => setSelectPicturePreview(data.id)}
+                                                    key={data.id}
+                                                    className={`w-[32%] p-3 rounded-md text-white  ${scoreCountsArray && scoreCountsArray[0][i] > 0
+                                                        ? "bg-green-500"
+                                                        : "bg-gray-500"
+                                                        } flex flex-col items-center gap-1`}
+                                                >
+                                                    <div>Picture {data.id}</div>
+                                                    <img
+                                                        className={`w-full cursor-pointer rounded-md object-cover`}
+                                                        onClick={() =>
+                                                            setIsOpenPreviewPicture(!isOpenPreviewPicture)
+                                                        }
+                                                        src={`images/pic${data.id}-1.jpg`}
+                                                        alt=""
+                                                    />
+                                                    <div className=" justify-around  text-[100%] flex ">
+                                                        <div className="flex gap-1 items-center ">
+                                                            <FaMousePointer />
+                                                            <div>
+                                                                {clickCountsArray && clickCountsArray[0][i]}
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className="flex gap-1  items-center ">
-                                                        <PiTimerBold />
-                                                        <div> {timeCountsArray && timeCountsArray[0][i]}</div>
-                                                    </div>
-                                                    {/* <div className="flex gap-1  items-center ">
+                                                        <div className="flex gap-1  items-center ">
+                                                            <PiTimerBold />
+                                                            <div> {timeCountsArray && timeCountsArray[0][i]}</div>
+                                                        </div>
+                                                        {/* <div className="flex gap-1  items-center ">
                                             <MdCheckCircleOutline />
                                             <div>{scoreCountsArray && scoreCountsArray[0][i]}</div>
                                             </div> */}
-                                                    <div className="flex gap-1  items-center ">
-                                                        <IoPlaySkipForwardSharp />
-                                                        <div>{skipCountsArray && skipCountsArray[0][i]}</div>
+                                                        <div className="flex gap-1  items-center ">
+                                                            <IoPlaySkipForwardSharp />
+                                                            <div>{skipCountsArray && skipCountsArray[0][i]}</div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        );
-                                    })}
+                                            );
+                                        })}
+                                    </div>
                                 </div>
+
+
+                                <div className=" w-full p-[1rem]">
+                                    <div className="font-medium text-[1.75rem] tracking-[0.1em] mb-[0.25rem]">
+                                        Part 2 : <span className="text-[1rem]">Multiple-choice Quiz</span>
+                                    </div>
+
+                                    <div className="flex flex-row">
+                                        <div className="flex flex-col">
+                                            <div>
+                                                1.
+                                            </div>
+                                            <div>
+                                                2.
+                                            </div>
+                                            <div>
+                                                3.
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-col">
+                                            <div>
+                                                A
+                                            </div>
+                                            <div>
+                                                B
+                                            </div>
+                                            <div>
+                                                C
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
 
                         </div>
