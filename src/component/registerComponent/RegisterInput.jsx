@@ -18,8 +18,8 @@ export default function RegisterInput({
   const inputs = [];
 
   const typeOfGender = [
-    { title: "Male" },
-    { title: "Female" },
+    { title: "Male / ชาย" },
+    { title: "Female / หญิง" },
     { title: "Other" },
   ];
 
@@ -166,7 +166,7 @@ export default function RegisterInput({
           {isAddress ? (
             <div className="flex flex-col text-[14px] gap-0.5">
               <label className="text-xs" htmlFor="">
-                Province
+                Province / จังหวัด
               </label>
               <input
                 onClick={() => setSelectProvince(null)}
@@ -201,7 +201,7 @@ export default function RegisterInput({
                 </div>
               )}
               <label className="text-xs" htmlFor="">
-                District
+                District / อำเภอ
               </label>
               <input
                 onChange={testHaned}
@@ -234,7 +234,7 @@ export default function RegisterInput({
                 </div>
               )}
               <label className="text-xs" htmlFor="">
-                Sub District
+                Sub District / ตำบล
               </label>
               <input
                 value={
