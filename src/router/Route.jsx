@@ -62,7 +62,6 @@ const router = createBrowserRouter([
       { path: "/testingDifferPage", element: <TestingDiiferPage /> },
       { path: "/profilePage", element: <ProfilePage /> },
       { path: "/registerSuccess", element: <RegisterSuccessLoading /> },
-
       { path: "/resultPage", element: <ResultPage /> },
     ],
   },
@@ -73,6 +72,7 @@ const router = createBrowserRouter([
 
   { path: "/jobPage", element: <JobPage /> },
 ]);
+
 
 export default function Router() {
   return <RouterProvider router={router} />;

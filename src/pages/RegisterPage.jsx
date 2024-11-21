@@ -4,13 +4,15 @@ import { useNavigate } from "react-router-dom";
 import RegisterInput from "../component/registerComponent/RegisterInput";
 import RegisterLabel from "../component/registerComponent/RegisterLabel";
 import axios from "axios";
+
+import translationJson from "../data/translations.json"
 export default function RegisterPage() {
   const navigate = useNavigate();
 
   if (!localStorage.getItem("photo")) {
     window.location = "/camera";
   }
-
+console.log(translationJson.en.positions.positionName)
   const [errorValidator, setErrorValidator] = useState("");
   const [input, setInput] = useState({
     targetUserId: localStorage.getItem("userId"),
@@ -127,7 +129,7 @@ export default function RegisterPage() {
 
       await axios
         .post("http://localhost:8000/user/register", input)
-        .then(() => navigate("/"))
+        .then(() => navigate("/registerSuccess"))
         .finally(() => {
           localStorage.setItem("register", true);
           localStorage.removeItem("position");

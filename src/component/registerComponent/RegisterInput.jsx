@@ -416,11 +416,11 @@ export default function RegisterInput({
                               setInput({
                                 ...input,
                                 university:
-                                  `[${data.enCode}] - ` + data.university,
+                                  `[${data.enCode}]  ` + data.university,
                               });
                               setSelectUniversity({
                                 ...selectUniversity,
-                                uni: `[${data.enCode}] - ` + data.university,
+                                uni: `[${data.enCode}]  ` + data.university,
                               });
                               setIsSearchUniversity(false);
                             }}
@@ -428,7 +428,7 @@ export default function RegisterInput({
                             key={i}
                           >
                             {" "}
-                            {`[${data.enCode}] - ` + data.university}{" "}
+                            {`[${data.enCode}]  ` + data.university}{" "}
                           </div>
                         );
                       })}
