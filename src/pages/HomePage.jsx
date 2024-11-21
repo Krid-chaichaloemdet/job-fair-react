@@ -8,6 +8,9 @@ import close from "../assets/close-circle.png";
 import Vector from "../assets/Vector (1).svg"
 import PositionData from "../component/homePageComponent/PositionData";
 import translations from "../data/translations.json";
+import Footer from "../layouts/Footer";
+
+
 
 const HomePage = () => {
   const [openJobs, setOpenJobs] = useState({});
@@ -29,11 +32,8 @@ const HomePage = () => {
   const t = translations[language];
   const arr = t.positions;
 
-  return (
-
+ return (
     <div className="w-full h-[100%] px-[2rem] py-[1rem] mt-[80px] flex flex-col mb-[6rem]">
-
-
       <div className="flex flex-row justify-between">
         <div className="font-medium text-[1.75rem] tracking-[0.1em]">{t.jobTitle}</div>
         <div className="relative flex justify-end mb-4 text-[12px]">
@@ -65,8 +65,6 @@ const HomePage = () => {
             </div>
           )}
         </div>
-
-
       </div>
 
       {arr.map((data, i) => (
@@ -90,6 +88,9 @@ const HomePage = () => {
           )}
         </div>
       ))}
+
+      {/* ส่ง language และ translations ไปยัง Footer */}
+      <Footer language={language} translations={t.footer} />
     </div>
   );
 };
