@@ -16,6 +16,7 @@ export default function ProfilePage() {
       <div className="flex flex-row items-start justify-start">
         <h1 className="font-medium text-[1.75rem] tracking-[0.1em]">Your Profile</h1>
       </div>
+
  
       <div className="flex flex-col justify-center w-full py-2">
         <div className="py-2">
@@ -70,6 +71,7 @@ export default function ProfilePage() {
 
 
       {/* <button className="bg-[#131E3C] rounded-full py-[0.75rem] my-[0.5rem]" fdprocessedid="rfa0wpn"><div class="text-[#ffffff] tracking-[0.12em]">Edit Profile</div></button> */}
+
     </div>
   );
 }

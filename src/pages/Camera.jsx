@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import photo from "../assets/photo.svg";
+
 import SuccessUpload from "../component/camera/SuccessUpload";
 
 export default function Camera({ setIsPhotoSuccess }) {
@@ -15,8 +16,10 @@ export default function Camera({ setIsPhotoSuccess }) {
   const [isOpenUploadSuccess, setIsOpenUploadSuccess] = useState(false);
   const [isPreviewPhoto, setIsPreviewPhoto] = useState(false);
 
+
   const handleAllowCamera = async () => {
-    setIsPhotoAllow(true);
+    setShowLightbox(false); // ปิด Lightbox
+    setIsPhotoAllow(true); // อนุญาตกล้อง
     const stream = await navigator.mediaDevices.getUserMedia({ video: true });
     videoRef.current.srcObject = stream;
   };
@@ -49,11 +52,11 @@ export default function Camera({ setIsPhotoSuccess }) {
         return;
       }
 
-      // Prepare FormData
       const formData = new FormData();
       formData.append("photo", blob, `photo_${Date.now()}.png`);
 
       try {
+
         // Send the image to the backend
         const response = await axios
           .post("http://localhost:8000/upload", formData)
@@ -62,20 +65,23 @@ export default function Camera({ setIsPhotoSuccess }) {
         if (response.status == 200) {
           localStorage.setItem("userId", response.data.response.userId);
           localStorage.setItem("photo", true);
+
         } else {
           console.error("Photo upload failed:", response.statusText);
         }
       } catch (error) {
         console.error("Error sending photo to backend:", error);
       }
-    }, "image/png"); // Specify image type (e.g., PNG)
+    }, "image/png");
   };
 
   return (
     <div className="flex flex-col items-center justify-center h-[100%] p-14">
+
       {isOpenUploadSuccess && <SuccessUpload />}
       {isPhotoAllow ? (
         <div className="fixed top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center bg-white tracking-widest p-12 ">
+
           <p className="tracking-widest text-center">Please remove your mask</p>
           <p className="py-5 tracking-widest text-center">
             to take a photo of your face.
@@ -96,6 +102,7 @@ export default function Camera({ setIsPhotoSuccess }) {
             ref={canvasRef}
             // style={{ display: "none" }}
           ></canvas>
+
 
           <div className="flex flex-col  w-[300px]">
             {isPreviewPhoto && (
@@ -133,6 +140,7 @@ export default function Camera({ setIsPhotoSuccess }) {
                 </button>
               </div>
             )}
+
           </div>
         </div>
       ) : (
