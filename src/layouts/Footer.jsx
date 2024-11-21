@@ -15,7 +15,7 @@ export default function Footer({select ,setSelect, isActive, setIsActive}) {
   const footerBar = [
     { id: 1, title: "Jobs", image: jobsicon, path: "/" },
     { id: 2, title: "Send Profile", image: sendprofile, path: "/registerPage" },
-    { id: 3, title: "profile", image: profileicon, path: "/profilePage" },
+    { id: 3, title: "psrofile", image: profileicon, path: "/profilePage" },
   ];
 
   return (

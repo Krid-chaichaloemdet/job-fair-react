@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+
+
 export default function RegisterInput({
   name,
   typeOfInput = "text",

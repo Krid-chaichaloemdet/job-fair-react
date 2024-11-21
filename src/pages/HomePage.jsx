@@ -7,7 +7,10 @@ import arrowup from "../assets/arrow-circle-down (1).png";
 import close from "../assets/close-circle.png";
 import Vector from "../assets/Vector (1).svg"
 import PositionData from "../component/homePageComponent/PositionData";
-import translations from "../pages/translations.json";
+import translations from "../data/translations.json";
+import Footer from "../layouts/Footer";
+
+
 
 const HomePage = () => {
   const [openJobs, setOpenJobs] = useState({});
@@ -29,25 +32,24 @@ const HomePage = () => {
   const t = translations[language];
   const arr = t.positions;
 
-  return (
-
+ return (
     <div className="w-full h-[100%] px-[2rem] py-[1rem] mt-[80px] flex flex-col mb-[6rem]">
-
-
       <div className="flex flex-row justify-between">
         <div className="font-medium text-[1.75rem] tracking-[0.1em]">{t.jobTitle}</div>
-        <div className="flex justify-end mb-4 relative text-[12px]">
+        <div className="relative flex justify-end mb-4 text-[12px]">
           <button
             onClick={() => setShowDropdown(!showDropdown)}
             className="px-4 py-2 bg-white border border-[#131E3C] shadow-lg rounded-[26px] w-15 text-[#131E3C] flex items-center space-x-2"
           >
             <span>{language === "en" ? "EN" : "TH"}</span>
-            <span><img className="pl-2" src={Vector} alt="" /></span>
+            <span>
+              <img className="pl-2" src={Vector} alt="dropdown icon" />
+            </span>
           </button>
 
           {/* Dropdown menu */}
           {showDropdown && (
-            <div className="absolute right-0 mt-9 bg-white  shadow-lg rounded-lg w-20 flex flex-col items-center justify-center text-[#131E3C]">
+            <div className="absolute right-0 mt-[36px] bg-white shadow-lg rounded-lg w-20 flex flex-col items-center justify-center text-[#131E3C]">
               <button
                 onClick={() => handleChangeLanguage("en")}
                 className="w-full px-4 py-2 rounded-t-lg text-center hover:bg-gray-100"
@@ -63,7 +65,6 @@ const HomePage = () => {
             </div>
           )}
         </div>
-
       </div>
 
       {arr.map((data, i) => (
@@ -87,6 +88,9 @@ const HomePage = () => {
           )}
         </div>
       ))}
+
+      {/* ส่ง language และ translations ไปยัง Footer */}
+      <Footer language={language} translations={t.footer} />
     </div>
   );
 };
