@@ -1,17 +1,24 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
-export default function TestFinishLoading() {
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-    const navigate = useNavigate()
+export default function TestFinishLoading() {
+  const navigate = useNavigate();
+
   return (
-    <ul className='w-screen h-screen absolute bg-white flex justify-center items-center flex-col'>
-        <li>Well done !! the test was already sent to us, please wait for us to contact back</li>
-        <li>Please return i-pad back to our staff</li>
-        <li>Thank you very much</li>
-        <li
-        className='cursor-pointer'
-        onClick={()=>navigate('/')}
-        >Back to home page</li>
-    </ul>
-  )
+    <div className="w-screen h-screen absolute top-0 left-0 bg-gradient-to-br from-blue-100 via-white to-blue-50 flex flex-col justify-center items-center">
+      <div className="text-center max-w-lg px-6 py-4 bg-white shadow-md rounded-lg">
+        <h1 className="text-2xl font-bold text-gray-700 mb-4">🎉 Well Done!</h1>
+        <p className="text-gray-600 mb-2">
+          Your test has been successfully submitted. Please wait for us to contact you shortly.
+        </p>
+        <p className="text-gray-600 mb-6">Kindly return the iPad to our staff. Thank you for your cooperation!</p>
+        <button
+          className="bg-[#131E3C]  text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-all duration-300 ease-in-out"
+          onClick={() => navigate('/')}
+        >
+          Back to Home
+        </button>
+      </div>
+    </div>
+  );
 }

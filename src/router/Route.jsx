@@ -8,7 +8,11 @@ import Footer from "../layouts/Footer";
 import TestingDiiferPage from "../pages/TestingDifferPage";
 import Camera from "../pages/Camera";
 import ProfilePage from "../pages/ProfilePage";
+
 import JobPage from "../pages/JobPage"
+
+import ResultPage from "../pages/ResultPage";
+
 
 // Layout component that conditionally renders the Footer
 const Layout = () => {
@@ -46,7 +50,11 @@ const router = createBrowserRouter([
       { path: "/testingPage", element: <TestingPage /> },  // TestingPage will not show Footer
       { path: "/testingDifferPage", element: <TestingDiiferPage /> },
       { path: "/profilePage", element: <ProfilePage /> },
+
       
+
+      { path: "/resultPage", element: <ResultPage />}
+
     ],
   },
   {

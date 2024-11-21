@@ -60,7 +60,7 @@ export default function RegisterPage() {
     // },
     {
       id: 3,
-      title: "address",
+      title: "Address",
       isAddress: true,
       addresData: ["Province", "District", "Sub District"],
       // province: 'Province',
@@ -70,7 +70,6 @@ export default function RegisterPage() {
       // subDistrict: 'Sub District',
       // name3: 'subDistrict',
       // addressAmout: 3,
-      err: "address",
     },
     {
       id: 4,
@@ -93,7 +92,7 @@ export default function RegisterPage() {
     { id: 6, title: "Phone Number", name: "phoneNumber", err: "phoneNumber" },
     { id: 7, title: "E-mail", name: "email", err: "email" },
     { id: 8, title: "University", name: "university",},
-    { id: 9, title: "Education", name: "education", err: "education" },
+    { id: 9, title: "Highest Education", name: "education", err: "education" },
     {
       id: 10,
       title: "Faculty",
@@ -111,7 +110,7 @@ export default function RegisterPage() {
     // },
     {
       id: 12,
-      title: "Interested position",
+      title: "Interested Position",
       name: "interestedPosition",
       isDropDown: true,
       positionDropDown: input.interestedPosition,
@@ -120,7 +119,7 @@ export default function RegisterPage() {
   const requiredFields = [
     { field: "firstName", errorId: 1 },
     { field: "lastName", errorId: 2 },
-    { field: "address", errorId: 3 },
+    // { field: "address", errorId: 3 },
     { field: "dateOfBirth", errorId: 4 },
     { field: "phoneNumber", errorId: 5 },
 
