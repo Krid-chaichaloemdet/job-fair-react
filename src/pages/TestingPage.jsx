@@ -9,7 +9,7 @@ import TestFinishLoading from "../component/loadingComponent/TestFinishLoading";
 export default function TestingPage() {
   const navigate = useNavigate();
 
-  const [count, setCount] = useState(20); ////////game time
+  const [count, setCount] = useState(20000); ////////game time
 
   const [input, setInput] = useState({
     firstName: "",
@@ -380,17 +380,17 @@ export default function TestingPage() {
         </div>
         <div className="">
           <div className="flex flex-col w-full items-start justify-center ">
-            <div className="mb-[0.25rem]">
-              <label htmlFor="" className="text-[0.8rem] ">
+            <div className="mb-[0.25rem] pb-5">
+              <label htmlFor="" className="">
                 Please enter the phone number you submitted during the registration.
               </label>
               {isErrorCheckNumber && (
-                <div className="text-red-500" htmlFor="">
+                <div className="text-red-500 pb-5" htmlFor="">
                   {isErrorCheckNumber}
                 </div>
               )}
               {errorInput && (
-                <div className="text-red-500">This field is required.</div>
+                <div className="text-red-500 pb-5">This field is required.</div>
               )}
             </div>
             <input

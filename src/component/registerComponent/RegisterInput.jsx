@@ -70,11 +70,11 @@ export default function RegisterInput({
   }
 
   const howLiked = [
-    "5. ชอบมากที่สุด /Very much",
-    "4. ชอบมาก/Quite a lot",
-    "3. ชอบปานกลาง/Netral",
-    "2. ไม่ค่อยชอบ/์Not much",
-    "1. ไม่ชอบเลย/Not at all",
+    "5. ชอบมากที่สุด / Very much",
+    "4. ชอบมาก / Quite a lot",
+    "3. ชอบปานกลาง / Netral",
+    "2. ไม่ค่อยชอบ / Not much",
+    "1. ไม่ชอบเลย / Not at all",
   ]
 
   if (keyProp == 14) {
@@ -191,13 +191,13 @@ export default function RegisterInput({
       ) : (
         <>
           {isAddress ? (
-            <div className="flex flex-col text-[14px] gap-0.5 w-full">
+            <div className="flex flex-col text-[14px] gap-0.5 w-full pt-3">
               <label className="text-xs" htmlFor="">
                 Province / จังหวัด
               </label>
               <input
                 onClick={() => setSelectProvince(null)}
-                value={selectProvince && selectProvince.province_name_th}
+                value={selectProvince && selectProvince.province_name_en}
                 onChange={handleSearchProvince}
                 className="bg-[#f3f3f5] border-[1px] rounded-sm border-[#DFE0E5] p-1"
                 type="text"
@@ -215,24 +215,24 @@ export default function RegisterInput({
                             address: "จ." + data.province_name_th,
                           });
                         }}
-                        className="bg-gray-200 hover:bg-gray-50 cursor-pointer "
+                        className="bg-gray-200 hover:bg-gray-50 cursor-pointer p-1"
                         key={i}
                       >
                         {" "}
                         {data.province_name_en
-                          ? data.province_name_th
-                          : data.province_name_th}{" "}
+                          ? data.province_name_en + " | " + data.province_name_th 
+                          : data.province_name_th + data.province_name_en}{" "}
                       </div>
                     );
                   })}
                 </div>
               )}
-              <label className="text-xs" htmlFor="">
+              <label className="text-xs pt-2" htmlFor="">
                 District / อำเภอ
               </label>
               <input
                 onChange={testHaned}
-                value={selectDistrict && selectDistrict.district_name_th}
+                value={selectDistrict && selectDistrict.district_name_en}
                 onClick={handleSearchDistrict}
                 className={`bg-[#f3f3f5] border-[1px] rounded-sm border-[#DFE0E5] p-1`}
                 type="text"
@@ -251,21 +251,21 @@ export default function RegisterInput({
                               input.address + " อ." + data.district_name_th,
                           });
                         }}
-                        className="bg-gray-200 hover:bg-gray-50 cursor-pointer"
+                        className="bg-gray-200 hover:bg-gray-50 cursor-pointer p-1"
                         key={i}
                       >
-                        {data.district_name_th}
+                        {data.district_name_en + " | " + data.district_name_th}
                       </div>
                     );
                   })}
                 </div>
               )}
-              <label className="text-xs" htmlFor="">
+              <label className="text-xs pt-2" htmlFor="">
                 Sub District / ตำบล
               </label>
               <input
                 value={
-                  selectSubDistrict && selectSubDistrict.sub_district_name_th
+                  selectSubDistrict && selectSubDistrict.sub_district_name_en
                 }
                 onClick={handleSearchSubDistrict}
                 className="bg-[#f3f3f5] border-[1px] rounded-sm border-[#DFE0E5] p-1"
@@ -282,13 +282,13 @@ export default function RegisterInput({
                           setInput({
                             ...input,
                             address:
-                              input.address + " ต." + data.sub_district_name_th,
+                              input.address + " ต." + data.sub_district_name_en,
                           });
                         }}
                         className="bg-gray-200 hover:bg-gray-50 cursor-pointer "
                         key={i}
                       >
-                        {data.sub_district_name_th}
+                        {data.sub_district_name_en + " | " + data.sub_district_name_th}
                       </div>
                     );
                   })}
@@ -378,14 +378,14 @@ export default function RegisterInput({
                                 ...input,
                                 education: data.education_th,
                               });
-                              setSelectEducation(data.education_th);
+                              setSelectEducation(data.education_en);
 
                               setIsSearchEducation(false);
                             }}
                             className="hover:bg-gray-300 cursor-pointer"
                             key={i}
                           >
-                            {data.education_th}
+                            {data.education_en + " / " + data.education_th}
                           </div>
                         );
                       })}

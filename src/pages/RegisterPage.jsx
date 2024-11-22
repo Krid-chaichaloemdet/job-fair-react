@@ -12,8 +12,8 @@ export default function RegisterPage() {
   if (!localStorage.getItem("photo")) {
     window.location = "/camera";
   }
-  console.log(translationJson.en.positions);
   const [errorValidator, setErrorValidator] = useState("");
+
   const [input, setInput] = useState({
     targetUserId: localStorage.getItem("userId"),
     firstName: "",
@@ -29,7 +29,7 @@ export default function RegisterPage() {
     department: "",
     interestedPosition: localStorage.getItem("position")
       ? localStorage.getItem("position")
-      : "click here",
+      : "Select a Position",
   });
 
   const handleInput = (e) => {
@@ -111,11 +111,11 @@ export default function RegisterPage() {
         "How interested are you in applying for a job with our company ? / คุณสนใจสมัครงานกับบริษัทเรามากแค่ไหน ?",
       name: "interestingRate",
       rateChoice: [
-        "5. สนใจมากที่สุด/Very interested",
-        "4. สนใจมาก/Interested",
-        "3. สนใจปานกลาง/Netral",
-        "2. ไม่ค่อยสนใจ/Slightly interested",
-        "1. ไม่สนใจเลย/Not interested at all",
+        "5. สนใจมากที่สุด / Very interested",
+        "4. สนใจมาก / Interested",
+        "3. สนใจปานกลาง / Netral",
+        "2. ไม่ค่อยสนใจ / Slightly interested",
+        "1. ไม่สนใจเลย / Not interested at all",
       ],
       amout: 5,
       typeOfInput: "radio",
@@ -123,14 +123,14 @@ export default function RegisterPage() {
     {
       id: 14,
       title:
-        "How much do you like our company's recruitment process ? / คุณชอบวิธีการรับสมัครงานของบริษัทเรามากน้อยเพียงใด ?",
+        "How much do you like our company's recruitment process ? | คุณชอบวิธีการรับสมัครงานของบริษัทเรามากน้อยเพียงใด ?",
       name: "likedRate",
       rateChoice: [
-        "5. ชอบมากที่สุด /Very much",
-        "4. ชอบมาก/Quite a lot",
-        "3. ชอบปานกลาง/Netral",
-        "2. ไม่ค่อยชอบ/์Not much",
-        "1. ไม่ชอบเลย/Not at all",
+        "5. ชอบมากที่สุด / Very much",
+        "4. ชอบมาก / Quite a lot",
+        "3. ชอบปานกลาง / Netral",
+        "2. ไม่ค่อยชอบ /์ Not much",
+        "1. ไม่ชอบเลย / Not at all",
       ],
       amout: 5,
       typeOfInput: "radio",
@@ -154,7 +154,6 @@ export default function RegisterPage() {
   const handleSubmitForm = async (e) => {
     try {
       e.preventDefault();
-
       for (const { field, errorId } of requiredFields) {
         if (!input[field]) {
           setErrorValidator(errorId);
@@ -164,7 +163,7 @@ export default function RegisterPage() {
 
       await axios
         .post("http://localhost:8000/user/register", input)
-        .then(() => navigate("/registerSuccess"))
+        .then(() => navigate("/registerSuccess")).catch(()=>navigate('/registerError'))
         .finally(() => {
           localStorage.setItem("register", true);
           localStorage.removeItem("position");
@@ -179,6 +178,7 @@ export default function RegisterPage() {
       onSubmit={handleSubmitForm}
       className="w-full px-[2rem] py-[1rem] mt-[80px] flex flex-col gap-2 mb-[6rem] "
     >
+      
       <div className="flex flex-row justify-start">
         <div className="font-medium text-[1.75rem] tracking-[0.1em]">
           Profile

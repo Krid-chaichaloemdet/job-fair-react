@@ -18,18 +18,14 @@ import RegisterSuccessLoading from "../component/registerComponent/RegisterSucce
 import JobPage from "../pages/JobPage";
 
 import ResultPage from "../pages/ResultPage";
+import RegisterError from "../component/registerComponent/RegisterError";
 
 const Layout = () => {
-  const footerBar = [
-    { id: 1, title: "Jobs", path: "/" },
-    { id: 2, title: "Send Profile", path: "/registerPage" },
-    { id: 3, title: "profile", path: "/profilePage" },
-  ];
+
 
   const location = useLocation();
-  console.log(location.pathname);
   const [isActive, setIsActive] = useState(location.pathname);
-
+console.log(location.pathname)
   const shouldShowFooter =
     location.pathname !== "/testingPage" &&
     location.pathname !== "/testingDifferPage" &&
@@ -62,6 +58,7 @@ const router = createBrowserRouter([
       { path: "/testingDifferPage", element: <TestingDiiferPage /> },
       { path: "/profilePage", element: <ProfilePage /> },
       { path: "/registerSuccess", element: <RegisterSuccessLoading /> },
+      { path: "/registerError", element: <RegisterError /> },
       { path: "/resultPage", element: <ResultPage /> },
     ],
   },

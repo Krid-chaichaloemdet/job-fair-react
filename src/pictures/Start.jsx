@@ -40,31 +40,28 @@ export default function Start({ setIsStart }) {
       {popup && (
         <div className="w-full h-screen absolute bg-gray-900 bg-opacity-40 flex items-center justify-center  ">
           <div className="w-[80%] px-[2rem] py-[2rem] bg-white rounded-md relative">
-            <div className="w-full flex justify-center mb-[2rem] text-[1.5rem]">Instruction</div>
+            <div className="w-full flex justify-center mb-[2rem] text-[1.5rem]">
+              Instruction
+            </div>
             <div className="mb-[1.5rem]">
-              <div className="mb-[0.25rem]"><span className="font-medium text-[1.25rem]">Part 1 :</span> Spot the Differences</div>
+              <div className="mb-[0.25rem]">
+                <span className="font-medium text-[1.25rem]">Part 1 :</span>{" "}
+                Spot the Differences (1 minute)
+              </div>
               <div className=" ">
-              <div className="flex flex-row items-center justify-end gap-[1rem]">
-                  <div className="w-[0.75rem] h-[0.75rem] bg-[#131E3C] rounded-full"></div>
-                  <div className="text-[1rem] w-[94%]">
-                    {lang === "EN"
-                      ? "The Spot the Difference game includes a total of 30 images."
-                      : "เกมจับผิดภาพประกอบไปด้วยภาพทั้งหมด 30 รูป"}
-                  </div>
-                </div>
                 <div className="flex flex-row items-center justify-end gap-[1rem]">
                   <div className="w-[0.75rem] h-[0.75rem] bg-[#131E3C] rounded-full"></div>
                   <div className="text-[1rem] w-[94%]">
-                    {lang == "EN"
-                      ? `You have 1 minute to complete the test.`
-                      : `คุณมีเวลา 1 นาทีในการทำแบบทดสอบให้เสร็จ`}
+                    {lang === "EN"
+                      ? "The Spot the Difference game includes a total of 15 images."
+                      : "เกมจับผิดภาพประกอบไปด้วยภาพทั้งหมด 15 รูป"}
                   </div>
                 </div>
                 <div className="flex flex-row items-center justify-end gap-[1rem]">
                   <div className="w-[0.75rem] h-[0.75rem] bg-[#131E3C] rounded-full"></div>
                   <div className="text-[1rem] w-[94%]">
                     {lang === "EN"
-                      ? `You can skip to any image at any time.`
+                      ? `You are welcome to skip the current image.`
                       : `คุณสามารถข้ามไปยังรูปภาพใด ๆ ได้ตามที่ต้องการ`}
                   </div>
                 </div>
@@ -72,7 +69,7 @@ export default function Start({ setIsStart }) {
                   <div className="w-[0.75rem] h-[0.75rem] bg-[#131E3C] rounded-full"></div>
                   <div className="text-[1rem] w-[94%]">
                     {lang == "EN"
-                      ? `If you make 10 incorrect guesses, the game will automatically change the image for you.`
+                      ? `If you make 10 incorrect guesses on an image, the game will automatically skip to the next image.`
                       : `หากคุณทายผิดครบ 10 ครั้ง เกมจะเปลี่ยนรูปภาพให้คุณโดยอัตโนมัติ`}
                   </div>
                 </div>
@@ -88,7 +85,10 @@ export default function Start({ setIsStart }) {
             </div>
 
             <div className="mb-[1.5rem]">
-            <div className="mb-[0.25rem]"><span className="font-medium text-[1.25rem]">Part 2 :</span> Multiple-Choice Quiz</div>
+              <div className="mb-[0.25rem]">
+                <span className="font-medium text-[1.25rem]">Part 2 :</span>{" "}
+                Multiple-Choice Quiz (2 minutes)
+              </div>
               <div className=" ">
                 <div className="flex flex-row items-center justify-end gap-[1rem]">
                   <div className="w-[0.75rem] h-[0.75rem] bg-[#131E3C] rounded-full"></div>
@@ -109,9 +109,17 @@ export default function Start({ setIsStart }) {
                 <div className="flex flex-row items-center justify-end gap-[1rem]">
                   <div className="w-[0.75rem] h-[0.75rem] bg-[#131E3C] rounded-full"></div>
                   <div className="text-[1rem] w-[94%]">
-                    {lang === "EN"
-                      ? `You have 2 minutes to complete the test.`
-                      : `คุณมีเวลา 2 นาทีในการทำแบบทดสอบให้เสร็จ`}
+                    {lang == "EN"
+                      ? `You can move back and forth on the questions by using the arrow buttons.`
+                      : `จงเลือกคำตอบที่ถูกต้องที่สุด`}
+                  </div>
+                </div>
+                <div className="flex flex-row items-center justify-end gap-[1rem]">
+                  <div className="w-[0.75rem] h-[0.75rem] bg-[#131E3C] rounded-full"></div>
+                  <div className="text-[1rem] w-[94%]">
+                    {lang == "EN"
+                      ? `You can end the quiz early by pressing the complete button`
+                      : `จงเลือกคำตอบที่ถูกต้องที่สุด`}
                   </div>
                 </div>
                 <div className="flex flex-row items-center justify-end gap-[1rem]">
@@ -128,8 +136,8 @@ export default function Start({ setIsStart }) {
             <div className="w-full h-[50%] mt-[2.5rem] flex justify-center items-center  bottom-0">
               <button
                 onClick={() => {
-                  setIsStart(true)
-                  setPopup(false)
+                  setIsStart(true);
+                  setPopup(false);
                 }}
                 className="bg-[#131E3C]  w-full py-[0.5rem] rounded-full text-white flex items-center justify-center"
               >

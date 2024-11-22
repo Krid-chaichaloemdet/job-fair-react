@@ -20,7 +20,7 @@ export default function ProfilePage() {
  
       <div className="flex flex-col justify-center w-full py-2">
         <div className="py-2">
-          <p className="pb-2">First Name</p>
+          <p className="pb-2 text-[12px]">First Name / ชื่อจริง</p>
           {/* <input
             className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0"
             type="text"
@@ -28,11 +28,11 @@ export default function ProfilePage() {
             fdprocessedid="6kf01q"
           ></input> */}
           <div
-           className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0"
+           className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0 text-[12px]"
           >{user.firstName ? user.firstName : '--'}</div>
         </div>
         <div className="py-2">
-          <p className="pb-2">Last Name</p>
+          <p className="pb-2 text-[12px]">Last Name / นามสกุล</p>
           {/* <input
             className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0 "
             type="text"
@@ -40,11 +40,11 @@ export default function ProfilePage() {
             fdprocessedid="6kf01q"
           ></input> */}
                     <div
-           className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0"
+           className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0 text-[12px]"
           >{user.lastName ? user.lastName : '--'}</div>
         </div>
         <div className="py-2">
-          <p className="pb-2">Phone Number</p>
+          <p className="pb-2 text-[12px]">Phone Number / เบอร์โทรศัพท์</p>
           {/* <input
             className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0 "
             type="number"
@@ -52,11 +52,11 @@ export default function ProfilePage() {
             fdprocessedid="6kf01q"
           ></input> */}
                       <div
-           className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0"
+           className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0 text-[12px]"
           >{user.phoneNumber ? user.phoneNumber : '--'}</div>
         </div>
         <div className="py-2">
-          <p className="pb-2">E-mail</p>
+          <p className="pb-2 text-[12px]">E-mail / อีเมล</p>
           {/* <input
             className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0 "
             type="email"
@@ -64,7 +64,7 @@ export default function ProfilePage() {
             fdprocessedid="6kf01q"
           ></input> */}
                <div
-           className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0"
+           className="rounded-md bg-[#f3f3f5] w-full border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] z-0 text-[12px]"
           >{user.email ? user.email : '--'}</div>
         </div>
       </div>

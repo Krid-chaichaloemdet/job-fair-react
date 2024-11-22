@@ -6,7 +6,7 @@ export default function TestingCompleteComponent({handleSubmitForm, setIsTestFin
       <div className="w-screen h-screen absolute top-0 left-0 bg-gradient-to-br from-blue-100 via-white to-blue-50 flex flex-col justify-center items-center">
         <div className="text-center max-w-lg px-6 py-4 bg-white shadow-md rounded-lg">
           <h1 className="text-2xl font-bold text-gray-700 mb-4">
-            🎉 Do you want to finish this test before time runs out ?
+            🎉 Do you want to finish this quiz before time runs out ?
           </h1>
        
           <div className="flex gap-5 items-center justify-center">

@@ -13,11 +13,11 @@ export default function TestingComponent({
   handleSubmitForm,
   setIsTestFinish,
   setIsStartTesting,
-  setIsOpenComPlete
-  ,isOpenComplete
+  setIsOpenComPlete,
+  isOpenComplete,
 }) {
-
-
+  const minutes = Math.floor(count / 60);
+  const seconds = count % 60;
   return (
     <div className="bg-white w-full h-full fixed top-0 left-0 mt-[80px] ">
       {isOpenComplete && (
@@ -32,7 +32,13 @@ export default function TestingComponent({
           <div className="font-medium text-[1.75rem] tracking-[0.1em]">
             Question {testingPage} of 11
           </div>
-          <div className="">Count: {count}</div>
+          <div className="">
+            {" "}
+            <div className="w-full flex justify-center  gap-3 items-end">
+              <div> { minutes + " m "}</div>
+              <div>{seconds + " s"}</div>
+            </div>
+          </div>
         </div>
         <div className=" flex flex-col  items-center">
           <div className="pb-[1rem] w-full">
@@ -133,7 +139,7 @@ export default function TestingComponent({
             }}
             className="bg-[#131E3C] py-[0.5rem] rounded-full cursor-pointer px-[2rem] text-white font-medium fixed right-[2rem]"
           >
-           Complete
+            Complete
           </div>
         </div>
       </div>
