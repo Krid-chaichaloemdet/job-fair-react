@@ -108,7 +108,7 @@ export default function RegisterPage() {
     {
       id: 13,
       title:
-        "How interested are you in applying for a job with our company ? / คุณสนใจสมัครงานกับบริษัทเรามากแค่ไหน ?",
+        "How interested are you in applying for a job with our company? / คุณสนใจสมัครงานกับบริษัทเรามากแค่ไหน?",
       name: "interestingRate",
       rateChoice: [
         "5. สนใจมากที่สุด / Very interested",
@@ -123,7 +123,7 @@ export default function RegisterPage() {
     {
       id: 14,
       title:
-        "How much do you like our company's recruitment process ? | คุณชอบวิธีการรับสมัครงานของบริษัทเรามากน้อยเพียงใด ?",
+        "How much do you like our company's recruitment process? / คุณชอบวิธีการรับสมัครงานของบริษัทเรามากน้อยเพียงใด?",
       name: "likedRate",
       rateChoice: [
         "5. ชอบมากที่สุด / Very much",
@@ -197,6 +197,7 @@ export default function RegisterPage() {
               label={arr[i].title}
             />
             <RegisterInput
+            handleInput={handleInput}
               name={arr[i].name}
               typeOfInput={arr[i].typeOfInput}
               amout={arr[i].amout}

@@ -9,7 +9,7 @@ import TestFinishLoading from "../component/loadingComponent/TestFinishLoading";
 export default function TestingPage() {
   const navigate = useNavigate();
 
-  const [count, setCount] = useState(20000); ////////game time
+  const [count, setCount] = useState(10); ////////game time
 
   const [input, setInput] = useState({
     firstName: "",
@@ -174,26 +174,27 @@ export default function TestingPage() {
       correct: 3,
       width: 350,
       height: 350,
+      textSize: 20,
     },
     {
       title: "What number do you see?",
-      image: "public/testingImages/Picture2.jpg",
+      image: "public/testingImages/1.png",
       choice: [28, 73, 18, 42],
       correct: 1,
       width: 350,
       height: 350,
     },
     {
-      title: "1,3,6,10,",
-      image: "public/testingImages/Picture3.png",
+      title: "What is the next number?",
+      image: "public/testingImages/nextnumber1.jpg",
       choice: [11, 15, 19, 26],
       correct: 1,
       width: 350,
       height: 350,
     },
     {
-      title: "8,6,7,5,6,4,",
-      image: "public/testingImages/Picture3.png",
+      title: "What is the next number?",
+      image: "public/testingImages/nextnumber2.jpg",
       choice: [3, 5, 1, 0],
       correct: 1,
       width: 350,
@@ -314,7 +315,7 @@ export default function TestingPage() {
 
   const [isOpenComplete, setIsOpenComPlete] = useState(false);
 
-  const handleSubmitForm = async (e) => {
+  const handleSubmitForm = async () => {
     try {
       await axios.post("http://localhost:8000/user/createTestRecord", input);
     } catch (error) {
@@ -359,13 +360,18 @@ export default function TestingPage() {
         return () => clearTimeout(timer);
       }
     }
-  }, [isStartTesting, count,isOpenComplete]);
+  }, [isStartTesting, count, isOpenComplete]);
 
+  const [isNeedMoreTime, setIsNeedMoreTime] = useState(false);
   useEffect(() => {
-    // if(isTestFinish){
-
-    // }
     if (count === 0) {
+      // setIsNeedMoreTime(true)
+      // if( isNeedMoreTime == false){
+
+      //   setIsStartTesting(false);
+      //   setIsTestFinish(true);
+      //   handleSubmitForm();
+      // }
       setIsStartTesting(false);
       setIsTestFinish(true);
       handleSubmitForm();
@@ -382,7 +388,8 @@ export default function TestingPage() {
           <div className="flex flex-col w-full items-start justify-center ">
             <div className="mb-[0.25rem] pb-5">
               <label htmlFor="" className="">
-                Please enter the phone number you submitted during the registration.
+                Please enter the phone number you submitted during the
+                registration.
               </label>
               {isErrorCheckNumber && (
                 <div className="text-red-500 pb-5" htmlFor="">
@@ -420,6 +427,8 @@ export default function TestingPage() {
         </div>
         {isStartTesting && (
           <TestingCoponent
+          setIsNeedMoreTime={setIsNeedMoreTime}
+          isNeedMoreTime={isNeedMoreTime}
             testingPage={testingPage}
             count={count}
             input={input}

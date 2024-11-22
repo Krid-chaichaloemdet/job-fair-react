@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { IoIosArrowDropright, IoIosArrowDropleft } from "react-icons/io";
 import TestingCompleteComponent from "./TestingCompleteComponent";
+import TestingComponentNeedMoreTime from "./TestingComponentNeedMoreTime";
 
 export default function TestingComponent({
   count,
@@ -15,6 +16,8 @@ export default function TestingComponent({
   setIsStartTesting,
   setIsOpenComPlete,
   isOpenComplete,
+  isNeedMoreTime,
+  setIsNeedMoreTime
 }) {
   const minutes = Math.floor(count / 60);
   const seconds = count % 60;
@@ -27,6 +30,7 @@ export default function TestingComponent({
           setIsTestFinish={setIsTestFinish}
         />
       )}
+  { isNeedMoreTime &&   <TestingComponentNeedMoreTime setIsNeedMoreTime={setIsNeedMoreTime}/>}
       <div className="px-[2rem] py-[2rem] h-screen w-screen">
         <div className="flex w-full justify-between items-center pb-[1rem]">
           <div className="font-medium text-[1.75rem] tracking-[0.1em]">
@@ -35,14 +39,14 @@ export default function TestingComponent({
           <div className="">
             {" "}
             <div className="w-full flex justify-center  gap-3 items-end">
-              <div> { minutes + " m "}</div>
+              <div> {minutes + " m "}</div>
               <div>{seconds + " s"}</div>
             </div>
           </div>
         </div>
         <div className=" flex flex-col  items-center">
           <div className="pb-[1rem] w-full">
-            <div className="indent-[2rem]">
+            <div className={`indent-[2rem]`}>
               {testingData[testingPage - 1].title}
             </div>
           </div>
@@ -56,13 +60,17 @@ export default function TestingComponent({
           )}
         </div>
 
-        <div className="w-full pb-[1rem] pt-[3rem] px-[4rem]">
+        <div className="w-full pb-[1rem] pt-[3rem] px-[4rem] flex flex-col gap-3 ">
           {testingData[testingPage - 1].choice.map((choice, i) => (
             <div
-              className="flex gap-[0.5rem] items-center "
+              onClick={() =>
+                document.getElementById(`testingPage-${i}`).click()
+              }
+              className="flex gap-5 items-center bg-gray-100   border-2 p-3"
               key={`choice-${testingPage}-${i}`}
             >
               <input
+                id={`testingPage-${i}`}
                 type="radio"
                 name={`question-${testingPage}`}
                 onClick={() => {
@@ -104,7 +112,7 @@ export default function TestingComponent({
           ))}
         </div>
 
-        <div className="flex w-full justify-center gap-16 items-center bottom-0 fixed  pb-1 left-0">
+        <div className="flex z-10 w-full justify-center gap-16 items-center bottom-0 fixed  pb-1 left-0">
           <IoIosArrowDropleft
             onClick={() => {
               if (testingPage === 1) {

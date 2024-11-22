@@ -12,31 +12,35 @@ export default function RegisterInput({
   input,
   keyProp,
   allPosition,
+  handleInput,
 }) {
   const [isOpenPositionDropDown, setIsOpenPositionDropDown] = useState(false);
 
   const inputs = [];
 
-  const typeOfGender = [
-    { title: "Male / ชาย" },
-    { title: "Female / หญิง" },
-    { title: "Other" },
-  ];
+  const typeOfGender = [{ title: "Male / ชาย" }, { title: "Female / หญิง" }];
 
   const testHaned = () => {};
   if (keyProp == 5) {
     for (let i = 0; i < amout; i++) {
       inputs.push(
-        <div className="rounded-md text-xs bg-[#f3f3f5] h-[2rem] w-full flex  items-center border-[1px] border-[#DFE0E5]">
+        <div
+        onClick={() => document.getElementById(`genderInput-${i}`).click()}
+          className="rounded-md text-xs bg-[#f3f3f5] h-[2rem] w-full flex  items-center border-[1px] border-[#DFE0E5]"
+        >
           <input
+          id={`genderInput-${i}`}
             value={typeOfGender[i]?.title}
             key={i}
             name={name}
             type={typeOfInput}
             className="mx-[0.5rem]"
           />
-          <div>
-            <label htmlFor="">{typeOfGender[i]?.title}</label>
+          <div
+           
+          >
+            <label 
+            htmlFor="">{typeOfGender[i]?.title}</label>
           </div>
         </div>
       );
@@ -46,15 +50,19 @@ export default function RegisterInput({
   const howInterested = [
     "5. สนใจมากที่สุด / Very interested",
     "4. สนใจมาก / Interested",
-    "3. สนใจปานกลาง / Netral",
+    "3. สนใจปานกลาง / Neutral",
     "2. ไม่ค่อยสนใจ / Slightly interested",
     "1. ไม่สนใจเลย / Not interested at all",
   ];
   if (keyProp == 13) {
     for (let i = 0; i < amout; i++) {
       inputs.push(
-        <div className="rounded-md text-xs bg-[#f3f3f5] h-[2rem] w-full flex items-center border-[1px] border-[#DFE0E5]">
+        <div
+        onClick={() => document.getElementById(`interestingRate-${i}`).click()}
+          className="rounded-md text-xs bg-[#f3f3f5] h-[2rem] w-full flex items-center border-[1px] border-[#DFE0E5]"
+        >
           <input
+           id={`interestingRate-${i}`}
             value={howInterested[i]}
             key={i}
             name={name}
@@ -72,16 +80,19 @@ export default function RegisterInput({
   const howLiked = [
     "5. ชอบมากที่สุด / Very much",
     "4. ชอบมาก / Quite a lot",
-    "3. ชอบปานกลาง / Netral",
+    "3. ชอบปานกลาง / Neutral",
     "2. ไม่ค่อยชอบ / Not much",
     "1. ไม่ชอบเลย / Not at all",
-  ]
+  ];
 
   if (keyProp == 14) {
     for (let i = 0; i < amout; i++) {
       inputs.push(
-        <div className="rounded-md text-xs bg-[#f3f3f5] h-[2rem] w-full flex items-center border-[1px] border-[#DFE0E5]">
+        <div 
+        onClick={() => document.getElementById(`likedRate-${i}`).click()}
+        className="rounded-md text-xs bg-[#f3f3f5] h-[2rem] w-full flex items-center border-[1px] border-[#DFE0E5]">
           <input
+             id={`likedRate-${i}`}
             value={howLiked[i]}
             key={i}
             name={name}
@@ -185,7 +196,9 @@ export default function RegisterInput({
   return (
     <div key={keyProp} className="flex flex-row gap-[0.5rem] justify-between">
       {amout ? (
-        <div className={`${keyProp == 5 ? "flex w-[100%] gap-5" : "w-[100%]"} `}>
+        <div
+          className={`${keyProp == 5 ? "flex w-[100%] gap-5" : "w-[100%]"} `}
+        >
           {inputs}
         </div>
       ) : (
@@ -220,7 +233,9 @@ export default function RegisterInput({
                       >
                         {" "}
                         {data.province_name_en
-                          ? data.province_name_en + " | " + data.province_name_th 
+                          ? data.province_name_en +
+                            " | " +
+                            data.province_name_th
                           : data.province_name_th + data.province_name_en}{" "}
                       </div>
                     );
@@ -288,7 +303,9 @@ export default function RegisterInput({
                         className="bg-gray-200 hover:bg-gray-50 cursor-pointer "
                         key={i}
                       >
-                        {data.sub_district_name_en + " | " + data.sub_district_name_th}
+                        {data.sub_district_name_en +
+                          " | " +
+                          data.sub_district_name_th}
                       </div>
                     );
                   })}
