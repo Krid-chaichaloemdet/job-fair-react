@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-
 export default function RegisterInput({
   name,
   typeOfInput = "text",
@@ -12,6 +11,7 @@ export default function RegisterInput({
   setInput,
   input,
   keyProp,
+  allPosition,
 }) {
   const [isOpenPositionDropDown, setIsOpenPositionDropDown] = useState(false);
 
@@ -27,7 +27,7 @@ export default function RegisterInput({
   if (keyProp == 5) {
     for (let i = 0; i < amout; i++) {
       inputs.push(
-        <div className="rounded-md text-xs bg-[#f3f3f5] h-[2rem] w-full flex items-center border-[1px] border-[#DFE0E5]">
+        <div className="rounded-md text-xs bg-[#f3f3f5] h-[2rem] w-full flex  items-center border-[1px] border-[#DFE0E5]">
           <input
             value={typeOfGender[i]?.title}
             key={i}
@@ -63,6 +63,33 @@ export default function RegisterInput({
           />
           <div>
             <label htmlFor="">{howInterested[i]}</label>
+          </div>
+        </div>
+      );
+    }
+  }
+
+  const howLiked = [
+    "5. ชอบมากที่สุด /Very much",
+    "4. ชอบมาก/Quite a lot",
+    "3. ชอบปานกลาง/Netral",
+    "2. ไม่ค่อยชอบ/์Not much",
+    "1. ไม่ชอบเลย/Not at all",
+  ]
+
+  if (keyProp == 14) {
+    for (let i = 0; i < amout; i++) {
+      inputs.push(
+        <div className="rounded-md text-xs bg-[#f3f3f5] h-[2rem] w-full flex items-center border-[1px] border-[#DFE0E5]">
+          <input
+            value={howLiked[i]}
+            key={i}
+            name={name}
+            type={typeOfInput}
+            className="mx-[0.5rem]"
+          />
+          <div>
+            <label htmlFor="">{howLiked[i]}</label>
           </div>
         </div>
       );
@@ -158,13 +185,13 @@ export default function RegisterInput({
   return (
     <div key={keyProp} className="flex flex-row gap-[0.5rem] justify-between">
       {amout ? (
-        <div className={`${keyProp == 5 ? "flex w-[100%]" : "w-[100%]"} `}>
+        <div className={`${keyProp == 5 ? "flex w-[100%] gap-5" : "w-[100%]"} `}>
           {inputs}
         </div>
       ) : (
         <>
           {isAddress ? (
-            <div className="flex flex-col text-[14px] gap-0.5">
+            <div className="flex flex-col text-[14px] gap-0.5 w-full">
               <label className="text-xs" htmlFor="">
                 Province / จังหวัด
               </label>
@@ -172,7 +199,7 @@ export default function RegisterInput({
                 onClick={() => setSelectProvince(null)}
                 value={selectProvince && selectProvince.province_name_th}
                 onChange={handleSearchProvince}
-                className="bg-[#f3f3f5] border-[1px] border-[#DFE0E5]"
+                className="bg-[#f3f3f5] border-[1px] rounded-sm border-[#DFE0E5] p-1"
                 type="text"
               />
               {isSearchProvince && (
@@ -207,7 +234,7 @@ export default function RegisterInput({
                 onChange={testHaned}
                 value={selectDistrict && selectDistrict.district_name_th}
                 onClick={handleSearchDistrict}
-                className={`bg-[#f3f3f5] border-[1px] border-[#DFE0E5]`}
+                className={`bg-[#f3f3f5] border-[1px] rounded-sm border-[#DFE0E5] p-1`}
                 type="text"
               />
               {isOpenSearchDistrict && (
@@ -241,7 +268,7 @@ export default function RegisterInput({
                   selectSubDistrict && selectSubDistrict.sub_district_name_th
                 }
                 onClick={handleSearchSubDistrict}
-                className="bg-[#f3f3f5] border-[1px] border-[#DFE0E5]"
+                className="bg-[#f3f3f5] border-[1px] rounded-sm border-[#DFE0E5] p-1"
                 type="text"
               />
               {isOpenSearchSubDistrict && (
@@ -272,80 +299,38 @@ export default function RegisterInput({
             <div className="w-full">
               {isDropDown ? (
                 <div>
-                  {isOpenPositionDropDown !== true && (
+                  <div
+                    name={name}
+                    onClick={() =>
+                      setIsOpenPositionDropDown(!isOpenPositionDropDown)
+                    }
+                    className="cursor-pointer text-[12px] bg-[#f3f3f5] border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] rounded-md"
+                  >
+                    {" "}
+                    {positionDropDown}
+                  </div>
+                  {isOpenPositionDropDown && (
                     <div
                       name={name}
-                      onClick={() =>
-                        setIsOpenPositionDropDown(!isOpenPositionDropDown)
-                      }
-                      className="cursor-pointer bg-[#f3f3f5] border-[1px] border-[#DFE0E5] py-[0.25rem] px-[0.25rem] rounded-md"
+                      className="flex flex-col gap-0.5 h-32 overflow-auto border-2"
                     >
-                      {" "}
-                      {positionDropDown}
-                    </div>
-                  )}
-                  {isOpenPositionDropDown && (
-                    <div name={name} className="flex flex-col ">
-                      <div className="flex gap-2 py-[0.25rem]">
-                        <input
-                          onClick={() => setIsOpenPositionDropDown(false)}
-                          type="radio"
-                          name={name}
-                          value={"Accounting & Purchasing"}
-                        />
-                        <label className="text-[0.8rem]">
-                          Accounting & Purchasing
-                        </label>
-                      </div>
-                      <div className="flex gap-2 py-[0.25rem]">
-                        <input
-                          onClick={() => setIsOpenPositionDropDown(false)}
-                          type="radio"
-                          name={name}
-                          value={"Application Developer"}
-                        />
-                        <label className="text-[0.8rem]">
-                          Application Developer
-                        </label>
-                      </div>
-                      <div className="flex gap-2 py-[0.25rem]">
-                        <input
-                          onClick={() => setIsOpenPositionDropDown(false)}
-                          type="radio"
-                          name={name}
-                          value={"Administrator"}
-                        />
-                        <label className="text-[0.8rem]">Administrator</label>
-                      </div>
-                      <div className="flex gap-2 py-[0.25rem]">
-                        <input
-                          onClick={() => setIsOpenPositionDropDown(false)}
-                          type="radio"
-                          name={name}
-                          value={"Graphics Designer"}
-                        />
-                        <label className="text-[0.8rem]">
-                          Graphics Designer
-                        </label>
-                      </div>
-                      <div className="flex gap-2 py-[0.25rem]">
-                        <input
-                          onClick={() => setIsOpenPositionDropDown(false)}
-                          type="radio"
-                          name={name}
-                          value={"Human Resources"}
-                        />
-                        <label className="text-[0.8rem]">Human Resources</label>
-                      </div>
-                      <div className="flex gap-2 py-[0.25rem]">
-                        <input
-                          onClick={() => setIsOpenPositionDropDown(false)}
-                          type="radio"
-                          name={name}
-                          value={"IT Support"}
-                        />
-                        <label className="text-[0.8rem]">IT Support</label>
-                      </div>
+                      {allPosition.map((data, i) => {
+                        return (
+                          <div
+                            className="flex text-[12px] pl-2 p-1 items-center gap-3 bg-gray-100 border-b-2"
+                            key={i}
+                          >
+                            <input
+                              className=""
+                              onClick={() => setIsOpenPositionDropDown(false)}
+                              name={name}
+                              value={data.positionName}
+                              type="radio"
+                            />
+                            <label htmlFor="">{data.positionName}</label>
+                          </div>
+                        );
+                      })}
                     </div>
                   )}
                 </div>

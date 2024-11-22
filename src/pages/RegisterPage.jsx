@@ -5,14 +5,14 @@ import RegisterInput from "../component/registerComponent/RegisterInput";
 import RegisterLabel from "../component/registerComponent/RegisterLabel";
 import axios from "axios";
 
-import translationJson from "../data/translations.json"
+import translationJson from "../data/translations.json";
 export default function RegisterPage() {
   const navigate = useNavigate();
 
   if (!localStorage.getItem("photo")) {
     window.location = "/camera";
   }
-console.log(translationJson.en.positions.positionName)
+  console.log(translationJson.en.positions);
   const [errorValidator, setErrorValidator] = useState("");
   const [input, setInput] = useState({
     targetUserId: localStorage.getItem("userId"),
@@ -51,7 +51,11 @@ console.log(translationJson.en.positions.positionName)
       id: 3,
       title: "Address / ที่อยู่",
       isAddress: true,
-      addresData: ["Province / จังหวัด", "District / อำเภอ", "Sub District / ตำบล"],
+      addresData: [
+        "Province / จังหวัด",
+        "District / อำเภอ",
+        "Sub District / ตำบล",
+      ],
     },
     {
       id: 4,
@@ -68,16 +72,31 @@ console.log(translationJson.en.positions.positionName)
       radio1: "male / ชาย",
       radio2: "female / หญิง",
     },
-    { id: 6, title: "Phone Number / เบอร์โทรศัพท์", name: "phoneNumber", err: "phoneNumber" },
+    {
+      id: 6,
+      title: "Phone Number / เบอร์โทรศัพท์",
+      name: "phoneNumber",
+      err: "phoneNumber",
+    },
     { id: 7, title: "E-mail / อีเมล", name: "email", err: "email" },
     { id: 8, title: "University / มหาวิทยาลัย", name: "university" },
-    { id: 9, title: "Highest Education / การศึกษาสูงสุด", name: "education", err: "education" },
+    {
+      id: 9,
+      title: "Highest Education / การศึกษาสูงสุด",
+      name: "education",
+      err: "education",
+    },
     {
       id: 10,
       title: "Faculty / คณะ",
       name: "faculty",
     },
-    { id: 11, title: "Department / สาขา", name: "department", err: "department" },
+    {
+      id: 11,
+      title: "Department / สาขา",
+      name: "department",
+      err: "department",
+    },
 
     {
       id: 12,
@@ -88,7 +107,8 @@ console.log(translationJson.en.positions.positionName)
     },
     {
       id: 13,
-      title: "How interested are you in applying for a job with our company? / คุณสนใจสมัครงานกับบริษัทเรามากแค่ไหน?",
+      title:
+        "How interested are you in applying for a job with our company ? / คุณสนใจสมัครงานกับบริษัทเรามากแค่ไหน ?",
       name: "interestingRate",
       rateChoice: [
         "5. สนใจมากที่สุด/Very interested",
@@ -96,6 +116,21 @@ console.log(translationJson.en.positions.positionName)
         "3. สนใจปานกลาง/Netral",
         "2. ไม่ค่อยสนใจ/Slightly interested",
         "1. ไม่สนใจเลย/Not interested at all",
+      ],
+      amout: 5,
+      typeOfInput: "radio",
+    },
+    {
+      id: 14,
+      title:
+        "How much do you like our company's recruitment process ? / คุณชอบวิธีการรับสมัครงานของบริษัทเรามากน้อยเพียงใด ?",
+      name: "likedRate",
+      rateChoice: [
+        "5. ชอบมากที่สุด /Very much",
+        "4. ชอบมาก/Quite a lot",
+        "3. ชอบปานกลาง/Netral",
+        "2. ไม่ค่อยชอบ/์Not much",
+        "1. ไม่ชอบเลย/Not at all",
       ],
       amout: 5,
       typeOfInput: "radio",
@@ -179,6 +214,7 @@ console.log(translationJson.en.positions.positionName)
               setInput={setInput}
               input={input}
               keyProp={arr[i].id}
+              allPosition={translationJson.en.positions}
             />
           </div>
         );
