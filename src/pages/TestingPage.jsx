@@ -5,11 +5,12 @@ import axios from "axios";
 import TestingCoponent from "../component/testingPageComponent/TestingCoponent";
 import TestingDiiferPage from "./TestingDifferPage";
 import TestFinishLoading from "../component/loadingComponent/TestFinishLoading";
+import TestingSurvey from "../component/testingPageComponent/TestingSurvey";
 
 export default function TestingPage() {
   const navigate = useNavigate();
 
-  const [count, setCount] = useState(10); ////////game time
+  const [count, setCount] = useState(120); ////////game time
 
   const [input, setInput] = useState({
     firstName: "",
@@ -153,18 +154,17 @@ export default function TestingPage() {
     isCorrect30: 0,
 
     testTime: 0,
-    testScore: 0,
-    test1: 0,
-    test2: 0,
-    test3: 0,
-    test4: 0,
-    test5: 0,
-    test6: 0,
-    test7: 0,
-    test8: 0,
-    test9: 0,
-    test10: 0,
-    test11: 0,
+    test1: false,
+    test2: false,
+    test3: false,
+    test4: false,
+    test5: false,
+    test6: false,
+    test7: false,
+    test8: false,
+    test9: false,
+    test10: false,
+    test11: false,
   });
   const testingData = [
     {
@@ -288,18 +288,18 @@ export default function TestingPage() {
       ],
       optional: true,
     },
-    {
-      title:
-        "คุณชอบวิธีการรับสมัครงานของบริษัทเรามากน้อยเพียงใด? How much do you like our company's recruitment process?",
-      choice: [
-        "5 ชอบมากที่สุด / Very much",
-        "4 ชอบมาก / Quite a lot",
-        "3 ชอบปานกลาง / Netral",
-        "2 ไม่ค่อยชอบ / Not much",
-        "1 ไม่ชอบเลย / Not at all",
-      ],
-      optional: true,
-    },
+    // {
+    //   title:
+    //     "คุณชอบวิธีการรับสมัครงานของบริษัทเรามากน้อยเพียงใด? How much do you like our company's recruitment process?",
+    //   choice: [
+    //     "5 ชอบมากที่สุด / Very much",
+    //     "4 ชอบมาก / Quite a lot",
+    //     "3 ชอบปานกลาง / Netral",
+    //     "2 ไม่ค่อยชอบ / Not much",
+    //     "1 ไม่ชอบเลย / Not at all",
+    //   ],
+    //   optional: true,
+    // },
   ];
 
   const [testingPage, setTestingPage] = useState(1);
@@ -317,7 +317,8 @@ export default function TestingPage() {
 
   const handleSubmitForm = async () => {
     try {
-      await axios.post("http://localhost:8000/user/createTestRecord", input);
+      localStorage.setItem("phoneNumber", input.phoneNumber)
+      await axios.post("http://localhost:8000/user/createTestRecord", input)
     } catch (error) {
       console.log(error);
     }
@@ -363,17 +364,14 @@ export default function TestingPage() {
   }, [isStartTesting, count, isOpenComplete]);
 
   const [isNeedMoreTime, setIsNeedMoreTime] = useState(false);
+  
+  const [isAfterTestSurvey, setIsAfterTestSurvey] = useState(false)
+
   useEffect(() => {
     if (count === 0) {
-      // setIsNeedMoreTime(true)
-      // if( isNeedMoreTime == false){
-
-      //   setIsStartTesting(false);
-      //   setIsTestFinish(true);
-      //   handleSubmitForm();
-      // }
+      setIsAfterTestSurvey(true)
       setIsStartTesting(false);
-      setIsTestFinish(true);
+      // setIsTestFinish(true);
       handleSubmitForm();
     }
   }, [count]);
@@ -425,8 +423,10 @@ export default function TestingPage() {
             Back to Home
           </button>
         </div>
+    
         {isStartTesting && (
           <TestingCoponent
+          setIsAfterTestSurvey={setIsAfterTestSurvey}
           setIsNeedMoreTime={setIsNeedMoreTime}
           isNeedMoreTime={isNeedMoreTime}
             testingPage={testingPage}
@@ -442,6 +442,9 @@ export default function TestingPage() {
             setIsOpenComPlete={setIsOpenComPlete}
           />
         )}
+            {
+          isAfterTestSurvey && <TestingSurvey setIsAfterTestSurvey={setIsAfterTestSurvey} isAfterTestSurvey={isAfterTestSurvey} targetPhonenumber={input.phoneNumber}/>
+        }
         {isStartDiffer && (
           <TestingDiiferPage
             setIsStartTesting={setIsStartTesting}

@@ -246,7 +246,6 @@ export default function RegisterInput({
                 District / อำเภอ
               </label>
               <input
-                onChange={testHaned}
                 value={selectDistrict && selectDistrict.district_name_en}
                 onClick={handleSearchDistrict}
                 className={`bg-[#f3f3f5] border-[1px] rounded-sm border-[#DFE0E5] p-1`}
@@ -334,10 +333,12 @@ export default function RegisterInput({
                       {allPosition.map((data, i) => {
                         return (
                           <div
+                          onClick={() => document.getElementById(`selectPosition-${i}`).click()}
                             className="flex text-[12px] pl-2 p-1 items-center gap-3 bg-gray-100 border-b-2"
                             key={i}
                           >
                             <input
+                            id={`selectPosition-${i}`}
                               className=""
                               onClick={() => setIsOpenPositionDropDown(false)}
                               name={name}

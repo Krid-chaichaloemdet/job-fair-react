@@ -19,17 +19,19 @@ import JobPage from "../pages/JobPage";
 
 import ResultPage from "../pages/ResultPage";
 import RegisterError from "../component/registerComponent/RegisterError";
+import TestingSurvey from "../component/testingPageComponent/TestingSurvey";
+import TestFinishLoading from "../component/loadingComponent/TestFinishLoading";
 
 const Layout = () => {
 
 
   const location = useLocation();
   const [isActive, setIsActive] = useState(location.pathname);
-console.log(location.pathname)
   const shouldShowFooter =
     location.pathname !== "/testingPage" &&
     location.pathname !== "/testingDifferPage" &&
-    location.pathname !== "/registerSuccess";
+    location.pathname !== "/registerSuccess" &&
+    location.pathname !== "/registerError"
   const [select, setSelect] = useState(1);
   return (
     <>
@@ -60,6 +62,7 @@ const router = createBrowserRouter([
       { path: "/registerSuccess", element: <RegisterSuccessLoading /> },
       { path: "/registerError", element: <RegisterError /> },
       { path: "/resultPage", element: <ResultPage /> },
+      { path: "/afterTestSurvey", element: <TestingSurvey /> },
     ],
   },
   {
@@ -68,6 +71,7 @@ const router = createBrowserRouter([
   },
 
   { path: "/jobPage", element: <JobPage /> },
+  { path: "/testingSuccess", element: <TestFinishLoading /> },
 ]);
 
 

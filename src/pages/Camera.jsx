@@ -41,7 +41,7 @@ export default function Camera({ setIsPhotoSuccess }) {
   const handleConfirmToUpload = async () => {
     // setIsOpenUploadSuccess(true)
     setIsPreviewPhoto(false);
-    // handleCloseCamera()
+    handleCloseCamera()
 
     canvasRef.current.toBlob(async (blob) => {
       if (!blob) {

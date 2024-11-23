@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import RegisterInput from "../component/registerComponent/RegisterInput";
@@ -9,9 +9,14 @@ import translationJson from "../data/translations.json";
 export default function RegisterPage() {
   const navigate = useNavigate();
 
-  if (!localStorage.getItem("photo")) {
-    window.location = "/camera";
-  }
+  useEffect(() => {
+    if (localStorage.getItem("register")) {
+      navigate("/registerError");
+    }
+    if (!localStorage.getItem("photo")) {
+      navigate("/camera");
+    }
+  }, [navigate]); // Dependency array ensures this runs only on mount
   const [errorValidator, setErrorValidator] = useState("");
 
   const [input, setInput] = useState({
@@ -157,13 +162,18 @@ export default function RegisterPage() {
       for (const { field, errorId } of requiredFields) {
         if (!input[field]) {
           setErrorValidator(errorId);
+          window.scrollTo({
+            top: errorId * 50,
+            behavior: "smooth",
+          });
           return;
         }
       }
 
       await axios
         .post("http://localhost:8000/user/register", input)
-        .then(() => navigate("/registerSuccess")).catch(()=>navigate('/registerError'))
+        .then(() => navigate("/registerSuccess"))
+        .catch(() => navigate("/registerError"))
         .finally(() => {
           localStorage.setItem("register", true);
           localStorage.removeItem("position");
@@ -178,7 +188,6 @@ export default function RegisterPage() {
       onSubmit={handleSubmitForm}
       className="w-full px-[2rem] py-[1rem] mt-[80px] flex flex-col gap-2 mb-[6rem] "
     >
-      
       <div className="flex flex-row justify-start">
         <div className="font-medium text-[1.75rem] tracking-[0.1em]">
           Profile
@@ -197,7 +206,7 @@ export default function RegisterPage() {
               label={arr[i].title}
             />
             <RegisterInput
-            handleInput={handleInput}
+              handleInput={handleInput}
               name={arr[i].name}
               typeOfInput={arr[i].typeOfInput}
               amout={arr[i].amout}

@@ -17,24 +17,30 @@ export default function TestingComponent({
   setIsOpenComPlete,
   isOpenComplete,
   isNeedMoreTime,
-  setIsNeedMoreTime
+  setIsNeedMoreTime,
+  setIsAfterTestSurvey
+
 }) {
   const minutes = Math.floor(count / 60);
   const seconds = count % 60;
+  console.log(testingPage);
   return (
     <div className="bg-white w-full h-full fixed top-0 left-0 mt-[80px] ">
       {isOpenComplete && (
         <TestingCompleteComponent
+        setIsAfterTestSurvey={setIsAfterTestSurvey}
           setIsOpenComPlete={setIsOpenComPlete}
           handleSubmitForm={handleSubmitForm}
           setIsTestFinish={setIsTestFinish}
         />
       )}
-  { isNeedMoreTime &&   <TestingComponentNeedMoreTime setIsNeedMoreTime={setIsNeedMoreTime}/>}
+      {isNeedMoreTime && (
+        <TestingComponentNeedMoreTime setIsNeedMoreTime={setIsNeedMoreTime} />
+      )}
       <div className="px-[2rem] py-[2rem] h-screen w-screen">
         <div className="flex w-full justify-between items-center pb-[1rem]">
           <div className="font-medium text-[1.75rem] tracking-[0.1em]">
-            Question {testingPage} of 11
+            Question {testingPage} of 10
           </div>
           <div className="">
             {" "}
@@ -61,55 +67,61 @@ export default function TestingComponent({
         </div>
 
         <div className="w-full pb-[1rem] pt-[3rem] px-[4rem] flex flex-col gap-3 ">
-          {testingData[testingPage - 1].choice.map((choice, i) => (
-            <div
-              onClick={() =>
-                document.getElementById(`testingPage-${i}`).click()
-              }
-              className="flex gap-5 items-center bg-gray-100   border-2 p-3"
-              key={`choice-${testingPage}-${i}`}
-            >
-              <input
-                id={`testingPage-${i}`}
-                type="radio"
-                name={`question-${testingPage}`}
-                onClick={() => {
-                  if (testingData[testingPage - 1].optional) {
-                    setInput((prevInput) => ({
-                      ...prevInput,
-                      [`test${testingPage}`]: choice,
-                    }));
-
-                    return;
-                  }
-
-                  if (testingData[testingPage - 1].correct === i) {
-                    setInput((prevInput) => ({
-                      ...prevInput,
-                      [`test${testingPage}`]: 1,
-                      testScore: input.testScore + 1,
-                    }));
-
-                    return;
-                  } else {
-                    setInput((prevInput) => {
-                      const newTestScore =
-                        prevInput.testScore > 0
-                          ? prevInput.testScore - 1
-                          : prevInput.testScore;
-
-                      return {
+          {testingData[testingPage - 1].choice.map((choice, i) => {
+          //  let selectRadio =  input.test[testingPage]
+          // console.log(input.test[testingPage])
+            return (
+              <div
+                onClick={() =>
+                  document.getElementById(`testingPage-${i}`).click()
+                }
+                className="flex gap-5 items-center bg-gray-100   border-2 p-3"
+                key={`choice-${testingPage}-${i}`}
+              >
+                <input
+                  checked={input[`test${testingPage}`] === i }
+                  id={`testingPage-${i}`}
+                  type="radio"
+                  name={`question-${testingPage}`}
+                  onClick={() => {
+        
+                    setInput((prevInput)=> ({ ...prevInput, [`test${testingPage}`]: i}))
+                    if (testingData[testingPage - 1].correct === i) {
+                      setInput((prevInput) => ({
                         ...prevInput,
-                        [`test${testingPage}`]: 0,
-                        testScore: newTestScore,
-                      };
-                    });
-                  }
-                }}
-              />
-              <label>{choice}</label>
-            </div>
-          ))}
+                        testScore: input.testScore + 1,
+                      }));
+
+                      return;
+                    } else {
+                      setInput((prevInput) => {
+                        const newTestScore =
+                          prevInput.testScore > 0
+                            ? prevInput.testScore - 1
+                            : prevInput.testScore;
+
+                        return {
+                          ...prevInput,
+                          testScore: newTestScore,
+                        };
+                      });
+                    }
+
+
+                    // if (testingData[testingPage - 1].optional) {
+                    //   setInput((prevInput) => ({
+                    //     ...prevInput,
+                    //     [`test${testingPage}`]: choice,
+                    //   }));
+
+                    //   return;
+                    // }
+                  }}
+                />
+                <label>{choice}</label>
+              </div>
+            );
+          })}
         </div>
 
         <div className="flex z-10 w-full justify-center gap-16 items-center bottom-0 fixed  pb-1 left-0">
@@ -128,13 +140,13 @@ export default function TestingComponent({
           />
           <IoIosArrowDropright
             onClick={() => {
-              if (testingPage === 11) {
+              if (testingPage === 10) {
                 return;
               }
               setTestingPage(testingPage + 1);
             }}
             className={`text-5xl ${
-              testingPage === 11
+              testingPage === 10
                 ? "text-gray-400 cursor-not-allowed"
                 : "cursor-pointer"
             }`}
