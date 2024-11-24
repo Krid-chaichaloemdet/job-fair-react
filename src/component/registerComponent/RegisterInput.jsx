@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import axios from "../../config/axios";
 
 export default function RegisterInput({
   name,
@@ -127,7 +127,7 @@ export default function RegisterInput({
       }
 
       await axios
-        .get(`http://localhost:8000/user/searchProvince?q=${e.target.value}`)
+        .get(`/user/searchProvince?q=${e.target.value}`)
         .then((res) => setSearchProvinceData(res.data));
     } catch (error) {
       console.error("Error fetching province data:", error);
@@ -143,7 +143,7 @@ export default function RegisterInput({
       }
       await axios
         .get(
-          `http://localhost:8000/user/searchDistrict?q=${selectProvince.province_code}`
+          `/user/searchDistrict?q=${selectProvince.province_code}`
         )
         .then((res) => setSearchDistrictData(res.data))
         .finally(() => setIsOpenSearchDistrict(true));
@@ -159,7 +159,7 @@ export default function RegisterInput({
       }
       await axios
         .get(
-          `http://localhost:8000/user/searchSubDistrict?q=${selectDistrict.district_code}`
+          `/user/searchSubDistrict?q=${selectDistrict.district_code}`
         )
         .then((res) => setSearchSubDistrictData(res.data))
         .finally(() => setIsOpenSearchSubDistrict(true));
@@ -177,7 +177,7 @@ export default function RegisterInput({
     if (e.target.value) {
       setIsSearchUniversity(true);
       await axios
-        .get(`http://localhost:8000/user/searchUniversity?q=${e.target.value}`)
+        .get(`/user/searchUniversity?q=${e.target.value}`)
         .then((res) => setUniversityData(res.data));
     }
   };
@@ -188,7 +188,7 @@ export default function RegisterInput({
 
   const handleSearchEducation = async () => {
     await axios
-      .get(`http://localhost:8000/user/searchEducation`)
+      .get(`/user/searchEducation`)
       .then((res) => setEducationData(res.data))
       .finally(() => setIsSearchEducation(true));
   };
@@ -296,7 +296,7 @@ export default function RegisterInput({
                           setInput({
                             ...input,
                             address:
-                              input.address + " ต." + data.sub_district_name_en,
+                              input.address + " ต." + data.sub_district_name_th,
                           });
                         }}
                         className="bg-gray-200 hover:bg-gray-50 cursor-pointer "

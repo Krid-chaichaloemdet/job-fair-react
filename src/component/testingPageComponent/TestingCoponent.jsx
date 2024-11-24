@@ -59,14 +59,14 @@ export default function TestingComponent({
 
           {testingData[testingPage - 1].image && (
             <img
-              className="h-[400px] object-scale-down"
+              className="h-[450px] object-scale-down"
               src={"" + testingData[testingPage - 1].image}
               alt="Question Image"
             />
           )}
         </div>
 
-        <div className="w-full pb-[1rem] pt-[3rem] px-[4rem] flex flex-col gap-3 ">
+        <div className="w-full pb-[1rem] pt-[1rem] px-[4rem] flex flex-col gap-2 ">
           {testingData[testingPage - 1].choice.map((choice, i) => {
           //  let selectRadio =  input.test[testingPage]
           // console.log(input.test[testingPage])
@@ -75,7 +75,7 @@ export default function TestingComponent({
                 onClick={() =>
                   document.getElementById(`testingPage-${i}`).click()
                 }
-                className="flex gap-5 items-center bg-gray-100   border-2 p-3"
+                className="flex gap-5 items-center bg-gray-100   border-2 p-1"
                 key={`choice-${testingPage}-${i}`}
               >
                 <input

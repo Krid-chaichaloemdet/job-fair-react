@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import axios from "axios";
+import axios from "../../config/axios";
 
 export default function TestingSurvey({ targetPhonenumber,setIsAfterTestSurvey }) {
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ export default function TestingSurvey({ targetPhonenumber,setIsAfterTestSurvey }
 
   const handleSubmit = async () => {
     try {
-      axios.post('http://localhost:8000/user/createSurvey', input)
+      axios.post('/user/createSurvey', input)
     } catch (error) {
       console.log(error)
     }

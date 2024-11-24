@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import axios from "../config/axios";
+
 import photo from "../assets/photo.svg";
 import SuccessUpload from "../component/camera/SuccessUpload";
 
@@ -56,7 +57,7 @@ export default function Camera({ setIsPhotoSuccess }) {
       try {
         // Send the image to the backend
         const response = await axios
-          .post("http://localhost:8000/upload", formData)
+          .post("/upload", formData)
           .finally(() => setIsOpenUploadSuccess(true));
 
         if (response.status == 200) {

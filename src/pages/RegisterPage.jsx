@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import RegisterInput from "../component/registerComponent/RegisterInput";
 import RegisterLabel from "../component/registerComponent/RegisterLabel";
-import axios from "axios";
+import axios from "../config/axios";
 
 import translationJson from "../data/translations.json";
 export default function RegisterPage() {
@@ -171,7 +171,7 @@ export default function RegisterPage() {
       }
 
       await axios
-        .post("http://localhost:8000/user/register", input)
+        .post("/user/register", input)
         .then(() => navigate("/registerSuccess"))
         .catch(() => navigate("/registerError"))
         .finally(() => {

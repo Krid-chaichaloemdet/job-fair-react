@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import axios from "../config/axios";
 
 import TestingCoponent from "../component/testingPageComponent/TestingCoponent";
 import TestingDiiferPage from "./TestingDifferPage";
@@ -37,22 +37,7 @@ export default function TestingPage() {
     pic13: 0,
     pic14: 0,
     pic15: 0,
-    pic16: 0,
-    pic17: 0,
-    pic18: 0,
-    pic19: 0,
-    pic20: 0,
-
-    pic21: 0,
-    pic22: 0,
-    pic23: 0,
-    pic24: 0,
-    pic25: 0,
-    pic26: 0,
-    pic27: 0,
-    pic28: 0,
-    pic29: 0,
-    pic30: 0,
+   
 
     click1: 0,
     click2: 0,
@@ -70,22 +55,7 @@ export default function TestingPage() {
     click13: 0,
     click14: 0,
     click15: 0,
-    click16: 0,
-    click17: 0,
-    click18: 0,
-    click19: 0,
-    click20: 0,
-
-    click21: 0,
-    click22: 0,
-    click23: 0,
-    click24: 0,
-    click25: 0,
-    click26: 0,
-    click27: 0,
-    click28: 0,
-    click29: 0,
-    click30: 0,
+  
 
     skip1: 0,
     skip2: 0,
@@ -103,22 +73,7 @@ export default function TestingPage() {
     skip13: 0,
     skip14: 0,
     skip15: 0,
-    skip16: 0,
-    skip17: 0,
-    skip18: 0,
-    skip19: 0,
-    skip20: 0,
-
-    skip21: 0,
-    skip22: 0,
-    skip23: 0,
-    skip24: 0,
-    skip25: 0,
-    skip26: 0,
-    skip27: 0,
-    skip28: 0,
-    skip29: 0,
-    skip30: 0,
+ 
 
     isCorrect1: 0,
     isCorrect2: 0,
@@ -136,22 +91,7 @@ export default function TestingPage() {
     isCorrect13: 0,
     isCorrect14: 0,
     isCorrect15: 0,
-    isCorrect16: 0,
-    isCorrect17: 0,
-    isCorrect18: 0,
-    isCorrect19: 0,
-    isCorrect20: 0,
-
-    isCorrect21: 0,
-    isCorrect22: 0,
-    isCorrect23: 0,
-    isCorrect24: 0,
-    isCorrect25: 0,
-    isCorrect26: 0,
-    isCorrect27: 0,
-    isCorrect28: 0,
-    isCorrect29: 0,
-    isCorrect30: 0,
+ 
 
     testTime: 0,
     test1: false,
@@ -164,7 +104,6 @@ export default function TestingPage() {
     test8: false,
     test9: false,
     test10: false,
-    test11: false,
   });
   const testingData = [
     {
@@ -237,8 +176,8 @@ export default function TestingPage() {
         />,
       ],
       correct: 3,
-      width: 250,
-      height: 250,
+      width: 200,
+      height: 200,
     },
     {
       title: "Based on the following dialogue, what are they talking about?",
@@ -252,8 +191,8 @@ export default function TestingPage() {
         "F.	Does not understand English. / ไม่เข้าใจภาษาอังกฤษ",
       ],
       correct: 1,
-      width: 350,
-      height: 350,
+      width: 200,
+      height: 200,
     },
     {
       title: "在这张对话中，求职者因为什么原因被录取了？",
@@ -267,8 +206,8 @@ export default function TestingPage() {
         "F.	Does not understand Chinese / ไม่เข้าใจภาษาจีน",
       ],
       correct: 2,
-      width: 350,
-      height: 350,
+      width: 200,
+      height: 200,
     },
     {
       title: "Which of the following statements do you agree with the most?",
@@ -288,18 +227,7 @@ export default function TestingPage() {
       ],
       optional: true,
     },
-    // {
-    //   title:
-    //     "คุณชอบวิธีการรับสมัครงานของบริษัทเรามากน้อยเพียงใด? How much do you like our company's recruitment process?",
-    //   choice: [
-    //     "5 ชอบมากที่สุด / Very much",
-    //     "4 ชอบมาก / Quite a lot",
-    //     "3 ชอบปานกลาง / Netral",
-    //     "2 ไม่ค่อยชอบ / Not much",
-    //     "1 ไม่ชอบเลย / Not at all",
-    //   ],
-    //   optional: true,
-    // },
+
   ];
 
   const [testingPage, setTestingPage] = useState(1);
@@ -318,7 +246,7 @@ export default function TestingPage() {
   const handleSubmitForm = async () => {
     try {
       localStorage.setItem("phoneNumber", input.phoneNumber)
-      await axios.post("http://localhost:8000/user/createTestRecord", input)
+      await axios.post("/user/createTestRecord", input)
     } catch (error) {
       console.log(error);
     }
@@ -328,7 +256,7 @@ export default function TestingPage() {
   const handleCheckPhoneNumber = async () => {
     try {
       await axios
-        .post("http://localhost:8000/user/checkPhoneNumber", {
+        .post("/user/checkPhoneNumber", {
           phoneNumber: input.phoneNumber,
         })
         .then(() => {

@@ -12,7 +12,7 @@ import Pic8 from "../pictures/Pic8";
 import Pic9 from "../pictures/Pic9";
 import Pic10 from "../pictures/Pic10";
 
-import axios from "axios";
+import axios from "../config/axios";
 import Pic11 from "../pictures/Pic11";
 import Pic12 from "../pictures/Pic12";
 import Pic13 from "../pictures/Pic13";
@@ -38,14 +38,14 @@ export default function TestingDiiferPage({
 
   const [totalClick, setTotalClcik] = useState(0);
 
-  useEffect(() => {
-    const saveRecord = () => {
-      axios.post("http://192.168.0.169:4567/create", input);
-    };
-    if (pic === 15) {
-      saveRecord();
-    }
-  }, [pic]);
+  // useEffect(() => {
+  //   const saveRecord = () => {
+  //     axios.post("http://192.168.0.169:4567/create", input);
+  //   };
+  //   if (pic === 15) {
+  //     saveRecord();
+  //   }
+  // }, [pic]);
 
   const [orientation, setOrientation] = useState(
     window.innerWidth > window.innerHeight ? "Landscape (X)" : "Portrait (Y)"
