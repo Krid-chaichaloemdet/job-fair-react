@@ -913,41 +913,7 @@
           "Knowledge of engineering laws such as factory laws, machinery laws and environmental law"
         ]
       },
-      {
-        "positionName": "Prepress Staff",
-        "jobDes": [
-          "Create artwork, prepare files, and output files for printing plates.",
-          "Record daily work reports.",
-          "Communicate with suppliers and coordinate with relevant departments.",
-          "Operate CTP machinery to produce printing plates (occasionally)."
-        ],
-        "requirement": [
-          "High Vocational - Bachelor's Degree",
-          "Proficient in Adobe Illustrator.",
-          "Knowledge of color theory.",
-          "Ability to work as part of a team.",
-          "Detail-oriented.",
-          "Preference will be given to those with education in printing technology or experience in printing-related work.",
-          "Knowledge of FSC-CoC certification systems will be considered an advantage."
-        ]
-      },
-      {
-        "positionName": "Prepress Supervisor",
-        "jobDes": [
-          "Screen and check basic job details.",
-          "Create layout formats Give it to the prepress proceed with issuing plates according to the specified format.",
-          "Coordinate both internally and externally",
-          "Prepare monthly reports and KPI",
-          "Prepare and update various ISO documents",
-          "Manage personnel within the department",
-          "Manage annual budget preparation"
-        ],
-        "requirement": [
-          "Bachelor's degree in Printing Technology or related fields",
-          "Experience in artwork, printing techniques, color separation, plate making for at least 3 years or experience at a sticker printing for at least 5 years.",
-          "At least 3 years of experience as supervisor of the pre-press department using Flexo, Rotary, Letterpress systems."
-        ]
-      },
+      
       {
         "positionName": "Senior Production Staff",
         "jobDes": [
@@ -1967,24 +1933,7 @@
           "มีความรู้กฎหมายวิศวกรรม เช่น กฎหมายโรงงาน กฎหมายเครื่องจักร และกฎหมายสิ่งแวดล้อม"
         ]
       },
-      {
-        "positionName": "พนักงาน Prepress",
-        "jobDes": [
-          "จัดทำอาร์ตเวิร์ค เตรียมไฟล์ และทำไฟล์ออกแม่พิมพ์",
-          "ลงบันทึกรายงานการปฏิบัติงานประจำวัน",
-          "ติดต่อซัพพลายเออร์และประสานงานกับฝ่ายที่เกี่ยวข้อง",
-          "จัดทำแม่พิมพ์ด้วยเครื่องจักร CTP (บางครั้ง)"
-        ],
-        "requirement": [
-          "ปวส. - ปริญญาตรี",
-          "มีความเชี่ยวชาญในการใช้โปรแกรม Adobe Illustrator",
-          "มีความรู้เรื่องทฤษฎีสี",
-          "มีความสามารถในการทำงานเป็นทีม",
-          "มีความละเอียดรอบคอบ",
-          "หากจบการศึกษาในด้านเทคโนโลยีการพิมพ์หรือมีประสบการณ์เกี่ยวกับงานพิมพ์จะได้รับการพิจารณาเป็นพิเศษ",
-          "หากมีความรู้ในเรื่องระบบรับรอง FSC-CoC จะได้รับการพิจารณาเป็นพิเศษ"
-        ]
-      },
+     
       {
         "positionName": "หัวหน้าแผนก Prepress",
         "jobDes": [

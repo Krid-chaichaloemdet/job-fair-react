@@ -111,7 +111,7 @@ export default function ResultPage() {
 
   //     axios.get(`/user/readSingleCandidateTestData?userId=${selectSingleCandidateTestData}`).then((res)=>setSingleCandidateData(res.data))
   //   },[selectSingleCandidateTestData])
-
+  console.log(displaySingUserData?.profileImage);
   return (
     <div className="w-full h-[100%] px-[2rem] py-[1rem] mt-[80px] flex flex-col mb-[6rem]">
       <div className="mb-[1rem]">
@@ -212,8 +212,15 @@ export default function ResultPage() {
 
               <div className="h-full w-full overflow-y-scroll flex flex-col items-center justify-start">
                 <div className="flex w-full flex-col justify-center  gap-2 p-[1rem] relative border-[#b2b5be] border-b-[1px]">
-                  <div className="font-medium text-[1.75rem] tracking-[0.1em] mb-[0.25rem]">
+                  <div className="font-medium text-[1.75rem] tracking-[0.1em] ">
                     Profile
+                  <div className="w-full bg-red- flex items-center justify-center">
+                    <img
+                      className="w-[60%]  h-[50%] items-center rounded-md"
+                      src={`uploads/${displaySingUserData.profileImage}`}
+                      alt=""
+                    />
+                  </div>
                   </div>
                   <div>
                     <div>First Name : {displaySingUserData?.firstName}</div>
